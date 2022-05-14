@@ -37,8 +37,8 @@ typedef struct{
     uint8_t friendly_name [CANCOMM_MAXIMUM_NAME_LENGTH];
 }cancomm_message;
 
-
-void CANCOMM_ReadMessages( void );
+void CANCOMM_ReadMessages(cancomm_message* message_list,
+        uint32_t message_list_len);
 
 #ifdef	__cplusplus
 }
