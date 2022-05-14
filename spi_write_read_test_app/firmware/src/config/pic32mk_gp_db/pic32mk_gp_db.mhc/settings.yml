@@ -1,0 +1,13 @@
+configName: pic32mk_gp_db
+folderName: ''
+format_version: v1.0
+frameworkPath: ../../../../../../..
+processor: PIC32MK1024GPE100
+projectName: ''
+settings:
+  PackageFilter: bsp;classb_sam_e5x_d5x;classb_sam_e70_s70_v70_v71;core;core_apps_pic32mx;crypto;csp;csp_apps_pic32mx;csp_apps_pic32mz_da;csp_apps_sam_9x60;csp_apps_sam_d5x_e5x;Devices;gfx;gfx_apps_pic32mz_da;net_apps_sam_e70_v71;quick_docs;reference_apps;touch;usb;usb_apps_device;usb_apps_dual_role;usb_apps_host;usb_apps_multi_controller
+  FORCE_OPTIMIZATION: 'false'
+  GENERATE_BACKUP: 'true'
+  CMSISPath: .\dev_packs\arm\CMSIS\5.7.0
+  MERGE_STRATEGY: USER_ALL
+  DFPPath: .\dev_packs\Microchip\PIC32MK-GP_DFP\1.4.117\atdf\PIC32MK1024GPE100.atdf
