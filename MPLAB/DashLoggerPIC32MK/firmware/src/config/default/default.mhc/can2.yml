@@ -200,4 +200,4 @@ children:
       - type: Dynamic
         attributes: {id: can2, value: '125.000'}
 - type: ElementPosition
-  attributes: {x: '18', y: '107', id: can2}
+  attributes: {x: '17', y: '106', id: can2}

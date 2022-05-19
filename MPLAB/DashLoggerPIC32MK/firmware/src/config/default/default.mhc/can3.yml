@@ -18,6 +18,20 @@ children:
       children:
       - type: Dynamic
         attributes: {id: can3, value: '0.000'}
+  - type: Integer
+    attributes: {id: CALCULATED_NOMINAL_BITRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can3, value: '500'}
+  - type: String
+    attributes: {id: CALCULATED_NOMINAL_ERRORRATE}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can3, value: '0.000'}
   - type: KeyValueSet
     attributes: {id: CAN3_FIFO1_PAYLOAD_SIZE}
     children:
@@ -46,6 +60,13 @@ children:
       children:
       - type: User
         attributes: {value: '32'}
+  - type: Integer
+    attributes: {id: CAN_CORE_CLOCK_FREQ}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can3, value: '120000000'}
   - type: KeyValueSet
     attributes: {id: CAN_OPMODE}
     children:
@@ -143,5 +164,40 @@ children:
       children:
       - type: Dynamic
         attributes: {id: can3, value: '0x4'}
+  - type: Integer
+    attributes: {id: NBT_SJW}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can3, value: '4'}
+  - type: Integer
+    attributes: {id: NBT_TOTAL_TIME_QUANTA}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can3, value: '16'}
+  - type: Integer
+    attributes: {id: NBT_TSEG1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can3, value: '11'}
+  - type: Integer
+    attributes: {id: NBT_TSEG2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can3, value: '4'}
+  - type: String
+    attributes: {id: NOMINAL_TIME_QUANTA_PERIOD}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: can3, value: '125.000'}
 - type: ElementPosition
-  attributes: {x: '16', y: '149', id: can3}
+  attributes: {x: '17', y: '149', id: can3}

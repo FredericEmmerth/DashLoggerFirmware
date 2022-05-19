@@ -96,7 +96,6 @@ cancomm_message message_list [] = {
 uint32_t message_list_len = sizeof(message_list) / sizeof(cancomm_message);
 
 /* Define all Signals to be interpreted and shown */
-
 signals_signal signal_list [] = {
     {.friendly_name="Min_Voltage",
             .id=0xA2,
@@ -140,18 +139,50 @@ uint32_t signal_list_len = sizeof(signal_list) / sizeof(signals_signal);
 
 /* Define a Protocol Instance for Communication with Display */
 
+SHORTPROTOCOL_status UART_ReadAvailable( void ){
+    if(UART3_ReceiverIsReady()){
+        return SHORTPROTOCOL_AVAILABLE;
+    }else{
+        return SHORTPROTOCOL_NOT_AVAILABLE;
+    }
+}
+
+uint8_t UART_ReadByte( void ){
+    return UART3_ReadByte();
+}
+
+SHORTPROTOCOL_status UART_WriteAvailable( void ){
+    if(UART3_TransmitterIsReady()){
+        return SHORTPROTOCOL_AVAILABLE;
+    }else{
+        return SHORTPROTOCOL_NOT_AVAILABLE;
+    }
+}
+
+void UART_WriteByte(uint8_t byte){
+    UART3_WriteByte(byte);
+}
+
 SHORTPROTOCOL_Instance inst = {
     .readAvailable = UART_ReadAvailable,
-    .readByte = UART
+    .readByte = UART_ReadByte,
+    .writeAvailable = UART_WriteAvailable,
+    .writeByte = UART_WriteByte,
+    .maximumPackageLength = 100
 };
 
-
+uint8_t sendData[] = "#SSC 1,\"LOL\";\n";
+uint32_t sendData_length = 14;
 
 int main ( void )
 {
     /* Initialize all modules */
     SYS_Initialize ( NULL );
+    SHORTPROTOCOL_Initialize(&inst);
     
+    DELAY_Microseconds(5000);
+    
+    SHORTPROTOCOL_Send(&inst, sendData, sendData_length);
     /* Main Loop */
     /* The Maximum Loop Time has to be smaller than 2ms, to catch all Messages*/
     /* 15k Frames/s MAX and FIFO Length 32 -> 1/15E3 * 32 = 2ms */
@@ -162,12 +193,12 @@ int main ( void )
 //        /* Interpret the RAW Message Data */
 //        SIGNALS_Interpret(signal_list, signal_list_len,
 //                message_list, message_list_len);
-        /* Generate the Messages to be sent to the Display */
+        /* Generate the Informations to be sent to the Display */
         
         /* Send Messages to Display */
-        SHORTPROTOCOL_Update();
+        SHORTPROTOCOL_Update(&inst);
         /* Wait for constant Loop time */
-        DELAY_Microseconds(5000);
+        DELAY_Microseconds(500);
         /* (Window WDG Reset)*/
         
     }

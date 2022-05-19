@@ -82,12 +82,14 @@ void GPIO_Initialize ( void )
     C3RXR = 10;
     C2RXR = 12;
     C4RXR = 6;
+    U3RXR = 5;
 
     /* PPS Output Remapping */
     RPE0R = 12;
     RPC15R = 12;
     RPE15R = 12;
     RPB1R = 12;
+    RPC6R = 1;
 
         /* Lock back the system after PPS configuration */
     CFGCONbits.IOLOCK = 1;
