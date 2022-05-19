@@ -1,0 +1,118 @@
+#CCR7,0,$606060,100,50,$d0d0d0,100,100,$606060,100
+#CCR3,0,$8d8d8d,100,100,$c3c3c3,100
+#CCR5,0,$1e1e1e,100,12,$808080,100
+#CCR2,0,$b4b4ef,100,49,$e4e4f8,100,100,$babaf0,100
+#CCR4,0,$5a5a5a,100,12,$ffffff,100
+#CCR1,0,$0000d1,100,100,$9090eb,100
+#CCR6,1,$000028,100,100,$0000aa,100
+#CLS1,$ffffff,100,2,0,0
+#CFC1,$808080,100
+#CLS10,$000000,100,2,0,0
+#CFC10,$ffffff,100
+#CLS22,$4a4a4a,100,1,0,0
+#CFL22,3,90
+#CLS8,$000000,100,2,0,0
+#CFD8
+#CLD20
+#CFC20,$c8c8c8,100
+#CLD14
+#CFL14,2,90
+#CLD4
+#CFC4,$ff0000,100
+#CLD3
+#CFC3,$000000,100
+#CLD15
+#CFL15,3,90
+#CLD21
+#CFL21,7,90
+#CLD2
+#CFC2,$ffffff,100
+#CLD5
+#CFC5,$00ff00,100
+#CLD18
+#CFL18,6,90
+#CLS12,$ff0000,100,2,0,0
+#CFC12,$00ff00,100
+#CLS11,$ffffff,100,2,0,0
+#CFC11,$000000,100
+#CLD13
+#CFL13,1,90
+#CLD6
+#CFC6,$0000ff,100
+#CLD17
+#CFL17,5,90
+#CLS9,$ff0000,100,2,0,0
+#CFD9
+#CLS7,$ffffff,100,2,0,0
+#CFD7
+#CLD16
+#CFL16,4,90
+#CLS19,$4a4a4a,100,1,0,0
+#CFC19,$ffffff,100
+#CTF8,<I:unicode_32.epf> 58,0,2,0,0,0,? 100
+#CTF4,<I:ascii_14.epf> 58,0,2,0,0,0,? 100
+#CTF11,<I:unicode_26.epf> 58,0,3,0,0,0,? 100
+#CTF1,<I:mono_6x8.epf> 58,0,2,0,0,0,? 100
+#CTF5,<I:unicode_16.epf> 58,0,2,0,0,0,? 100
+#CTF10,<I:unicode_20.epf> 58,0,3,0,0,0,? 100
+#CTF12,<I:unicode_32.epf> 58,0,3,0,0,0,? 100
+#CTF14,<I:unicode_26.epf> 58,1,2,0,0,0,? 100
+#CTF3,<I:ascii_10.epf> 58,0,2,0,0,0,? 100
+#CTF9,<I:unicode_16.epf> 58,0,3,0,0,0,? 100
+#CTF16,<I:unicode_20.epf> 58,1,3,0,0,0,? 100
+#CTF17,<I:unicode_26.epf> 58,1,3,0,0,0,? 100
+#CTF7,<I:unicode_26.epf> 58,0,2,0,0,0,? 100
+#CTF15,<I:unicode_32.epf> 58,1,2,0,0,0,? 100
+#CTF18,<I:unicode_32.epf> 58,1,3,0,0,0,? 100
+#CTF2,<I:mono_8x16.epf> 58,0,2,0,0,0,? 100
+#CTF6,<I:unicode_20.epf> 58,0,2,0,0,0,? 100
+#CTF13,<I:unicode_20.epf> 58,1,2,0,0,0,? 100
+#CBP4,<P:button/RoundGrey.epg>,<P:button/RoundGreen.epg>,120,50,1
+#CBT4,14,17,0,0
+#CBO4,0,0,100,0
+#CBS4,"9c"
+#CBD7,13,13,50,50,8
+#CBT7,14,14,0,0
+#CBO7,0,0,110,0
+#CBS7,"9c"
+#CBP3,<P:button/PillBlue.epg>,<P:button/PillYellow.epg>,120,50,1
+#CBT3,14,17,0,0
+#CBO3,0,0,100,0
+#CBS3,"9c"
+#CBD9,22,22,120,50,5
+#CBT9,17,14,0,0
+#CBO9,0,0,100,0
+#CBS9,"9c"
+#CBD8,18,18,50,50,8
+#CBT8,13,13,0,0
+#CBO8,0,0,110,0
+#CBS8,"9c"
+#CBD1,13,13,100,50,8
+#CBT1,14,14,0,0
+#CBO1,0,0,110,0
+#CBS1,"9c"
+#CBP11,<P:button/Radiobutton0.epg>,<P:button/Radiobutton1.epg>,30,30,0
+#CBT11,7,7,35,0
+#CBO11,0,0,100,0
+#CBS11,"9c"
+#CBD6,17,17,50,50,8
+#CBT6,13,13,0,0
+#CBO6,0,0,110,0
+#CBS6,"9c"
+#CBD2,1,12,22,22,6
+#CBT2,9,9,30,0
+#CBO2,0,0,100,0
+#CBS2,"9c"
+#CBD5,16,16,50,50,8
+#CBT5,17,17,0,0
+#CBO5,0,0,110,0
+#CBS5,"9c"
+#CBP10,<P:button/Checkbox0.epg>,<P:button/Checkbox1.epg>,30,30,0
+#CBT10,7,7,35,-5
+#CBO10,0,0,100,0
+#CBS10,"9c"
+#YDO1
+#XBT60
+#TCG30,100
+#TAA15,15
+#MRN<P:/macro/screen/Screen1.emc>
