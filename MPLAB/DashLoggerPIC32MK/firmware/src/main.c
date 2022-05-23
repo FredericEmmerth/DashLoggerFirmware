@@ -168,11 +168,11 @@ SHORTPROTOCOL_Instance inst = {
     .readByte = UART_ReadByte,
     .writeAvailable = UART_WriteAvailable,
     .writeByte = UART_WriteByte,
-    .maximumPackageLength = 100
+    .maximumPackageLength = 5
 };
 
-uint8_t sendData[] = "#SSC 1,\"LOL\";\n";
-uint32_t sendData_length = 14;
+uint8_t sendData[] = "#SSC 1,\"Das ist jetzt ein Versuch \";\n";
+uint32_t sendData_length = sizeof(sendData) / sizeof(uint8_t) - 1;
 
 int main ( void )
 {
@@ -198,7 +198,7 @@ int main ( void )
         /* Send Messages to Display */
         SHORTPROTOCOL_Update(&inst);
         /* Wait for constant Loop time */
-        DELAY_Microseconds(500);
+        DELAY_Microseconds(200);
         /* (Window WDG Reset)*/
         
     }

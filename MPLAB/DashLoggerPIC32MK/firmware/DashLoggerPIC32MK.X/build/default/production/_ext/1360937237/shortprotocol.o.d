@@ -14,7 +14,8 @@ build/default/production/_ext/1360937237/shortprotocol.o: \
  ../src/config/default/peripheral/gpio/plib_gpio.h \
  ../src/config/default/peripheral/evic/plib_evic.h \
  ../src/config/default/peripheral/spi/spi_master/plib_spi2_master.h \
- ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h
+ ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h \
+ ../src/crc.h
 
 ../src/shortprotocol.h:
 
@@ -47,3 +48,5 @@ build/default/production/_ext/1360937237/shortprotocol.o: \
 ../src/config/default/peripheral/spi/spi_master/plib_spi2_master.h:
 
 ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h:
+
+../src/crc.h:
