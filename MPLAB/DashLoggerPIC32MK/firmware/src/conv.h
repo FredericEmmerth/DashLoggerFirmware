@@ -14,6 +14,7 @@ extern "C" {
     
 #include "definitions.h"
 #include "signals.h"
+#include "stdio.h"
     
 /* User-Defined Callback Functions to Convert the RAW CAN Data to Values */
 /* Numbers are Hardcoded here, to make it more Readable */
@@ -29,6 +30,12 @@ float CONV_MotorTemp_RL(uint8_t* data);
 float CONV_MotorTemp_FL(uint8_t* data);
 float CONV_MotorTemp_FR(uint8_t* data);
 float CONV_MaxMotorTemp(signals_signal* signal_list, uint32_t signal_list_len);
+void CONV_DISP_Motor_Temp(signals_signal* signal_list, uint32_t signal_list_len,
+        SIGNALS_string* outstring);
+uint32_t CONV_find_string_length(uint8_t* str, uint32_t strlen);
+
+float CONV_max(float* vals, uint32_t valcount);
+float CONV_min(float* vals, uint32_t valcount);
 
 #ifdef	__cplusplus
 }

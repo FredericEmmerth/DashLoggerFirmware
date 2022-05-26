@@ -14,7 +14,8 @@ build/default/debug/_ext/1360937237/command.o: ../src/command.c \
  ../src/config/default/peripheral/evic/plib_evic.h \
  ../src/config/default/peripheral/spi/spi_master/plib_spi2_master.h \
  ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h \
- ../src/signals.h ../src/cancomm.h ../src/shortprotocol.h ../src/crc.h
+ ../src/signals.h ../src/cancomm.h ../src/shortprotocol.h ../src/crc.h \
+ ../src/conv.h
 
 ../src/command.h:
 
@@ -55,3 +56,5 @@ build/default/debug/_ext/1360937237/command.o: ../src/command.c \
 ../src/shortprotocol.h:
 
 ../src/crc.h:
+
+../src/conv.h:

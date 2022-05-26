@@ -1,7 +1,14 @@
+[General]
+buildVersion=2110
+projectMacro=Private/macro/NewProject.emm
+exportLocation=
+exportFileName=Backup
+encryption=0 0
+
 [Project]
-AMI_Mission=-453, 58, 200, 100, 1
+AMI_Mission=1266, 58, 200, 100, 1
 DashLoggerDebug=272, 43, 210, 100, 1
-Default=-1719, 55, 200, 100, 1
+Default=166, 48, 200, 100, 1
 
 [ScreenTransitions]
 FadeScrTrans="id=5name=FadeScrTranstransition=4direction=0time=50triggerEvent=0curve=2"
@@ -11,13 +18,6 @@ FlipScrTrans="id=7name=FlipScrTranstransition=0direction=0time=50triggerEvent=0c
 SplitScrTrans="id=6name=SplitScrTranstransition=5direction=1time=50triggerEvent=0curve=1"
 PushScrTrans="id=1name=PushScrTranstransition=0direction=1time=50triggerEvent=0curve=1"
 ZoomScrTrans="id=4name=ZoomScrTranstransition=3direction=4time=50triggerEvent=0curve=2"
-
-[General]
-buildVersion=2110
-projectMacro=Private/macro/NewProject.emm
-exportLocation=
-exportFileName=Backup
-encryption=0 0
 
 [ProjectTree]
 SORT=0, 0, 0, 0, 0, 0

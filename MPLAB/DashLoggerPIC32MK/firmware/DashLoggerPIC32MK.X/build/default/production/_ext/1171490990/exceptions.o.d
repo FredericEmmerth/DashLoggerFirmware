@@ -1,9 +1,8 @@
 build/default/production/_ext/1171490990/exceptions.o: \
- ../src/config/default/exceptions.c ../src/config/default/device.h \
- ../src/config/default/toolchain_specifics.h \
- ../src/config/default/definitions.h \
+ ../src/config/default/exceptions.c ../src/config/default/definitions.h \
  ../src/config/default/peripheral/uart/plib_uart3.h \
  ../src/config/default/device.h \
+ ../src/config/default/toolchain_specifics.h \
  ../src/config/default/peripheral/uart/plib_uart_common.h \
  ../src/config/default/peripheral/canfd/plib_canfd3.h \
  ../src/config/default/peripheral/canfd/plib_canfd_common.h \
@@ -16,15 +15,13 @@ build/default/production/_ext/1171490990/exceptions.o: \
  ../src/config/default/peripheral/spi/spi_master/plib_spi2_master.h \
  ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h
 
-../src/config/default/device.h:
-
-../src/config/default/toolchain_specifics.h:
-
 ../src/config/default/definitions.h:
 
 ../src/config/default/peripheral/uart/plib_uart3.h:
 
 ../src/config/default/device.h:
+
+../src/config/default/toolchain_specifics.h:
 
 ../src/config/default/peripheral/uart/plib_uart_common.h:
 

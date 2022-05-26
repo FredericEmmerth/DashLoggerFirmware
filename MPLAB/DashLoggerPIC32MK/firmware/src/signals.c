@@ -1,7 +1,7 @@
 #include "signals.h"
 
 void SIGNALS_Interpret(signals_signal* signal_list, uint32_t signal_list_len,
-        cancomm_message* message_list, uint32_t message_list_len){
+    cancomm_message* message_list, uint32_t message_list_len){
     
     uint8_t databuff[CANCOMM_MAXIMUM_DATA_LENGTH];
     for(uint32_t i=0; i<signal_list_len; i++){
@@ -18,6 +18,11 @@ void SIGNALS_Interpret(signals_signal* signal_list, uint32_t signal_list_len,
                     case SIGNALS_UINT32_T_SIGNAL:
                         signal_list[i].value_uint32_t =
                                 signal_list[i].can_convert_uint32_t(databuff);
+                        break;
+                    
+                    case SIGNALS_STRING_SIGNAL:
+                        signal_list[i].can_convert_string(databuff, 
+                                &(signal_list[i].value_string));
                         break;
 
                     default:
@@ -36,6 +41,11 @@ void SIGNALS_Interpret(signals_signal* signal_list, uint32_t signal_list_len,
                         signal_list[i].value_uint32_t =
                                 signal_list[i].internal_convert_uint32_t(
                                         signal_list, signal_list_len);
+                        break;
+                        
+                    case SIGNALS_STRING_SIGNAL:
+                        signal_list[i].internal_convert_string(signal_list,
+                                signal_list_len, &(signal_list[i].value_string));
                         break;
 
                     default:
@@ -62,4 +72,49 @@ signals_result signals_find_data(uint32_t id, uint8_t interface,
     }
     
     return result;
+}
+
+signals_result signals_compare_names(uint8_t* first, uint32_t firstlen,
+        uint8_t* second, uint32_t secondlen){
+    
+    uint32_t searchlen;
+    
+    /* Set searchlen to the shorter length */
+    if(firstlen > secondlen){
+        searchlen = secondlen;
+    }else if (secondlen > firstlen){
+        searchlen = firstlen;
+    }else{
+        /* The Strings have equal length */
+        searchlen = firstlen;
+    }
+    
+    signals_result res = SIGNALS_MATCH;
+    
+    for(uint32_t i=0; i<searchlen; i++){
+        if(first[i] != second[i]){
+            res = SIGNALS_NO_MATCH;
+            break;
+        }
+    }
+    
+    return res;
+}
+
+signals_signal* signals_find_signal( signals_signal* signal_list,
+        uint32_t signal_list_len, void(*Callback)(void)){
+    
+    for(uint32_t i=0; i<signal_list_len; i++){
+        if(Callback == (void(*)(void))signal_list[i].can_convert_float        ||
+           Callback == (void(*)(void))signal_list[i].can_convert_uint32_t     ||
+           Callback == (void(*)(void))signal_list[i].internal_convert_float   ||
+           Callback == (void(*)(void))signal_list[i].internal_convert_uint32_t||
+           Callback == (void(*)(void))signal_list[i].internal_convert_string  ||
+           Callback == (void(*)(void))signal_list[i].can_convert_string        )
+        { 
+            return &(signal_list[i]);
+        }
+    }
+    
+    return NULL;
 }

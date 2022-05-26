@@ -44,6 +44,70 @@ float CONV_MaxInvTemp(uint8_t* data){
     return 1.0;
 }
 
+float CONV_min(float* vals, uint32_t valcount){
+    float minimum;
+    for(uint32_t i=0; i<valcount; i++){
+        if(vals[i] < minimum){
+            minimum = vals[i];
+        }
+    }
+    return minimum;
+}
+
+float CONV_max(float* vals, uint32_t valcount){
+    float maximum;
+    for(uint32_t i=0; i<valcount; i++){
+        if(vals[i] > maximum){
+            maximum = vals[i];
+        }
+    }
+    return maximum;
+}
+
 float CONV_MaxMotorTemp(signals_signal* signal_list, uint32_t signal_list_len){
-    return 1.0;
+    
+    signals_signal* rr_temp = signals_find_signal(signal_list, signal_list_len,
+            (void*)CONV_MotorTemp_RR);
+    
+    signals_signal* rl_temp = signals_find_signal(signal_list, signal_list_len,
+            (void*)CONV_MotorTemp_FL);
+    
+    signals_signal* fr_temp = signals_find_signal(signal_list, signal_list_len,
+            (void*)CONV_MotorTemp_FR);
+    
+    signals_signal* fl_temp = signals_find_signal(signal_list, signal_list_len,
+            (void*)CONV_MotorTemp_RL);
+    
+    float temperatureValues[4] = 
+    {
+        rr_temp->value_float,
+        rl_temp->value_float,
+        fr_temp->value_float,
+        fl_temp->value_float
+    };
+    
+    return CONV_max(temperatureValues, 4);
+}
+
+void CONV_DISP_Motor_Temp(signals_signal* signal_list, uint32_t signal_list_len,
+        SIGNALS_string* outstring){
+    
+    float maxtemp = signals_find_signal(signal_list,
+        signal_list_len,(void(*)(void))CONV_MaxMotorTemp)->value_float;
+    sprintf((char*)outstring->data,"%4.1f°C",maxtemp);
+    
+    outstring->length = CONV_find_string_length(outstring->data,
+                                SIGNALS_STRING_MAXIMUM_LENGTH);
+    
+}
+
+uint32_t CONV_find_string_length(uint8_t* str, uint32_t strlen){
+    
+    uint32_t i=0;
+    for(; i<strlen; i++){
+        if(str[i] == 0x00){
+            break;
+        }
+    }
+    return i;
 }

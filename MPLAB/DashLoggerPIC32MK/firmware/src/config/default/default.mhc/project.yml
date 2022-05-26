@@ -1,18 +1,25 @@
 files:
-- generatedChecksum: 99DB74296DF9943C474F4F03A700C790
+- generatedChecksum: 92192A5F40DD294B870AF761B09C5EE6
   logicalPath: config/default
   name: exceptions.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: 99DB74296DF9943C474F4F03A700C790
-- generatedChecksum: AD168A30179C97D615C9CC49F6106F03
+  userChecksum: 92192A5F40DD294B870AF761B09C5EE6
+- generatedChecksum: C73FC716A50DDB05718577E8BBE06959
+  logicalPath: config/default
+  name: exceptionsHandler.S
+  physicalPath: ''
+  security: NON_SECURE
+  type: SOURCE
+  userChecksum: C73FC716A50DDB05718577E8BBE06959
+- generatedChecksum: 89EDCD27B0B8EB6AEA96D8538AE2D1CD
   logicalPath: config/default
   name: initialization.c
   physicalPath: ''
   security: NON_SECURE
   type: SOURCE
-  userChecksum: AD168A30179C97D615C9CC49F6106F03
+  userChecksum: 89EDCD27B0B8EB6AEA96D8538AE2D1CD
 - generatedChecksum: 4B6A778CF4449A8EC938F5D4D0917E56
   logicalPath: config/default
   name: interrupts.c
@@ -236,7 +243,7 @@ settings:
   delimiter: ''
   key: heap-size
   security: NON_SECURE
-  value: '512'
+  value: '1024'
 - append: false
   category: C32-LD
   delimiter: ''

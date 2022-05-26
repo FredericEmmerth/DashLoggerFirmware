@@ -15,15 +15,17 @@ extern "C" {
 #include "definitions.h"
 #include "signals.h"
 #include "shortprotocol.h"
+#include "stdio.h"
+#include "conv.h"
     
 typedef struct {
-    uint32_t currentCommand;
-    uint32_t commandCount;
-    void(*CommandCallback)(uint32_t commandNum);
-}COMMAND_Instance;
+    uint32_t object_id;
+    void(*Signal)(void);
+}COMMAND_Command;
 
-void COMMAND_Generate(signals_signal* signal_list, uint32_t signal_list_len, 
-        SHORTPROTOCOL_Instance* inst);
+void COMMAND_Generate(signals_signal* signal_list, uint32_t signal_list_len,
+        COMMAND_Command* command_list, uint32_t command_list_len,
+        uint32_t* current_command, SHORTPROTOCOL_Instance* shortProt);
 
 
 #ifdef	__cplusplus

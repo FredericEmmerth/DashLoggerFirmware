@@ -64,7 +64,6 @@ cancomm_interface interface_list [] = {
             .MessageReceive=CAN4_MessageReceive
     }
 };
-
 uint32_t interface_list_len = sizeof(interface_list)
                                         / sizeof(cancomm_interface);
 
@@ -92,7 +91,6 @@ cancomm_message message_list [] = {
             .id=0x23A, .interface_number=1, .length=8
     }
 };
-
 uint32_t message_list_len = sizeof(message_list) / sizeof(cancomm_message);
 
 /* Define all Signals to be interpreted and shown */
@@ -164,14 +162,25 @@ signals_signal signal_list [] = {
             .origin = SIGNALS_INTERNAL_SIGNAL,
             .signal_type=SIGNALS_FLOAT_SIGNAL,
             .internal_convert_float=CONV_MaxMotorTemp
+    },
+    {.friendly_name="DISP_Motor_Temp",
+            .origin=SIGNALS_INTERNAL_SIGNAL,
+            .signal_type=SIGNALS_STRING_SIGNAL,
+            .internal_convert_string=CONV_DISP_Motor_Temp
     }
             
 };
-
 uint32_t signal_list_len = sizeof(signal_list) / sizeof(signals_signal);
 
 /* Define a Command Instance for Generating the Commands for the Display */
+COMMAND_Command command_list[] = {
+    {.object_id = 11,
+     .Signal = (void(*)(void))CONV_DISP_Motor_Temp}
+};
 
+uint32_t command_list_len = sizeof(command_list)/sizeof(COMMAND_Command);
+
+uint32_t current_command = 0;
 
 /* Define a Protocol Instance for Shortprotocol Communication with Display */
 SHORTPROTOCOL_Instance shortProt = {
@@ -195,12 +204,13 @@ int main ( void )
     
     DELAY_Microseconds(5000);
     
-    SHORTPROTOCOL_Send(&shortProt, sendData, sendData_length);
+    //SHORTPROTOCOL_Send(&shortProt, sendData, sendData_length);
     
     /* Main Loop */
     /* The Maximum Loop Time has to be smaller than 2ms, to catch all Messages*/
     /* 15k Frames/s MAX and FIFO Length 32 -> 1/15E3 * 32 = 2ms */
     while(1){
+        
         /* Read All Messages in the CAN FIFOs */
         CANCOMM_ReadMessages(message_list, message_list_len,
                 interface_list, interface_list_len);
@@ -210,7 +220,8 @@ int main ( void )
                 message_list, message_list_len);
         
         /* Generate the Commands to be sent to the Display */
-        COMMAND_Generate(signal_list, signal_list_len, &shortProt);
+        COMMAND_Generate(signal_list, signal_list_len, command_list,
+                command_list_len, &current_command, &shortProt);
         
         /* Send Messages to Display */
         SHORTPROTOCOL_Update(&shortProt);
