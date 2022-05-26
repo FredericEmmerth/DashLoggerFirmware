@@ -269,4 +269,4 @@ children:
       - type: User
         attributes: {value: 'true'}
 - type: ElementPosition
-  attributes: {x: '16', y: '64', id: can1}
+  attributes: {x: '16', y: '63', id: can1}

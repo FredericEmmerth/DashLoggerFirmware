@@ -4,6 +4,7 @@ SHORTPROTOCOL_status SHORTPROTOCOL_Send(SHORTPROTOCOL_Instance* inst,
         uint8_t* data, uint32_t length){
     /* Command Length without Zero Termination */
     /* This Function generates a Shortprotocol Packet from a Command */
+    
     /* If the last Packet is not yet send, cant accept a new Command */
     if(inst->newCommand == SHORTPROTOCOL_NOT_AVAILABLE){
         return SHORTPROTOCOL_NOT_AVAILABLE;
@@ -84,6 +85,10 @@ void SHORTPROTOCOL_Update(SHORTPROTOCOL_Instance* inst){
             package_length += 1;
         }
     }
+}
+
+SHORTPROTOCOL_status SHORTPROTOCOL_Available(SHORTPROTOCOL_Instance* inst){
+    return inst->newCommand;
 }
 
 void SHORTPROTOCOL_Initialize(SHORTPROTOCOL_Instance* inst){

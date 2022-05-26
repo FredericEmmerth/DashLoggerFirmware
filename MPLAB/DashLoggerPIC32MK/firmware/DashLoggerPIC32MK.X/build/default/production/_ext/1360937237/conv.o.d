@@ -13,7 +13,8 @@ build/default/production/_ext/1360937237/conv.o: ../src/conv.c \
  ../src/config/default/peripheral/gpio/plib_gpio.h \
  ../src/config/default/peripheral/evic/plib_evic.h \
  ../src/config/default/peripheral/spi/spi_master/plib_spi2_master.h \
- ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h
+ ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h \
+ ../src/signals.h ../src/cancomm.h
 
 ../src/conv.h:
 
@@ -46,3 +47,7 @@ build/default/production/_ext/1360937237/conv.o: ../src/conv.c \
 ../src/config/default/peripheral/spi/spi_master/plib_spi2_master.h:
 
 ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h:
+
+../src/signals.h:
+
+../src/cancomm.h:

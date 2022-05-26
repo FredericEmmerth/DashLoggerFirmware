@@ -15,7 +15,7 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
  ../src/config/default/peripheral/spi/spi_master/plib_spi2_master.h \
  ../src/config/default/peripheral/spi/spi_master/plib_spi_master_common.h \
  ../src/delay.h ../src/cancomm.h ../src/signals.h ../src/conv.h \
- ../src/shortprotocol.h ../src/crc.h
+ ../src/shortprotocol.h ../src/crc.h ../src/uart.h ../src/command.h
 
 ../src/config/default/definitions.h:
 
@@ -58,3 +58,7 @@ build/default/debug/_ext/1360937237/main.o: ../src/main.c \
 ../src/shortprotocol.h:
 
 ../src/crc.h:
+
+../src/uart.h:
+
+../src/command.h:

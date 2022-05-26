@@ -38,7 +38,8 @@ typedef enum{
 
 typedef struct{
     uint32_t length;
-    uint8_t data[SHORTPROTOCOL_MAXIMUM_COMMAND_LENGTH + SHORTPROTOCOL_OVERHEAD_BYTES];
+    uint8_t data[SHORTPROTOCOL_MAXIMUM_COMMAND_LENGTH +
+                        SHORTPROTOCOL_OVERHEAD_BYTES];
 }SHORTPROTOCOL_string;
     
 typedef struct{
@@ -57,6 +58,8 @@ SHORTPROTOCOL_status SHORTPROTOCOL_Send(SHORTPROTOCOL_Instance* inst,
         uint8_t* data, uint32_t length);
 
 void SHORTPROTOCOL_Update(SHORTPROTOCOL_Instance* inst);
+
+SHORTPROTOCOL_status SHORTPROTOCOL_Available(SHORTPROTOCOL_Instance* inst);
 
 void SHORTPROTOCOL_Initialize(SHORTPROTOCOL_Instance* inst);
 

@@ -46,6 +46,8 @@
       <itemPath>../src/shortprotocol.h</itemPath>
       <itemPath>../src/delay.h</itemPath>
       <itemPath>../src/crc.h</itemPath>
+      <itemPath>../src/uart.h</itemPath>
+      <itemPath>../src/command.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -101,6 +103,8 @@
       <itemPath>../src/conv.c</itemPath>
       <itemPath>../src/shortprotocol.c</itemPath>
       <itemPath>../src/crc.c</itemPath>
+      <itemPath>../src/uart.c</itemPath>
+      <itemPath>../src/command.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"

@@ -3,17 +3,17 @@ Optional file vector_offset_init.o not found
 Archive member included to satisfy reference by file (symbol)
 
 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
-                              C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o (_on_reset)
+                              C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o (_on_reset)
 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
-                              C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o (_on_bootstrap)
+                              C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o (_on_bootstrap)
 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-nmi-handler.o)
-                              C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o (_nmi_handler)
+                              C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o (_nmi_handler)
 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(pic32_data_init.o)
-                              C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o (__pic32_data_init)
+                              C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o (__pic32_data_init)
 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(general-exception.o)
-                              C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o (_general_exception_context)
+                              C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o (_general_exception_context)
 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
-                              C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o (_DefaultInterrupt)
+                              C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o (_DefaultInterrupt)
 
 Microchip PIC32 Memory-Usage Report
 
@@ -23,62 +23,71 @@ section                    address  length [bytes]      (dec)  Description
 .text.CAN3_Initialize   0x9d000000          0x174         372   
 .text._on_reset         0x9d000174            0x8           8   
 .app_excpt              0x9d000180           0x10          16  General-Exception 
-.text.DELAY_Microsecond 0x9d000190           0x6c         108   
-.rodata                 0x9d0001fc            0x4           4  Read-only const 
+.text.CONV_MotorTemp_RR 0x9d000190           0x70         112   
 .vectors                0x9d000200           0x48          72   
-.dinit                  0x9d000248          0x820        2080   
-.rodata                 0x9d000a68          0x400        1024  Read-only const 
-.text.CAN1_MessageTrans 0x9d000e68          0x364         868   
-.text.CAN3_MessageTrans 0x9d0011cc          0x364         868   
-.text.CAN4_MessageTrans 0x9d001530          0x364         868   
-.text.CAN2_MessageTrans 0x9d001894          0x364         868   
-.text.CAN1_MessageRecei 0x9d001bf8          0x2c4         708   
-.text.CAN3_MessageRecei 0x9d001ebc          0x2c4         708   
-.text.CAN4_MessageRecei 0x9d002180          0x2c4         708   
-.text.CAN2_MessageRecei 0x9d002444          0x2c4         708   
-.text.SHORTPROTOCOL_Sen 0x9d002708          0x18c         396   
-.text.CAN4_Initialize   0x9d002894          0x174         372   
-.text.CAN2_Initialize   0x9d002a08          0x174         372   
-.text.CAN1_Initialize   0x9d002b7c          0x170         368   
-.text.GPIO_Initialize   0x9d002cec          0x120         288   
-.text.SHORTPROTOCOL_Upd 0x9d002e0c          0x108         264   
-.text.CLK_Initialize    0x9d002f14           0xdc         220   
-.text.general_exception 0x9d002ff0           0xdc         220   
-.text.SPI2_Initialize   0x9d0030cc           0xc4         196   
-.text.SYS_Initialize    0x9d003190           0xbc         188   
-.text.crc_update        0x9d00324c           0xac         172   
-.text                   0x9d0032f8           0x8c         140  App's exec code 
-.text.main              0x9d003384           0x78         120   
-.text.CRC_Calculate     0x9d0033fc           0x68         104   
-.text.UART3_Initialize  0x9d003464           0x54          84   
-.text.main_entry        0x9d0034b8           0x54          84   
-.text.UART3_WriteByte   0x9d00350c           0x4c          76   
-.text.UART3_ReceiverIsR 0x9d003558           0x48          72   
-.text.UART_ReadAvailabl 0x9d0035a0           0x48          72   
-.text.UART_WriteAvailab 0x9d0035e8           0x48          72   
-.text.UART3_Transmitter 0x9d003630           0x44          68   
-.text.UART_WriteByte    0x9d003674           0x44          68   
-.text                   0x9d0036b8           0x44          68  App's exec code 
-.text.EVIC_Initialize   0x9d0036fc           0x40          64   
-.text.SHORTPROTOCOL_Ini 0x9d00373c           0x3c          60   
-.text.UART_ReadByte     0x9d003778           0x34          52   
-.text._general_exceptio 0x9d0037ac           0x30          48   
-.text._bootstrap_except 0x9d0037dc           0x30          48   
-.text.CONV_MinVoltage   0x9d00380c           0x2c          44   
-.text.CONV_MaxTemp      0x9d003838           0x2c          44   
-.text.CONV_LapTime      0x9d003864           0x2c          44   
-.text.CONV_MaxMotTemp   0x9d003890           0x2c          44   
-.text.CONV_MaxInvTemp   0x9d0038bc           0x2c          44   
-.text.UART3_ReadByte    0x9d0038e8           0x28          40   
-.text.CONV_FSG_AMI_stat 0x9d003910           0x28          40   
-.text.crc_finalize      0x9d003938           0x28          40   
-.text.crc_init          0x9d003960           0x24          36   
-.MIPS.abiflags          0x9d003988           0x18          24   
-.text                   0x9d0039a0           0x18          24  App's exec code 
-.rodata                 0x9d0039b8           0x20          32  Read-only const 
-.rodata                 0x9d0039d8           0x20          32  Read-only const 
-.text._on_bootstrap     0x9d0039f8            0x8           8   
-      Total kseg0_program_mem used  :      0x39f8       14840  1.4% of 0x100000
+.dinit                  0x9d000248          0x9b0        2480   
+.rodata                 0x9d000bf8          0x400        1024  Read-only const 
+.text.SIGNALS_Interpret 0x9d000ff8          0x3b8         952   
+.text.CAN1_MessageTrans 0x9d0013b0          0x364         868   
+.text.CAN3_MessageTrans 0x9d001714          0x364         868   
+.text.CAN4_MessageTrans 0x9d001a78          0x364         868   
+.text.CAN2_MessageTrans 0x9d001ddc          0x364         868   
+.text.CAN1_MessageRecei 0x9d002140          0x2c4         708   
+.text.CAN3_MessageRecei 0x9d002404          0x2c4         708   
+.text.CAN4_MessageRecei 0x9d0026c8          0x2c4         708   
+.text.CAN2_MessageRecei 0x9d00298c          0x2c4         708   
+.text.CANCOMM_ReadMessa 0x9d002c50          0x228         552   
+.text.SHORTPROTOCOL_Sen 0x9d002e78          0x18c         396   
+.text.CAN4_Initialize   0x9d003004          0x174         372   
+.text.CAN2_Initialize   0x9d003178          0x174         372   
+.text.CAN1_Initialize   0x9d0032ec          0x170         368   
+.text.signals_find_data 0x9d00345c          0x154         340   
+.text.GPIO_Initialize   0x9d0035b0          0x120         288   
+.text.SHORTPROTOCOL_Upd 0x9d0036d0          0x108         264   
+.text.main              0x9d0037d8           0xf0         240   
+.text.CLK_Initialize    0x9d0038c8           0xdc         220   
+.text.general_exception 0x9d0039a4           0xdc         220   
+.text.SPI2_Initialize   0x9d003a80           0xc4         196   
+.text.SYS_Initialize    0x9d003b44           0xbc         188   
+.text.crc_update        0x9d003c00           0xac         172   
+.text                   0x9d003cac           0x8c         140  App's exec code 
+.text.CONV_MotorTemp_RL 0x9d003d38           0x70         112   
+.text.CONV_MotorTemp_FR 0x9d003da8           0x70         112   
+.text.DELAY_Microsecond 0x9d003e18           0x6c         108   
+.text.CONV_MotorTemp_FL 0x9d003e84           0x6c         108   
+.text.CRC_Calculate     0x9d003ef0           0x68         104   
+.text.UART3_Initialize  0x9d003f58           0x54          84   
+.text.main_entry        0x9d003fac           0x54          84   
+.text.UART3_WriteByte   0x9d004000           0x4c          76   
+.text.UART3_ReceiverIsR 0x9d00404c           0x48          72   
+.text.UART_ReadAvailabl 0x9d004094           0x48          72   
+.text.UART_WriteAvailab 0x9d0040dc           0x48          72   
+.text.UART3_Transmitter 0x9d004124           0x44          68   
+.text.UART_WriteByte    0x9d004168           0x44          68   
+.text.COMMAND_Generate  0x9d0041ac           0x44          68   
+.text                   0x9d0041f0           0x44          68  App's exec code 
+.text.EVIC_Initialize   0x9d004234           0x40          64   
+.text.SHORTPROTOCOL_Ini 0x9d004274           0x3c          60   
+.text.UART_ReadByte     0x9d0042b0           0x34          52   
+.text._general_exceptio 0x9d0042e4           0x30          48   
+.text._bootstrap_except 0x9d004314           0x30          48   
+.text.CONV_MaxMotorTemp 0x9d004344           0x30          48   
+.text.CONV_MinVoltage   0x9d004374           0x2c          44   
+.text.CONV_MaxTemp      0x9d0043a0           0x2c          44   
+.text.CONV_LapTime      0x9d0043cc           0x2c          44   
+.text.CONV_MaxInvTemp   0x9d0043f8           0x2c          44   
+.text.SHORTPROTOCOL_Ava 0x9d004424           0x2c          44   
+.text.UART3_ReadByte    0x9d004450           0x28          40   
+.text.CONV_FSG_AMI_stat 0x9d004478           0x28          40   
+.text.crc_finalize      0x9d0044a0           0x28          40   
+.text.crc_init          0x9d0044c8           0x24          36   
+.MIPS.abiflags          0x9d0044f0           0x18          24   
+.text                   0x9d004508           0x18          24  App's exec code 
+.rodata                 0x9d004520           0x20          32  Read-only const 
+.rodata                 0x9d004540           0x20          32  Read-only const 
+.rodata                 0x9d004560           0x10          16  Read-only const 
+.text._on_bootstrap     0x9d004570            0x8           8   
+      Total kseg0_program_mem used  :      0x4570       17776  1.7% of 0x100000
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -92,27 +101,27 @@ section                    address  length [bytes]      (dec)  Description
 .bev_excpt              0xbfc00380           0x10          16  BEV-Exception 
          Total kseg1_boot_mem used  :       0x1b4         436  37.8% of 0x480
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x3bac       15276  1.5% of 0x100480
+         Total Program Memory used  :      0x4724       18212  1.7% of 0x100480
         --------------------------------------------------------------------------
 
 
 kseg0 Data-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-.sdata                  0x80000000           0x18          24  Small init data 
-.sbss                   0x80000018           0x18          24  Small uninit data 
-.data                   0x80001370          0x374         884  Initialized data 
-         Total kseg0_data_mem used  :       0x3a4         932  0.4% of 0x40000
+.sdata                  0x80000000           0x10          16  Small init data 
+.sbss                   0x80000010           0x18          24  Small uninit data 
+.data                   0x80001370          0x50f        1295  Initialized data 
+         Total kseg0_data_mem used  :       0x537        1335  0.5% of 0x40000
         --------------------------------------------------------------------------
-            Total Data Memory used  :       0x3a4         932  0.4% of 0x40000
+            Total Data Memory used  :       0x537        1335  0.5% of 0x40000
         --------------------------------------------------------------------------
 
 
 Dynamic Data-Memory Reservation
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-heap                    0x800016e8          0x200         512  Reserved for heap 
-stack                   0x80001900        0x3e6f0      255728  Reserved for stack 
+heap                    0x80001880          0x200         512  Reserved for heap 
+stack                   0x80001a98        0x3e558      255320  Reserved for stack 
 
         --------------------------------------------------------------------------
 
@@ -374,18 +383,12 @@ Discarded input sections
  .reginfo       0x0000000000000000       0x18 build/default/production/_ext/1360937237/cancomm.o
  .MIPS.abiflags
                 0x0000000000000000       0x18 build/default/production/_ext/1360937237/cancomm.o
- .text.CANCOMM_ReadMessages
-                0x0000000000000000      0x228 build/default/production/_ext/1360937237/cancomm.o
  .text          0x0000000000000000        0x0 build/default/production/_ext/1360937237/signals.o
  .data          0x0000000000000000        0x0 build/default/production/_ext/1360937237/signals.o
  .bss           0x0000000000000000        0x0 build/default/production/_ext/1360937237/signals.o
  .reginfo       0x0000000000000000       0x18 build/default/production/_ext/1360937237/signals.o
  .MIPS.abiflags
                 0x0000000000000000       0x18 build/default/production/_ext/1360937237/signals.o
- .text.SIGNALS_Interpret
-                0x0000000000000000      0x170 build/default/production/_ext/1360937237/signals.o
- .text.signals_find_data
-                0x0000000000000000      0x14c build/default/production/_ext/1360937237/signals.o
  .text          0x0000000000000000        0x0 build/default/production/_ext/1360937237/conv.o
  .data          0x0000000000000000        0x0 build/default/production/_ext/1360937237/conv.o
  .bss           0x0000000000000000        0x0 build/default/production/_ext/1360937237/conv.o
@@ -404,31 +407,45 @@ Discarded input sections
  .reginfo       0x0000000000000000       0x18 build/default/production/_ext/1360937237/crc.o
  .MIPS.abiflags
                 0x0000000000000000       0x18 build/default/production/_ext/1360937237/crc.o
- .text          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
- .data          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
- .bss           0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
- .reginfo       0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
+ .text          0x0000000000000000        0x0 build/default/production/_ext/1360937237/uart.o
+ .data          0x0000000000000000        0x0 build/default/production/_ext/1360937237/uart.o
+ .bss           0x0000000000000000        0x0 build/default/production/_ext/1360937237/uart.o
+ .reginfo       0x0000000000000000       0x18 build/default/production/_ext/1360937237/uart.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
- .text          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccQHjclb.o
- .data          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccQHjclb.o
- .bss           0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccQHjclb.o
- .reginfo       0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccQHjclb.o
+                0x0000000000000000       0x18 build/default/production/_ext/1360937237/uart.o
+ .text          0x0000000000000000        0x0 build/default/production/_ext/1360937237/command.o
+ .data          0x0000000000000000        0x0 build/default/production/_ext/1360937237/command.o
+ .bss           0x0000000000000000        0x0 build/default/production/_ext/1360937237/command.o
+ .reginfo       0x0000000000000000       0x18 build/default/production/_ext/1360937237/command.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccQHjclb.o
- .text          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
- .data          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
- .bss           0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
- .reginfo       0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x0000000000000000       0x18 build/default/production/_ext/1360937237/command.o
+ .text.COMMAND_ChangeString
+                0x0000000000000000       0x30 build/default/production/_ext/1360937237/command.o
+ .text          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
+ .data          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
+ .bss           0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
+ .reginfo       0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
- .text          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o
- .data          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o
- .bss           0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o
- .reginfo       0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o
+                0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
+ .text          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccK030aD.o
+ .data          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccK030aD.o
+ .bss           0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccK030aD.o
+ .reginfo       0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccK030aD.o
  .MIPS.abiflags
-                0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o
- .discard       0x0000000000000000        0x4 C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o
+                0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccK030aD.o
+ .text          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
+ .data          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
+ .bss           0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
+ .reginfo       0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
+ .text          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o
+ .data          0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o
+ .bss           0x0000000000000000        0x0 C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o
+ .reginfo       0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o
+ .MIPS.abiflags
+                0x0000000000000000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o
+ .discard       0x0000000000000000        0x4 C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o
  .data          0x0000000000000000        0x0 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
  .bss           0x0000000000000000        0x0 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
  .reginfo       0x0000000000000000       0x18 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
@@ -621,6 +638,8 @@ LOAD build/default/production/_ext/1360937237/signals.o
 LOAD build/default/production/_ext/1360937237/conv.o
 LOAD build/default/production/_ext/1360937237/shortprotocol.o
 LOAD build/default/production/_ext/1360937237/crc.o
+LOAD build/default/production/_ext/1360937237/uart.o
+LOAD build/default/production/_ext/1360937237/command.o
                 0x0000000000000001                __MPLAB_BUILD = 0x1
                 0x0000000000000400                PROVIDE (_min_stack_size = 0x400)
 START GROUP
@@ -869,20 +888,20 @@ END GROUP
 
 .reset          0x00000000bfc00000      0x1a4
  *(.reset)
- .reset         0x00000000bfc00000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
+ .reset         0x00000000bfc00000       0x18 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
                 0x00000000bfc00000                _reset
  *(.reset.startup)
  .reset.startup
-                0x00000000bfc00018      0x18c C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
+                0x00000000bfc00018      0x18c C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
                 0x00000000bfc00018                _startup
 
 .bev_excpt      0x00000000bfc00380       0x10
  *(.bev_handler)
- .bev_handler   0x00000000bfc00380       0x10 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
+ .bev_handler   0x00000000bfc00380       0x10 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
 
 .app_excpt      0x000000009d000180       0x10
  *(.gen_handler)
- .gen_handler   0x000000009d000180       0x10 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
+ .gen_handler   0x000000009d000180       0x10 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
 
 .vectors        0x000000009d000200       0x48
                 0x000000009d000200                . = ALIGN (0x4)
@@ -1779,47 +1798,46 @@ END GROUP
  *(.got)
                 0x0000000080000000                . = ALIGN (0x4)
 
-.sdata          0x0000000080000000       0x18
+.sdata          0x0000000080000000       0x10
                 0x0000000080000000                _sdata_begin = .
  *(.sdata .sdata.* .gnu.linkonce.s.*)
- .sdata         0x0000000080000000       0x18 build/default/production/_ext/1360937237/main.o
+ .sdata         0x0000000080000000       0x10 build/default/production/_ext/1360937237/main.o
                 0x0000000080000000                interface_list_len
                 0x0000000080000004                message_list_len
                 0x0000000080000008                signal_list_len
-                0x000000008000000c                sendData
-                0x0000000080000014                sendData_length
-                0x0000000080000018                . = ALIGN (0x4)
-                0x0000000080000018                _sdata_end = .
+                0x000000008000000c                sendData_length
+                0x0000000080000010                . = ALIGN (0x4)
+                0x0000000080000010                _sdata_end = .
 
 .lit8
  *(.lit8)
 
 .lit4
  *(.lit4)
-                0x0000000080000018                . = ALIGN (0x4)
-                0x0000000080000018                _data_end = .
-                0x0000000080000018                _bss_begin = .
+                0x0000000080000010                . = ALIGN (0x4)
+                0x0000000080000010                _data_end = .
+                0x0000000080000010                _bss_begin = .
 
-.sbss           0x0000000080000018       0x18
-                0x0000000080000018                _sbss_begin = .
+.sbss           0x0000000080000010       0x18
+                0x0000000080000010                _sbss_begin = .
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000080000018        0x4 build/default/production/_ext/1984168316/plib_canfd1.o
- .sbss          0x000000008000001c        0x4 build/default/production/_ext/1984168316/plib_canfd3.o
- .sbss          0x0000000080000020        0x4 build/default/production/_ext/1984168316/plib_canfd4.o
- .sbss          0x0000000080000024        0x4 build/default/production/_ext/1984168316/plib_canfd2.o
- .sbss          0x0000000080000028        0x8 build/default/production/_ext/1171490990/exceptions.o
+ .sbss          0x0000000080000010        0x4 build/default/production/_ext/1984168316/plib_canfd1.o
+ .sbss          0x0000000080000014        0x4 build/default/production/_ext/1984168316/plib_canfd3.o
+ .sbss          0x0000000080000018        0x4 build/default/production/_ext/1984168316/plib_canfd4.o
+ .sbss          0x000000008000001c        0x4 build/default/production/_ext/1984168316/plib_canfd2.o
+ .sbss          0x0000000080000020        0x8 build/default/production/_ext/1171490990/exceptions.o
  *(.scommon)
-                0x0000000080000030                _sbss_end = .
-                0x0000000080000030                . = ALIGN (0x4)
+                0x0000000080000028                _sbss_end = .
+                0x0000000080000028                . = ALIGN (0x4)
 
-.bss            0x0000000080000030        0x0
+.bss            0x0000000080000028        0x0
  *(.dynbss)
  *(COMMON)
-                0x0000000080000030                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x0000000080000030                . = ALIGN (0x4)
-                0x0000000080000030                _end = .
-                0x0000000080000030                _bss_end = .
+                0x0000000080000028                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0000000080000028                . = ALIGN (0x4)
+                0x0000000080000028                _end = .
+                0x0000000080000028                _bss_end = .
                 0x0000000000040000                _bmxdudba_address = LENGTH (kseg0_data_mem)
                 0x0000000000040000                _bmxdupba_address = LENGTH (kseg0_data_mem)
 
@@ -1862,6 +1880,8 @@ END GROUP
  .mdebug.abi32  0x0000000000000000        0x0 build/default/production/_ext/1360937237/conv.o
  .mdebug.abi32  0x0000000000000000        0x0 build/default/production/_ext/1360937237/shortprotocol.o
  .mdebug.abi32  0x0000000000000000        0x0 build/default/production/_ext/1360937237/crc.o
+ .mdebug.abi32  0x0000000000000000        0x0 build/default/production/_ext/1360937237/uart.o
+ .mdebug.abi32  0x0000000000000000        0x0 build/default/production/_ext/1360937237/command.o
  .mdebug.abi32  0x0000000000000000        0x0 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
  .mdebug.abi32  0x0000000000000000        0x0 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
  .mdebug.abi32  0x0000000000000000        0x0 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
@@ -1928,6 +1948,8 @@ END GROUP
  .comment       0x0000000000000053       0x54 build/default/production/_ext/1360937237/conv.o
  .comment       0x0000000000000053       0x54 build/default/production/_ext/1360937237/shortprotocol.o
  .comment       0x0000000000000053       0x54 build/default/production/_ext/1360937237/crc.o
+ .comment       0x0000000000000053       0x54 build/default/production/_ext/1360937237/uart.o
+ .comment       0x0000000000000053       0x54 build/default/production/_ext/1360937237/command.o
  .comment       0x0000000000000053       0x54 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
  .comment       0x0000000000000053       0x54 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
  .comment       0x0000000000000053       0x54 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
@@ -1948,7 +1970,7 @@ END GROUP
  *.elf(.debug_sfnames)
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x618
+.debug_aranges  0x0000000000000000      0x680
  *.elf(.debug_aranges)
  *(.debug_aranges)
  .debug_aranges
@@ -1978,31 +2000,35 @@ END GROUP
  .debug_aranges
                 0x0000000000000430       0x28 build/default/production/_ext/1171490990/exceptions.o
  .debug_aranges
-                0x0000000000000458       0x40 build/default/production/_ext/1360937237/main.o
+                0x0000000000000458       0x20 build/default/production/_ext/1360937237/main.o
  .debug_aranges
-                0x0000000000000498       0x28 build/default/production/_ext/54025020/delay.o
+                0x0000000000000478       0x28 build/default/production/_ext/54025020/delay.o
  .debug_aranges
-                0x00000000000004c0       0x20 build/default/production/_ext/1360937237/cancomm.o
+                0x00000000000004a0       0x20 build/default/production/_ext/1360937237/cancomm.o
  .debug_aranges
-                0x00000000000004e0       0x28 build/default/production/_ext/1360937237/signals.o
+                0x00000000000004c0       0x28 build/default/production/_ext/1360937237/signals.o
  .debug_aranges
-                0x0000000000000508       0x48 build/default/production/_ext/1360937237/conv.o
+                0x00000000000004e8       0x68 build/default/production/_ext/1360937237/conv.o
  .debug_aranges
-                0x0000000000000550       0x30 build/default/production/_ext/1360937237/shortprotocol.o
+                0x0000000000000550       0x38 build/default/production/_ext/1360937237/shortprotocol.o
  .debug_aranges
-                0x0000000000000580       0x38 build/default/production/_ext/1360937237/crc.o
+                0x0000000000000588       0x38 build/default/production/_ext/1360937237/crc.o
  .debug_aranges
-                0x00000000000005b8       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+                0x00000000000005c0       0x38 build/default/production/_ext/1360937237/uart.o
  .debug_aranges
-                0x00000000000005d8       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+                0x00000000000005f8       0x28 build/default/production/_ext/1360937237/command.o
  .debug_aranges
-                0x00000000000005f8       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
+                0x0000000000000620       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+ .debug_aranges
+                0x0000000000000640       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+ .debug_aranges
+                0x0000000000000660       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
 
 .debug_pubnames
  *.elf(.debug_pubnames)
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000   0x7afef1
+.debug_info     0x0000000000000000   0x897733
  *.elf(.debug_info .gnu.linkonce.wi.*)
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000    0x73f6a build/default/production/_ext/1984168316/plib_canfd1.o
@@ -2018,18 +2044,20 @@ END GROUP
  .debug_info    0x0000000000412901    0x7387d build/default/production/_ext/1171490990/initialization.o
  .debug_info    0x000000000048617e    0x7384a build/default/production/_ext/1171490990/interrupts.o
  .debug_info    0x00000000004f99c8    0x7396a build/default/production/_ext/1171490990/exceptions.o
- .debug_info    0x000000000056d332    0x73dda build/default/production/_ext/1360937237/main.o
- .debug_info    0x00000000005e110c       0xe6 build/default/production/_ext/54025020/delay.o
- .debug_info    0x00000000005e11f2    0x73b44 build/default/production/_ext/1360937237/cancomm.o
- .debug_info    0x0000000000654d36    0x73b43 build/default/production/_ext/1360937237/signals.o
- .debug_info    0x00000000006c8879    0x73979 build/default/production/_ext/1360937237/conv.o
- .debug_info    0x000000000073c1f2    0x73a71 build/default/production/_ext/1360937237/shortprotocol.o
- .debug_info    0x00000000007afc63      0x1d0 build/default/production/_ext/1360937237/crc.o
- .debug_info    0x00000000007afe33       0x3f c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
- .debug_info    0x00000000007afe72       0x3f c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
- .debug_info    0x00000000007afeb1       0x40 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
+ .debug_info    0x000000000056d332    0x73dfa build/default/production/_ext/1360937237/main.o
+ .debug_info    0x00000000005e112c       0xe6 build/default/production/_ext/54025020/delay.o
+ .debug_info    0x00000000005e1212    0x73b44 build/default/production/_ext/1360937237/cancomm.o
+ .debug_info    0x0000000000654d56    0x73bcd build/default/production/_ext/1360937237/signals.o
+ .debug_info    0x00000000006c8923    0x73c17 build/default/production/_ext/1360937237/conv.o
+ .debug_info    0x000000000073c53a    0x73a9e build/default/production/_ext/1360937237/shortprotocol.o
+ .debug_info    0x00000000007affd8      0x1d0 build/default/production/_ext/1360937237/crc.o
+ .debug_info    0x00000000007b01a8    0x73909 build/default/production/_ext/1360937237/uart.o
+ .debug_info    0x0000000000823ab1    0x73bc4 build/default/production/_ext/1360937237/command.o
+ .debug_info    0x0000000000897675       0x3f c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+ .debug_info    0x00000000008976b4       0x3f c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x00000000008976f3       0x40 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
 
-.debug_abbrev   0x0000000000000000     0x2858
+.debug_abbrev   0x0000000000000000     0x2cf2
  *.elf(.debug_abbrev)
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x2f4 build/default/production/_ext/1984168316/plib_canfd1.o
@@ -2045,18 +2073,20 @@ END GROUP
  .debug_abbrev  0x00000000000016b0      0x18e build/default/production/_ext/1171490990/initialization.o
  .debug_abbrev  0x000000000000183e      0x156 build/default/production/_ext/1171490990/interrupts.o
  .debug_abbrev  0x0000000000001994      0x1bf build/default/production/_ext/1171490990/exceptions.o
- .debug_abbrev  0x0000000000001b53      0x235 build/default/production/_ext/1360937237/main.o
- .debug_abbrev  0x0000000000001d88       0xa4 build/default/production/_ext/54025020/delay.o
- .debug_abbrev  0x0000000000001e2c      0x21f build/default/production/_ext/1360937237/cancomm.o
- .debug_abbrev  0x000000000000204b      0x24e build/default/production/_ext/1360937237/signals.o
- .debug_abbrev  0x0000000000002299      0x1b0 build/default/production/_ext/1360937237/conv.o
- .debug_abbrev  0x0000000000002449      0x254 build/default/production/_ext/1360937237/shortprotocol.o
- .debug_abbrev  0x000000000000269d      0x12e build/default/production/_ext/1360937237/crc.o
- .debug_abbrev  0x00000000000027cb       0x2e c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
- .debug_abbrev  0x00000000000027f9       0x2e c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
- .debug_abbrev  0x0000000000002827       0x31 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
+ .debug_abbrev  0x0000000000001b53      0x219 build/default/production/_ext/1360937237/main.o
+ .debug_abbrev  0x0000000000001d6c       0xa4 build/default/production/_ext/54025020/delay.o
+ .debug_abbrev  0x0000000000001e10      0x21f build/default/production/_ext/1360937237/cancomm.o
+ .debug_abbrev  0x000000000000202f      0x25d build/default/production/_ext/1360937237/signals.o
+ .debug_abbrev  0x000000000000228c      0x234 build/default/production/_ext/1360937237/conv.o
+ .debug_abbrev  0x00000000000024c0      0x272 build/default/production/_ext/1360937237/shortprotocol.o
+ .debug_abbrev  0x0000000000002732      0x12e build/default/production/_ext/1360937237/crc.o
+ .debug_abbrev  0x0000000000002860      0x1c1 build/default/production/_ext/1360937237/uart.o
+ .debug_abbrev  0x0000000000002a21      0x244 build/default/production/_ext/1360937237/command.o
+ .debug_abbrev  0x0000000000002c65       0x2e c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+ .debug_abbrev  0x0000000000002c93       0x2e c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+ .debug_abbrev  0x0000000000002cc1       0x31 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
 
-.debug_line     0x0000000000000000     0x4408
+.debug_line     0x0000000000000000     0x4892
  *.elf(.debug_line)
  *(.debug_line)
  .debug_line    0x0000000000000000      0x74e build/default/production/_ext/1984168316/plib_canfd1.o
@@ -2072,18 +2102,20 @@ END GROUP
  .debug_line    0x0000000000002e3d      0x1c9 build/default/production/_ext/1171490990/initialization.o
  .debug_line    0x0000000000003006      0x124 build/default/production/_ext/1171490990/interrupts.o
  .debug_line    0x000000000000312a      0x21b build/default/production/_ext/1171490990/exceptions.o
- .debug_line    0x0000000000003345      0x2b5 build/default/production/_ext/1360937237/main.o
- .debug_line    0x00000000000035fa      0x10e build/default/production/_ext/54025020/delay.o
- .debug_line    0x0000000000003708      0x2a2 build/default/production/_ext/1360937237/cancomm.o
- .debug_line    0x00000000000039aa      0x262 build/default/production/_ext/1360937237/signals.o
- .debug_line    0x0000000000003c0c      0x1fe build/default/production/_ext/1360937237/conv.o
- .debug_line    0x0000000000003e0a      0x27f build/default/production/_ext/1360937237/shortprotocol.o
- .debug_line    0x0000000000004089      0x166 build/default/production/_ext/1360937237/crc.o
- .debug_line    0x00000000000041ef       0xa6 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
- .debug_line    0x0000000000004295       0xaa c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
- .debug_line    0x000000000000433f       0xc9 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
+ .debug_line    0x0000000000003345      0x24e build/default/production/_ext/1360937237/main.o
+ .debug_line    0x0000000000003593      0x10e build/default/production/_ext/54025020/delay.o
+ .debug_line    0x00000000000036a1      0x2a2 build/default/production/_ext/1360937237/cancomm.o
+ .debug_line    0x0000000000003943      0x2cf build/default/production/_ext/1360937237/signals.o
+ .debug_line    0x0000000000003c12      0x2b0 build/default/production/_ext/1360937237/conv.o
+ .debug_line    0x0000000000003ec2      0x297 build/default/production/_ext/1360937237/shortprotocol.o
+ .debug_line    0x0000000000004159      0x166 build/default/production/_ext/1360937237/crc.o
+ .debug_line    0x00000000000042bf      0x1f4 build/default/production/_ext/1360937237/uart.o
+ .debug_line    0x00000000000044b3      0x1c6 build/default/production/_ext/1360937237/command.o
+ .debug_line    0x0000000000004679       0xa6 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+ .debug_line    0x000000000000471f       0xaa c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x00000000000047c9       0xc9 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
 
-.debug_frame    0x0000000000000000     0x11b4
+.debug_frame    0x0000000000000000     0x12b8
  *.elf(.debug_frame)
  *(.debug_frame)
  .debug_frame   0x0000000000000000      0x1ec build/default/production/_ext/1984168316/plib_canfd1.o
@@ -2098,18 +2130,20 @@ END GROUP
  .debug_frame   0x0000000000000d0c       0x50 build/default/production/_ext/163028504/xc32_monitor.o
  .debug_frame   0x0000000000000d5c       0x34 build/default/production/_ext/1171490990/initialization.o
  .debug_frame   0x0000000000000d90       0x48 build/default/production/_ext/1171490990/exceptions.o
- .debug_frame   0x0000000000000dd8       0xbc build/default/production/_ext/1360937237/main.o
- .debug_frame   0x0000000000000e94       0x54 build/default/production/_ext/54025020/delay.o
- .debug_frame   0x0000000000000ee8       0x34 build/default/production/_ext/1360937237/cancomm.o
- .debug_frame   0x0000000000000f1c       0x5c build/default/production/_ext/1360937237/signals.o
- .debug_frame   0x0000000000000f78       0xd0 build/default/production/_ext/1360937237/conv.o
- .debug_frame   0x0000000000001048       0x78 build/default/production/_ext/1360937237/shortprotocol.o
- .debug_frame   0x00000000000010c0       0x94 build/default/production/_ext/1360937237/crc.o
- .debug_frame   0x0000000000001154       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
- .debug_frame   0x0000000000001174       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
- .debug_frame   0x0000000000001194       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
+ .debug_frame   0x0000000000000dd8       0x2c build/default/production/_ext/1360937237/main.o
+ .debug_frame   0x0000000000000e04       0x54 build/default/production/_ext/54025020/delay.o
+ .debug_frame   0x0000000000000e58       0x34 build/default/production/_ext/1360937237/cancomm.o
+ .debug_frame   0x0000000000000e8c       0x5c build/default/production/_ext/1360937237/signals.o
+ .debug_frame   0x0000000000000ee8      0x150 build/default/production/_ext/1360937237/conv.o
+ .debug_frame   0x0000000000001038       0x98 build/default/production/_ext/1360937237/shortprotocol.o
+ .debug_frame   0x00000000000010d0       0x94 build/default/production/_ext/1360937237/crc.o
+ .debug_frame   0x0000000000001164       0xa0 build/default/production/_ext/1360937237/uart.o
+ .debug_frame   0x0000000000001204       0x54 build/default/production/_ext/1360937237/command.o
+ .debug_frame   0x0000000000001258       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+ .debug_frame   0x0000000000001278       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+ .debug_frame   0x0000000000001298       0x20 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
 
-.debug_str      0x0000000000000000   0x2eb8de
+.debug_str      0x0000000000000000   0x3434f0
  *.elf(.debug_str)
  *(.debug_str)
  .debug_str     0x0000000000000000    0x2c037 build/default/production/_ext/1984168316/plib_canfd1.o
@@ -2125,16 +2159,18 @@ END GROUP
  .debug_str     0x000000000018c5f9    0x2bafd build/default/production/_ext/1171490990/initialization.o
  .debug_str     0x00000000001b80f6    0x2bae5 build/default/production/_ext/1171490990/interrupts.o
  .debug_str     0x00000000001e3bdb    0x2bbfe build/default/production/_ext/1171490990/exceptions.o
- .debug_str     0x000000000020f7d9    0x2bebd build/default/production/_ext/1360937237/main.o
- .debug_str     0x000000000023b696      0x31f build/default/production/_ext/54025020/delay.o
- .debug_str     0x000000000023b9b5    0x2bd03 build/default/production/_ext/1360937237/cancomm.o
- .debug_str     0x00000000002676b8    0x2bc63 build/default/production/_ext/1360937237/signals.o
- .debug_str     0x000000000029331b    0x2bb40 build/default/production/_ext/1360937237/conv.o
- .debug_str     0x00000000002bee5b    0x2bc56 build/default/production/_ext/1360937237/shortprotocol.o
- .debug_str     0x00000000002eaab1      0x33d build/default/production/_ext/1360937237/crc.o
- .debug_str     0x00000000002eadee      0x39a c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
- .debug_str     0x00000000002eb188      0x3a2 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
- .debug_str     0x00000000002eb52a      0x3b4 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
+ .debug_str     0x000000000020f7d9    0x2bf11 build/default/production/_ext/1360937237/main.o
+ .debug_str     0x000000000023b6ea      0x31f build/default/production/_ext/54025020/delay.o
+ .debug_str     0x000000000023ba09    0x2bd03 build/default/production/_ext/1360937237/cancomm.o
+ .debug_str     0x000000000026770c    0x2bcfb build/default/production/_ext/1360937237/signals.o
+ .debug_str     0x0000000000293407    0x2bd0a build/default/production/_ext/1360937237/conv.o
+ .debug_str     0x00000000002bf111    0x2bc6e build/default/production/_ext/1360937237/shortprotocol.o
+ .debug_str     0x00000000002ead7f      0x33d build/default/production/_ext/1360937237/crc.o
+ .debug_str     0x00000000002eb0bc    0x2bb94 build/default/production/_ext/1360937237/uart.o
+ .debug_str     0x0000000000316c50    0x2bdb0 build/default/production/_ext/1360937237/command.o
+ .debug_str     0x0000000000342a00      0x39a c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+ .debug_str     0x0000000000342d9a      0x3a2 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+ .debug_str     0x000000000034313c      0x3b4 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
 
 .debug_loc
  *.elf(.debug_loc)
@@ -2164,7 +2200,7 @@ END GROUP
  *.elf(.debug_pubtypes)
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x4b8
+.debug_ranges   0x0000000000000000      0x500
  *.elf(.debug_ranges)
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x78 build/default/production/_ext/1984168316/plib_canfd1.o
@@ -2179,16 +2215,18 @@ END GROUP
  .debug_ranges  0x0000000000000340       0x18 build/default/production/_ext/163028504/xc32_monitor.o
  .debug_ranges  0x0000000000000358       0x10 build/default/production/_ext/1171490990/initialization.o
  .debug_ranges  0x0000000000000368       0x18 build/default/production/_ext/1171490990/exceptions.o
- .debug_ranges  0x0000000000000380       0x30 build/default/production/_ext/1360937237/main.o
- .debug_ranges  0x00000000000003b0       0x18 build/default/production/_ext/54025020/delay.o
- .debug_ranges  0x00000000000003c8       0x10 build/default/production/_ext/1360937237/cancomm.o
- .debug_ranges  0x00000000000003d8       0x18 build/default/production/_ext/1360937237/signals.o
- .debug_ranges  0x00000000000003f0       0x38 build/default/production/_ext/1360937237/conv.o
- .debug_ranges  0x0000000000000428       0x38 build/default/production/_ext/1360937237/shortprotocol.o
- .debug_ranges  0x0000000000000460       0x28 build/default/production/_ext/1360937237/crc.o
- .debug_ranges  0x0000000000000488       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
- .debug_ranges  0x0000000000000498       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
- .debug_ranges  0x00000000000004a8       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
+ .debug_ranges  0x0000000000000380       0x10 build/default/production/_ext/1360937237/main.o
+ .debug_ranges  0x0000000000000390       0x18 build/default/production/_ext/54025020/delay.o
+ .debug_ranges  0x00000000000003a8       0x10 build/default/production/_ext/1360937237/cancomm.o
+ .debug_ranges  0x00000000000003b8       0x18 build/default/production/_ext/1360937237/signals.o
+ .debug_ranges  0x00000000000003d0       0x58 build/default/production/_ext/1360937237/conv.o
+ .debug_ranges  0x0000000000000428       0x40 build/default/production/_ext/1360937237/shortprotocol.o
+ .debug_ranges  0x0000000000000468       0x28 build/default/production/_ext/1360937237/crc.o
+ .debug_ranges  0x0000000000000490       0x28 build/default/production/_ext/1360937237/uart.o
+ .debug_ranges  0x00000000000004b8       0x18 build/default/production/_ext/1360937237/command.o
+ .debug_ranges  0x00000000000004d0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+ .debug_ranges  0x00000000000004e0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+ .debug_ranges  0x00000000000004f0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
 
 .gnu.attributes
                 0x0000000000000000       0x10
@@ -2236,32 +2274,36 @@ END GROUP
  .gnu.attributes
                 0x0000000000000140       0x10 build/default/production/_ext/1360937237/crc.o
  .gnu.attributes
-                0x0000000000000150       0x10 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
+                0x0000000000000150       0x10 build/default/production/_ext/1360937237/uart.o
  .gnu.attributes
-                0x0000000000000160       0x10 C:\Users\Frederic\AppData\Local\Temp\ccQHjclb.o
+                0x0000000000000160       0x10 build/default/production/_ext/1360937237/command.o
  .gnu.attributes
-                0x0000000000000170       0x10 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x0000000000000170       0x10 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
  .gnu.attributes
-                0x0000000000000180       0x10 C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o
+                0x0000000000000180       0x10 C:\Users\Frederic\AppData\Local\Temp\ccK030aD.o
  .gnu.attributes
-                0x0000000000000190       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
+                0x0000000000000190       0x10 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
  .gnu.attributes
-                0x00000000000001a0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
+                0x00000000000001a0       0x10 C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o
  .gnu.attributes
-                0x00000000000001b0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+                0x00000000000001b0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
  .gnu.attributes
-                0x00000000000001c0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-nmi-handler.o)
+                0x00000000000001c0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-reset.o)
  .gnu.attributes
-                0x00000000000001d0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(pic32_data_init.o)
+                0x00000000000001d0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
  .gnu.attributes
-                0x00000000000001e0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(general-exception.o)
+                0x00000000000001e0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-nmi-handler.o)
  .gnu.attributes
-                0x00000000000001f0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
+                0x00000000000001f0       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(pic32_data_init.o)
+ .gnu.attributes
+                0x0000000000000200       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(general-exception.o)
+ .gnu.attributes
+                0x0000000000000210       0x10 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(defaultinterrupt.o)
                 0x0000000000000200                _min_heap_size = 0x200
-LOAD C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
-LOAD C:\Users\Frederic\AppData\Local\Temp\ccQHjclb.o
-LOAD C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
-LOAD C:\Users\Frederic\AppData\Local\Temp\ccvTaotl.o
+LOAD C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
+LOAD C:\Users\Frederic\AppData\Local\Temp\ccK030aD.o
+LOAD C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
+LOAD C:\Users\Frederic\AppData\Local\Temp\ccAJ2TvS.o
 LOAD c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
 LOAD c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/fpu64\libgcc.a
 START GROUP
@@ -2280,53 +2322,53 @@ LOAD data_init
 .reginfo        0x0000000000000000       0x18
  .reginfo       0x0000000000000000       0x18 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\debug-exception-return.o
 
-.stack          0x0000000080001900      0x400
- .stack         0x0000000080001900      0x400 stack
+.stack          0x0000000080001a98      0x400
+ .stack         0x0000000080001a98      0x400 stack
 
 .__vector_offset_BF8105B8_data
                 0x00000000bf8105b8       0xfc
  .__vector_offset_BF8105B8_data
-                0x00000000bf8105b8       0xfc C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf8105b8       0xfc C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .__vector_offset_BF8106B8_data
                 0x00000000bf8106b8       0xa0
  .__vector_offset_BF8106B8_data
-                0x00000000bf8106b8       0xa0 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf8106b8       0xa0 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .__vector_offset_BF810848_data
                 0x00000000bf810848       0x94
  .__vector_offset_BF810848_data
-                0x00000000bf810848       0x94 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf810848       0x94 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .__vector_offset_BF8107D0_data
                 0x00000000bf8107d0       0x74
  .__vector_offset_BF8107D0_data
-                0x00000000bf8107d0       0x74 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf8107d0       0x74 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .__vector_offset_BF810540_data
                 0x00000000bf810540       0x70
  .__vector_offset_BF810540_data
-                0x00000000bf810540       0x70 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf810540       0x70 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .__vector_offset_BF81079C_data
                 0x00000000bf81079c       0x30
  .__vector_offset_BF81079C_data
-                0x00000000bf81079c       0x30 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf81079c       0x30 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .__vector_offset_BF8108F8_data
                 0x00000000bf8108f8       0x28
  .__vector_offset_BF8108F8_data
-                0x00000000bf8108f8       0x28 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf8108f8       0x28 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .__vector_offset_BF81076C_data
                 0x00000000bf81076c       0x24
  .__vector_offset_BF81076C_data
-                0x00000000bf81076c       0x24 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf81076c       0x24 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .__vector_offset_BF810938_data
                 0x00000000bf810938        0x8
  .__vector_offset_BF810938_data
-                0x00000000bf810938        0x8 C:\Users\Frederic\AppData\Local\Temp\ccLPomtb.o
+                0x00000000bf810938        0x8 C:\Users\Frederic\AppData\Local\Temp\ccqLiit3.o
 
 .COHERENTBSS$   0x00000000a0000030     0x133c
  .COHERENTBSS$  0x00000000a0000030      0x4d4 build/default/production/_ext/1984168316/plib_canfd3.o
@@ -2340,12 +2382,13 @@ LOAD data_init
  .bss.can_message_buffer
                 0x00000000a0000ed0      0x49c build/default/production/_ext/1984168316/plib_canfd1.o
 
-.data           0x0000000080001370      0x374
- .data          0x0000000080001370      0x374 build/default/production/_ext/1360937237/main.o
+.data           0x0000000080001370      0x50f
+ .data          0x0000000080001370      0x50f build/default/production/_ext/1360937237/main.o
                 0x0000000080001370                interface_list
                 0x00000000800013a0                message_list
                 0x000000008000150c                signal_list
-                0x000000008000168c                inst
+                0x0000000080001804                shortProt
+                0x000000008000185c                sendData
 
 ._debug_exception
                 0x00000000bfc00480       0x2c
@@ -2353,65 +2396,77 @@ LOAD data_init
                 0x00000000bfc00480       0x2c c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\debug-exception-return.o
                 0x00000000bfc00480                __DbgExecReturn
 
-.dinit          0x000000009d000248      0x820
- .dinit         0x000000009d000248      0x820 data_init
+.dinit          0x000000009d000248      0x9b0
+ .dinit         0x000000009d000248      0x9b0 data_init
 
-.rodata         0x000000009d000a68      0x400
- .rodata        0x000000009d000a68      0x400 build/default/production/_ext/1360937237/crc.o
+.rodata         0x000000009d000bf8      0x400
+ .rodata        0x000000009d000bf8      0x400 build/default/production/_ext/1360937237/crc.o
+
+.text.SIGNALS_Interpret
+                0x000000009d000ff8      0x3b8
+ .text.SIGNALS_Interpret
+                0x000000009d000ff8      0x3b8 build/default/production/_ext/1360937237/signals.o
+                0x000000009d000ff8                SIGNALS_Interpret
 
 .text.CAN1_MessageTransmit
-                0x000000009d000e68      0x364
+                0x000000009d0013b0      0x364
  .text.CAN1_MessageTransmit
-                0x000000009d000e68      0x364 build/default/production/_ext/1984168316/plib_canfd1.o
-                0x000000009d000e68                CAN1_MessageTransmit
+                0x000000009d0013b0      0x364 build/default/production/_ext/1984168316/plib_canfd1.o
+                0x000000009d0013b0                CAN1_MessageTransmit
 
 .text.CAN3_MessageTransmit
-                0x000000009d0011cc      0x364
+                0x000000009d001714      0x364
  .text.CAN3_MessageTransmit
-                0x000000009d0011cc      0x364 build/default/production/_ext/1984168316/plib_canfd3.o
-                0x000000009d0011cc                CAN3_MessageTransmit
+                0x000000009d001714      0x364 build/default/production/_ext/1984168316/plib_canfd3.o
+                0x000000009d001714                CAN3_MessageTransmit
 
 .text.CAN4_MessageTransmit
-                0x000000009d001530      0x364
+                0x000000009d001a78      0x364
  .text.CAN4_MessageTransmit
-                0x000000009d001530      0x364 build/default/production/_ext/1984168316/plib_canfd4.o
-                0x000000009d001530                CAN4_MessageTransmit
+                0x000000009d001a78      0x364 build/default/production/_ext/1984168316/plib_canfd4.o
+                0x000000009d001a78                CAN4_MessageTransmit
 
 .text.CAN2_MessageTransmit
-                0x000000009d001894      0x364
+                0x000000009d001ddc      0x364
  .text.CAN2_MessageTransmit
-                0x000000009d001894      0x364 build/default/production/_ext/1984168316/plib_canfd2.o
-                0x000000009d001894                CAN2_MessageTransmit
+                0x000000009d001ddc      0x364 build/default/production/_ext/1984168316/plib_canfd2.o
+                0x000000009d001ddc                CAN2_MessageTransmit
 
 .text.CAN1_MessageReceive
-                0x000000009d001bf8      0x2c4
+                0x000000009d002140      0x2c4
  .text.CAN1_MessageReceive
-                0x000000009d001bf8      0x2c4 build/default/production/_ext/1984168316/plib_canfd1.o
-                0x000000009d001bf8                CAN1_MessageReceive
+                0x000000009d002140      0x2c4 build/default/production/_ext/1984168316/plib_canfd1.o
+                0x000000009d002140                CAN1_MessageReceive
 
 .text.CAN3_MessageReceive
-                0x000000009d001ebc      0x2c4
+                0x000000009d002404      0x2c4
  .text.CAN3_MessageReceive
-                0x000000009d001ebc      0x2c4 build/default/production/_ext/1984168316/plib_canfd3.o
-                0x000000009d001ebc                CAN3_MessageReceive
+                0x000000009d002404      0x2c4 build/default/production/_ext/1984168316/plib_canfd3.o
+                0x000000009d002404                CAN3_MessageReceive
 
 .text.CAN4_MessageReceive
-                0x000000009d002180      0x2c4
+                0x000000009d0026c8      0x2c4
  .text.CAN4_MessageReceive
-                0x000000009d002180      0x2c4 build/default/production/_ext/1984168316/plib_canfd4.o
-                0x000000009d002180                CAN4_MessageReceive
+                0x000000009d0026c8      0x2c4 build/default/production/_ext/1984168316/plib_canfd4.o
+                0x000000009d0026c8                CAN4_MessageReceive
 
 .text.CAN2_MessageReceive
-                0x000000009d002444      0x2c4
+                0x000000009d00298c      0x2c4
  .text.CAN2_MessageReceive
-                0x000000009d002444      0x2c4 build/default/production/_ext/1984168316/plib_canfd2.o
-                0x000000009d002444                CAN2_MessageReceive
+                0x000000009d00298c      0x2c4 build/default/production/_ext/1984168316/plib_canfd2.o
+                0x000000009d00298c                CAN2_MessageReceive
+
+.text.CANCOMM_ReadMessages
+                0x000000009d002c50      0x228
+ .text.CANCOMM_ReadMessages
+                0x000000009d002c50      0x228 build/default/production/_ext/1360937237/cancomm.o
+                0x000000009d002c50                CANCOMM_ReadMessages
 
 .text.SHORTPROTOCOL_Send
-                0x000000009d002708      0x18c
+                0x000000009d002e78      0x18c
  .text.SHORTPROTOCOL_Send
-                0x000000009d002708      0x18c build/default/production/_ext/1360937237/shortprotocol.o
-                0x000000009d002708                SHORTPROTOCOL_Send
+                0x000000009d002e78      0x18c build/default/production/_ext/1360937237/shortprotocol.o
+                0x000000009d002e78                SHORTPROTOCOL_Send
 
 .text.CAN3_Initialize
                 0x000000009d000000      0x174
@@ -2420,233 +2475,278 @@ LOAD data_init
                 0x000000009d000000                CAN3_Initialize
 
 .text.CAN4_Initialize
-                0x000000009d002894      0x174
+                0x000000009d003004      0x174
  .text.CAN4_Initialize
-                0x000000009d002894      0x174 build/default/production/_ext/1984168316/plib_canfd4.o
-                0x000000009d002894                CAN4_Initialize
+                0x000000009d003004      0x174 build/default/production/_ext/1984168316/plib_canfd4.o
+                0x000000009d003004                CAN4_Initialize
 
 .text.CAN2_Initialize
-                0x000000009d002a08      0x174
+                0x000000009d003178      0x174
  .text.CAN2_Initialize
-                0x000000009d002a08      0x174 build/default/production/_ext/1984168316/plib_canfd2.o
-                0x000000009d002a08                CAN2_Initialize
+                0x000000009d003178      0x174 build/default/production/_ext/1984168316/plib_canfd2.o
+                0x000000009d003178                CAN2_Initialize
 
 .text.CAN1_Initialize
-                0x000000009d002b7c      0x170
+                0x000000009d0032ec      0x170
  .text.CAN1_Initialize
-                0x000000009d002b7c      0x170 build/default/production/_ext/1984168316/plib_canfd1.o
-                0x000000009d002b7c                CAN1_Initialize
+                0x000000009d0032ec      0x170 build/default/production/_ext/1984168316/plib_canfd1.o
+                0x000000009d0032ec                CAN1_Initialize
+
+.text.signals_find_data
+                0x000000009d00345c      0x154
+ .text.signals_find_data
+                0x000000009d00345c      0x154 build/default/production/_ext/1360937237/signals.o
+                0x000000009d00345c                signals_find_data
 
 .text.GPIO_Initialize
-                0x000000009d002cec      0x120
+                0x000000009d0035b0      0x120
  .text.GPIO_Initialize
-                0x000000009d002cec      0x120 build/default/production/_ext/1865254177/plib_gpio.o
-                0x000000009d002cec                GPIO_Initialize
+                0x000000009d0035b0      0x120 build/default/production/_ext/1865254177/plib_gpio.o
+                0x000000009d0035b0                GPIO_Initialize
 
 .text.SHORTPROTOCOL_Update
-                0x000000009d002e0c      0x108
+                0x000000009d0036d0      0x108
  .text.SHORTPROTOCOL_Update
-                0x000000009d002e0c      0x108 build/default/production/_ext/1360937237/shortprotocol.o
-                0x000000009d002e0c                SHORTPROTOCOL_Update
+                0x000000009d0036d0      0x108 build/default/production/_ext/1360937237/shortprotocol.o
+                0x000000009d0036d0                SHORTPROTOCOL_Update
+
+.text.main      0x000000009d0037d8       0xf0
+ .text.main     0x000000009d0037d8       0xf0 build/default/production/_ext/1360937237/main.o
+                0x000000009d0037d8                main
 
 .text.CLK_Initialize
-                0x000000009d002f14       0xdc
+                0x000000009d0038c8       0xdc
  .text.CLK_Initialize
-                0x000000009d002f14       0xdc build/default/production/_ext/60165520/plib_clk.o
-                0x000000009d002f14                CLK_Initialize
+                0x000000009d0038c8       0xdc build/default/production/_ext/60165520/plib_clk.o
+                0x000000009d0038c8                CLK_Initialize
 
 .text.general_exception
-                0x000000009d002ff0       0xdc
+                0x000000009d0039a4       0xdc
  .text.general_exception
-                0x000000009d002ff0       0xdc c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(general-exception.o)
-                0x000000009d002ff0                _general_exception_context
+                0x000000009d0039a4       0xdc c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(general-exception.o)
+                0x000000009d0039a4                _general_exception_context
 
 .text.SPI2_Initialize
-                0x000000009d0030cc       0xc4
+                0x000000009d003a80       0xc4
  .text.SPI2_Initialize
-                0x000000009d0030cc       0xc4 build/default/production/_ext/298189674/plib_spi2_master.o
-                0x000000009d0030cc                SPI2_Initialize
+                0x000000009d003a80       0xc4 build/default/production/_ext/298189674/plib_spi2_master.o
+                0x000000009d003a80                SPI2_Initialize
 
 .text.SYS_Initialize
-                0x000000009d003190       0xbc
+                0x000000009d003b44       0xbc
  .text.SYS_Initialize
-                0x000000009d003190       0xbc build/default/production/_ext/1171490990/initialization.o
-                0x000000009d003190                SYS_Initialize
+                0x000000009d003b44       0xbc build/default/production/_ext/1171490990/initialization.o
+                0x000000009d003b44                SYS_Initialize
 
 .text.crc_update
-                0x000000009d00324c       0xac
+                0x000000009d003c00       0xac
  .text.crc_update
-                0x000000009d00324c       0xac build/default/production/_ext/1360937237/crc.o
-                0x000000009d00324c                crc_update
+                0x000000009d003c00       0xac build/default/production/_ext/1360937237/crc.o
+                0x000000009d003c00                crc_update
 
-.text           0x000000009d0032f8       0x8c
- .text          0x000000009d0032f8       0x8c c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(pic32_data_init.o)
-                0x000000009d0032f8                __pic32_data_init
+.text           0x000000009d003cac       0x8c
+ .text          0x000000009d003cac       0x8c c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(pic32_data_init.o)
+                0x000000009d003cac                __pic32_data_init
 
-.text.main      0x000000009d003384       0x78
- .text.main     0x000000009d003384       0x78 build/default/production/_ext/1360937237/main.o
-                0x000000009d003384                main
+.text.CONV_MotorTemp_RR
+                0x000000009d000190       0x70
+ .text.CONV_MotorTemp_RR
+                0x000000009d000190       0x70 build/default/production/_ext/1360937237/conv.o
+                0x000000009d000190                CONV_MotorTemp_RR
+
+.text.CONV_MotorTemp_RL
+                0x000000009d003d38       0x70
+ .text.CONV_MotorTemp_RL
+                0x000000009d003d38       0x70 build/default/production/_ext/1360937237/conv.o
+                0x000000009d003d38                CONV_MotorTemp_RL
+
+.text.CONV_MotorTemp_FR
+                0x000000009d003da8       0x70
+ .text.CONV_MotorTemp_FR
+                0x000000009d003da8       0x70 build/default/production/_ext/1360937237/conv.o
+                0x000000009d003da8                CONV_MotorTemp_FR
 
 .text.DELAY_Microseconds
-                0x000000009d000190       0x6c
+                0x000000009d003e18       0x6c
  .text.DELAY_Microseconds
-                0x000000009d000190       0x6c build/default/production/_ext/54025020/delay.o
-                0x000000009d000190                DELAY_Microseconds
+                0x000000009d003e18       0x6c build/default/production/_ext/54025020/delay.o
+                0x000000009d003e18                DELAY_Microseconds
+
+.text.CONV_MotorTemp_FL
+                0x000000009d003e84       0x6c
+ .text.CONV_MotorTemp_FL
+                0x000000009d003e84       0x6c build/default/production/_ext/1360937237/conv.o
+                0x000000009d003e84                CONV_MotorTemp_FL
 
 .text.CRC_Calculate
-                0x000000009d0033fc       0x68
+                0x000000009d003ef0       0x68
  .text.CRC_Calculate
-                0x000000009d0033fc       0x68 build/default/production/_ext/1360937237/crc.o
-                0x000000009d0033fc                CRC_Calculate
+                0x000000009d003ef0       0x68 build/default/production/_ext/1360937237/crc.o
+                0x000000009d003ef0                CRC_Calculate
 
 .text.UART3_Initialize
-                0x000000009d003464       0x54
+                0x000000009d003f58       0x54
  .text.UART3_Initialize
-                0x000000009d003464       0x54 build/default/production/_ext/1865657120/plib_uart3.o
-                0x000000009d003464                UART3_Initialize
+                0x000000009d003f58       0x54 build/default/production/_ext/1865657120/plib_uart3.o
+                0x000000009d003f58                UART3_Initialize
 
 .text.main_entry
-                0x000000009d0034b8       0x54
+                0x000000009d003fac       0x54
  .text.main_entry
-                0x000000009d0034b8       0x54 C:\Users\Frederic\AppData\Local\Temp\ccXUOBsv.o
-                0x000000009d0034ec                __crt0_exit
+                0x000000009d003fac       0x54 C:\Users\Frederic\AppData\Local\Temp\ccmTks9x.o
+                0x000000009d003fe0                __crt0_exit
 
 .text.UART3_WriteByte
-                0x000000009d00350c       0x4c
+                0x000000009d004000       0x4c
  .text.UART3_WriteByte
-                0x000000009d00350c       0x4c build/default/production/_ext/1865657120/plib_uart3.o
-                0x000000009d00350c                UART3_WriteByte
+                0x000000009d004000       0x4c build/default/production/_ext/1865657120/plib_uart3.o
+                0x000000009d004000                UART3_WriteByte
 
 .text.UART3_ReceiverIsReady
-                0x000000009d003558       0x48
+                0x000000009d00404c       0x48
  .text.UART3_ReceiverIsReady
-                0x000000009d003558       0x48 build/default/production/_ext/1865657120/plib_uart3.o
-                0x000000009d003558                UART3_ReceiverIsReady
+                0x000000009d00404c       0x48 build/default/production/_ext/1865657120/plib_uart3.o
+                0x000000009d00404c                UART3_ReceiverIsReady
 
 .text.UART_ReadAvailable
-                0x000000009d0035a0       0x48
+                0x000000009d004094       0x48
  .text.UART_ReadAvailable
-                0x000000009d0035a0       0x48 build/default/production/_ext/1360937237/main.o
-                0x000000009d0035a0                UART_ReadAvailable
+                0x000000009d004094       0x48 build/default/production/_ext/1360937237/uart.o
+                0x000000009d004094                UART_ReadAvailable
 
 .text.UART_WriteAvailable
-                0x000000009d0035e8       0x48
+                0x000000009d0040dc       0x48
  .text.UART_WriteAvailable
-                0x000000009d0035e8       0x48 build/default/production/_ext/1360937237/main.o
-                0x000000009d0035e8                UART_WriteAvailable
+                0x000000009d0040dc       0x48 build/default/production/_ext/1360937237/uart.o
+                0x000000009d0040dc                UART_WriteAvailable
 
 .text.UART3_TransmitterIsReady
-                0x000000009d003630       0x44
+                0x000000009d004124       0x44
  .text.UART3_TransmitterIsReady
-                0x000000009d003630       0x44 build/default/production/_ext/1865657120/plib_uart3.o
-                0x000000009d003630                UART3_TransmitterIsReady
+                0x000000009d004124       0x44 build/default/production/_ext/1865657120/plib_uart3.o
+                0x000000009d004124                UART3_TransmitterIsReady
 
 .text.UART_WriteByte
-                0x000000009d003674       0x44
+                0x000000009d004168       0x44
  .text.UART_WriteByte
-                0x000000009d003674       0x44 build/default/production/_ext/1360937237/main.o
-                0x000000009d003674                UART_WriteByte
+                0x000000009d004168       0x44 build/default/production/_ext/1360937237/uart.o
+                0x000000009d004168                UART_WriteByte
 
-.text           0x000000009d0036b8       0x44
- .text          0x000000009d0036b8       0x44 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
-                0x000000009d0036b8                __pic32_software_reset
+.text.COMMAND_Generate
+                0x000000009d0041ac       0x44
+ .text.COMMAND_Generate
+                0x000000009d0041ac       0x44 build/default/production/_ext/1360937237/command.o
+                0x000000009d0041ac                COMMAND_Generate
+
+.text           0x000000009d0041f0       0x44
+ .text          0x000000009d0041f0       0x44 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\pic32_software_reset.o
+                0x000000009d0041f0                __pic32_software_reset
 
 .text.EVIC_Initialize
-                0x000000009d0036fc       0x40
+                0x000000009d004234       0x40
  .text.EVIC_Initialize
-                0x000000009d0036fc       0x40 build/default/production/_ext/1865200349/plib_evic.o
-                0x000000009d0036fc                EVIC_Initialize
+                0x000000009d004234       0x40 build/default/production/_ext/1865200349/plib_evic.o
+                0x000000009d004234                EVIC_Initialize
 
 .text.SHORTPROTOCOL_Initialize
-                0x000000009d00373c       0x3c
+                0x000000009d004274       0x3c
  .text.SHORTPROTOCOL_Initialize
-                0x000000009d00373c       0x3c build/default/production/_ext/1360937237/shortprotocol.o
-                0x000000009d00373c                SHORTPROTOCOL_Initialize
+                0x000000009d004274       0x3c build/default/production/_ext/1360937237/shortprotocol.o
+                0x000000009d004274                SHORTPROTOCOL_Initialize
 
 .text.UART_ReadByte
-                0x000000009d003778       0x34
+                0x000000009d0042b0       0x34
  .text.UART_ReadByte
-                0x000000009d003778       0x34 build/default/production/_ext/1360937237/main.o
-                0x000000009d003778                UART_ReadByte
+                0x000000009d0042b0       0x34 build/default/production/_ext/1360937237/uart.o
+                0x000000009d0042b0                UART_ReadByte
 
 .text._general_exception_handler
-                0x000000009d0037ac       0x30
+                0x000000009d0042e4       0x30
  .text._general_exception_handler
-                0x000000009d0037ac       0x30 build/default/production/_ext/1171490990/exceptions.o
-                0x000000009d0037ac                _general_exception_handler
+                0x000000009d0042e4       0x30 build/default/production/_ext/1171490990/exceptions.o
+                0x000000009d0042e4                _general_exception_handler
 
 .text._bootstrap_exception_handler
-                0x000000009d0037dc       0x30
+                0x000000009d004314       0x30
  .text._bootstrap_exception_handler
-                0x000000009d0037dc       0x30 build/default/production/_ext/1171490990/exceptions.o
-                0x000000009d0037dc                _bootstrap_exception_handler
+                0x000000009d004314       0x30 build/default/production/_ext/1171490990/exceptions.o
+                0x000000009d004314                _bootstrap_exception_handler
+
+.text.CONV_MaxMotorTemp
+                0x000000009d004344       0x30
+ .text.CONV_MaxMotorTemp
+                0x000000009d004344       0x30 build/default/production/_ext/1360937237/conv.o
+                0x000000009d004344                CONV_MaxMotorTemp
 
 .text.CONV_MinVoltage
-                0x000000009d00380c       0x2c
+                0x000000009d004374       0x2c
  .text.CONV_MinVoltage
-                0x000000009d00380c       0x2c build/default/production/_ext/1360937237/conv.o
-                0x000000009d00380c                CONV_MinVoltage
+                0x000000009d004374       0x2c build/default/production/_ext/1360937237/conv.o
+                0x000000009d004374                CONV_MinVoltage
 
 .text.CONV_MaxTemp
-                0x000000009d003838       0x2c
+                0x000000009d0043a0       0x2c
  .text.CONV_MaxTemp
-                0x000000009d003838       0x2c build/default/production/_ext/1360937237/conv.o
-                0x000000009d003838                CONV_MaxTemp
+                0x000000009d0043a0       0x2c build/default/production/_ext/1360937237/conv.o
+                0x000000009d0043a0                CONV_MaxTemp
 
 .text.CONV_LapTime
-                0x000000009d003864       0x2c
+                0x000000009d0043cc       0x2c
  .text.CONV_LapTime
-                0x000000009d003864       0x2c build/default/production/_ext/1360937237/conv.o
-                0x000000009d003864                CONV_LapTime
-
-.text.CONV_MaxMotTemp
-                0x000000009d003890       0x2c
- .text.CONV_MaxMotTemp
-                0x000000009d003890       0x2c build/default/production/_ext/1360937237/conv.o
-                0x000000009d003890                CONV_MaxMotTemp
+                0x000000009d0043cc       0x2c build/default/production/_ext/1360937237/conv.o
+                0x000000009d0043cc                CONV_LapTime
 
 .text.CONV_MaxInvTemp
-                0x000000009d0038bc       0x2c
+                0x000000009d0043f8       0x2c
  .text.CONV_MaxInvTemp
-                0x000000009d0038bc       0x2c build/default/production/_ext/1360937237/conv.o
-                0x000000009d0038bc                CONV_MaxInvTemp
+                0x000000009d0043f8       0x2c build/default/production/_ext/1360937237/conv.o
+                0x000000009d0043f8                CONV_MaxInvTemp
+
+.text.SHORTPROTOCOL_Available
+                0x000000009d004424       0x2c
+ .text.SHORTPROTOCOL_Available
+                0x000000009d004424       0x2c build/default/production/_ext/1360937237/shortprotocol.o
+                0x000000009d004424                SHORTPROTOCOL_Available
 
 .text.UART3_ReadByte
-                0x000000009d0038e8       0x28
+                0x000000009d004450       0x28
  .text.UART3_ReadByte
-                0x000000009d0038e8       0x28 build/default/production/_ext/1865657120/plib_uart3.o
-                0x000000009d0038e8                UART3_ReadByte
+                0x000000009d004450       0x28 build/default/production/_ext/1865657120/plib_uart3.o
+                0x000000009d004450                UART3_ReadByte
 
 .text.CONV_FSG_AMI_state
-                0x000000009d003910       0x28
+                0x000000009d004478       0x28
  .text.CONV_FSG_AMI_state
-                0x000000009d003910       0x28 build/default/production/_ext/1360937237/conv.o
-                0x000000009d003910                CONV_FSG_AMI_state
+                0x000000009d004478       0x28 build/default/production/_ext/1360937237/conv.o
+                0x000000009d004478                CONV_FSG_AMI_state
 
 .text.crc_finalize
-                0x000000009d003938       0x28
+                0x000000009d0044a0       0x28
  .text.crc_finalize
-                0x000000009d003938       0x28 build/default/production/_ext/1360937237/crc.o
+                0x000000009d0044a0       0x28 build/default/production/_ext/1360937237/crc.o
 
-.text.crc_init  0x000000009d003960       0x24
+.text.crc_init  0x000000009d0044c8       0x24
  .text.crc_init
-                0x000000009d003960       0x24 build/default/production/_ext/1360937237/crc.o
+                0x000000009d0044c8       0x24 build/default/production/_ext/1360937237/crc.o
 
-.MIPS.abiflags  0x000000009d003988       0x18
+.MIPS.abiflags  0x000000009d0044f0       0x18
  .MIPS.abiflags
-                0x000000009d003988       0x18 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\debug-exception-return.o
+                0x000000009d0044f0       0x18 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\debug-exception-return.o
 
-.text           0x000000009d0039a0       0x18
- .text          0x000000009d0039a0       0x18 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-nmi-handler.o)
-                0x000000009d0039a0                _nmi_handler
+.text           0x000000009d004508       0x18
+ .text          0x000000009d004508       0x18 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-nmi-handler.o)
+                0x000000009d004508                _nmi_handler
 
-.rodata         0x000000009d0039b8       0x20
- .rodata        0x000000009d0039b8       0x10 build/default/production/_ext/1984168316/plib_canfd1.o
- .rodata        0x000000009d0039c8       0x10 build/default/production/_ext/1984168316/plib_canfd3.o
+.rodata         0x000000009d004520       0x20
+ .rodata        0x000000009d004520       0x10 build/default/production/_ext/1984168316/plib_canfd1.o
+ .rodata        0x000000009d004530       0x10 build/default/production/_ext/1984168316/plib_canfd3.o
 
-.rodata         0x000000009d0039d8       0x20
- .rodata        0x000000009d0039d8       0x10 build/default/production/_ext/1984168316/plib_canfd4.o
- .rodata        0x000000009d0039e8       0x10 build/default/production/_ext/1984168316/plib_canfd2.o
+.rodata         0x000000009d004540       0x20
+ .rodata        0x000000009d004540       0x10 build/default/production/_ext/1984168316/plib_canfd4.o
+ .rodata        0x000000009d004550       0x10 build/default/production/_ext/1984168316/plib_canfd2.o
+
+.rodata         0x000000009d004560       0x10
+ .rodata        0x000000009d004560       0x10 build/default/production/_ext/1360937237/conv.o
 
 .text._on_reset
                 0x000000009d000174        0x8
@@ -2655,10 +2755,7 @@ LOAD data_init
                 0x000000009d000174                _on_reset
 
 .text._on_bootstrap
-                0x000000009d0039f8        0x8
+                0x000000009d004570        0x8
  .text._on_bootstrap
-                0x000000009d0039f8        0x8 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
-                0x000000009d0039f8                _on_bootstrap
-
-.rodata         0x000000009d0001fc        0x4
- .rodata        0x000000009d0001fc        0x4 build/default/production/_ext/1360937237/conv.o
+                0x000000009d004570        0x8 c:/program files/microchip/xc32/v4.00/bin/bin/../../lib/gcc/pic32mx/8.3.1/../../../../pic32mx/lib/fpu64\libpic32.a(default-on-bootstrap.o)
+                0x000000009d004570                _on_bootstrap

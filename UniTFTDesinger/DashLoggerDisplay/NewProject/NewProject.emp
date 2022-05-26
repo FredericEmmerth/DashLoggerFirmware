@@ -1,5 +1,7 @@
 [Project]
-Screen1=0, 0, 100, 100, 1
+AMI_Mission=-453, 58, 200, 100, 1
+DashLoggerDebug=272, 43, 210, 100, 1
+Default=-1719, 55, 200, 100, 1
 
 [ScreenTransitions]
 FadeScrTrans="id=5name=FadeScrTranstransition=4direction=0time=50triggerEvent=0curve=2"
