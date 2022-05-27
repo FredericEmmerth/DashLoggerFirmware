@@ -1,0 +1,63 @@
+\hypertarget{group___c_a_n_c_o_m_m}{}\doxysection{CANCOMM}
+\label{group___c_a_n_c_o_m_m}\index{CANCOMM@{CANCOMM}}
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{cancomm_8h}{cancomm.\+h}}
+\begin{DoxyCompactList}\small\item\em This File defines the Prototypes for \mbox{\hyperlink{group___c_a_n_c_o_m_m}{CANCOMM}}. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{cancomm_8c}{cancomm.\+c}}
+\begin{DoxyCompactList}\small\item\em This File Implements the Prototypes for \mbox{\hyperlink{group___c_a_n_c_o_m_m}{CANCOMM}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structcancomm__interface}{cancomm\+\_\+interface}}
+\begin{DoxyCompactList}\small\item\em Structure defining a CAN Interface. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}}
+\begin{DoxyCompactList}\small\item\em Structure defining a CAN Message. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}\label{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}} 
+\#define {\bfseries CANCOMM\+\_\+\+MAXIMUM\+\_\+\+DATA\+\_\+\+LENGTH}~8
+\begin{DoxyCompactList}\small\item\em The Maximum Bytes of Data per CAN Frame. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___c_a_n_c_o_m_m_ga99058a892a05ecd6afbcb37380bdcf22}\label{group___c_a_n_c_o_m_m_ga99058a892a05ecd6afbcb37380bdcf22}} 
+\#define {\bfseries CANCOMM\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH}~30
+\begin{DoxyCompactList}\small\item\em The Maximum Friendly Name Length of the CAN Messages. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___c_a_n_c_o_m_m_gad3a29d228b324d017ee3c2a998f18f1b}{CANCOMM\+\_\+\+Read\+Messages}} (\mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len, \mbox{\hyperlink{structcancomm__interface}{cancomm\+\_\+interface}} $\ast$interface\+\_\+list, uint8\+\_\+t interface\+\_\+list\+\_\+len)
+\begin{DoxyCompactList}\small\item\em This function recieves the CAN Messages defined in a message\+\_\+list using the provided interface\+\_\+list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Module is configured using a list of \mbox{\hyperlink{structcancomm__interface}{cancomm\+\_\+interface}} Structs. These provide the Recieve and Transmit Functions for the CAN Interface. Which Messages should be recieved and transmitted is configured using a list of \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} Structs.
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]Implement Transmit Functionality \end{DoxyRefDesc}
+\begin{DoxyRefDesc}{Bug}
+\item[\mbox{\hyperlink{bug__bug000001}{Bug}}]Only Interface One was tested\end{DoxyRefDesc}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___c_a_n_c_o_m_m_gad3a29d228b324d017ee3c2a998f18f1b}\label{group___c_a_n_c_o_m_m_gad3a29d228b324d017ee3c2a998f18f1b}} 
+\index{CANCOMM@{CANCOMM}!CANCOMM\_ReadMessages@{CANCOMM\_ReadMessages}}
+\index{CANCOMM\_ReadMessages@{CANCOMM\_ReadMessages}!CANCOMM@{CANCOMM}}
+\doxysubsubsection{\texorpdfstring{CANCOMM\_ReadMessages()}{CANCOMM\_ReadMessages()}}
+{\footnotesize\ttfamily void CANCOMM\+\_\+\+Read\+Messages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$}]{message\+\_\+list,  }\item[{uint32\+\_\+t}]{message\+\_\+list\+\_\+len,  }\item[{\mbox{\hyperlink{structcancomm__interface}{cancomm\+\_\+interface}} $\ast$}]{interface\+\_\+list,  }\item[{uint8\+\_\+t}]{interface\+\_\+list\+\_\+len }\end{DoxyParamCaption})}
+
+
+
+This function recieves the CAN Messages defined in a message\+\_\+list using the provided interface\+\_\+list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message\+\_\+list} & List of cancom\+\_\+message Structs \\
+\hline
+{\em message\+\_\+list\+\_\+len} & Length of {\ttfamily message\+\_\+list} \\
+\hline
+{\em interface\+\_\+list} & List of \mbox{\hyperlink{structcancomm__interface}{cancomm\+\_\+interface}} Structs \\
+\hline
+{\em interface\+\_\+list\+\_\+len} & Length of {\ttfamily interface\+\_\+list} \\
+\hline
+\end{DoxyParams}

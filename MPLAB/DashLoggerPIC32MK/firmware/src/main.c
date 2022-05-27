@@ -1,31 +1,8 @@
-/*******************************************************************************
-  Main Source File
 
-  Company:
-    Microchip Technology Inc.
-
-  File Name:
-    main.c
-
-  Summary:
-    This file contains the "main" function for a project.
-
-  Description:
-    This file contains the "main" function for a project.  The
-    "main" function calls the "SYS_Initialize" function to initialize the state
-    machines of all modules in the system
- *******************************************************************************/
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-
-#include <stddef.h>                     // Defines NULL
-#include <stdbool.h>                    // Defines true
-#include <stdlib.h>                     // Defines EXIT_FAILURE
-#include "definitions.h"                // SYS function prototypes
+#include <stddef.h>
+#include <stdbool.h>
+#include <stdlib.h>
+#include "definitions.h"
 #include "delay.h"
 #include "cancomm.h"
 #include "signals.h"
@@ -33,13 +10,6 @@
 #include "shortprotocol.h"
 #include "uart.h"
 #include "command.h"
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Main Entry Point
-// *****************************************************************************
-// *****************************************************************************
-
 
 /* Define List of CAN Interfaces */
 cancomm_interface interface_list [] = {
@@ -116,6 +86,13 @@ signals_signal signal_list [] = {
             .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_LapTime
     },
+    {.friendly_name="BestLapTime",
+            .type=SIGNALS_CAN_MESSAGE,
+            .id=0x711,
+            .interface_number=1,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
+            .can_convert_float=CONV_BestLapTime
+    },
     {.friendly_name="FSG_AMI_state",
             .type = SIGNALS_CAN_MESSAGE,
             .id=0x502,
@@ -167,12 +144,17 @@ signals_signal signal_list [] = {
             .type=SIGNALS_DISPLAY_SIGNAL,
             .data_type=SIGNALS_STRING_SIGNAL,
             .internal_convert_string=CONV_DISP_Motor_Temp
+    },
+    {.friendly_name="DISP_MinVoltage",
+            .type=SIGNALS_DISPLAY_SIGNAL,
+            .data_type=SIGNALS_STRING_SIGNAL,
+            .internal_convert_string=CONV_DISP_MinVoltage
     }
             
 };
 uint32_t signal_list_len = sizeof(signal_list) / sizeof(signals_signal);
 
-uint32_t current_command = 0;
+uint32_t current_command_signal = 0;
 
 /* Define a Protocol Instance for Shortprotocol Communication with Display */
 SHORTPROTOCOL_Instance shortProt = {
@@ -182,8 +164,6 @@ SHORTPROTOCOL_Instance shortProt = {
     .writeByte = UART_WriteByte,
     .maximumPackageLength = 5
 };
-
-
 
 uint8_t sendData[] = "#MRN <P:macro/screen/Default.emc>\n";
 uint32_t sendData_length = sizeof(sendData) / sizeof(uint8_t) - 1;
@@ -213,7 +193,7 @@ int main ( void )
         
         /* Generate the Commands to be sent to the Display */
         COMMAND_Generate(signal_list, signal_list_len, 
-                &current_command, &shortProt);
+                &current_command_signal, &shortProt);
         
         /* Send Messages to Display */
         SHORTPROTOCOL_Update(&shortProt);

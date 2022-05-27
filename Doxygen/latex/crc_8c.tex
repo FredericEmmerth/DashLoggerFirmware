@@ -1,0 +1,67 @@
+\hypertarget{crc_8c}{}\doxysection{crc.\+c File Reference}
+\label{crc_8c}\index{crc.c@{crc.c}}
+{\ttfamily \#include \char`\"{}crc.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}} \mbox{\hyperlink{crc_8c_ae2460bde4b16604fc070edd62485557a}{crc\+\_\+update}} (\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}} crc, const void $\ast$data, size\+\_\+t data\+\_\+len)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{crc_8c_a712ae55ceb0a8512be2dfd8d39c298d0}{CRC\+\_\+\+Calculate}} (void $\ast$data, uint32\+\_\+t length)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and types for CRC checks.
+
+Generated on Wed May 11 23\+:00\+:19 2022 by pycrc v0.\+9.\+2, \href{https://pycrc.org}{\texttt{ https\+://pycrc.\+org}} using the configuration\+:
+\begin{DoxyItemize}
+\item Width = 16
+\item Poly = 0x1021
+\item Xor\+In = 0x1d0f
+\item Reflect\+In = False
+\item Xor\+Out = 0x0000
+\item Reflect\+Out = False
+\item Algorithm = table-\/driven 
+\end{DoxyItemize}
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{crc_8c_a712ae55ceb0a8512be2dfd8d39c298d0}\label{crc_8c_a712ae55ceb0a8512be2dfd8d39c298d0}} 
+\index{crc.c@{crc.c}!CRC\_Calculate@{CRC\_Calculate}}
+\index{CRC\_Calculate@{CRC\_Calculate}!crc.c@{crc.c}}
+\doxysubsubsection{\texorpdfstring{CRC\_Calculate()}{CRC\_Calculate()}}
+{\footnotesize\ttfamily uint32\+\_\+t CRC\+\_\+\+Calculate (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{uint32\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Wrapper function to Calculate the CRC over a Array
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & The Array of Data to calculate the CRC of. \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & The Length of the Input Data Array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The CRC Value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crc_8c_ae2460bde4b16604fc070edd62485557a}\label{crc_8c_ae2460bde4b16604fc070edd62485557a}} 
+\index{crc.c@{crc.c}!crc\_update@{crc\_update}}
+\index{crc\_update@{crc\_update}!crc.c@{crc.c}}
+\doxysubsubsection{\texorpdfstring{crc\_update()}{crc\_update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}} crc\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}}}]{crc,  }\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len }\end{DoxyParamCaption})}
+
+Update the crc value with new data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em crc} & The current crc value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a buffer of {\itshape data\+\_\+len} bytes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+\_\+len} & Number of bytes in the {\itshape data} buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated crc value. 
+\end{DoxyReturn}

@@ -1,0 +1,119 @@
+\hypertarget{crc_8h}{}\doxysection{crc.\+h File Reference}
+\label{crc_8h}\index{crc.h@{crc.h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{crc_8h_acdc2d3a1020afb271c12a747a03935a2}{CRC\+\_\+\+ALGO\+\_\+\+TABLE\+\_\+\+DRIVEN}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint\+\_\+fast16\+\_\+t \mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}} \mbox{\hyperlink{crc_8h_ae2460bde4b16604fc070edd62485557a}{crc\+\_\+update}} (\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}} crc, const void $\ast$data, size\+\_\+t data\+\_\+len)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{crc_8h_a712ae55ceb0a8512be2dfd8d39c298d0}{CRC\+\_\+\+Calculate}} (void $\ast$data, uint32\+\_\+t length)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions and types for CRC checks.
+
+Generated on Wed May 11 23\+:00\+:05 2022 by pycrc v0.\+9.\+2, \href{https://pycrc.org}{\texttt{ https\+://pycrc.\+org}} using the configuration\+:
+\begin{DoxyItemize}
+\item Width = 16
+\item Poly = 0x1021
+\item Xor\+In = 0x1d0f
+\item Reflect\+In = False
+\item Xor\+Out = 0x0000
+\item Reflect\+Out = False
+\item Algorithm = table-\/driven
+\end{DoxyItemize}
+
+This file defines the functions crc\+\_\+init(), \mbox{\hyperlink{crc_8h_ae2460bde4b16604fc070edd62485557a}{crc\+\_\+update()}} and crc\+\_\+finalize().
+
+The crc\+\_\+init() function returns the inital {\ttfamily crc} value and must be called before the first call to \mbox{\hyperlink{crc_8h_ae2460bde4b16604fc070edd62485557a}{crc\+\_\+update()}}. Similarly, the crc\+\_\+finalize() function must be called after the last call to \mbox{\hyperlink{crc_8h_ae2460bde4b16604fc070edd62485557a}{crc\+\_\+update()}}, before the {\ttfamily crc} is being used. is being used.
+
+The \mbox{\hyperlink{crc_8h_ae2460bde4b16604fc070edd62485557a}{crc\+\_\+update()}} function can be called any number of times (including zero times) in between the crc\+\_\+init() and crc\+\_\+finalize() calls.
+
+This pseudo-\/code shows an example usage of the API\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\_t}} crc;}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} data[MAX\_DATA\_LEN];}
+\DoxyCodeLine{\textcolor{keywordtype}{size\_t} data\_len;}
+\DoxyCodeLine{}
+\DoxyCodeLine{crc = crc\_init();}
+\DoxyCodeLine{\textcolor{keywordflow}{while} ((data\_len = read\_data(data, MAX\_DATA\_LEN)) > 0) \{}
+\DoxyCodeLine{    crc = \mbox{\hyperlink{crc_8h_ae2460bde4b16604fc070edd62485557a}{crc\_update}}(crc, data, data\_len);}
+\DoxyCodeLine{\}}
+\DoxyCodeLine{crc = crc\_finalize(crc);}
+
+\end{DoxyCode}
+ 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{crc_8h_acdc2d3a1020afb271c12a747a03935a2}\label{crc_8h_acdc2d3a1020afb271c12a747a03935a2}} 
+\index{crc.h@{crc.h}!CRC\_ALGO\_TABLE\_DRIVEN@{CRC\_ALGO\_TABLE\_DRIVEN}}
+\index{CRC\_ALGO\_TABLE\_DRIVEN@{CRC\_ALGO\_TABLE\_DRIVEN}!crc.h@{crc.h}}
+\doxysubsubsection{\texorpdfstring{CRC\_ALGO\_TABLE\_DRIVEN}{CRC\_ALGO\_TABLE\_DRIVEN}}
+{\footnotesize\ttfamily \#define CRC\+\_\+\+ALGO\+\_\+\+TABLE\+\_\+\+DRIVEN~1}
+
+The definition of the used algorithm.
+
+This is not used anywhere in the generated code, but it may be used by the application code to call algorithm-\/specific code, if desired. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{crc_8h_ad404c77de06c7d0f26930c009befe75d}\label{crc_8h_ad404c77de06c7d0f26930c009befe75d}} 
+\index{crc.h@{crc.h}!crc\_t@{crc\_t}}
+\index{crc\_t@{crc\_t}!crc.h@{crc.h}}
+\doxysubsubsection{\texorpdfstring{crc\_t}{crc\_t}}
+{\footnotesize\ttfamily typedef uint\+\_\+fast16\+\_\+t \mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}}}
+
+The type of the CRC values.
+
+This type must be big enough to contain at least 16 bits. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{crc_8h_a712ae55ceb0a8512be2dfd8d39c298d0}\label{crc_8h_a712ae55ceb0a8512be2dfd8d39c298d0}} 
+\index{crc.h@{crc.h}!CRC\_Calculate@{CRC\_Calculate}}
+\index{CRC\_Calculate@{CRC\_Calculate}!crc.h@{crc.h}}
+\doxysubsubsection{\texorpdfstring{CRC\_Calculate()}{CRC\_Calculate()}}
+{\footnotesize\ttfamily uint32\+\_\+t CRC\+\_\+\+Calculate (\begin{DoxyParamCaption}\item[{void $\ast$}]{data,  }\item[{uint32\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+Wrapper function to Calculate the CRC over a Array
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & The Array of Data to calculate the CRC of. \\
+\hline
+\mbox{\texttt{ in}}  & {\em length} & The Length of the Input Data Array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The CRC Value. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{crc_8h_ae2460bde4b16604fc070edd62485557a}\label{crc_8h_ae2460bde4b16604fc070edd62485557a}} 
+\index{crc.h@{crc.h}!crc\_update@{crc\_update}}
+\index{crc\_update@{crc\_update}!crc.h@{crc.h}}
+\doxysubsubsection{\texorpdfstring{crc\_update()}{crc\_update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}} crc\+\_\+update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\+\_\+t}}}]{crc,  }\item[{const void $\ast$}]{data,  }\item[{size\+\_\+t}]{data\+\_\+len }\end{DoxyParamCaption})}
+
+Update the crc value with new data.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em crc} & The current crc value. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data} & Pointer to a buffer of {\itshape data\+\_\+len} bytes. \\
+\hline
+\mbox{\texttt{ in}}  & {\em data\+\_\+len} & Number of bytes in the {\itshape data} buffer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The updated crc value. 
+\end{DoxyReturn}

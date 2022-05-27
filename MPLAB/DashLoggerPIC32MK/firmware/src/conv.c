@@ -1,15 +1,23 @@
 #include "conv.h"
 
 float CONV_MinVoltage(uint8_t* data){
-    return 1.0;
+    uint16_t temp;
+    temp = (data[7] << 8) | data[6];
+    return (float)0.0001 * temp;  
 }
 
 float CONV_MaxTemp(uint8_t* data){
-    return 1.0;    
+    return 1.0;
 }
 
 float CONV_LapTime(uint8_t* data){
+    
     return 1.0;    
+}
+
+float CONV_BestLapTime(uint8_t* data){
+    uint32_t temp = (data[4]<<12)|(data[3]<<4)|((data[2]&0xF0)>>4);
+    return temp * 0.001;    
 }
 
 uint32_t CONV_FSG_AMI_state(uint8_t* data){
@@ -87,6 +95,17 @@ float CONV_MaxMotorTemp(signals_signal* signal_list, uint32_t signal_list_len){
     };
     
     return CONV_max(temperatureValues, 4);
+}
+
+void CONV_DISP_MinVoltage(signals_signal* signal_list, uint32_t signal_list_len,
+        SIGNALS_string* outstring){
+    float minvoltage = signals_find_signal(signal_list,
+        signal_list_len,(void(*)(void))CONV_MinVoltage)->value_float;
+    
+    sprintf((char*)outstring->data,"#SSC %d,\"%4.3fV\";\n",9,minvoltage);
+    
+    outstring->length = CONV_find_string_length(outstring->data,
+                                SIGNALS_STRING_MAXIMUM_LENGTH);
 }
 
 void CONV_DISP_Motor_Temp(signals_signal* signal_list, uint32_t signal_list_len,

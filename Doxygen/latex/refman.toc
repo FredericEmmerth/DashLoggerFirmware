@@ -1,0 +1,72 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Todo List}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Bug List}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Module Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Modules}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Data Structure Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Data Structures}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}File Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}File List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Module Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}CANCOMM}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{12}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{12}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}CANCOMM\_ReadMessages()}{12}{subsubsection.6.1.2.1}%
+\contentsline {section}{\numberline {6.2}COMMAND}{12}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{13}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Function Documentation}{13}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}COMMAND\_Generate()}{13}{subsubsection.6.2.2.1}%
+\contentsline {section}{\numberline {6.3}SIGNALS}{13}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{14}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Typedef Documentation}{14}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}signals\_signal}{14}{subsubsection.6.3.2.1}%
+\contentsline {subsection}{\numberline {6.3.3}Enumeration Type Documentation}{15}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}signals\_result}{15}{subsubsection.6.3.3.1}%
+\contentsline {chapter}{\numberline {7}Data Structure Documentation}{17}{chapter.7}%
+\contentsline {section}{\numberline {7.1}cancomm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface Struct Reference}{17}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{17}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Field Documentation}{17}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}MessageReceive}{17}{subsubsection.7.1.2.1}%
+\contentsline {subsubsection}{\numberline {7.1.2.2}MessageTransmit}{18}{subsubsection.7.1.2.2}%
+\contentsline {section}{\numberline {7.2}cancomm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}message Struct Reference}{18}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{19}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}SHORTPROTOCOL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Instance Struct Reference}{19}{section.7.3}%
+\contentsline {section}{\numberline {7.4}SHORTPROTOCOL\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}string Struct Reference}{19}{section.7.4}%
+\contentsline {section}{\numberline {7.5}signals\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}signal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}struct Struct Reference}{20}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{20}{subsection.7.5.1}%
+\contentsline {section}{\numberline {7.6}SIGNALS\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}string Struct Reference}{20}{section.7.6}%
+\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{21}{subsection.7.6.1}%
+\contentsline {chapter}{\numberline {8}File Documentation}{23}{chapter.8}%
+\contentsline {section}{\numberline {8.1}cancomm.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{23}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{23}{subsection.8.1.1}%
+\contentsline {section}{\numberline {8.2}cancomm.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{23}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{24}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}cancomm.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{24}{section.8.3}%
+\contentsline {section}{\numberline {8.4}command.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{25}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{25}{subsection.8.4.1}%
+\contentsline {section}{\numberline {8.5}command.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{25}{section.8.5}%
+\contentsline {subsection}{\numberline {8.5.1}Detailed Description}{26}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.6}command.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{26}{section.8.6}%
+\contentsline {section}{\numberline {8.7}conv.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{26}{section.8.7}%
+\contentsline {section}{\numberline {8.8}crc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{27}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{27}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Function Documentation}{27}{subsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.1}CRC\_Calculate()}{27}{subsubsection.8.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.8.2.2}crc\_update()}{28}{subsubsection.8.8.2.2}%
+\contentsline {section}{\numberline {8.9}crc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{28}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Detailed Description}{29}{subsection.8.9.1}%
+\contentsline {subsection}{\numberline {8.9.2}Macro Definition Documentation}{29}{subsection.8.9.2}%
+\contentsline {subsubsection}{\numberline {8.9.2.1}CRC\_ALGO\_TABLE\_DRIVEN}{29}{subsubsection.8.9.2.1}%
+\contentsline {subsection}{\numberline {8.9.3}Typedef Documentation}{29}{subsection.8.9.3}%
+\contentsline {subsubsection}{\numberline {8.9.3.1}crc\_t}{30}{subsubsection.8.9.3.1}%
+\contentsline {subsection}{\numberline {8.9.4}Function Documentation}{30}{subsection.8.9.4}%
+\contentsline {subsubsection}{\numberline {8.9.4.1}CRC\_Calculate()}{30}{subsubsection.8.9.4.1}%
+\contentsline {subsubsection}{\numberline {8.9.4.2}crc\_update()}{30}{subsubsection.8.9.4.2}%
+\contentsline {section}{\numberline {8.10}crc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{31}{section.8.10}%
+\contentsline {section}{\numberline {8.11}delay.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{31}{section.8.11}%
+\contentsline {section}{\numberline {8.12}shortprotocol.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{32}{section.8.12}%
+\contentsline {section}{\numberline {8.13}signals.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{33}{section.8.13}%
+\contentsline {subsection}{\numberline {8.13.1}Detailed Description}{34}{subsection.8.13.1}%
+\contentsline {section}{\numberline {8.14}signals.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{34}{section.8.14}%
+\contentsline {section}{\numberline {8.15}uart.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{35}{section.8.15}%
+\contentsline {chapter}{Index}{37}{section*.34}%

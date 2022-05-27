@@ -1,0 +1,77 @@
+\hypertarget{shortprotocol_8h_source}{}\doxysection{shortprotocol.\+h}
+\label{shortprotocol_8h_source}\index{shortprotocol.h@{shortprotocol.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* }}
+\DoxyCodeLine{2 \textcolor{comment}{ * File:   shortprotocol.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Author: Frederic}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Created on 19. Mai 2022, 13:37}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef SHORTPROTOCOL\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{12 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{14     }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{crc_8h}{crc.h}}"{}}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH 100}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BEGIN 0x13}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_OVERHEAD\_BYTES 5}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES 3}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_FIRST\_BYTE\_MASK 0x00FF}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_SECOND\_BYTE\_MASK 0xFF00}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BYTE\_LENGTH 8}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BEGIN\_OFFSET 0}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET 1}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET 2}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_COMMAND\_OFFSET 3}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_CRC\_LSB\_OFFSET 0}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_CRC\_MSB\_OFFSET 1}}
+\DoxyCodeLine{31     }
+\DoxyCodeLine{32 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{33     SHORTPROTOCOL\_SUCCESS = 0,}
+\DoxyCodeLine{34     SHORTPROTOCOL\_ERROR,}
+\DoxyCodeLine{35     SHORTPROTOCOL\_AVAILABLE,}
+\DoxyCodeLine{36     SHORTPROTOCOL\_NOT\_AVAILABLE}
+\DoxyCodeLine{37 \}SHORTPROTOCOL\_status;}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{40     uint32\_t length;}
+\DoxyCodeLine{41     uint8\_t data[SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH +}
+\DoxyCodeLine{42                         SHORTPROTOCOL\_OVERHEAD\_BYTES];}
+\DoxyCodeLine{43 \}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{SHORTPROTOCOL\_string}};}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{45 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{46     uint8\_t (*readByte)(void);}
+\DoxyCodeLine{47     SHORTPROTOCOL\_status (*readAvailable)(void);}
+\DoxyCodeLine{48     void (*writeByte)(uint8\_t);}
+\DoxyCodeLine{49     SHORTPROTOCOL\_status (*writeAvailable)(void);}
+\DoxyCodeLine{50     uint32\_t maximumPackageLength;}
+\DoxyCodeLine{51     \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{SHORTPROTOCOL\_string}} command\_buffer;}
+\DoxyCodeLine{52     SHORTPROTOCOL\_status newCommand;}
+\DoxyCodeLine{53     uint32\_t writeCounter;}
+\DoxyCodeLine{54     }
+\DoxyCodeLine{55 \}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}};}
+\DoxyCodeLine{56     }
+\DoxyCodeLine{57 SHORTPROTOCOL\_status SHORTPROTOCOL\_Send(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst,}
+\DoxyCodeLine{58         uint8\_t* data, uint32\_t length);}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60 \textcolor{keywordtype}{void} SHORTPROTOCOL\_Update(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 SHORTPROTOCOL\_status SHORTPROTOCOL\_Available(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{keywordtype}{void} SHORTPROTOCOL\_Initialize(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{67 \}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* SHORTPROTOCOL\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{71 }
+
+\end{DoxyCode}

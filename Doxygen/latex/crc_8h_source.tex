@@ -1,0 +1,46 @@
+\hypertarget{crc_8h_source}{}\doxysection{crc.\+h}
+\label{crc_8h_source}\index{crc.h@{crc.h}}
+\mbox{\hyperlink{crc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#ifndef CRC\_H}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define CRC\_H}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{47 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define CRC\_ALGO\_TABLE\_DRIVEN 1}}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{65 \textcolor{keyword}{typedef} uint\_fast16\_t \mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\_t}};}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67 }
+\DoxyCodeLine{73 \textcolor{keyword}{static} \textcolor{keyword}{inline} \mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\_t}} crc\_init(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{74 \{}
+\DoxyCodeLine{75     \textcolor{keywordflow}{return} 0xFFFF;}
+\DoxyCodeLine{76 \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{87 \mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\_t}} \mbox{\hyperlink{crc_8h_ae2460bde4b16604fc070edd62485557a}{crc\_update}}(\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\_t}} crc, \textcolor{keyword}{const} \textcolor{keywordtype}{void} *data, \textcolor{keywordtype}{size\_t} data\_len);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 }
+\DoxyCodeLine{96 \textcolor{keyword}{static} \textcolor{keyword}{inline} \mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\_t}} crc\_finalize(\mbox{\hyperlink{crc_8h_ad404c77de06c7d0f26930c009befe75d}{crc\_t}} crc)}
+\DoxyCodeLine{97 \{}
+\DoxyCodeLine{98     \textcolor{keywordflow}{return} crc;}
+\DoxyCodeLine{99 \}}
+\DoxyCodeLine{100 }
+\DoxyCodeLine{110 uint32\_t \mbox{\hyperlink{crc_8h_a712ae55ceb0a8512be2dfd8d39c298d0}{CRC\_Calculate}}(\textcolor{keywordtype}{void}* data, uint32\_t length);}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{114 \}           \textcolor{comment}{/* closing brace for extern "{}C"{} */}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif      }\textcolor{comment}{/* CRC\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

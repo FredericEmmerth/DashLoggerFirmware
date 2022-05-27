@@ -1,0 +1,37 @@
+\hypertarget{delay_8h_source}{}\doxysection{delay.\+h}
+\label{delay_8h_source}\index{delay.h@{delay.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/* }}
+\DoxyCodeLine{2 \textcolor{comment}{ * File:   delay.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Author: Frederic}}
+\DoxyCodeLine{4 \textcolor{comment}{ *}}
+\DoxyCodeLine{5 \textcolor{comment}{ * Created on 11. Mai 2022, 17:54}}
+\DoxyCodeLine{6 \textcolor{comment}{ */}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef DELAY\_H}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#define DELAY\_H}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{12 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{14     }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#define CLOCK\_FREQUENCY\_CORE 120000000}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#define MICROSECONDS\_IN\_SECOND 1000000}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#define MILLISECONDS\_IN\_SECOND 1000}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define TWO\_STEPS\_DELAY\_ADJ 2}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} DELAY\_Milliseconds(uint32\_t delay);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} DELAY\_Microseconds(uint32\_t delay);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{27 \}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* DELAY\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{31 }
+
+\end{DoxyCode}

@@ -1,0 +1,70 @@
+\hypertarget{signals_8h}{}\doxysection{signals.\+h File Reference}
+\label{signals_8h}\index{signals.h@{signals.h}}
+
+
+This File defines the Prototypes for \mbox{\hyperlink{group___s_i_g_n_a_l_s}{SIGNALS}}.  
+
+
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cancomm.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}}
+\begin{DoxyCompactList}\small\item\em A struct to combine a String with it\textquotesingle{}s length. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsignals__signal__struct}{signals\+\_\+signal\+\_\+struct}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SIGNALS\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH}~30
+\begin{DoxyCompactList}\small\item\em The maximum friendly name length for a signal. \end{DoxyCompactList}\item 
+\#define {\bfseries SIGNALS\+\_\+\+STRING\+\_\+\+MAXIMUM\+\_\+\+LENGTH}~50
+\begin{DoxyCompactList}\small\item\em The maximum length of the string value of a signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structsignals__signal__struct}{signals\+\_\+signal\+\_\+struct}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} \{ \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b}{SIGNALS\+\_\+\+FOUND}} = 0
+, \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28}{SIGNALS\+\_\+\+NOT\+\_\+\+FOUND}}
+, \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb}{SIGNALS\+\_\+\+MATCH}}
+, \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29}{SIGNALS\+\_\+\+NO\+\_\+\+MATCH}}
+ \}
+\begin{DoxyCompactList}\small\item\em Definition of the Return Values of some Functions of this Module. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}\label{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}} 
+enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\+\_\+data\+\_\+type}} \{ {\bfseries SIGNALS\+\_\+\+FLOAT\+\_\+\+SIGNAL} = 0
+, {\bfseries SIGNALS\+\_\+\+UINT32\+\_\+\+T\+\_\+\+SIGNAL}
+, {\bfseries SIGNALS\+\_\+\+STRING\+\_\+\+SIGNAL}
+ \}
+\begin{DoxyCompactList}\small\item\em The Data type of a Signal. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}\label{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}} 
+enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\+\_\+signal\+\_\+type}} \{ {\bfseries SIGNALS\+\_\+\+CAN\+\_\+\+MESSAGE} = 0
+, {\bfseries SIGNALS\+\_\+\+INTERNAL\+\_\+\+SIGNAL}
+, {\bfseries SIGNALS\+\_\+\+DISPLAY\+\_\+\+SIGNAL}
+ \}
+\begin{DoxyCompactList}\small\item\em The Signal type of a Signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries SIGNALS\+\_\+\+Interpret} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len)
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} {\bfseries signals\+\_\+find\+\_\+data} (uint32\+\_\+t id, uint8\+\_\+t interface, \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len, uint8\+\_\+t $\ast$data)
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ {\bfseries signals\+\_\+find\+\_\+signal} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, void($\ast$Callback)(void))
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} {\bfseries signals\+\_\+compare\+\_\+names} (uint8\+\_\+t $\ast$first, uint32\+\_\+t firstlen, uint8\+\_\+t $\ast$second, uint32\+\_\+t secondlen)
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ {\bfseries signals\+\_\+find\+\_\+display\+\_\+signal} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, uint32\+\_\+t $\ast$disp\+Signal\+Count, uint32\+\_\+t needle)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This File defines the Prototypes for \mbox{\hyperlink{group___s_i_g_n_a_l_s}{SIGNALS}}. 
+
+\begin{DoxyAuthor}{Author}
+Frederic Emmerth 
+\end{DoxyAuthor}

@@ -1,0 +1,49 @@
+\hypertarget{conv_8h_source}{}\doxysection{conv.\+h}
+\label{conv_8h_source}\index{conv.h@{conv.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#ifndef CONV\_H}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#define CONV\_H}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{7 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{9     }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{signals_8h}{signals.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}stdio.h"{}}}
+\DoxyCodeLine{13     }
+\DoxyCodeLine{14 \textcolor{comment}{/* User-\/Defined Callback Functions to Convert the RAW CAN Data to Values */}}
+\DoxyCodeLine{15 \textcolor{comment}{/* Numbers are Hardcoded here, to make it more Readable */}}
+\DoxyCodeLine{16     }
+\DoxyCodeLine{17 \textcolor{keywordtype}{float} CONV\_MinVoltage(uint8\_t* data);}
+\DoxyCodeLine{18 \textcolor{keywordtype}{float} CONV\_MaxTemp(uint8\_t* data);}
+\DoxyCodeLine{19 \textcolor{keywordtype}{float} CONV\_LapTime(uint8\_t* data);}
+\DoxyCodeLine{20 \textcolor{keywordtype}{float} CONV\_BestLapTime(uint8\_t* data);}
+\DoxyCodeLine{21 uint32\_t CONV\_FSG\_AMI\_state(uint8\_t* data);}
+\DoxyCodeLine{22 \textcolor{keywordtype}{float} CONV\_MaxMotTemp(uint8\_t* data);}
+\DoxyCodeLine{23 \textcolor{keywordtype}{float} CONV\_MaxInvTemp(uint8\_t* data);}
+\DoxyCodeLine{24 \textcolor{keywordtype}{float} CONV\_MotorTemp\_RR(uint8\_t* data);}
+\DoxyCodeLine{25 \textcolor{keywordtype}{float} CONV\_MotorTemp\_RL(uint8\_t* data);}
+\DoxyCodeLine{26 \textcolor{keywordtype}{float} CONV\_MotorTemp\_FL(uint8\_t* data);}
+\DoxyCodeLine{27 \textcolor{keywordtype}{float} CONV\_MotorTemp\_FR(uint8\_t* data);}
+\DoxyCodeLine{28 \textcolor{keywordtype}{float} CONV\_MaxMotorTemp(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len);}
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} CONV\_DISP\_Motor\_Temp(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
+\DoxyCodeLine{30         \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}}* outstring);}
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} CONV\_DISP\_MinVoltage(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
+\DoxyCodeLine{32         \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}}* outstring);}
+\DoxyCodeLine{33 uint32\_t CONV\_find\_string\_length(uint8\_t* str, uint32\_t strlen);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keywordtype}{float} CONV\_max(\textcolor{keywordtype}{float}* vals, uint32\_t valcount);}
+\DoxyCodeLine{36 \textcolor{keywordtype}{float} CONV\_min(\textcolor{keywordtype}{float}* vals, uint32\_t valcount);}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{39 \}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* CONV\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{43 }
+
+\end{DoxyCode}

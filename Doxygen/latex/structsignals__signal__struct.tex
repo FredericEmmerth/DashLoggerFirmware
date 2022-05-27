@@ -1,0 +1,69 @@
+\hypertarget{structsignals__signal__struct}{}\doxysection{signals\+\_\+signal\+\_\+struct Struct Reference}
+\label{structsignals__signal__struct}\index{signals\_signal\_struct@{signals\_signal\_struct}}
+
+
+{\ttfamily \#include $<$signals.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a6b91f99ce8a81496f49dc35d13dac0b0}\label{structsignals__signal__struct_a6b91f99ce8a81496f49dc35d13dac0b0}} 
+uint32\+\_\+t {\bfseries id}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a59f86ac6195ba91ca4312e018bc4a119}\label{structsignals__signal__struct_a59f86ac6195ba91ca4312e018bc4a119}} 
+uint8\+\_\+t {\bfseries interface\+\_\+number}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_af68804a49ea40ef5000c9f76ab47d2d8}\label{structsignals__signal__struct_af68804a49ea40ef5000c9f76ab47d2d8}} 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\+\_\+data\+\_\+type}} {\bfseries data\+\_\+type}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a3c6366a494b09023499ccc623a951c31}\label{structsignals__signal__struct_a3c6366a494b09023499ccc623a951c31}} 
+float($\ast$ {\bfseries can\+\_\+convert\+\_\+float} )(uint8\+\_\+t $\ast$data)
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a3db1c4962d72a52bc2da98d627d21311}\label{structsignals__signal__struct_a3db1c4962d72a52bc2da98d627d21311}} 
+float($\ast$ {\bfseries internal\+\_\+convert\+\_\+float} )(\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len)
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_ab935d973b3a1f1030fdb5a835e143248}\label{structsignals__signal__struct_ab935d973b3a1f1030fdb5a835e143248}} 
+float {\bfseries value\+\_\+float}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_abfc621b9dbe9de03f794e479039e1dcb}\label{structsignals__signal__struct_abfc621b9dbe9de03f794e479039e1dcb}} 
+uint32\+\_\+t($\ast$ {\bfseries can\+\_\+convert\+\_\+uint32\+\_\+t} )(uint8\+\_\+t $\ast$data)
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_af9f969177c03c39b8622e0ca011e281d}\label{structsignals__signal__struct_af9f969177c03c39b8622e0ca011e281d}} 
+uint32\+\_\+t($\ast$ {\bfseries internal\+\_\+convert\+\_\+uint32\+\_\+t} )(\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len)
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a22f897328a12b8e442b3d7c99f85cc55}\label{structsignals__signal__struct_a22f897328a12b8e442b3d7c99f85cc55}} 
+uint32\+\_\+t {\bfseries value\+\_\+uint32\+\_\+t}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_ac995cb11901ea482a506e81f9ba5b498}\label{structsignals__signal__struct_ac995cb11901ea482a506e81f9ba5b498}} 
+void($\ast$ {\bfseries can\+\_\+convert\+\_\+string} )(uint8\+\_\+t $\ast$data, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$string)
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a3151a985d6d2de155e36f185a96ce960}\label{structsignals__signal__struct_a3151a985d6d2de155e36f185a96ce960}} 
+void($\ast$ {\bfseries internal\+\_\+convert\+\_\+string} )(\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$string)
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a88b1a26aa092b39c64026d2ad0e87eae}\label{structsignals__signal__struct_a88b1a26aa092b39c64026d2ad0e87eae}} 
+\mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} {\bfseries value\+\_\+string}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a733c9f5e557ba368fba6bdc0dea51974}\label{structsignals__signal__struct_a733c9f5e557ba368fba6bdc0dea51974}} 
+uint8\+\_\+t {\bfseries friendly\+\_\+name} \mbox{[}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}{SIGNALS\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH}}\mbox{]}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a400c4500b5329e3d6bf5baa605f2abac}\label{structsignals__signal__struct_a400c4500b5329e3d6bf5baa605f2abac}} 
+uint32\+\_\+t {\bfseries timestamp}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_ad30a372a63b611762abe1c5e0c5fa6aa}\label{structsignals__signal__struct_ad30a372a63b611762abe1c5e0c5fa6aa}} 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\+\_\+signal\+\_\+type}} {\bfseries type}
+\item 
+\mbox{\Hypertarget{structsignals__signal__struct_a4097cd574e68c93be49085b652303f2c}\label{structsignals__signal__struct_a4097cd574e68c93be49085b652303f2c}} 
+uint32\+\_\+t {\bfseries object\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Struct defines a Signal. Every Signal should have a friendly Name, to be easily identified by a human. Every Signal has to have a signals\+\_\+signal.\+type and a signals\+\_\+signal.\+data\+\_\+type. Depending on the signals\+\_\+signal.\+type and signals\+\_\+signal.\+data\+\_\+type other members of the struct have to be defined. If a signal is of type SIGNALS\+\_\+\+CAN\+\_\+\+MESSAGE, the id and the interface\+\_\+number have to be defined. The Signal can be either of data\+\_\+type SIGNALS\+\_\+\+FLOAT\+\_\+\+SIGNAL, SIGNALS\+\_\+\+UINT32\+\_\+\+T\+\_\+\+SIGNAL or SIGNALS\+\_\+\+STRING\+\_\+\+SIGNAL. The corresponding callback function can\+\_\+convert\+\_\+float, can\+\_\+convert\+\_\+uint32\+\_\+t or can\+\_\+convert\+\_\+string has to be defined.
+
+If a signal is of type SIGNALS\+\_\+\+INTERNAL\+\_\+\+SIGNAL, it can be of data\+\_\+type SIGNALS\+\_\+\+FLOAT\+\_\+\+SIGNAL, SIGNALS\+\_\+\+UINT32\+\_\+\+T\+\_\+\+SIGNAL or SIGNALS\+\_\+\+STRING\+\_\+\+SIGNAL. The corresponding callback function internal\+\_\+convert\+\_\+float, internal\+\_\+convert\+\_\+uint32\+\_\+t or internal\+\_\+convert\+\_\+string has to be defined.
+
+If a signal is of type SIGNALS\+\_\+\+DISPLAY\+\_\+\+SIGNAL, it\textquotesingle{}s data\+\_\+type has to be SIGNALS\+\_\+\+STRING\+\_\+\+SIGNAL, and its callback function internal\+\_\+convert\+\_\+string has to be defined in a way to produce correct Commands for the Display to be interpreted. Signals of this Type are read by \mbox{\hyperlink{group___c_o_m_m_a_n_d}{COMMAND}} to be sent of to the Display using the SHORTPROTOCOL. 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{signals_8h}{signals.\+h}}\end{DoxyCompactItemize}

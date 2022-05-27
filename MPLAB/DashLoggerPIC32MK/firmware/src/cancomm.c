@@ -1,4 +1,23 @@
+/**
+ * @file cancomm.c
+ * @brief This File Implements the Prototypes for \ref CANCOMM
+ * 
+ * @author Frederic Emmerth
+ * 
+ * \ingroup CANCOMM
+ * 
+ * \addtogroup CANCOMM
+ * \{
+ * 
+ */
+
+
+
+
+
+
 #include "cancomm.h"
+
 
 void CANCOMM_ReadMessages(cancomm_message* message_list,
         uint32_t message_list_len,
@@ -56,3 +75,7 @@ void CANCOMM_ReadMessages(cancomm_message* message_list,
     }
     
 }
+
+/**
+ * \}
+ */

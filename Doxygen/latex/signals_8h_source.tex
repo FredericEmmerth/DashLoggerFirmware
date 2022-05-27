@@ -1,0 +1,100 @@
+\hypertarget{signals_8h_source}{}\doxysection{signals.\+h}
+\label{signals_8h_source}\index{signals.h@{signals.h}}
+\mbox{\hyperlink{signals_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#ifndef SIGNALS\_H}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define SIGNALS\_H}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{34 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{36     }
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cancomm_8h}{cancomm.h}}"{}}}
+\DoxyCodeLine{39     }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define SIGNALS\_MAXIMUM\_NAME\_LENGTH     30}}
+\DoxyCodeLine{44     }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define SIGNALS\_STRING\_MAXIMUM\_LENGTH   50}}
+\DoxyCodeLine{49    }
+\DoxyCodeLine{53 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{57     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b}{SIGNALS\_FOUND}} = 0,}
+\DoxyCodeLine{58             }
+\DoxyCodeLine{62     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28}{SIGNALS\_NOT\_FOUND}},}
+\DoxyCodeLine{63             }
+\DoxyCodeLine{67     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb}{SIGNALS\_MATCH}},}
+\DoxyCodeLine{68             }
+\DoxyCodeLine{72     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29}{SIGNALS\_NO\_MATCH}}}
+\DoxyCodeLine{73 \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{80     SIGNALS\_FLOAT\_SIGNAL = 0,}
+\DoxyCodeLine{81     SIGNALS\_UINT32\_T\_SIGNAL,}
+\DoxyCodeLine{82     SIGNALS\_STRING\_SIGNAL}
+\DoxyCodeLine{83 \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\_data\_type}};}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{88 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{89     SIGNALS\_CAN\_MESSAGE = 0,}
+\DoxyCodeLine{90     SIGNALS\_INTERNAL\_SIGNAL,}
+\DoxyCodeLine{91     SIGNALS\_DISPLAY\_SIGNAL}
+\DoxyCodeLine{92 \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\_signal\_type}};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{97 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{98     uint32\_t length;}
+\DoxyCodeLine{99     uint8\_t data[\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}{SIGNALS\_STRING\_MAXIMUM\_LENGTH}}];}
+\DoxyCodeLine{100 \}\mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{107 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal\_struct}} \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}};}
+\DoxyCodeLine{108      }
+\DoxyCodeLine{135 \textcolor{keyword}{struct }\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal\_struct}}\{}
+\DoxyCodeLine{136     uint32\_t id;}
+\DoxyCodeLine{137     uint8\_t interface\_number;}
+\DoxyCodeLine{138     \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\_data\_type}} data\_type;}
+\DoxyCodeLine{139     }
+\DoxyCodeLine{140     float(*can\_convert\_float)(uint8\_t* data);}
+\DoxyCodeLine{141     float(*internal\_convert\_float)(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{142             uint32\_t signal\_list\_len);}
+\DoxyCodeLine{143     \textcolor{keywordtype}{float} value\_float;}
+\DoxyCodeLine{144     }
+\DoxyCodeLine{145     uint32\_t(*can\_convert\_uint32\_t)(uint8\_t* data);}
+\DoxyCodeLine{146     uint32\_t(*internal\_convert\_uint32\_t)(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{147             uint32\_t signal\_list\_len);}
+\DoxyCodeLine{148     uint32\_t value\_uint32\_t;}
+\DoxyCodeLine{149     }
+\DoxyCodeLine{150     void (*can\_convert\_string)(uint8\_t* data, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}}* string);}
+\DoxyCodeLine{151     void (*internal\_convert\_string)(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{152             uint32\_t signal\_list\_len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}}* string);}
+\DoxyCodeLine{153     \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}} value\_string;}
+\DoxyCodeLine{154     }
+\DoxyCodeLine{155     uint8\_t friendly\_name[\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}{SIGNALS\_MAXIMUM\_NAME\_LENGTH}}];}
+\DoxyCodeLine{156     uint32\_t timestamp;}
+\DoxyCodeLine{157     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\_signal\_type}} type;}
+\DoxyCodeLine{158     }
+\DoxyCodeLine{159     uint32\_t object\_id;}
+\DoxyCodeLine{160 \};}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 \textcolor{keywordtype}{void} SIGNALS\_Interpret(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
+\DoxyCodeLine{163         \mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list, uint32\_t message\_list\_len);}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} signals\_find\_data(uint32\_t \textcolor{keywordtype}{id}, uint8\_t interface,}
+\DoxyCodeLine{166         \mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list, uint32\_t message\_list\_len,}
+\DoxyCodeLine{167         uint8\_t* data);}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signals\_find\_signal( \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{170         uint32\_t signal\_list\_len, \textcolor{keywordtype}{void}(*Callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{172 \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} signals\_compare\_names(uint8\_t* first, uint32\_t firstlen,}
+\DoxyCodeLine{173         uint8\_t* second, uint32\_t secondlen);}
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signals\_find\_display\_signal(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{176         uint32\_t signal\_list\_len, uint32\_t* dispSignalCount, uint32\_t needle);}
+\DoxyCodeLine{177 }
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{179 \}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* SIGNALS\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{183 }
+
+\end{DoxyCode}

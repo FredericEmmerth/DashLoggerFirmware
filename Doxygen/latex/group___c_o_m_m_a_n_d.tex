@@ -1,0 +1,41 @@
+\hypertarget{group___c_o_m_m_a_n_d}{}\doxysection{COMMAND}
+\label{group___c_o_m_m_a_n_d}\index{COMMAND@{COMMAND}}
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{command_8h}{command.\+h}}
+\begin{DoxyCompactList}\small\item\em This File defines the Prototypes for \mbox{\hyperlink{group___c_o_m_m_a_n_d}{COMMAND}}. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{command_8c}{command.\+c}}
+\begin{DoxyCompactList}\small\item\em This File implements the Prototypes for \mbox{\hyperlink{group___c_o_m_m_a_n_d}{COMMAND}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___c_o_m_m_a_n_d_gaed1ab647768f1c798408529cdd73de6f}{COMMAND\+\_\+\+Generate}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, uint32\+\_\+t $\ast$next\+\_\+command, \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$short\+Prot)
+\begin{DoxyCompactList}\small\item\em Adds a Command from {\ttfamily signal\+\_\+list} if {\ttfamily short\+Prot} is ready. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Module Picks the \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} from a signal\+\_\+list wich are of Type SIGNALS\+\_\+\+DISPLAY\+\_\+\+SIGNAL and Generates a Comand to change the Text Object on the Display with ID signals\+\_\+signal.\+oject\+\_\+id to signals\+\_\+signal.\+string\+\_\+value. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___c_o_m_m_a_n_d_gaed1ab647768f1c798408529cdd73de6f}\label{group___c_o_m_m_a_n_d_gaed1ab647768f1c798408529cdd73de6f}} 
+\index{COMMAND@{COMMAND}!COMMAND\_Generate@{COMMAND\_Generate}}
+\index{COMMAND\_Generate@{COMMAND\_Generate}!COMMAND@{COMMAND}}
+\doxysubsubsection{\texorpdfstring{COMMAND\_Generate()}{COMMAND\_Generate()}}
+{\footnotesize\ttfamily void COMMAND\+\_\+\+Generate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$}]{signal\+\_\+list,  }\item[{uint32\+\_\+t}]{signal\+\_\+list\+\_\+len,  }\item[{uint32\+\_\+t $\ast$}]{next\+\_\+command,  }\item[{\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$}]{short\+Prot }\end{DoxyParamCaption})}
+
+
+
+Adds a Command from {\ttfamily signal\+\_\+list} if {\ttfamily short\+Prot} is ready. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal\+\_\+list} & A list of \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} \\
+\hline
+{\em signal\+\_\+list\+\_\+len} & The Length of {\ttfamily signal\+\_\+list} \\
+\hline
+{\em next\+\_\+command} & A pointer to an Integer. This represents the next Command to be Sent. This value should only be changed by this Function. \\
+\hline
+{\em short\+Prot} & A \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} for sending Packets to the Display. \\
+\hline
+\end{DoxyParams}
