@@ -5,11 +5,11 @@ void SIGNALS_Interpret(signals_signal* signal_list, uint32_t signal_list_len,
     
     uint8_t databuff[CANCOMM_MAXIMUM_DATA_LENGTH];
     for(uint32_t i=0; i<signal_list_len; i++){
-        if(signal_list[i].origin == SIGNALS_CAN_MESSAGE){
+        if(signal_list[i].type == SIGNALS_CAN_MESSAGE){
             if(signals_find_data(signal_list[i].id, signal_list[i].interface_number,
                     message_list, message_list_len, databuff) == SIGNALS_FOUND)
             {
-                switch(signal_list[i].signal_type){
+                switch(signal_list[i].data_type){
                     case SIGNALS_FLOAT_SIGNAL:
                         signal_list[i].value_float = 
                                 signal_list[i].can_convert_float(databuff);
@@ -29,8 +29,8 @@ void SIGNALS_Interpret(signals_signal* signal_list, uint32_t signal_list_len,
                         break;
                 }
             }
-        }else if(signal_list[i].origin == SIGNALS_INTERNAL_SIGNAL){
-            switch(signal_list[i].signal_type){
+        }else if(signal_list[i].type == SIGNALS_INTERNAL_SIGNAL){
+            switch(signal_list[i].data_type){
                     case SIGNALS_FLOAT_SIGNAL:
                         signal_list[i].value_float = 
                                 signal_list[i].internal_convert_float(
@@ -51,9 +51,19 @@ void SIGNALS_Interpret(signals_signal* signal_list, uint32_t signal_list_len,
                     default:
                         break;
             }
+        }else if(signal_list[i].type == SIGNALS_DISPLAY_SIGNAL){
+            switch(signal_list[i].data_type){
+
+                    case SIGNALS_STRING_SIGNAL:
+                        signal_list[i].internal_convert_string(signal_list,
+                                signal_list_len, &(signal_list[i].value_string));
+                        break;
+
+                    default:
+                        break;
+            }
         }
     }
-    
 }
 
 signals_result signals_find_data(uint32_t id, uint8_t interface,
@@ -117,4 +127,25 @@ signals_signal* signals_find_signal( signals_signal* signal_list,
     }
     
     return NULL;
+}
+
+/* this function returns the total count of display signals in the list, and */
+/* if there is at least one display signal, the nth display signal by needle*/
+
+signals_signal* signals_find_display_signal(signals_signal* signal_list,
+        uint32_t signal_list_len, uint32_t* dispSignalCount, uint32_t needle){
+    
+    uint32_t counter = 0;
+    signals_signal* foundNeedle = NULL;
+    for(uint32_t i=0; i<signal_list_len; i++){
+        if(signal_list[i].type == SIGNALS_DISPLAY_SIGNAL){
+            if(needle == counter){
+                foundNeedle = &(signal_list[i]);
+            }
+            counter++;
+        }
+    }
+    
+    *dispSignalCount = counter;
+    return foundNeedle;
 }

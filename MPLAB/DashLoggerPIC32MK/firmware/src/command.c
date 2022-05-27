@@ -1,27 +1,26 @@
 #include "command.h"
 
 void COMMAND_Generate(signals_signal* signal_list, uint32_t signal_list_len,
-        COMMAND_Command* command_list, uint32_t command_list_len,
-        uint32_t* current_command, SHORTPROTOCOL_Instance* shortProt){
+        uint32_t* current_display_signal, SHORTPROTOCOL_Instance* shortProt){
     
-    uint8_t buffer[SHORTPROTOCOL_MAXIMUM_COMMAND_LENGTH];
+    uint32_t display_signal_count;
     
-
+    signals_signal* current_signal;
+    
+    /* get the count of display signals and if there is one, the current display signal*/
+    current_signal = signals_find_display_signal(signal_list, signal_list_len,
+            &display_signal_count, *current_display_signal);
     
     if(SHORTPROTOCOL_Available(shortProt)==SHORTPROTOCOL_AVAILABLE){
         
-        sprintf((char*)buffer,"#SSC %d,\"%s\";\n",
-                command_list[*current_command].object_id,
-                signals_find_signal(signal_list,signal_list_len,
-                command_list[*current_command].Signal)->value_string.data);
-        
-        
-        SHORTPROTOCOL_Send(shortProt, buffer,
-                CONV_find_string_length(buffer, SHORTPROTOCOL_MAXIMUM_COMMAND_LENGTH));
-    }
+        SHORTPROTOCOL_Send(shortProt, current_signal->value_string.data,
+                current_signal->value_string.length);
     
-    
+        *current_display_signal++;
 
-SHORTPROTOCOL_status SHORTPROTOCOL_Send(SHORTPROTOCOL_Instance* inst,
-        uint8_t* data, uint32_t length);
+        if(*current_display_signal >= display_signal_count){
+            *current_display_signal = 0;
+        }
+    
+    }
 }

@@ -94,7 +94,7 @@ void CONV_DISP_Motor_Temp(signals_signal* signal_list, uint32_t signal_list_len,
     
     float maxtemp = signals_find_signal(signal_list,
         signal_list_len,(void(*)(void))CONV_MaxMotorTemp)->value_float;
-    sprintf((char*)outstring->data,"%4.1f°C",maxtemp);
+    sprintf((char*)outstring->data,"#SSC %d,\"%4.1f°C\";\n",11,maxtemp);
     
     outstring->length = CONV_find_string_length(outstring->data,
                                 SIGNALS_STRING_MAXIMUM_LENGTH);

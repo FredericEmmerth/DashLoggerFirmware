@@ -29,12 +29,13 @@ typedef enum{
     SIGNALS_FLOAT_SIGNAL = 0,
     SIGNALS_UINT32_T_SIGNAL,
     SIGNALS_STRING_SIGNAL
-}signals_signal_type;
+}signals_data_type;
 
 typedef enum{
     SIGNALS_CAN_MESSAGE = 0,
-    SIGNALS_INTERNAL_SIGNAL
-}signals_signal_origin;
+    SIGNALS_INTERNAL_SIGNAL,
+    SIGNALS_DISPLAY_SIGNAL
+}signals_signal_type;
 
 typedef struct{
     uint32_t length;
@@ -46,7 +47,7 @@ typedef struct signals_signal_struct signals_signal;
 struct signals_signal_struct{
     uint32_t id;
     uint8_t interface_number;
-    signals_signal_type signal_type;
+    signals_data_type data_type;
     
     float(*can_convert_float)(uint8_t* data);
     float(*internal_convert_float)(signals_signal* signal_list,
@@ -65,7 +66,9 @@ struct signals_signal_struct{
     
     uint8_t friendly_name[SIGNALS_MAXIMUM_NAME_LENGTH];
     uint32_t timestamp;
-    signals_signal_origin origin;
+    signals_signal_type type;
+    
+    uint32_t object_id;
 };
 
 void SIGNALS_Interpret(signals_signal* signal_list, uint32_t signal_list_len,
@@ -80,6 +83,9 @@ signals_signal* signals_find_signal( signals_signal* signal_list,
 
 signals_result signals_compare_names(uint8_t* first, uint32_t firstlen,
         uint8_t* second, uint32_t secondlen);
+
+signals_signal* signals_find_display_signal(signals_signal* signal_list,
+        uint32_t signal_list_len, uint32_t* dispSignalCount, uint32_t needle);
 
 #ifdef	__cplusplus
 }

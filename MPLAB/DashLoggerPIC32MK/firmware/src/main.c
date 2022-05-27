@@ -93,92 +93,84 @@ cancomm_message message_list [] = {
 };
 uint32_t message_list_len = sizeof(message_list) / sizeof(cancomm_message);
 
-/* Define all Signals to be interpreted and shown */
+/* Define all Signals to be interpreted */
 signals_signal signal_list [] = {
     {.friendly_name="Min_Voltage",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0xA2,
             .interface_number=1,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_MinVoltage
     },
     {.friendly_name="MaxBatTemp",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0xA3,
             .interface_number=1,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_MaxTemp
     },
     {.friendly_name="LapTime",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0x711,
             .interface_number=1,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_LapTime
     },
     {.friendly_name="FSG_AMI_state",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0x502,
             .interface_number=1,
-            .signal_type=SIGNALS_UINT32_T_SIGNAL,
+            .data_type=SIGNALS_UINT32_T_SIGNAL,
             .can_convert_uint32_t=CONV_FSG_AMI_state
     },
     {.friendly_name="MotorTemp_RR",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0x239,
             .interface_number=1,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_MotorTemp_RR
     },
     {.friendly_name="MotorTemp_FL",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0x239,
             .interface_number=1,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_MotorTemp_FL
     },
     {.friendly_name="MotorTemp_FR",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0x239,
             .interface_number=1,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_MotorTemp_FR
     },
     {.friendly_name="MotorTemp_RL",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0x239,
             .interface_number=1,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_MotorTemp_RL
     },
     {.friendly_name="MaxInvTemp",
-            .origin = SIGNALS_CAN_MESSAGE,
+            .type = SIGNALS_CAN_MESSAGE,
             .id=0x23A,
             .interface_number=1,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_MaxInvTemp
     },
     {.friendly_name="MaxMotorTemp",
-            .origin = SIGNALS_INTERNAL_SIGNAL,
-            .signal_type=SIGNALS_FLOAT_SIGNAL,
+            .type = SIGNALS_INTERNAL_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
             .internal_convert_float=CONV_MaxMotorTemp
     },
     {.friendly_name="DISP_Motor_Temp",
-            .origin=SIGNALS_INTERNAL_SIGNAL,
-            .signal_type=SIGNALS_STRING_SIGNAL,
+            .type=SIGNALS_DISPLAY_SIGNAL,
+            .data_type=SIGNALS_STRING_SIGNAL,
             .internal_convert_string=CONV_DISP_Motor_Temp
     }
             
 };
 uint32_t signal_list_len = sizeof(signal_list) / sizeof(signals_signal);
-
-/* Define a Command Instance for Generating the Commands for the Display */
-COMMAND_Command command_list[] = {
-    {.object_id = 11,
-     .Signal = (void(*)(void))CONV_DISP_Motor_Temp}
-};
-
-uint32_t command_list_len = sizeof(command_list)/sizeof(COMMAND_Command);
 
 uint32_t current_command = 0;
 
@@ -220,8 +212,8 @@ int main ( void )
                 message_list, message_list_len);
         
         /* Generate the Commands to be sent to the Display */
-        COMMAND_Generate(signal_list, signal_list_len, command_list,
-                command_list_len, &current_command, &shortProt);
+        COMMAND_Generate(signal_list, signal_list_len, 
+                &current_command, &shortProt);
         
         /* Send Messages to Display */
         SHORTPROTOCOL_Update(&shortProt);
