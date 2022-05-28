@@ -18,20 +18,20 @@
     \subitem {COMMAND}, \hyperpage{13}
   \item {conv.h}, \hyperpage{26}
   \item {crc.c}, \hyperpage{27}
-    \subitem {CRC\_Calculate}, \hyperpage{27}
+    \subitem {CRC\_Calculate}, \hyperpage{28}
     \subitem {crc\_update}, \hyperpage{28}
   \item {crc.h}, \hyperpage{28}, \hyperpage{31}
     \subitem {CRC\_ALGO\_TABLE\_DRIVEN}, \hyperpage{29}
     \subitem {CRC\_Calculate}, \hyperpage{30}
-    \subitem {crc\_t}, \hyperpage{29}
+    \subitem {crc\_t}, \hyperpage{30}
     \subitem {crc\_update}, \hyperpage{30}
   \item {CRC\_ALGO\_TABLE\_DRIVEN}
     \subitem {crc.h}, \hyperpage{29}
   \item {CRC\_Calculate}
-    \subitem {crc.c}, \hyperpage{27}
+    \subitem {crc.c}, \hyperpage{28}
     \subitem {crc.h}, \hyperpage{30}
   \item {crc\_t}
-    \subitem {crc.h}, \hyperpage{29}
+    \subitem {crc.h}, \hyperpage{30}
   \item {crc\_update}
     \subitem {crc.c}, \hyperpage{28}
     \subitem {crc.h}, \hyperpage{30}

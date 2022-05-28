@@ -50,14 +50,14 @@
 \contentsline {section}{\numberline {8.7}conv.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{26}{section.8.7}%
 \contentsline {section}{\numberline {8.8}crc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{27}{section.8.8}%
 \contentsline {subsection}{\numberline {8.8.1}Detailed Description}{27}{subsection.8.8.1}%
-\contentsline {subsection}{\numberline {8.8.2}Function Documentation}{27}{subsection.8.8.2}%
-\contentsline {subsubsection}{\numberline {8.8.2.1}CRC\_Calculate()}{27}{subsubsection.8.8.2.1}%
+\contentsline {subsection}{\numberline {8.8.2}Function Documentation}{28}{subsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.1}CRC\_Calculate()}{28}{subsubsection.8.8.2.1}%
 \contentsline {subsubsection}{\numberline {8.8.2.2}crc\_update()}{28}{subsubsection.8.8.2.2}%
 \contentsline {section}{\numberline {8.9}crc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{28}{section.8.9}%
 \contentsline {subsection}{\numberline {8.9.1}Detailed Description}{29}{subsection.8.9.1}%
 \contentsline {subsection}{\numberline {8.9.2}Macro Definition Documentation}{29}{subsection.8.9.2}%
-\contentsline {subsubsection}{\numberline {8.9.2.1}CRC\_ALGO\_TABLE\_DRIVEN}{29}{subsubsection.8.9.2.1}%
-\contentsline {subsection}{\numberline {8.9.3}Typedef Documentation}{29}{subsection.8.9.3}%
+\contentsline {subsubsection}{\numberline {8.9.2.1}CRC\_ALGO\_TABLE\_DRIVEN}{30}{subsubsection.8.9.2.1}%
+\contentsline {subsection}{\numberline {8.9.3}Typedef Documentation}{30}{subsection.8.9.3}%
 \contentsline {subsubsection}{\numberline {8.9.3.1}crc\_t}{30}{subsubsection.8.9.3.1}%
 \contentsline {subsection}{\numberline {8.9.4}Function Documentation}{30}{subsection.8.9.4}%
 \contentsline {subsubsection}{\numberline {8.9.4.1}CRC\_Calculate()}{30}{subsubsection.8.9.4.1}%

@@ -18,6 +18,8 @@
  * \ref cancomm_message Structs.
  * 
  * \todo Implement Transmit Functionality
+ * \todo Handle Remote Frames on Recieve
+ * \todo Handle CAN FD Frames on Recieve
  * \bug Only Interface One was tested
  * 
  * \addtogroup CANCOMM

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.14)  27 MAY 2022 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2022.1.14)  28 MAY 2022 13:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -952,16 +952,16 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 30.
 [11]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 47.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 47
+(Font)              scaled to size 7.19995pt on input line 51.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 51
 .
  (C:\MikTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 47.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 51.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 47.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 51.
 ) (group___c_o_m_m_a_n_d.tex
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 14.
@@ -1078,7 +1078,7 @@ Underfull \hbox (badness 10000) detected at line 21
 [][][]
  []
 
-) (command_8h_source.tex) (conv_8h_source.tex) (crc_8c.tex [26]
+) (command_8h_source.tex) (conv_8h_source.tex [26]) (crc_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
@@ -1108,8 +1108,8 @@ Underfull \hbox (badness 10000) detected at line 117
 [][][]
  []
 
-) (crc_8h_source.tex) (delay_8h_source.tex) (shortprotocol_8h_source.tex
-[31]) (signals_8h.tex [32]
+) (crc_8h_source.tex) (delay_8h_source.tex [31]) (shortprotocol_8h_source.tex
+[32]) (signals_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
@@ -1147,12 +1147,12 @@ Underfull \hbox (badness 6641) in paragraph at lines 53--55
 st[]_[]len, []
  []
 
-
+[33]
 Underfull \hbox (badness 10000) detected at line 68
 [][][]
  []
 
-) (signals_8h_source.tex [33] [34]) (uart_8h_source.tex) [35] [36
+) (signals_8h_source.tex [34]) (uart_8h_source.tex) [35] [36
 
 ] (refman.ind
 [37
@@ -1181,9 +1181,9 @@ nts/type1/urw/courier/ucrr8a.pfb><C:/MikTeX/fonts/type1/urw/courier/ucrro8a.pfb
 ><C:/MikTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/MikTeX/fonts/type1/urw/helv
 etic/uhvb8ac.pfb><C:/MikTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/MikTeX/font
 s/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (41 pages, 315863 bytes).
+Output written on refman.pdf (41 pages, 318656 bytes).
 PDF statistics:
- 1099 PDF objects out of 1200 (max. 8388607)
+ 1109 PDF objects out of 1200 (max. 8388607)
  244 named destinations out of 1000 (max. 500000)
  569 words of extra memory for PDF output out of 10000 (max. 10000000)
 

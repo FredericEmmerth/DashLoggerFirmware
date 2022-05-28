@@ -100,6 +100,34 @@ signals_signal signal_list [] = {
             .data_type=SIGNALS_UINT32_T_SIGNAL,
             .can_convert_uint32_t=CONV_FSG_AMI_state
     },
+    {.friendly_name="InverterTemp_RR",
+            .type = SIGNALS_CAN_MESSAGE,
+            .id = 0x23A,
+            .interface_number=1,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
+            .can_convert_float=CONV_InverterTemp_RR
+    },
+    {.friendly_name="InverterTemp_FL",
+            .type = SIGNALS_CAN_MESSAGE,
+            .id = 0x23A,
+            .interface_number=1,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
+            .can_convert_float=CONV_InverterTemp_FL
+    },
+    {.friendly_name="InverterTemp_FR",
+            .type = SIGNALS_CAN_MESSAGE,
+            .id = 0x23A,
+            .interface_number=1,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
+            .can_convert_float=CONV_InverterTemp_FR
+    },
+    {.friendly_name="InverterTemp_RL",
+            .type = SIGNALS_CAN_MESSAGE,
+            .id = 0x23A,
+            .interface_number=1,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
+            .can_convert_float=CONV_InverterTemp_RL
+    },
     {.friendly_name="MotorTemp_RR",
             .type = SIGNALS_CAN_MESSAGE,
             .id=0x239,
@@ -128,17 +156,20 @@ signals_signal signal_list [] = {
             .data_type=SIGNALS_FLOAT_SIGNAL,
             .can_convert_float=CONV_MotorTemp_RL
     },
-    {.friendly_name="MaxInvTemp",
-            .type = SIGNALS_CAN_MESSAGE,
-            .id=0x23A,
-            .interface_number=1,
-            .data_type=SIGNALS_FLOAT_SIGNAL,
-            .can_convert_float=CONV_MaxInvTemp
-    },
     {.friendly_name="MaxMotorTemp",
             .type = SIGNALS_INTERNAL_SIGNAL,
             .data_type=SIGNALS_FLOAT_SIGNAL,
             .internal_convert_float=CONV_MaxMotorTemp
+    },
+    {.friendly_name="MaxInverterTemp",
+            .type = SIGNALS_INTERNAL_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
+            .internal_convert_float=CONV_MaxInverterTemp
+    },
+    {.friendly_name="LastLap",
+            .type = SIGNALS_INTERNAL_SIGNAL,
+            .data_type=SIGNALS_FLOAT_SIGNAL,
+            .internal_convert_float=CONV_LastLapTime
     },
     {.friendly_name="DISP_Motor_Temp",
             .type=SIGNALS_DISPLAY_SIGNAL,
@@ -149,7 +180,27 @@ signals_signal signal_list [] = {
             .type=SIGNALS_DISPLAY_SIGNAL,
             .data_type=SIGNALS_STRING_SIGNAL,
             .internal_convert_string=CONV_DISP_MinVoltage
-    }
+    },
+    {.friendly_name="DISP_LapTime",
+            .type=SIGNALS_DISPLAY_SIGNAL,
+            .data_type=SIGNALS_STRING_SIGNAL,
+            .internal_convert_string=CONV_DISP_LapTime
+    },
+    {.friendly_name="DISP_LapDelta",
+            .type=SIGNALS_DISPLAY_SIGNAL,
+            .data_type=SIGNALS_STRING_SIGNAL,
+            .internal_convert_string=CONV_DISP_LapDelta
+    },
+    {.friendly_name="DISP_LastLap",
+            .type=SIGNALS_DISPLAY_SIGNAL,
+            .data_type=SIGNALS_STRING_SIGNAL,
+            .internal_convert_string=CONV_DISP_LastLapTime
+    },
+    {.friendly_name="DISP_Inverter_Temp",
+            .type=SIGNALS_DISPLAY_SIGNAL,
+            .data_type=SIGNALS_STRING_SIGNAL,
+            .internal_convert_string=CONV_DISP_InverterTemp
+    },
             
 };
 uint32_t signal_list_len = sizeof(signal_list) / sizeof(signals_signal);
