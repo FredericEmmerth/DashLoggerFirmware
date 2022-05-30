@@ -1,4 +1,3 @@
-
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdlib.h>
@@ -65,19 +64,19 @@ uint32_t message_list_len = sizeof(message_list) / sizeof(cancomm_message);
 
 /* Define all Signals to be interpreted */
 signals_signal signal_list [] = {
-    {.friendly_name="Min_Voltage",
+    {.friendly_name="MinBatVoltage",
             .type = SIGNALS_CAN_MESSAGE,
             .id=0xA2,
             .interface_number=1,
             .data_type=SIGNALS_FLOAT_SIGNAL,
-            .can_convert_float=CONV_MinVoltage
+            .can_convert_float=CONV_MinBatVoltage
     },
     {.friendly_name="MaxBatTemp",
             .type = SIGNALS_CAN_MESSAGE,
             .id=0xA3,
             .interface_number=1,
             .data_type=SIGNALS_FLOAT_SIGNAL,
-            .can_convert_float=CONV_MaxTemp
+            .can_convert_float=CONV_MaxBatTemp
     },
     {.friendly_name="LapTime",
             .type = SIGNALS_CAN_MESSAGE,
@@ -201,7 +200,16 @@ signals_signal signal_list [] = {
             .data_type=SIGNALS_STRING_SIGNAL,
             .internal_convert_string=CONV_DISP_InverterTemp
     },
-            
+    {.friendly_name="DISP_MaxBatTemp",
+            .type=SIGNALS_DISPLAY_SIGNAL,
+            .data_type=SIGNALS_STRING_SIGNAL,
+            .internal_convert_string=CONV_DISP_MaxBatTemp
+    },
+    {.friendly_name="DISP_FSG_AMI_State",
+            .type=SIGNALS_DISPLAY_SIGNAL,
+            .data_type=SIGNALS_STRING_SIGNAL,
+            .internal_convert_string=CONV_DISP_FSG_AMI_State
+    },
 };
 uint32_t signal_list_len = sizeof(signal_list) / sizeof(signals_signal);
 

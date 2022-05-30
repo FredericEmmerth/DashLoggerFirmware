@@ -1,36 +1,23 @@
 #include "conv.h"
 
-float CONV_MinVoltage(uint8_t* data){
+/*############################################################################*/
+/*############################# CAN Signals ##################################*/
+/*############################################################################*/
+
+float CONV_MinBatVoltage(uint8_t* data){
     uint16_t temp;
     temp = (data[7] << 8) | data[6];
     return (float)0.0001 * temp;  
 }
 
-float CONV_MaxTemp(uint8_t* data){
-    return 1.0;
+float CONV_MaxBatTemp(uint8_t* data){
+    int16_t temp = (data[5] << 8) | data[4];
+    return temp * 0.01;
 }
 
 float CONV_LapTime(uint8_t* data){
     uint32_t temp = ((data[2]&0x0F)<<16)|(data[1]<<8)|data[0];
     return temp * 0.001;    
-}
-
-float CONV_LastLapTime(signals_signal* signal_list, uint32_t signal_list_len){
-    
-    static float last_reported_value;
-    static float last_lap;
-    
-    float reported_lap_value = signals_find_signal(signal_list, signal_list_len,
-            (void(*)(void))CONV_LapTime)->value_float;
-    
-    if(reported_lap_value != last_reported_value){
-        last_lap = last_reported_value;
-    }
-    
-    
-    last_reported_value = reported_lap_value;
-    
-    return last_lap;
 }
 
 float CONV_BestLapTime(uint8_t* data){
@@ -39,7 +26,8 @@ float CONV_BestLapTime(uint8_t* data){
 }
 
 uint32_t CONV_FSG_AMI_state(uint8_t* data){
-    return 1;
+    uint8_t state = (data[0] & 0xE0)>>5;
+    return state;
 }
 
 float CONV_InverterTemp_FL(uint8_t* data){    
@@ -88,6 +76,28 @@ float CONV_MotorTemp_FR(uint8_t* data){
     int16_t temp;
     temp = (data[2] | (data[3] << 8));
     return (float)temp * 0.1;
+}
+
+/*############################################################################*/
+/*############################# Internal Signals #############################*/
+/*############################################################################*/
+
+float CONV_LastLapTime(signals_signal* signal_list, uint32_t signal_list_len){
+    
+    static float last_reported_value;
+    static float last_lap;
+    
+    float reported_lap_value = signals_find_signal(signal_list, signal_list_len,
+            (void(*)(void))CONV_LapTime)->value_float;
+    
+    if(reported_lap_value != last_reported_value){
+        last_lap = last_reported_value;
+    }
+    
+    
+    last_reported_value = reported_lap_value;
+    
+    return last_lap;
 }
 
 float CONV_MaxInverterTemp(signals_signal* signal_list,
@@ -141,10 +151,14 @@ float CONV_MaxMotorTemp(signals_signal* signal_list, uint32_t signal_list_len){
     return CONV_max(temperatureValues, 4);
 }
 
+/*############################################################################*/
+/*############################# Display Signals ##############################*/
+/*############################################################################*/
+
 void CONV_DISP_MinVoltage(signals_signal* signal_list, uint32_t signal_list_len,
         SIGNALS_string* outstring){
     float minvoltage = signals_find_signal(signal_list,
-        signal_list_len,(void(*)(void))CONV_MinVoltage)->value_float;
+        signal_list_len,(void(*)(void))CONV_MinBatVoltage)->value_float;
     
     sprintf((char*)outstring->data,"#SSC %d,\"%4.3fV\";\n",9,minvoltage);
     
@@ -219,6 +233,51 @@ void CONV_DISP_LastLapTime(signals_signal* signal_list, uint32_t signal_list_len
                                 SIGNALS_STRING_MAXIMUM_LENGTH);
     
 }
+
+void CONV_DISP_MaxBatTemp(signals_signal* signal_list, uint32_t signal_list_len,
+        SIGNALS_string* outstring){
+    float maxtemp = signals_find_signal(signal_list, signal_list_len,
+            (void(*)(void))CONV_MaxBatTemp)->value_float;
+    
+    sprintf((char*)outstring->data,"#SSC %d,\"%4.1f°C\";\n",6,maxtemp);
+    
+    outstring->length = CONV_find_string_length(outstring->data,
+                                SIGNALS_STRING_MAXIMUM_LENGTH);
+    
+}
+
+void CONV_DISP_FSG_AMI_State(signals_signal* signal_list,
+        uint32_t signal_list_len, SIGNALS_string* outstring){
+    
+    uint8_t statenum = signals_find_signal(signal_list, signal_list_len,
+            (void(*)(void))CONV_FSG_AMI_state)->value_uint32_t;
+    
+    if(statenum > 7){
+        statenum = 8;
+    }
+    
+    uint8_t statenames [9][15] ={
+        "Manual",
+        "Acceleration",
+        "Skidpad",
+        "Trackdrive",
+        "Braketest",
+        "Inspection",
+        "Autocross",
+        "Selecting",
+        "Unknown"
+    };
+    
+    sprintf((char*)outstring->data,"#SSC %d,\"%s\";\n",12,statenames[statenum]);
+    
+    outstring->length = CONV_find_string_length(outstring->data,
+                                SIGNALS_STRING_MAXIMUM_LENGTH);
+    
+}
+
+/*############################################################################*/
+/*############################# Helpful Functions ############################*/
+/*############################################################################*/
 
 uint32_t CONV_find_string_length(uint8_t* str, uint32_t strlen){
     

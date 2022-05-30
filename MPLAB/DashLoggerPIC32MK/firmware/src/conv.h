@@ -15,8 +15,8 @@ extern "C" {
 /* Numbers are Hardcoded here, to make it more Readable */
     
 /* CAN Signals*/
-float CONV_MinVoltage(uint8_t* data);
-float CONV_MaxTemp(uint8_t* data);
+float CONV_MinBatVoltage(uint8_t* data);
+float CONV_MaxBatTemp(uint8_t* data);
 float CONV_LapTime(uint8_t* data);
 float CONV_BestLapTime(uint8_t* data);
 uint32_t CONV_FSG_AMI_state(uint8_t* data);
@@ -50,6 +50,10 @@ void CONV_DISP_LastLapTime(signals_signal* signal_list, uint32_t signal_list_len
         SIGNALS_string* outstring);
 void CONV_DISP_InverterTemp(signals_signal* signal_list, uint32_t signal_list_len,
         SIGNALS_string* outstring);
+void CONV_DISP_MaxBatTemp(signals_signal* signal_list, uint32_t signal_list_len,
+        SIGNALS_string* outstring);
+void CONV_DISP_FSG_AMI_State(signals_signal* signal_list,
+        uint32_t signal_list_len, SIGNALS_string* outstring);
 
 /* Useful Arithmetic Functions (No Signal Callback Functions)*/
 uint32_t CONV_find_string_length(uint8_t* str, uint32_t strlen);
