@@ -1,0 +1,175 @@
+\hypertarget{signals_8c_source}{}\doxysection{signals.\+c}
+\label{signals_8c_source}\index{signals.c@{signals.c}}
+\mbox{\hyperlink{signals_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00001}00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00002}00002 \textcolor{comment}{ * @file signals.c}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00003}00003 \textcolor{comment}{ * @brief This File implements the Prototypes for \(\backslash\)ref SIGNALS}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00004}00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00005}00005 \textcolor{comment}{ * @author Frederic Emmerth}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00006}00006 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00007}00007 \textcolor{comment}{ * \(\backslash\)ingroup SIGNALS}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00008}00008 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00009}00009 \textcolor{comment}{ * \(\backslash\)addtogroup SIGNALS}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00010}00010 \textcolor{comment}{ * \(\backslash\)\{}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00011}00011 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00012}00012 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{signals_8h}{signals.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00016}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}{00016}} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}{SIGNALS\_Interpret}}(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00017}00017     \mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list, uint32\_t message\_list\_len)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00018}00018     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00019}00019     uint8\_t databuff[\mbox{\hyperlink{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}{CANCOMM\_MAXIMUM\_DATA\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00020}00020     \textcolor{keywordflow}{for}(uint32\_t i=0; i<signal\_list\_len; i++)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00021}00021         \textcolor{keywordflow}{if}(signal\_list[i].type == SIGNALS\_CAN\_MESSAGE)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00022}00022             \textcolor{keywordflow}{if}(\mbox{\hyperlink{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}{signals\_find\_data}}(signal\_list[i].\textcolor{keywordtype}{id}, signal\_list[i].interface\_number,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00023}00023                     message\_list, message\_list\_len, databuff) == \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b}{SIGNALS\_FOUND}})}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00024}00024             \{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00025}00025                 \textcolor{keywordflow}{switch}(signal\_list[i].data\_type)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00026}00026                     \textcolor{keywordflow}{case} SIGNALS\_FLOAT\_SIGNAL:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00027}00027                         signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_ab935d973b3a1f1030fdb5a835e143248}{value\_float}} = }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00028}00028                                 signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_a3c6366a494b09023499ccc623a951c31}{can\_convert\_float}}(databuff);}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00029}00029                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00031}00031                     \textcolor{keywordflow}{case} SIGNALS\_UINT32\_T\_SIGNAL:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00032}00032                         signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_a22f897328a12b8e442b3d7c99f85cc55}{value\_uint32\_t}} =}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00033}00033                                 signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_abfc621b9dbe9de03f794e479039e1dcb}{can\_convert\_uint32\_t}}(databuff);}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00034}00034                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00035}00035                     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00036}00036                     \textcolor{keywordflow}{case} SIGNALS\_STRING\_SIGNAL:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00037}00037                         signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_ac995cb11901ea482a506e81f9ba5b498}{can\_convert\_string}}(databuff, }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00038}00038                                 \&(signal\_list[i].value\_string));}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00039}00039                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00041}00041                     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00042}00042                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00043}00043                 \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00044}00044             \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00045}00045         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(signal\_list[i].type == SIGNALS\_INTERNAL\_SIGNAL)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00046}00046             \textcolor{keywordflow}{switch}(signal\_list[i].data\_type)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00047}00047                     \textcolor{keywordflow}{case} SIGNALS\_FLOAT\_SIGNAL:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00048}00048                         signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_ab935d973b3a1f1030fdb5a835e143248}{value\_float}} = }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00049}00049                                 signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_a3db1c4962d72a52bc2da98d627d21311}{internal\_convert\_float}}(}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00050}00050                                         signal\_list,signal\_list\_len);}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00051}00051                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00053}00053                     \textcolor{keywordflow}{case} SIGNALS\_UINT32\_T\_SIGNAL:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00054}00054                         signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_a22f897328a12b8e442b3d7c99f85cc55}{value\_uint32\_t}} =}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00055}00055                                 signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_af9f969177c03c39b8622e0ca011e281d}{internal\_convert\_uint32\_t}}(}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00056}00056                                         signal\_list, signal\_list\_len);}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00057}00057                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00058}00058                         }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00059}00059                     \textcolor{keywordflow}{case} SIGNALS\_STRING\_SIGNAL:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00060}00060                         signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_a3151a985d6d2de155e36f185a96ce960}{internal\_convert\_string}}(signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00061}00061                                 signal\_list\_len, \&(signal\_list[i].value\_string));}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00062}00062                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00064}00064                     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00065}00065                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00066}00066             \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00067}00067         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(signal\_list[i].type == SIGNALS\_DISPLAY\_SIGNAL)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00068}00068             \textcolor{keywordflow}{switch}(signal\_list[i].data\_type)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00070}00070                     \textcolor{keywordflow}{case} SIGNALS\_STRING\_SIGNAL:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00071}00071                         signal\_list[i].\mbox{\hyperlink{structsignals__signal__struct_a3151a985d6d2de155e36f185a96ce960}{internal\_convert\_string}}(signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00072}00072                                 signal\_list\_len, \&(signal\_list[i].value\_string));}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00073}00073                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00075}00075                     \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00076}00076                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00077}00077             \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00078}00078         \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00079}00079     \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00080}00080 \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00082}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}{00082}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}{signals\_find\_data}}(uint32\_t \textcolor{keywordtype}{id}, uint8\_t interface,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00083}00083         \mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list, uint32\_t message\_list\_len,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00084}00084         uint8\_t* data)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00085}00085     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00086}00086     \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} result = \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28}{SIGNALS\_NOT\_FOUND}};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00087}00087     \textcolor{keywordflow}{for}(uint32\_t i=0; i<message\_list\_len; i++)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00088}00088         \textcolor{keywordflow}{if}(message\_list[i].\textcolor{keywordtype}{id} == \textcolor{keywordtype}{id} \&\& message\_list[i].interface\_number == interface)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00089}00089             result = \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b}{SIGNALS\_FOUND}};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00090}00090             \textcolor{keywordflow}{for}(uint8\_t j=0; j<\mbox{\hyperlink{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}{CANCOMM\_MAXIMUM\_DATA\_LENGTH}}; j++)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00091}00091                 data[j] = message\_list[i].\mbox{\hyperlink{structcancomm__message_a502ae0d5f6098c34a87497593a94bda0}{data}}[j];}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00092}00092             \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00093}00093             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00094}00094         \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00095}00095     \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00096}00096     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00097}00097     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00098}00098 \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00100}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}{00100}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}{signals\_compare\_names}}(uint8\_t* first, uint32\_t firstlen,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00101}00101         uint8\_t* second, uint32\_t secondlen)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00102}00102     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00103}00103     uint32\_t searchlen;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00104}00104     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00105}00105     \textcolor{comment}{/* Set searchlen to the shorter length */}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00106}00106     \textcolor{keywordflow}{if}(firstlen > secondlen)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00107}00107         searchlen = secondlen;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00108}00108     \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (secondlen > firstlen)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00109}00109         searchlen = firstlen;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00110}00110     \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00111}00111         \textcolor{comment}{/* The Strings have equal length */}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00112}00112         searchlen = firstlen;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00113}00113     \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00114}00114     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00115}00115     \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} res = \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb}{SIGNALS\_MATCH}};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00116}00116     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00117}00117     \textcolor{keywordflow}{for}(uint32\_t i=0; i<searchlen; i++)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00118}00118         \textcolor{keywordflow}{if}(first[i] != second[i])\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00119}00119             res = \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29}{SIGNALS\_NO\_MATCH}};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00120}00120             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00121}00121         \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00122}00122     \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00123}00123     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00124}00124     \textcolor{keywordflow}{return} res;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00125}00125 \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00127}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}{00127}} \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}{signals\_find\_signal}}( \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00128}00128         uint32\_t signal\_list\_len, \textcolor{keywordtype}{void}(*Callback)(\textcolor{keywordtype}{void}))\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00129}00129     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00130}00130     \textcolor{keywordflow}{for}(uint32\_t i=0; i<signal\_list\_len; i++)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00131}00131         \textcolor{keywordflow}{if}(Callback == (\textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{void}))signal\_list[i].can\_convert\_float        ||}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00132}00132            Callback == (\textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{void}))signal\_list[i].can\_convert\_uint32\_t     ||}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00133}00133            Callback == (\textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{void}))signal\_list[i].internal\_convert\_float   ||}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00134}00134            Callback == (\textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{void}))signal\_list[i].internal\_convert\_uint32\_t||}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00135}00135            Callback == (\textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{void}))signal\_list[i].internal\_convert\_string  ||}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00136}00136            Callback == (\textcolor{keywordtype}{void}(*)(\textcolor{keywordtype}{void}))signal\_list[i].can\_convert\_string        )}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00137}00137         \{ }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00138}00138             \textcolor{keywordflow}{return} \&(signal\_list[i]);}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00139}00139         \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00140}00140     \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00141}00141     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00142}00142     \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00143}00143 \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00145}00145 \textcolor{comment}{/* this function returns the total count of display signals in the list, and */}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00146}00146 \textcolor{comment}{/* if there is at least one display signal, the nth display signal by needle*/}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00148}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}{00148}} \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}{signals\_find\_display\_signal}}(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00149}00149         uint32\_t signal\_list\_len, uint32\_t* dispSignalCount, uint32\_t needle)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00150}00150     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00151}00151     uint32\_t counter = 0;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00152}00152     \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* foundNeedle = NULL;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00153}00153     \textcolor{keywordflow}{for}(uint32\_t i=0; i<signal\_list\_len; i++)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00154}00154         \textcolor{keywordflow}{if}(signal\_list[i].type == SIGNALS\_DISPLAY\_SIGNAL)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00155}00155             \textcolor{keywordflow}{if}(needle == counter)\{}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00156}00156                 foundNeedle = \&(signal\_list[i]);}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00157}00157             \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00158}00158             counter++;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00159}00159         \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00160}00160     \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00161}00161     }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00162}00162     *dispSignalCount = counter;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00163}00163     \textcolor{keywordflow}{return} foundNeedle;}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00164}00164 \}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00165}00165 }
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00166}00166 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00167}00167 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00168}00168 \textcolor{comment}{ * \(\backslash\)\}}}
+\DoxyCodeLine{\Hypertarget{signals_8c_source_l00169}00169 \textcolor{comment}{ */}}
+
+\end{DoxyCode}

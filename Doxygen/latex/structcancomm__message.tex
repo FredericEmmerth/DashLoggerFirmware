@@ -12,28 +12,113 @@ Structure defining a CAN Message.
 \doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structcancomm__message_a5766f70d10f0e96c5e9751e6258a275f}\label{structcancomm__message_a5766f70d10f0e96c5e9751e6258a275f}} 
-uint32\+\_\+t {\bfseries id}
+uint32\+\_\+t \mbox{\hyperlink{structcancomm__message_a5766f70d10f0e96c5e9751e6258a275f}{id}}
 \begin{DoxyCompactList}\small\item\em The ID of the Message. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structcancomm__message_a385616a9fa9d03711a53ed12266d8d5c}\label{structcancomm__message_a385616a9fa9d03711a53ed12266d8d5c}} 
-uint8\+\_\+t {\bfseries interface\+\_\+number}
+uint8\+\_\+t \mbox{\hyperlink{structcancomm__message_a385616a9fa9d03711a53ed12266d8d5c}{interface\+\_\+number}}
 \begin{DoxyCompactList}\small\item\em The interface number (wich has to be unique to a CAN Interface) \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structcancomm__message_af86c6d18ccf8b901f21ad093a950c1fb}\label{structcancomm__message_af86c6d18ccf8b901f21ad093a950c1fb}} 
-uint8\+\_\+t {\bfseries length}
+uint8\+\_\+t \mbox{\hyperlink{structcancomm__message_af86c6d18ccf8b901f21ad093a950c1fb}{length}}
 \begin{DoxyCompactList}\small\item\em The DLC of the Message. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structcancomm__message_a502ae0d5f6098c34a87497593a94bda0}\label{structcancomm__message_a502ae0d5f6098c34a87497593a94bda0}} 
-uint8\+\_\+t {\bfseries data} \mbox{[}\mbox{\hyperlink{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}{CANCOMM\+\_\+\+MAXIMUM\+\_\+\+DATA\+\_\+\+LENGTH}}\mbox{]}
+uint8\+\_\+t \mbox{\hyperlink{structcancomm__message_a502ae0d5f6098c34a87497593a94bda0}{data}} \mbox{[}\mbox{\hyperlink{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}{CANCOMM\+\_\+\+MAXIMUM\+\_\+\+DATA\+\_\+\+LENGTH}}\mbox{]}
 \begin{DoxyCompactList}\small\item\em The Data of the Message. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structcancomm__message_a214326cac47c94869df6b85b8c9f4a90}\label{structcancomm__message_a214326cac47c94869df6b85b8c9f4a90}} 
-uint32\+\_\+t {\bfseries timestamp}
+uint32\+\_\+t \mbox{\hyperlink{structcancomm__message_a214326cac47c94869df6b85b8c9f4a90}{timestamp}}
 \begin{DoxyCompactList}\small\item\em The timestamp when the Message was recieved. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structcancomm__message_afc3ce32ae673b494c6f53e2536a41e4f}\label{structcancomm__message_afc3ce32ae673b494c6f53e2536a41e4f}} 
-uint8\+\_\+t {\bfseries friendly\+\_\+name} \mbox{[}\mbox{\hyperlink{group___c_a_n_c_o_m_m_ga99058a892a05ecd6afbcb37380bdcf22}{CANCOMM\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH}}\mbox{]}
+uint8\+\_\+t \mbox{\hyperlink{structcancomm__message_afc3ce32ae673b494c6f53e2536a41e4f}{friendly\+\_\+name}} \mbox{[}\mbox{\hyperlink{group___c_a_n_c_o_m_m_ga99058a892a05ecd6afbcb37380bdcf22}{CANCOMM\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH}}\mbox{]}
 \begin{DoxyCompactList}\small\item\em A friendly Human Readable Name for the Message. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Structure defining a CAN Message. 
+
+Definition at line \mbox{\hyperlink{cancomm_8h_source_l00115}{115}} of file \mbox{\hyperlink{cancomm_8h_source}{cancomm.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structcancomm__message_a502ae0d5f6098c34a87497593a94bda0}\label{structcancomm__message_a502ae0d5f6098c34a87497593a94bda0}} 
+\index{cancomm\_message@{cancomm\_message}!data@{data}}
+\index{data@{data}!cancomm\_message@{cancomm\_message}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily uint8\+\_\+t cancomm\+\_\+message\+::data\mbox{[}\mbox{\hyperlink{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}{CANCOMM\+\_\+\+MAXIMUM\+\_\+\+DATA\+\_\+\+LENGTH}}\mbox{]}}
+
+
+
+The Data of the Message. 
+
+
+
+Definition at line \mbox{\hyperlink{cancomm_8h_source_l00134}{134}} of file \mbox{\hyperlink{cancomm_8h_source}{cancomm.\+h}}.
+
+\mbox{\Hypertarget{structcancomm__message_afc3ce32ae673b494c6f53e2536a41e4f}\label{structcancomm__message_afc3ce32ae673b494c6f53e2536a41e4f}} 
+\index{cancomm\_message@{cancomm\_message}!friendly\_name@{friendly\_name}}
+\index{friendly\_name@{friendly\_name}!cancomm\_message@{cancomm\_message}}
+\doxysubsubsection{\texorpdfstring{friendly\_name}{friendly\_name}}
+{\footnotesize\ttfamily uint8\+\_\+t cancomm\+\_\+message\+::friendly\+\_\+name\mbox{[}\mbox{\hyperlink{group___c_a_n_c_o_m_m_ga99058a892a05ecd6afbcb37380bdcf22}{CANCOMM\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH}}\mbox{]}}
+
+
+
+A friendly Human Readable Name for the Message. 
+
+
+
+Definition at line \mbox{\hyperlink{cancomm_8h_source_l00144}{144}} of file \mbox{\hyperlink{cancomm_8h_source}{cancomm.\+h}}.
+
+\mbox{\Hypertarget{structcancomm__message_a5766f70d10f0e96c5e9751e6258a275f}\label{structcancomm__message_a5766f70d10f0e96c5e9751e6258a275f}} 
+\index{cancomm\_message@{cancomm\_message}!id@{id}}
+\index{id@{id}!cancomm\_message@{cancomm\_message}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily uint32\+\_\+t cancomm\+\_\+message\+::id}
+
+
+
+The ID of the Message. 
+
+
+
+Definition at line \mbox{\hyperlink{cancomm_8h_source_l00119}{119}} of file \mbox{\hyperlink{cancomm_8h_source}{cancomm.\+h}}.
+
+\mbox{\Hypertarget{structcancomm__message_a385616a9fa9d03711a53ed12266d8d5c}\label{structcancomm__message_a385616a9fa9d03711a53ed12266d8d5c}} 
+\index{cancomm\_message@{cancomm\_message}!interface\_number@{interface\_number}}
+\index{interface\_number@{interface\_number}!cancomm\_message@{cancomm\_message}}
+\doxysubsubsection{\texorpdfstring{interface\_number}{interface\_number}}
+{\footnotesize\ttfamily uint8\+\_\+t cancomm\+\_\+message\+::interface\+\_\+number}
+
+
+
+The interface number (wich has to be unique to a CAN Interface) 
+
+
+
+Definition at line \mbox{\hyperlink{cancomm_8h_source_l00124}{124}} of file \mbox{\hyperlink{cancomm_8h_source}{cancomm.\+h}}.
+
+\mbox{\Hypertarget{structcancomm__message_af86c6d18ccf8b901f21ad093a950c1fb}\label{structcancomm__message_af86c6d18ccf8b901f21ad093a950c1fb}} 
+\index{cancomm\_message@{cancomm\_message}!length@{length}}
+\index{length@{length}!cancomm\_message@{cancomm\_message}}
+\doxysubsubsection{\texorpdfstring{length}{length}}
+{\footnotesize\ttfamily uint8\+\_\+t cancomm\+\_\+message\+::length}
+
+
+
+The DLC of the Message. 
+
+
+
+Definition at line \mbox{\hyperlink{cancomm_8h_source_l00129}{129}} of file \mbox{\hyperlink{cancomm_8h_source}{cancomm.\+h}}.
+
+\mbox{\Hypertarget{structcancomm__message_a214326cac47c94869df6b85b8c9f4a90}\label{structcancomm__message_a214326cac47c94869df6b85b8c9f4a90}} 
+\index{cancomm\_message@{cancomm\_message}!timestamp@{timestamp}}
+\index{timestamp@{timestamp}!cancomm\_message@{cancomm\_message}}
+\doxysubsubsection{\texorpdfstring{timestamp}{timestamp}}
+{\footnotesize\ttfamily uint32\+\_\+t cancomm\+\_\+message\+::timestamp}
+
+
+
+The timestamp when the Message was recieved. 
+
+
+
+Definition at line \mbox{\hyperlink{cancomm_8h_source_l00139}{139}} of file \mbox{\hyperlink{cancomm_8h_source}{cancomm.\+h}}.
+
+
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

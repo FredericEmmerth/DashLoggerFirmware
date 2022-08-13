@@ -11,11 +11,6 @@
  * 
  */
 
-
-
-
-
-
 #include "cancomm.h"
 
 

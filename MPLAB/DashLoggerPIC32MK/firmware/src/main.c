@@ -1,3 +1,17 @@
+/**
+ * @file main.c
+ * In this file, there is the main() function wich is the entry Point of
+ * The Program
+ * 
+ * @author Frederic Emmerth
+ * 
+ * @todo Make a constant loop time
+ * @todo Implement Watchdog
+ * 
+ */
+
+
+/* Includes */
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdlib.h>
@@ -224,21 +238,19 @@ SHORTPROTOCOL_Instance shortProt = {
     .maximumPackageLength = 5
 };
 
-uint8_t sendData[] = "#MRN <P:macro/screen/Default.emc>\n";
-uint32_t sendData_length = sizeof(sendData) / sizeof(uint8_t) - 1;
-
 int main ( void )
 {
     /* Initialize all modules */
     SYS_Initialize ( NULL );
+    
+    /* Give Shortprotocol Parameters initial Values */
     SHORTPROTOCOL_Initialize(&shortProt);
     
+    /* Recieve CAN Frames for 5ms */
     DELAY_Microseconds(5000);
-    
-    //SHORTPROTOCOL_Send(&shortProt, sendData, sendData_length);
-    
+
     /* Main Loop */
-    /* The Maximum Loop Time has to be smaller than 2ms, to catch all Messages*/
+    /* The Maximum Loop Time has to be smaller than 2ms, to catch all Messages*80/
     /* 15k Frames/s MAX and FIFO Length 32 -> 1/15E3 * 32 = 2ms */
     while(1){
         

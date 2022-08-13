@@ -1,8 +1,24 @@
-/* 
- * File:   delay.h
- * Author: Frederic
- *
- * Created on 11. Mai 2022, 17:54
+/**
+ * @file delay.h
+ * @brief This File defines the Prototypes for \ref DELAY
+ * 
+ * @author Frederic Emmerth
+ * 
+ * \ingroup DELAY
+ * 
+ */
+
+/**
+ * \defgroup DELAY DELAY
+ * 
+ * This Module defines two Functions useful for generating a Delay of
+ * Microseconds or Milliseconds.
+ * 
+ * @todo Use NOPs for Delay
+ * @bug \ref DELAY_Milliseconds is not working, the Delay Time is very off
+ * 
+ * \addtogroup DELAY
+ * \{
  */
 
 #ifndef DELAY_H
@@ -29,3 +45,6 @@ void DELAY_Microseconds(uint32_t delay);
 
 #endif	/* DELAY_H */
 
+/**
+ * \}
+ */

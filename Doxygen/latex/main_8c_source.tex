@@ -1,0 +1,289 @@
+\hypertarget{main_8c_source}{}\doxysection{main.\+c}
+\label{main_8c_source}\index{main.c@{main.c}}
+\mbox{\hyperlink{main_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00001}00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00002}00002 \textcolor{comment}{ * @file main.c}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00003}00003 \textcolor{comment}{ * In this file, there is the main() function wich is the entry Point of}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00004}00004 \textcolor{comment}{ * The Program}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00005}00005 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00006}00006 \textcolor{comment}{ * @author Frederic Emmerth}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00007}00007 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00008}00008 \textcolor{comment}{ * @todo Make a constant loop time}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00009}00009 \textcolor{comment}{ * @todo Implement Watchdog}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00010}00010 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00011}00011 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00014}00014 \textcolor{comment}{/* Includes */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00015}00015 \textcolor{preprocessor}{\#include <stddef.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00016}00016 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00017}00017 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00018}00018 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00019}00019 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{delay_8h}{delay.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00020}00020 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cancomm_8h}{cancomm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00021}00021 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{signals_8h}{signals.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00022}00022 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{conv_8h}{conv.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00023}00023 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shortprotocol_8h}{shortprotocol.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00024}00024 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{uart_8h}{uart.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00025}00025 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{command_8h}{command.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00027}00027 \textcolor{comment}{/* Define List of CAN Interfaces */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00028}00028 \mbox{\hyperlink{structcancomm__interface}{cancomm\_interface}} interface\_list [] = \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00029}00029     \{.\mbox{\hyperlink{structcancomm__interface_abdc8775b3cddf74533fc27d43c1dddbb}{number}}=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00030}00030             .receiveFifo=2, .transmitFifo=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00031}00031             .MessageTransmit=CAN1\_MessageTransmit,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00032}00032             .MessageReceive=CAN1\_MessageReceive}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00033}00033     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00034}00034     \{.number=2,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00035}00035             .receiveFifo=2, .transmitFifo=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00036}00036             .MessageTransmit=CAN2\_MessageTransmit,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00037}00037             .MessageReceive=CAN2\_MessageReceive}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00038}00038     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00039}00039     \{.number=3,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00040}00040             .receiveFifo=2, .transmitFifo=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00041}00041             .MessageTransmit=CAN3\_MessageTransmit,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00042}00042             .MessageReceive=CAN3\_MessageReceive}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00043}00043     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00044}00044     \{.number=4,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00045}00045             .receiveFifo=2, .transmitFifo=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00046}00046             .MessageTransmit=CAN4\_MessageTransmit,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00047}00047             .MessageReceive=CAN4\_MessageReceive}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00049}00049 \};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00050}00050 uint32\_t interface\_list\_len = \textcolor{keyword}{sizeof}(interface\_list)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00051}00051                                         / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structcancomm__interface}{cancomm\_interface}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00053}00053 \textcolor{comment}{/* Define all Messages to be interpreted */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00054}00054 \mbox{\hyperlink{structcancomm__message}{cancomm\_message}} message\_list [] = \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00055}00055     \{.\mbox{\hyperlink{structcancomm__message_afc3ce32ae673b494c6f53e2536a41e4f}{friendly\_name}}=\textcolor{stringliteral}{"{}BCU\_Extrem\_Voltages"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00056}00056             .id=0xA2,  .interface\_number=1, .length=8}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00057}00057     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00058}00058     \{.friendly\_name=\textcolor{stringliteral}{"{}BCU\_Extrem\_Temperatures"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00059}00059             .id=0xA3,  .interface\_number=1, .length=8}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00060}00060     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00061}00061     \{.friendly\_name=\textcolor{stringliteral}{"{}VCU\_LapInfo"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00062}00062             .id=0x711, .interface\_number=1, .length=8}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00063}00063     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00064}00064     \{.friendly\_name=\textcolor{stringliteral}{"{}FSG\_System\_status"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00065}00065             .id=0x502, .interface\_number=1, .length=8}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00066}00066     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00067}00067     \{.friendly\_name=\textcolor{stringliteral}{"{}BCU\_SCstatus"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00068}00068             .id=0xA4,  .interface\_number=1, .length=2}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00069}00069     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00070}00070     \{.friendly\_name=\textcolor{stringliteral}{"{}VCU\_Motor\_Temps"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00071}00071             .id=0x239, .interface\_number=1, .length=8}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00072}00072     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00073}00073     \{.friendly\_name=\textcolor{stringliteral}{"{}VCU\_Inverter\_Temp"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00074}00074             .id=0x23A, .interface\_number=1, .length=8}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00076}00076 \};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00077}00077 uint32\_t message\_list\_len = \textcolor{keyword}{sizeof}(message\_list) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structcancomm__message}{cancomm\_message}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00079}00079 \textcolor{comment}{/* Define all Signals to be interpreted */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00080}00080 \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}} signal\_list [] = \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00081}00081     \{.\mbox{\hyperlink{structsignals__signal__struct_a733c9f5e557ba368fba6bdc0dea51974}{friendly\_name}}=\textcolor{stringliteral}{"{}MinBatVoltage"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00082}00082             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00083}00083             .id=0xA2,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00084}00084             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00085}00085             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00086}00086             .can\_convert\_float=CONV\_MinBatVoltage}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00087}00087     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00088}00088     \{.friendly\_name=\textcolor{stringliteral}{"{}MaxBatTemp"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00089}00089             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00090}00090             .id=0xA3,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00091}00091             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00092}00092             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00093}00093             .can\_convert\_float=CONV\_MaxBatTemp}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00094}00094     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00095}00095     \{.friendly\_name=\textcolor{stringliteral}{"{}LapTime"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00096}00096             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00097}00097             .id=0x711,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00098}00098             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00099}00099             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00100}00100             .can\_convert\_float=CONV\_LapTime}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00101}00101     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00102}00102     \{.friendly\_name=\textcolor{stringliteral}{"{}BestLapTime"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00103}00103             .type=SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00104}00104             .id=0x711,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00105}00105             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00106}00106             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00107}00107             .can\_convert\_float=CONV\_BestLapTime}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00108}00108     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00109}00109     \{.friendly\_name=\textcolor{stringliteral}{"{}FSG\_AMI\_state"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00110}00110             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00111}00111             .id=0x502,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00112}00112             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00113}00113             .data\_type=SIGNALS\_UINT32\_T\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00114}00114             .can\_convert\_uint32\_t=CONV\_FSG\_AMI\_state}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00115}00115     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00116}00116     \{.friendly\_name=\textcolor{stringliteral}{"{}InverterTemp\_RR"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00117}00117             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00118}00118             .id = 0x23A,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00119}00119             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00120}00120             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00121}00121             .can\_convert\_float=CONV\_InverterTemp\_RR}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00122}00122     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00123}00123     \{.friendly\_name=\textcolor{stringliteral}{"{}InverterTemp\_FL"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00124}00124             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00125}00125             .id = 0x23A,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00126}00126             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00127}00127             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00128}00128             .can\_convert\_float=CONV\_InverterTemp\_FL}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00129}00129     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00130}00130     \{.friendly\_name=\textcolor{stringliteral}{"{}InverterTemp\_FR"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00131}00131             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00132}00132             .id = 0x23A,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00133}00133             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00134}00134             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00135}00135             .can\_convert\_float=CONV\_InverterTemp\_FR}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00136}00136     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00137}00137     \{.friendly\_name=\textcolor{stringliteral}{"{}InverterTemp\_RL"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00138}00138             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00139}00139             .id = 0x23A,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00140}00140             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00141}00141             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00142}00142             .can\_convert\_float=CONV\_InverterTemp\_RL}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00143}00143     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00144}00144     \{.friendly\_name=\textcolor{stringliteral}{"{}MotorTemp\_RR"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00145}00145             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00146}00146             .id=0x239,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00147}00147             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00148}00148             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00149}00149             .can\_convert\_float=CONV\_MotorTemp\_RR}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00150}00150     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00151}00151     \{.friendly\_name=\textcolor{stringliteral}{"{}MotorTemp\_FL"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00152}00152             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00153}00153             .id=0x239,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00154}00154             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00155}00155             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00156}00156             .can\_convert\_float=CONV\_MotorTemp\_FL}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00157}00157     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00158}00158     \{.friendly\_name=\textcolor{stringliteral}{"{}MotorTemp\_FR"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00159}00159             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00160}00160             .id=0x239,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00161}00161             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00162}00162             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00163}00163             .can\_convert\_float=CONV\_MotorTemp\_FR}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00164}00164     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00165}00165     \{.friendly\_name=\textcolor{stringliteral}{"{}MotorTemp\_RL"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00166}00166             .type = SIGNALS\_CAN\_MESSAGE,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00167}00167             .id=0x239,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00168}00168             .interface\_number=1,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00169}00169             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00170}00170             .can\_convert\_float=CONV\_MotorTemp\_RL}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00171}00171     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00172}00172     \{.friendly\_name=\textcolor{stringliteral}{"{}MaxMotorTemp"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00173}00173             .type = SIGNALS\_INTERNAL\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00174}00174             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00175}00175             .internal\_convert\_float=CONV\_MaxMotorTemp}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00176}00176     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00177}00177     \{.friendly\_name=\textcolor{stringliteral}{"{}MaxInverterTemp"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00178}00178             .type = SIGNALS\_INTERNAL\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00179}00179             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00180}00180             .internal\_convert\_float=CONV\_MaxInverterTemp}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00181}00181     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00182}00182     \{.friendly\_name=\textcolor{stringliteral}{"{}LastLap"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00183}00183             .type = SIGNALS\_INTERNAL\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00184}00184             .data\_type=SIGNALS\_FLOAT\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00185}00185             .internal\_convert\_float=CONV\_LastLapTime}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00186}00186     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00187}00187     \{.friendly\_name=\textcolor{stringliteral}{"{}DISP\_Motor\_Temp"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00188}00188             .type=SIGNALS\_DISPLAY\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00189}00189             .data\_type=SIGNALS\_STRING\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00190}00190             .internal\_convert\_string=CONV\_DISP\_Motor\_Temp}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00191}00191     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00192}00192     \{.friendly\_name=\textcolor{stringliteral}{"{}DISP\_MinVoltage"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00193}00193             .type=SIGNALS\_DISPLAY\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00194}00194             .data\_type=SIGNALS\_STRING\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00195}00195             .internal\_convert\_string=CONV\_DISP\_MinVoltage}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00196}00196     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00197}00197     \{.friendly\_name=\textcolor{stringliteral}{"{}DISP\_LapTime"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00198}00198             .type=SIGNALS\_DISPLAY\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00199}00199             .data\_type=SIGNALS\_STRING\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00200}00200             .internal\_convert\_string=CONV\_DISP\_LapTime}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00201}00201     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00202}00202     \{.friendly\_name=\textcolor{stringliteral}{"{}DISP\_LapDelta"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00203}00203             .type=SIGNALS\_DISPLAY\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00204}00204             .data\_type=SIGNALS\_STRING\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00205}00205             .internal\_convert\_string=CONV\_DISP\_LapDelta}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00206}00206     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00207}00207     \{.friendly\_name=\textcolor{stringliteral}{"{}DISP\_LastLap"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00208}00208             .type=SIGNALS\_DISPLAY\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00209}00209             .data\_type=SIGNALS\_STRING\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00210}00210             .internal\_convert\_string=CONV\_DISP\_LastLapTime}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00211}00211     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00212}00212     \{.friendly\_name=\textcolor{stringliteral}{"{}DISP\_Inverter\_Temp"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00213}00213             .type=SIGNALS\_DISPLAY\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00214}00214             .data\_type=SIGNALS\_STRING\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00215}00215             .internal\_convert\_string=CONV\_DISP\_InverterTemp}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00216}00216     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00217}00217     \{.friendly\_name=\textcolor{stringliteral}{"{}DISP\_MaxBatTemp"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00218}00218             .type=SIGNALS\_DISPLAY\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00219}00219             .data\_type=SIGNALS\_STRING\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00220}00220             .internal\_convert\_string=CONV\_DISP\_MaxBatTemp}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00221}00221     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00222}00222     \{.friendly\_name=\textcolor{stringliteral}{"{}DISP\_FSG\_AMI\_State"{}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00223}00223             .type=SIGNALS\_DISPLAY\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00224}00224             .data\_type=SIGNALS\_STRING\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00225}00225             .internal\_convert\_string=CONV\_DISP\_FSG\_AMI\_State}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00226}00226     \},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00227}00227 \};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00228}00228 uint32\_t signal\_list\_len = \textcolor{keyword}{sizeof}(signal\_list) / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00229}00229 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00230}00230 uint32\_t current\_command\_signal = 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00232}00232 \textcolor{comment}{/* Define a Protocol Instance for Shortprotocol Communication with Display */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00233}00233 \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}} shortProt = \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00234}00234     .\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a2d6eb84ff339495806a39cc27e354966}{readAvailable}} = \mbox{\hyperlink{group___u_a_r_t_gab2c69fcc941bf1c9d9c6d6f17c501de0}{UART\_ReadAvailable}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00235}00235     .readByte = \mbox{\hyperlink{group___u_a_r_t_ga414d0f5f341aa74ca8ee77488ac2ba1f}{UART\_ReadByte}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00236}00236     .writeAvailable = \mbox{\hyperlink{group___u_a_r_t_ga55b31d065a749c2fd5248fe78df10faf}{UART\_WriteAvailable}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00237}00237     .writeByte = \mbox{\hyperlink{group___u_a_r_t_gab4b544724f23b23cadc905493d8f9f46}{UART\_WriteByte}},}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00238}00238     .maximumPackageLength = 5}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00239}00239 \};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00240}00240 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00241}00241 \textcolor{keywordtype}{int} main ( \textcolor{keywordtype}{void} )}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00242}00242 \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00243}00243     \textcolor{comment}{/* Initialize all modules */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00244}00244     SYS\_Initialize ( NULL );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00245}00245     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00246}00246     \textcolor{comment}{/* Give Shortprotocol Parameters initial Values */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00247}00247     \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4c229f96d354e4f78cb38996820e949}{SHORTPROTOCOL\_Initialize}}(\&shortProt);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00248}00248     }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00249}00249     \textcolor{comment}{/* Recieve CAN Frames for 5ms */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00250}00250     \mbox{\hyperlink{group___d_e_l_a_y_ga913766785576c4c6129a446001be1e77}{DELAY\_Microseconds}}(5000);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00251}00251 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00252}00252     \textcolor{comment}{/* Main Loop */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00253}00253     \textcolor{comment}{/* The Maximum Loop Time has to be smaller than 2ms, to catch all Messages*80/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00254}00254 \textcolor{comment}{    /* 15k Frames/s MAX and FIFO Length 32 -\/> 1/15E3 * 32 = 2ms */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00255}00255     \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00256}00256         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00257}00257         \textcolor{comment}{/* Read All Messages in the CAN FIFOs */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00258}00258         \mbox{\hyperlink{group___c_a_n_c_o_m_m_gad3a29d228b324d017ee3c2a998f18f1b}{CANCOMM\_ReadMessages}}(message\_list, message\_list\_len,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00259}00259                 interface\_list, interface\_list\_len);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00260}00260         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00261}00261         \textcolor{comment}{/* Interpret the RAW CAN Message Data */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00262}00262         \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}{SIGNALS\_Interpret}}(signal\_list, signal\_list\_len,}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00263}00263                 message\_list, message\_list\_len);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00264}00264         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00265}00265         \textcolor{comment}{/* Generate the Commands to be sent to the Display */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00266}00266         \mbox{\hyperlink{group___c_o_m_m_a_n_d_gaed1ab647768f1c798408529cdd73de6f}{COMMAND\_Generate}}(signal\_list, signal\_list\_len, }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00267}00267                 \&current\_command\_signal, \&shortProt);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00268}00268         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00269}00269         \textcolor{comment}{/* Send Messages to Display */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00270}00270         \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga004de19c9c8ad6a22da9fe7c978c758f}{SHORTPROTOCOL\_Update}}(\&shortProt);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00271}00271         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00272}00272         \textcolor{comment}{/* Wait for constant Loop time */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00273}00273         \mbox{\hyperlink{group___d_e_l_a_y_ga913766785576c4c6129a446001be1e77}{DELAY\_Microseconds}}(200);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00274}00274         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00275}00275         \textcolor{comment}{/* (Window WDG Reset)*/}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00276}00276         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00277}00277         }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00278}00278     \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00279}00279 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00280}00280     \textcolor{comment}{/* Execution should not come here during normal operation */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00281}00281 \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00283}00283 }
+
+\end{DoxyCode}

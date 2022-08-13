@@ -1,0 +1,83 @@
+\hypertarget{conv_8h}{}\doxysection{conv.\+h File Reference}
+\label{conv_8h}\index{conv.h@{conv.h}}
+
+
+This File defines the Prototypes for \mbox{\hyperlink{group___c_o_n_v}{CONV}}.  
+
+
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_gadd8b780490223c5f3b59713f018d1daf}{CONV\+\_\+\+Min\+Bat\+Voltage}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga5a3de74d3e46ae734db2d6d54e335ee3}{CONV\+\_\+\+Max\+Bat\+Temp}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga6c0f9c6108c582b26ead5ffc12e6fc26}{CONV\+\_\+\+Lap\+Time}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga9677b4fc4da6e3f0eaf9d7ad100e2bdf}{CONV\+\_\+\+Best\+Lap\+Time}} (uint8\+\_\+t $\ast$data)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___c_o_n_v_ga9093bb99ce275d25f5b1c16f04e226b4}{CONV\+\_\+\+FSG\+\_\+\+AMI\+\_\+state}} (uint8\+\_\+t $\ast$data)
+\item 
+float {\bfseries CONV\+\_\+\+Max\+Mot\+Temp} (uint8\+\_\+t $\ast$data)
+\item 
+float {\bfseries CONV\+\_\+\+Max\+Inv\+Temp} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga49c177c80792a2b82833c923cdb237d8}{CONV\+\_\+\+Inverter\+Temp\+\_\+\+FL}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga75cfd8245a9d0cb59c3e018cae1a0075}{CONV\+\_\+\+Inverter\+Temp\+\_\+\+FR}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_gad0a42d117f5f074b799118ea022f8b64}{CONV\+\_\+\+Inverter\+Temp\+\_\+\+RL}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga1b8fcb607466fd988401008130362958}{CONV\+\_\+\+Inverter\+Temp\+\_\+\+RR}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga70999e8fe82e21c84be9e6b1d21fb143}{CONV\+\_\+\+Motor\+Temp\+\_\+\+RR}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga1f099ddf341aa831c535c4c288cc6444}{CONV\+\_\+\+Motor\+Temp\+\_\+\+RL}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga261ff403acdb4f7e5f217c6377f026cb}{CONV\+\_\+\+Motor\+Temp\+\_\+\+FL}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_gaf3d2377d8ce42214376a148ce1f895a5}{CONV\+\_\+\+Motor\+Temp\+\_\+\+FR}} (uint8\+\_\+t $\ast$data)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_gab111bb944e4d9c47d257f4364d1ec4cb}{CONV\+\_\+\+Max\+Motor\+Temp}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga9ced21fb31989bbec415bd544babd15d}{CONV\+\_\+\+Last\+Lap\+Time}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga3ac0510a4f3c46585516a1c4e62366c9}{CONV\+\_\+\+Max\+Inverter\+Temp}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len)
+\item 
+void \mbox{\hyperlink{group___c_o_n_v_ga2ebdb29b7b1e5464e5bf325c6fbe0f94}{CONV\+\_\+\+DISP\+\_\+\+Motor\+\_\+\+Temp}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$outstring)
+\item 
+void \mbox{\hyperlink{group___c_o_n_v_gae9b959f699d208ac272b7ea9c9a3d462}{CONV\+\_\+\+DISP\+\_\+\+Min\+Voltage}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$outstring)
+\item 
+void \mbox{\hyperlink{group___c_o_n_v_ga45c9c6131f90ff3059f64909bd4b04fb}{CONV\+\_\+\+DISP\+\_\+\+Lap\+Delta}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$outstring)
+\item 
+void \mbox{\hyperlink{group___c_o_n_v_gaf8936dc0d18f6dd85fd4273662d5069c}{CONV\+\_\+\+DISP\+\_\+\+Lap\+Time}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$outstring)
+\item 
+void \mbox{\hyperlink{group___c_o_n_v_ga1af38543cafebb46f540438c67c46530}{CONV\+\_\+\+DISP\+\_\+\+Last\+Lap\+Time}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$outstring)
+\item 
+void \mbox{\hyperlink{group___c_o_n_v_ga21e9d536580708ffbf18bf6ac6a77f9f}{CONV\+\_\+\+DISP\+\_\+\+Inverter\+Temp}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$outstring)
+\item 
+void \mbox{\hyperlink{group___c_o_n_v_ga1dfa04f05cd8828c89d58bb7d2afe372}{CONV\+\_\+\+DISP\+\_\+\+Max\+Bat\+Temp}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$outstring)
+\item 
+void \mbox{\hyperlink{group___c_o_n_v_gad9cb2eb09b4662d8dd3640bf077f7025}{CONV\+\_\+\+DISP\+\_\+\+FSG\+\_\+\+AMI\+\_\+\+State}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\+\_\+string}} $\ast$outstring)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{group___c_o_n_v_ga472cdfbae28b898275163f1411df33a4}{CONV\+\_\+find\+\_\+string\+\_\+length}} (uint8\+\_\+t $\ast$str, uint32\+\_\+t strlen)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga478218fe456f8e1e1f6dac719c146317}{CONV\+\_\+max}} (float $\ast$vals, uint32\+\_\+t valcount)
+\item 
+float \mbox{\hyperlink{group___c_o_n_v_ga212bf10fea842842ac7a5dd093584c15}{CONV\+\_\+min}} (float $\ast$vals, uint32\+\_\+t valcount)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This File defines the Prototypes for \mbox{\hyperlink{group___c_o_n_v}{CONV}}. 
+
+\begin{DoxyAuthor}{Author}
+Frederic Emmerth 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{conv_8h_source}{conv.\+h}}.
+

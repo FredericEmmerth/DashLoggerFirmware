@@ -1,0 +1,82 @@
+\hypertarget{cancomm_8c_source}{}\doxysection{cancomm.\+c}
+\label{cancomm_8c_source}\index{cancomm.c@{cancomm.c}}
+\mbox{\hyperlink{cancomm_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00001}00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00002}00002 \textcolor{comment}{ * @file cancomm.c}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00003}00003 \textcolor{comment}{ * @brief This File Implements the Prototypes for \(\backslash\)ref CANCOMM}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00004}00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00005}00005 \textcolor{comment}{ * @author Frederic Emmerth}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00006}00006 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00007}00007 \textcolor{comment}{ * \(\backslash\)ingroup CANCOMM}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00008}00008 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00009}00009 \textcolor{comment}{ * \(\backslash\)addtogroup CANCOMM}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00010}00010 \textcolor{comment}{ * \(\backslash\)\{}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00011}00011 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00012}00012 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cancomm_8h}{cancomm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00017}\mbox{\hyperlink{group___c_a_n_c_o_m_m_gad3a29d228b324d017ee3c2a998f18f1b}{00017}} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_a_n_c_o_m_m_gad3a29d228b324d017ee3c2a998f18f1b}{CANCOMM\_ReadMessages}}(\mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list,}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00018}00018         uint32\_t message\_list\_len,}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00019}00019         \mbox{\hyperlink{structcancomm__interface}{cancomm\_interface}}* interface\_list,}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00020}00020         uint8\_t interface\_list\_len)\{}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00021}00021     }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00022}00022     \textcolor{comment}{/* Local Variables where the Frame Data can be temporarily saved */}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00023}00023     uint8\_t message\_recieved = 0;}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00024}00024     uint32\_t temp\_id;}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00025}00025     uint8\_t temp\_length;}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00026}00026     uint8\_t temp\_data[\mbox{\hyperlink{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}{CANCOMM\_MAXIMUM\_DATA\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00027}00027     CANFD\_MSG\_RX\_ATTRIBUTE temp\_msgAttr;}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00028}00028     uint32\_t temp\_timestamp;}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00029}00029     }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00030}00030     \textcolor{comment}{/* Loop over every Interface and get the recieved Messages from the FIFOs*/}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00031}00031     \textcolor{keywordflow}{for}(uint8\_t current\_interface = 0;}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00032}00032             current\_interface < interface\_list\_len;}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00033}00033             current\_interface ++)}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00034}00034         \{}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00035}00035         }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00036}00036         \textcolor{comment}{/* Endless Loop, broken internally when there is no data in the fifo */}    }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00037}00037         \textcolor{keywordflow}{while}(1)\{}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00039}00039             \textcolor{comment}{/* Try to get a Message from FIFO */}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00040}00040             message\_recieved = interface\_list[current\_interface].\mbox{\hyperlink{structcancomm__interface_ad565b7804b5776bc1551cc3075f5d005}{MessageReceive}}(}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00041}00041                     \&temp\_id,}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00042}00042                     \&temp\_length,}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00043}00043                     temp\_data,}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00044}00044                     \&temp\_timestamp,}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00045}00045                     interface\_list[current\_interface].receiveFifo,}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00046}00046                     \&temp\_msgAttr);}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00048}00048             \textcolor{comment}{/* If there was a Message in the FIFO interpret it */}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00049}00049             \textcolor{keywordflow}{if}(message\_recieved)\{}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00050}00050                 \textcolor{comment}{/* See if the Message is in cancomm\_message\_list */}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00051}00051                 \textcolor{keywordflow}{for}(uint32\_t i=0; i<message\_list\_len; i++)\{}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00052}00052                     \textcolor{comment}{/* If ID and Interface match, copy the data into the message\_list*/}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00053}00053                     \textcolor{keywordflow}{if}((message\_list[i].\textcolor{keywordtype}{id} == temp\_id)\&\&}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00054}00054                             (message\_list[i].interface\_number == }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00055}00055                             interface\_list[current\_interface].number))}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00056}00056                     \{}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00057}00057                         \textcolor{keywordflow}{for}(uint8\_t j=0; j<\mbox{\hyperlink{group___c_a_n_c_o_m_m_gaf60e4490a0345ef962a08c0f6b196f16}{CANCOMM\_MAXIMUM\_DATA\_LENGTH}}; j++)\{}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00058}00058                             message\_list[i].\mbox{\hyperlink{structcancomm__message_a502ae0d5f6098c34a87497593a94bda0}{data}}[j] = temp\_data[j];}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00059}00059                         \}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00060}00060                         \textcolor{comment}{/* Break the Loop after finding the Message */}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00061}00061                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00062}00062                     \}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00063}00063                 \}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00064}00064             \textcolor{comment}{/* If there was no Message in the FIFO break Loop */}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00065}00065             \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00066}00066                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00067}00067             \}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00068}00068         \}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00069}00069     }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00070}00070     \}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00071}00071     }
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00072}00072 \}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00073}00073 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00074}00074 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00075}00075 \textcolor{comment}{ * \(\backslash\)\}}}
+\DoxyCodeLine{\Hypertarget{cancomm_8c_source_l00076}00076 \textcolor{comment}{ */}}
+
+\end{DoxyCode}

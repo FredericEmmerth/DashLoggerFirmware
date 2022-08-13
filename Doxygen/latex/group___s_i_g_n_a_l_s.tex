@@ -4,7 +4,9 @@
 \begin{DoxyCompactItemize}
 \item 
 file \mbox{\hyperlink{signals_8h}{signals.\+h}}
-\begin{DoxyCompactList}\small\item\em This File defines the Prototypes for \mbox{\hyperlink{group___s_i_g_n_a_l_s}{SIGNALS}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This File defines the Prototypes for \mbox{\hyperlink{group___s_i_g_n_a_l_s}{SIGNALS}}. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{signals_8c}{signals.\+c}}
+\begin{DoxyCompactList}\small\item\em This File implements the Prototypes for \mbox{\hyperlink{group___s_i_g_n_a_l_s}{SIGNALS}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
@@ -15,11 +17,9 @@ struct \mbox{\hyperlink{structsignals__signal__struct}{signals\+\_\+signal\+\_\+
 \doxysubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}\label{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}} 
-\#define {\bfseries SIGNALS\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH}~30
+\#define \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}{SIGNALS\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH}}~30
 \begin{DoxyCompactList}\small\item\em The maximum friendly name length for a signal. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}\label{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}} 
-\#define {\bfseries SIGNALS\+\_\+\+STRING\+\_\+\+MAXIMUM\+\_\+\+LENGTH}~50
+\#define \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}{SIGNALS\+\_\+\+STRING\+\_\+\+MAXIMUM\+\_\+\+LENGTH}}~50
 \begin{DoxyCompactList}\small\item\em The maximum length of the string value of a signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
@@ -35,13 +35,11 @@ enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{
 , \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29}{SIGNALS\+\_\+\+NO\+\_\+\+MATCH}}
  \}
 \begin{DoxyCompactList}\small\item\em Definition of the Return Values of some Functions of this Module. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}\label{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}} 
 enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\+\_\+data\+\_\+type}} \{ {\bfseries SIGNALS\+\_\+\+FLOAT\+\_\+\+SIGNAL} = 0
 , {\bfseries SIGNALS\+\_\+\+UINT32\+\_\+\+T\+\_\+\+SIGNAL}
 , {\bfseries SIGNALS\+\_\+\+STRING\+\_\+\+SIGNAL}
  \}
 \begin{DoxyCompactList}\small\item\em The Data type of a Signal. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}\label{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}} 
 enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\+\_\+signal\+\_\+type}} \{ {\bfseries SIGNALS\+\_\+\+CAN\+\_\+\+MESSAGE} = 0
 , {\bfseries SIGNALS\+\_\+\+INTERNAL\+\_\+\+SIGNAL}
 , {\bfseries SIGNALS\+\_\+\+DISPLAY\+\_\+\+SIGNAL}
@@ -50,25 +48,51 @@ enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}\label{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}} 
-void {\bfseries SIGNALS\+\_\+\+Interpret} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len)
+void \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}{SIGNALS\+\_\+\+Interpret}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len)
 \item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}\label{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}} 
-\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} {\bfseries signals\+\_\+find\+\_\+data} (uint32\+\_\+t id, uint8\+\_\+t interface, \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len, uint8\+\_\+t $\ast$data)
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}{signals\+\_\+find\+\_\+data}} (uint32\+\_\+t id, uint8\+\_\+t interface, \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len, uint8\+\_\+t $\ast$data)
 \item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}\label{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}} 
-\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ {\bfseries signals\+\_\+find\+\_\+signal} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, void($\ast$Callback)(void))
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}{signals\+\_\+find\+\_\+signal}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, void($\ast$Callback)(void))
 \item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}\label{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}} 
-\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} {\bfseries signals\+\_\+compare\+\_\+names} (uint8\+\_\+t $\ast$first, uint32\+\_\+t firstlen, uint8\+\_\+t $\ast$second, uint32\+\_\+t secondlen)
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}{signals\+\_\+compare\+\_\+names}} (uint8\+\_\+t $\ast$first, uint32\+\_\+t firstlen, uint8\+\_\+t $\ast$second, uint32\+\_\+t secondlen)
 \item 
-\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}\label{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}} 
-\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ {\bfseries signals\+\_\+find\+\_\+display\+\_\+signal} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, uint32\+\_\+t $\ast$disp\+Signal\+Count, uint32\+\_\+t needle)
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}{signals\+\_\+find\+\_\+display\+\_\+signal}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, uint32\+\_\+t $\ast$disp\+Signal\+Count, uint32\+\_\+t needle)
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 This Module Handles the Information Interpretation Handling of All Inputs to Outputs. Signals have a Type, wich changes how it is interpreted and used. For more on this, refer to \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\+\_\+data\+\_\+type}} and \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\+\_\+signal\+\_\+type}}. Signals can be chained together. For Example, four Signals of Type SIGNALS\+\_\+\+CAN\+\_\+\+MESSAGE could recieve four Temperatures, wich would then be interpreted to float Values using thier respective Callback Functions. Another Signal of Type SIGNALS\+\_\+\+INTERNAL\+\_\+\+SIGNAL could then find the highest of these Temperatures using its Callback Function. To complete the Chain, a Signal of Type SIGNALS\+\_\+\+DISPLAY\+\_\+\+SIGNAL can be used to convert the float value of the previous Maximising Function to a String Command wich can be interpreted by a Display. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}\label{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}} 
+\index{SIGNALS@{SIGNALS}!SIGNALS\_MAXIMUM\_NAME\_LENGTH@{SIGNALS\_MAXIMUM\_NAME\_LENGTH}}
+\index{SIGNALS\_MAXIMUM\_NAME\_LENGTH@{SIGNALS\_MAXIMUM\_NAME\_LENGTH}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{SIGNALS\_MAXIMUM\_NAME\_LENGTH}{SIGNALS\_MAXIMUM\_NAME\_LENGTH}}
+{\footnotesize\ttfamily \#define SIGNALS\+\_\+\+MAXIMUM\+\_\+\+NAME\+\_\+\+LENGTH~30}
+
+
+
+The maximum friendly name length for a signal. 
+
+
+
+Definition at line \mbox{\hyperlink{signals_8h_source_l00041}{41}} of file \mbox{\hyperlink{signals_8h_source}{signals.\+h}}.
+
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}\label{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}} 
+\index{SIGNALS@{SIGNALS}!SIGNALS\_STRING\_MAXIMUM\_LENGTH@{SIGNALS\_STRING\_MAXIMUM\_LENGTH}}
+\index{SIGNALS\_STRING\_MAXIMUM\_LENGTH@{SIGNALS\_STRING\_MAXIMUM\_LENGTH}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{SIGNALS\_STRING\_MAXIMUM\_LENGTH}{SIGNALS\_STRING\_MAXIMUM\_LENGTH}}
+{\footnotesize\ttfamily \#define SIGNALS\+\_\+\+STRING\+\_\+\+MAXIMUM\+\_\+\+LENGTH~50}
+
+
+
+The maximum length of the string value of a signal. 
+
+
+
+Definition at line \mbox{\hyperlink{signals_8h_source_l00046}{46}} of file \mbox{\hyperlink{signals_8h_source}{signals.\+h}}.
+
+
 
 \doxysubsection{Typedef Documentation}
 \mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}\label{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}} 
@@ -79,7 +103,25 @@ This Module Handles the Information Interpretation Handling of All Inputs to Out
 
 Type Definition of \mbox{\hyperlink{structsignals__signal__struct}{signals\+\_\+signal\+\_\+struct}} to be able to use signals\+\_\+signal in the definition of signals\+\_\+signal, as signal structs have to store pointers to other signals\+\_\+signal structs. 
 
+Definition at line \mbox{\hyperlink{signals_8h_source_l00105}{105}} of file \mbox{\hyperlink{signals_8h_source}{signals.\+h}}.
+
+
+
 \doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}\label{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}} 
+\index{SIGNALS@{SIGNALS}!signals\_data\_type@{signals\_data\_type}}
+\index{signals\_data\_type@{signals\_data\_type}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{signals\_data\_type}{signals\_data\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\+\_\+data\+\_\+type}}}
+
+
+
+The Data type of a Signal. 
+
+
+
+Definition at line \mbox{\hyperlink{signals_8h_source_l00077}{77}} of file \mbox{\hyperlink{signals_8h_source}{signals.\+h}}.
+
 \mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}\label{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}} 
 \index{SIGNALS@{SIGNALS}!signals\_result@{signals\_result}}
 \index{signals\_result@{signals\_result}!SIGNALS@{SIGNALS}}
@@ -108,3 +150,153 @@ SIGNALS\+\_\+\+NO\+\_\+\+MATCH&Returned if the Inputs dont match \\
 \hline
 
 \end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{signals_8h_source_l00051}{51}} of file \mbox{\hyperlink{signals_8h_source}{signals.\+h}}.
+
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}\label{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}} 
+\index{SIGNALS@{SIGNALS}!signals\_signal\_type@{signals\_signal\_type}}
+\index{signals\_signal\_type@{signals\_signal\_type}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{signals\_signal\_type}{signals\_signal\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\+\_\+signal\+\_\+type}}}
+
+
+
+The Signal type of a Signal. 
+
+
+
+Definition at line \mbox{\hyperlink{signals_8h_source_l00086}{86}} of file \mbox{\hyperlink{signals_8h_source}{signals.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}\label{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}} 
+\index{SIGNALS@{SIGNALS}!signals\_compare\_names@{signals\_compare\_names}}
+\index{signals\_compare\_names@{signals\_compare\_names}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{signals\_compare\_names()}{signals\_compare\_names()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} signals\+\_\+compare\+\_\+names (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{first,  }\item[{uint32\+\_\+t}]{firstlen,  }\item[{uint8\+\_\+t $\ast$}]{second,  }\item[{uint32\+\_\+t}]{secondlen }\end{DoxyParamCaption})}
+
+Function to compare two Signals Names. 
+\begin{DoxyParams}{Parameters}
+{\em first} & First Name \\
+\hline
+{\em firstlen} & Length of {\ttfamily first} \\
+\hline
+{\em second} & Second Name \\
+\hline
+{\em secondlen} & Length of {\ttfamily second} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SIGNALS\+\_\+\+MATCH if the Names match, and SIGNALS\+\_\+\+NO\+\_\+\+MATCH if they dont 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{signals_8c_source_l00100}{100}} of file \mbox{\hyperlink{signals_8c_source}{signals.\+c}}.
+
+
+
+References \mbox{\hyperlink{signals_8h_source_l00065}{SIGNALS\+\_\+\+MATCH}}, and \mbox{\hyperlink{signals_8h_source_l00070}{SIGNALS\+\_\+\+NO\+\_\+\+MATCH}}.
+
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}\label{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}} 
+\index{SIGNALS@{SIGNALS}!signals\_find\_data@{signals\_find\_data}}
+\index{signals\_find\_data@{signals\_find\_data}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{signals\_find\_data()}{signals\_find\_data()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} signals\+\_\+find\+\_\+data (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{id,  }\item[{uint8\+\_\+t}]{interface,  }\item[{\mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$}]{message\+\_\+list,  }\item[{uint32\+\_\+t}]{message\+\_\+list\+\_\+len,  }\item[{uint8\+\_\+t $\ast$}]{data }\end{DoxyParamCaption})}
+
+This function finds the data from a CAN Message and writes it to the Buffer {\ttfamily data} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The CAN Message ID \\
+\hline
+{\em interface} & The CAN Interface (wich uniquely identifies a CAN Interface) \\
+\hline
+{\em message\+\_\+list} & List of \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} Structs with the data in it \\
+\hline
+{\em message\+\_\+list\+\_\+len} & The Length of {\ttfamily message\+\_\+list} \\
+\hline
+{\em data} & The Buffer the Data of the requested Message gets written to \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}}. Returns SIGNALS\+\_\+\+FOUND if the Data of the Message was found, and SIGNALS\+\_\+\+NOT\+\_\+\+FOUND if the Message is not in the List. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{signals_8c_source_l00082}{82}} of file \mbox{\hyperlink{signals_8c_source}{signals.\+c}}.
+
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}\label{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}} 
+\index{SIGNALS@{SIGNALS}!signals\_find\_display\_signal@{signals\_find\_display\_signal}}
+\index{signals\_find\_display\_signal@{signals\_find\_display\_signal}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{signals\_find\_display\_signal()}{signals\_find\_display\_signal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ signals\+\_\+find\+\_\+display\+\_\+signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$}]{signal\+\_\+list,  }\item[{uint32\+\_\+t}]{signal\+\_\+list\+\_\+len,  }\item[{uint32\+\_\+t $\ast$}]{disp\+Signal\+Count,  }\item[{uint32\+\_\+t}]{needle }\end{DoxyParamCaption})}
+
+Function to return the first, second, third ... display Signal. If needle is for example five, the fifth display Signal is returned. Also, the total Count of Display Signals is written to {\ttfamily disp\+Signal\+Count}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal\+\_\+list} & The signal\+\_\+list to be searched in. \\
+\hline
+{\em signal\+\_\+list\+\_\+len} & The Length of {\ttfamily signal\+\_\+list} \\
+\hline
+{\em disp\+Signal\+Count} & The total Count of Display Signals in {\ttfamily signal\+\_\+list} is written to this Pointer. \\
+\hline
+{\em needle} & The Display Signal to return \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the display Signal in place of {\ttfamily needle} 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{signals_8c_source_l00148}{148}} of file \mbox{\hyperlink{signals_8c_source}{signals.\+c}}.
+
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}\label{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}} 
+\index{SIGNALS@{SIGNALS}!signals\_find\_signal@{signals\_find\_signal}}
+\index{signals\_find\_signal@{signals\_find\_signal}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{signals\_find\_signal()}{signals\_find\_signal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ signals\+\_\+find\+\_\+signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$}]{signal\+\_\+list,  }\item[{uint32\+\_\+t}]{signal\+\_\+list\+\_\+len,  }\item[{void($\ast$)(void)}]{Callback }\end{DoxyParamCaption})}
+
+This function finds a singnal from signal\+\_\+list by its Callback. This is needed for the Conversion Functions of Internal Signals, as they need to read other Signal Values in thier Conversion Function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal\+\_\+list} & List of \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} to be searched in \\
+\hline
+{\em signal\+\_\+list\+\_\+len} & The Length of {\ttfamily signal\+\_\+list} \\
+\hline
+{\em Callback} & The Callback Function of the searched signal \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the Signal if it is found, else NULL is returned 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{signals_8c_source_l00127}{127}} of file \mbox{\hyperlink{signals_8c_source}{signals.\+c}}.
+
+\mbox{\Hypertarget{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}\label{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}} 
+\index{SIGNALS@{SIGNALS}!SIGNALS\_Interpret@{SIGNALS\_Interpret}}
+\index{SIGNALS\_Interpret@{SIGNALS\_Interpret}!SIGNALS@{SIGNALS}}
+\doxysubsubsection{\texorpdfstring{SIGNALS\_Interpret()}{SIGNALS\_Interpret()}}
+{\footnotesize\ttfamily void SIGNALS\+\_\+\+Interpret (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$}]{signal\+\_\+list,  }\item[{uint32\+\_\+t}]{signal\+\_\+list\+\_\+len,  }\item[{\mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$}]{message\+\_\+list,  }\item[{uint32\+\_\+t}]{message\+\_\+list\+\_\+len }\end{DoxyParamCaption})}
+
+This Function takes a signal\+\_\+list and a message\+\_\+list and interprets each Signal either from other Signals or from a CAN message. The Callback Functions defined in each Signal are called here.
+
+
+\begin{DoxyParams}{Parameters}
+{\em signal\+\_\+list} & A List of \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} Structs \\
+\hline
+{\em signal\+\_\+list\+\_\+len} & The Length of {\ttfamily signal\+\_\+list} \\
+\hline
+{\em message\+\_\+list} & A List of \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} Structs \\
+\hline
+{\em message\+\_\+list\+\_\+len} & The Length of {\ttfamily signal\+\_\+list} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{signals_8c_source_l00016}{16}} of file \mbox{\hyperlink{signals_8c_source}{signals.\+c}}.
+

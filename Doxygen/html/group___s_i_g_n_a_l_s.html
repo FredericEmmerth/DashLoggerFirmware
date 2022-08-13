@@ -98,6 +98,9 @@ Files</h2></td></tr>
 <tr class="memitem:signals_8h"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signals_8h.html">signals.h</a></td></tr>
 <tr class="memdesc:signals_8h"><td class="mdescLeft">&#160;</td><td class="mdescRight">This File defines the Prototypes for <a class="el" href="group___s_i_g_n_a_l_s.html">SIGNALS</a>. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:signals_8c"><td class="memItemLeft" align="right" valign="top">file &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="signals_8c.html">signals.c</a></td></tr>
+<tr class="memdesc:signals_8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This File implements the Prototypes for <a class="el" href="group___s_i_g_n_a_l_s.html">SIGNALS</a>. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
@@ -109,13 +112,11 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ga9fc067d416cfbe44c226acdfb69772a2"><td class="memItemLeft" align="right" valign="top"><a id="ga9fc067d416cfbe44c226acdfb69772a2" name="ga9fc067d416cfbe44c226acdfb69772a2"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIGNALS_MAXIMUM_NAME_LENGTH</b>&#160;&#160;&#160;30</td></tr>
-<tr class="memdesc:ga9fc067d416cfbe44c226acdfb69772a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum friendly name length for a signal. <br /></td></tr>
+<tr class="memitem:ga9fc067d416cfbe44c226acdfb69772a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2">SIGNALS_MAXIMUM_NAME_LENGTH</a>&#160;&#160;&#160;30</td></tr>
+<tr class="memdesc:ga9fc067d416cfbe44c226acdfb69772a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum friendly name length for a signal.  <a href="group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2">More...</a><br /></td></tr>
 <tr class="separator:ga9fc067d416cfbe44c226acdfb69772a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga187ad7aa9a4136a07b326b83ee9503e5"><td class="memItemLeft" align="right" valign="top"><a id="ga187ad7aa9a4136a07b326b83ee9503e5" name="ga187ad7aa9a4136a07b326b83ee9503e5"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><b>SIGNALS_STRING_MAXIMUM_LENGTH</b>&#160;&#160;&#160;50</td></tr>
-<tr class="memdesc:ga187ad7aa9a4136a07b326b83ee9503e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum length of the string value of a signal. <br /></td></tr>
+<tr class="memitem:ga187ad7aa9a4136a07b326b83ee9503e5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5">SIGNALS_STRING_MAXIMUM_LENGTH</a>&#160;&#160;&#160;50</td></tr>
+<tr class="memdesc:ga187ad7aa9a4136a07b326b83ee9503e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum length of the string value of a signal.  <a href="group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5">More...</a><br /></td></tr>
 <tr class="separator:ga187ad7aa9a4136a07b326b83ee9503e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
@@ -132,39 +133,71 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga433e7bf0aaee9070db3f46ae2521bab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the Return Values of some Functions of this Module.  <a href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">More...</a><br /></td></tr>
 <tr class="separator:ga433e7bf0aaee9070db3f46ae2521bab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga19345763f88f56f70252c7a97d831351"><td class="memItemLeft" align="right" valign="top"><a id="ga19345763f88f56f70252c7a97d831351" name="ga19345763f88f56f70252c7a97d831351"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a> { <b>SIGNALS_FLOAT_SIGNAL</b> = 0
+<tr class="memitem:ga19345763f88f56f70252c7a97d831351"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a> { <b>SIGNALS_FLOAT_SIGNAL</b> = 0
 , <b>SIGNALS_UINT32_T_SIGNAL</b>
 , <b>SIGNALS_STRING_SIGNAL</b>
  }</td></tr>
-<tr class="memdesc:ga19345763f88f56f70252c7a97d831351"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Data type of a Signal. <br /></td></tr>
+<tr class="memdesc:ga19345763f88f56f70252c7a97d831351"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Data type of a Signal.  <a href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">More...</a><br /></td></tr>
 <tr class="separator:ga19345763f88f56f70252c7a97d831351"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa8356b463bcf4f2de5fb8ab61004eb5a"><td class="memItemLeft" align="right" valign="top"><a id="gaa8356b463bcf4f2de5fb8ab61004eb5a" name="gaa8356b463bcf4f2de5fb8ab61004eb5a"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a> { <b>SIGNALS_CAN_MESSAGE</b> = 0
+<tr class="memitem:gaa8356b463bcf4f2de5fb8ab61004eb5a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a> { <b>SIGNALS_CAN_MESSAGE</b> = 0
 , <b>SIGNALS_INTERNAL_SIGNAL</b>
 , <b>SIGNALS_DISPLAY_SIGNAL</b>
  }</td></tr>
-<tr class="memdesc:gaa8356b463bcf4f2de5fb8ab61004eb5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Signal type of a Signal. <br /></td></tr>
+<tr class="memdesc:gaa8356b463bcf4f2de5fb8ab61004eb5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Signal type of a Signal.  <a href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">More...</a><br /></td></tr>
 <tr class="separator:gaa8356b463bcf4f2de5fb8ab61004eb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga1582449885505ae9242711dd5a89edae"><td class="memItemLeft" align="right" valign="top"><a id="ga1582449885505ae9242711dd5a89edae" name="ga1582449885505ae9242711dd5a89edae"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SIGNALS_Interpret</b> (<a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *signal_list, uint32_t signal_list_len, <a class="el" href="structcancomm__message.html">cancomm_message</a> *message_list, uint32_t message_list_len)</td></tr>
+<tr class="memitem:ga1582449885505ae9242711dd5a89edae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#ga1582449885505ae9242711dd5a89edae">SIGNALS_Interpret</a> (<a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *signal_list, uint32_t signal_list_len, <a class="el" href="structcancomm__message.html">cancomm_message</a> *message_list, uint32_t message_list_len)</td></tr>
 <tr class="separator:ga1582449885505ae9242711dd5a89edae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae14757bb5eca3e8333b9437648ec8713"><td class="memItemLeft" align="right" valign="top"><a id="gae14757bb5eca3e8333b9437648ec8713" name="gae14757bb5eca3e8333b9437648ec8713"></a>
-<a class="el" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>signals_find_data</b> (uint32_t id, uint8_t interface, <a class="el" href="structcancomm__message.html">cancomm_message</a> *message_list, uint32_t message_list_len, uint8_t *data)</td></tr>
+<tr class="memitem:gae14757bb5eca3e8333b9437648ec8713"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#gae14757bb5eca3e8333b9437648ec8713">signals_find_data</a> (uint32_t id, uint8_t interface, <a class="el" href="structcancomm__message.html">cancomm_message</a> *message_list, uint32_t message_list_len, uint8_t *data)</td></tr>
 <tr class="separator:gae14757bb5eca3e8333b9437648ec8713"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf87949102aad309c3f6402b3f73a12ce"><td class="memItemLeft" align="right" valign="top"><a id="gaf87949102aad309c3f6402b3f73a12ce" name="gaf87949102aad309c3f6402b3f73a12ce"></a>
-<a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>signals_find_signal</b> (<a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *signal_list, uint32_t signal_list_len, void(*Callback)(void))</td></tr>
+<tr class="memitem:gaf87949102aad309c3f6402b3f73a12ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#gaf87949102aad309c3f6402b3f73a12ce">signals_find_signal</a> (<a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *signal_list, uint32_t signal_list_len, void(*Callback)(void))</td></tr>
 <tr class="separator:gaf87949102aad309c3f6402b3f73a12ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab651d13c2faa1f7351a8fcb0224b0b50"><td class="memItemLeft" align="right" valign="top"><a id="gab651d13c2faa1f7351a8fcb0224b0b50" name="gab651d13c2faa1f7351a8fcb0224b0b50"></a>
-<a class="el" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a>&#160;</td><td class="memItemRight" valign="bottom"><b>signals_compare_names</b> (uint8_t *first, uint32_t firstlen, uint8_t *second, uint32_t secondlen)</td></tr>
+<tr class="memitem:gab651d13c2faa1f7351a8fcb0224b0b50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#gab651d13c2faa1f7351a8fcb0224b0b50">signals_compare_names</a> (uint8_t *first, uint32_t firstlen, uint8_t *second, uint32_t secondlen)</td></tr>
 <tr class="separator:gab651d13c2faa1f7351a8fcb0224b0b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5ff248cd6f705af5befc5a6f86d39365"><td class="memItemLeft" align="right" valign="top"><a id="ga5ff248cd6f705af5befc5a6f86d39365" name="ga5ff248cd6f705af5befc5a6f86d39365"></a>
-<a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>signals_find_display_signal</b> (<a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *signal_list, uint32_t signal_list_len, uint32_t *dispSignalCount, uint32_t needle)</td></tr>
+<tr class="memitem:ga5ff248cd6f705af5befc5a6f86d39365"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_i_g_n_a_l_s.html#ga5ff248cd6f705af5befc5a6f86d39365">signals_find_display_signal</a> (<a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *signal_list, uint32_t signal_list_len, uint32_t *dispSignalCount, uint32_t needle)</td></tr>
 <tr class="separator:ga5ff248cd6f705af5befc5a6f86d39365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p >This Module Handles the Information Interpretation Handling of All Inputs to Outputs. Signals have a Type, wich changes how it is interpreted and used. For more on this, refer to <a class="el" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a> and <a class="el" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a>. Signals can be chained together. For Example, four Signals of Type SIGNALS_CAN_MESSAGE could recieve four Temperatures, wich would then be interpreted to float Values using thier respective Callback Functions. Another Signal of Type SIGNALS_INTERNAL_SIGNAL could then find the highest of these Temperatures using its Callback Function. To complete the Chain, a Signal of Type SIGNALS_DISPLAY_SIGNAL can be used to convert the float value of the previous Maximising Function to a String Command wich can be interpreted by a Display. </p>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="ga9fc067d416cfbe44c226acdfb69772a2" name="ga9fc067d416cfbe44c226acdfb69772a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fc067d416cfbe44c226acdfb69772a2">&#9670;&nbsp;</a></span>SIGNALS_MAXIMUM_NAME_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SIGNALS_MAXIMUM_NAME_LENGTH&#160;&#160;&#160;30</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The maximum friendly name length for a signal. </p>
+
+<p class="definition">Definition at line <a class="el" href="signals_8h_source.html#l00041">41</a> of file <a class="el" href="signals_8h_source.html">signals.h</a>.</p>
+
+</div>
+</div>
+<a id="ga187ad7aa9a4136a07b326b83ee9503e5" name="ga187ad7aa9a4136a07b326b83ee9503e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga187ad7aa9a4136a07b326b83ee9503e5">&#9670;&nbsp;</a></span>SIGNALS_STRING_MAXIMUM_LENGTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SIGNALS_STRING_MAXIMUM_LENGTH&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The maximum length of the string value of a signal. </p>
+
+<p class="definition">Definition at line <a class="el" href="signals_8h_source.html#l00046">46</a> of file <a class="el" href="signals_8h_source.html">signals.h</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ga3a65aa7fe94f6bafd6d8a913b86999b3" name="ga3a65aa7fe94f6bafd6d8a913b86999b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga3a65aa7fe94f6bafd6d8a913b86999b3">&#9670;&nbsp;</a></span>signals_signal</h2>
@@ -179,9 +212,29 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SIGNALS_Interpret</b>
 </div><div class="memdoc">
 <p >Type Definition of <a class="el" href="structsignals__signal__struct.html">signals_signal_struct</a> to be able to use signals_signal in the definition of signals_signal, as signal structs have to store pointers to other signals_signal structs. </p>
 
+<p class="definition">Definition at line <a class="el" href="signals_8h_source.html#l00105">105</a> of file <a class="el" href="signals_8h_source.html">signals.h</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="ga19345763f88f56f70252c7a97d831351" name="ga19345763f88f56f70252c7a97d831351"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19345763f88f56f70252c7a97d831351">&#9670;&nbsp;</a></span>signals_data_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Data type of a Signal. </p>
+
+<p class="definition">Definition at line <a class="el" href="signals_8h_source.html#l00077">77</a> of file <a class="el" href="signals_8h_source.html">signals.h</a>.</p>
+
+</div>
+</div>
 <a id="ga433e7bf0aaee9070db3f46ae2521bab8" name="ga433e7bf0aaee9070db3f46ae2521bab8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga433e7bf0aaee9070db3f46ae2521bab8">&#9670;&nbsp;</a></span>signals_result</h2>
 
@@ -205,6 +258,292 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SIGNALS_Interpret</b>
 <tr><td class="fieldname"><a id="gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29" name="gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29"></a>SIGNALS_NO_MATCH&#160;</td><td class="fielddoc"><p >Returned if the Inputs dont match </p>
 </td></tr>
 </table>
+
+<p class="definition">Definition at line <a class="el" href="signals_8h_source.html#l00051">51</a> of file <a class="el" href="signals_8h_source.html">signals.h</a>.</p>
+
+</div>
+</div>
+<a id="gaa8356b463bcf4f2de5fb8ab61004eb5a" name="gaa8356b463bcf4f2de5fb8ab61004eb5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa8356b463bcf4f2de5fb8ab61004eb5a">&#9670;&nbsp;</a></span>signals_signal_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Signal type of a Signal. </p>
+
+<p class="definition">Definition at line <a class="el" href="signals_8h_source.html#l00086">86</a> of file <a class="el" href="signals_8h_source.html">signals.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gab651d13c2faa1f7351a8fcb0224b0b50" name="gab651d13c2faa1f7351a8fcb0224b0b50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab651d13c2faa1f7351a8fcb0224b0b50">&#9670;&nbsp;</a></span>signals_compare_names()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a> signals_compare_names </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>first</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>firstlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>second</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>secondlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Function to compare two Signals Names. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">first</td><td>First Name </td></tr>
+    <tr><td class="paramname">firstlen</td><td>Length of <code>first</code> </td></tr>
+    <tr><td class="paramname">second</td><td>Second Name </td></tr>
+    <tr><td class="paramname">secondlen</td><td>Length of <code>second</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SIGNALS_MATCH if the Names match, and SIGNALS_NO_MATCH if they dont </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="signals_8c_source.html#l00100">100</a> of file <a class="el" href="signals_8c_source.html">signals.c</a>.</p>
+
+<p class="reference">References <a class="el" href="signals_8h_source.html#l00065">SIGNALS_MATCH</a>, and <a class="el" href="signals_8h_source.html#l00070">SIGNALS_NO_MATCH</a>.</p>
+
+</div>
+</div>
+<a id="gae14757bb5eca3e8333b9437648ec8713" name="gae14757bb5eca3e8333b9437648ec8713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae14757bb5eca3e8333b9437648ec8713">&#9670;&nbsp;</a></span>signals_find_data()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a> signals_find_data </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>interface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcancomm__message.html">cancomm_message</a> *&#160;</td>
+          <td class="paramname"><em>message_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>message_list_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function finds the data from a CAN Message and writes it to the Buffer <code>data</code> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>The CAN Message ID </td></tr>
+    <tr><td class="paramname">interface</td><td>The CAN Interface (wich uniquely identifies a CAN Interface) </td></tr>
+    <tr><td class="paramname">message_list</td><td>List of <a class="el" href="structcancomm__message.html">cancomm_message</a> Structs with the data in it </td></tr>
+    <tr><td class="paramname">message_list_len</td><td>The Length of <code>message_list</code> </td></tr>
+    <tr><td class="paramname">data</td><td>The Buffer the Data of the requested Message gets written to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A <a class="el" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a>. Returns SIGNALS_FOUND if the Data of the Message was found, and SIGNALS_NOT_FOUND if the Message is not in the List. </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="signals_8c_source.html#l00082">82</a> of file <a class="el" href="signals_8c_source.html">signals.c</a>.</p>
+
+</div>
+</div>
+<a id="ga5ff248cd6f705af5befc5a6f86d39365" name="ga5ff248cd6f705af5befc5a6f86d39365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ff248cd6f705af5befc5a6f86d39365">&#9670;&nbsp;</a></span>signals_find_display_signal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> * signals_find_display_signal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *&#160;</td>
+          <td class="paramname"><em>signal_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>signal_list_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t *&#160;</td>
+          <td class="paramname"><em>dispSignalCount</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>needle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Function to return the first, second, third ... display Signal. If needle is for example five, the fifth display Signal is returned. Also, the total Count of Display Signals is written to <code>dispSignalCount</code>.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signal_list</td><td>The signal_list to be searched in. </td></tr>
+    <tr><td class="paramname">signal_list_len</td><td>The Length of <code>signal_list</code> </td></tr>
+    <tr><td class="paramname">dispSignalCount</td><td>The total Count of Display Signals in <code>signal_list</code> is written to this Pointer. </td></tr>
+    <tr><td class="paramname">needle</td><td>The Display Signal to return </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the display Signal in place of <code>needle</code> </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="signals_8c_source.html#l00148">148</a> of file <a class="el" href="signals_8c_source.html">signals.c</a>.</p>
+
+</div>
+</div>
+<a id="gaf87949102aad309c3f6402b3f73a12ce" name="gaf87949102aad309c3f6402b3f73a12ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf87949102aad309c3f6402b3f73a12ce">&#9670;&nbsp;</a></span>signals_find_signal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> * signals_find_signal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *&#160;</td>
+          <td class="paramname"><em>signal_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>signal_list_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void(*)(void)&#160;</td>
+          <td class="paramname"><em>Callback</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This function finds a singnal from signal_list by its Callback. This is needed for the Conversion Functions of Internal Signals, as they need to read other Signal Values in thier Conversion Function.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signal_list</td><td>List of <a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> to be searched in </td></tr>
+    <tr><td class="paramname">signal_list_len</td><td>The Length of <code>signal_list</code> </td></tr>
+    <tr><td class="paramname">Callback</td><td>The Callback Function of the searched signal </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer to the Signal if it is found, else NULL is returned </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="signals_8c_source.html#l00127">127</a> of file <a class="el" href="signals_8c_source.html">signals.c</a>.</p>
+
+</div>
+</div>
+<a id="ga1582449885505ae9242711dd5a89edae" name="ga1582449885505ae9242711dd5a89edae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1582449885505ae9242711dd5a89edae">&#9670;&nbsp;</a></span>SIGNALS_Interpret()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SIGNALS_Interpret </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> *&#160;</td>
+          <td class="paramname"><em>signal_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>signal_list_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcancomm__message.html">cancomm_message</a> *&#160;</td>
+          <td class="paramname"><em>message_list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>message_list_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >This Function takes a signal_list and a message_list and interprets each Signal either from other Signals or from a CAN message. The Callback Functions defined in each Signal are called here.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">signal_list</td><td>A List of <a class="el" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">signals_signal</a> Structs </td></tr>
+    <tr><td class="paramname">signal_list_len</td><td>The Length of <code>signal_list</code> </td></tr>
+    <tr><td class="paramname">message_list</td><td>A List of <a class="el" href="structcancomm__message.html">cancomm_message</a> Structs </td></tr>
+    <tr><td class="paramname">message_list_len</td><td>The Length of <code>signal_list</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="signals_8c_source.html#l00016">16</a> of file <a class="el" href="signals_8c_source.html">signals.c</a>.</p>
 
 </div>
 </div>

@@ -906,13 +906,14 @@ WARN_LOGFILE           =
 # spaces. See also FILE_PATTERNS and EXTENSION_MAPPING
 # Note: If this tag is empty the current directory is searched.
 
-INPUT                  = 	../MPLAB/DashLoggerPIC32MK/firmware/src/cancomm.h \
+INPUT                  = 	readme.md \
+							../MPLAB/DashLoggerPIC32MK/firmware/src/cancomm.h \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/command.h \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/conv.h \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/crc.h \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/delay.h \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/shortprotocol.h \
-							../MPLAB/DashLoggerPIC32MK/firmware/src/siganls.h \
+							../MPLAB/DashLoggerPIC32MK/firmware/src/signals.h \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/uart.h \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/cancomm.c \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/command.c \
@@ -920,7 +921,7 @@ INPUT                  = 	../MPLAB/DashLoggerPIC32MK/firmware/src/cancomm.h \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/crc.c \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/delay.c \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/shortprotocol.c \
-							../MPLAB/DashLoggerPIC32MK/firmware/src/siganls.c \
+							../MPLAB/DashLoggerPIC32MK/firmware/src/signals.c \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/uart.c \
 							../MPLAB/DashLoggerPIC32MK/firmware/src/main.c \
 
@@ -1120,7 +1121,7 @@ FILTER_SOURCE_PATTERNS =
 # (index.html). This can be useful if you have a project on for instance GitHub
 # and want to reuse the introduction page also for the doxygen output.
 
-USE_MDFILE_AS_MAINPAGE =
+USE_MDFILE_AS_MAINPAGE = readme.md
 
 #---------------------------------------------------------------------------
 # Configuration options related to source browsing
@@ -1133,13 +1134,13 @@ USE_MDFILE_AS_MAINPAGE =
 # also VERBATIM_HEADERS is set to NO.
 # The default value is: NO.
 
-SOURCE_BROWSER         = NO
+SOURCE_BROWSER         = YES
 
 # Setting the INLINE_SOURCES tag to YES will include the body of functions,
 # classes and enums directly into the documentation.
 # The default value is: NO.
 
-INLINE_SOURCES         = NO
+INLINE_SOURCES         = YES
 
 # Setting the STRIP_CODE_COMMENTS tag to YES will instruct doxygen to hide any
 # special comment blocks from generated source code fragments. Normal C, C++ and
@@ -1158,7 +1159,7 @@ REFERENCED_BY_RELATION = NO
 # all documented entities called/used by that function will be listed.
 # The default value is: NO.
 
-REFERENCES_RELATION    = NO
+REFERENCES_RELATION    = YES
 
 # If the REFERENCES_LINK_SOURCE tag is set to YES and SOURCE_BROWSER tag is set
 # to YES then the hyperlinks from functions in REFERENCES_RELATION and

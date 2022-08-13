@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "DashLogger", "index.html", [
+    [ "PIC32MK Software for DashLogger Display", "index.html", null ],
     [ "Todo List", "todo.html", null ],
     [ "Bug List", "bug.html", null ],
     [ "Modules", "modules.html", "modules" ],

@@ -1,82 +1,442 @@
 \begin{theindex}
 
-  \item {CANCOMM}, \hyperpage{11}
-    \subitem {CANCOMM\_ReadMessages}, \hyperpage{12}
-  \item {cancomm.c}, \hyperpage{23}
-  \item {cancomm.h}, \hyperpage{23, 24}
-  \item {cancomm\_interface}, \hyperpage{17}
-    \subitem {MessageReceive}, \hyperpage{17}
-    \subitem {MessageTransmit}, \hyperpage{18}
-  \item {cancomm\_message}, \hyperpage{18}
+  \item {can\_convert\_float}
+    \subitem {signals\_signal\_struct}, \hyperpage{47}
+  \item {can\_convert\_string}
+    \subitem {signals\_signal\_struct}, \hyperpage{47}
+  \item {can\_convert\_uint32\_t}
+    \subitem {signals\_signal\_struct}, \hyperpage{48}
+  \item {CANCOMM}, \hyperpage{13}
+    \subitem {CANCOMM\_MAXIMUM\_DATA\_LENGTH}, \hyperpage{14}
+    \subitem {CANCOMM\_MAXIMUM\_NAME\_LENGTH}, \hyperpage{14}
+    \subitem {CANCOMM\_ReadMessages}, \hyperpage{14}
+  \item {cancomm.c}, \hyperpage{53, 54}
+  \item {cancomm.h}, \hyperpage{55, 56}
+  \item {cancomm\_interface}, \hyperpage{39}
+    \subitem {MessageReceive}, \hyperpage{39}
+    \subitem {MessageTransmit}, \hyperpage{40}
+    \subitem {number}, \hyperpage{40}
+    \subitem {receiveFifo}, \hyperpage{40}
+    \subitem {transmitFifo}, \hyperpage{41}
+  \item {CANCOMM\_MAXIMUM\_DATA\_LENGTH}
+    \subitem {CANCOMM}, \hyperpage{14}
+  \item {CANCOMM\_MAXIMUM\_NAME\_LENGTH}
+    \subitem {CANCOMM}, \hyperpage{14}
+  \item {cancomm\_message}, \hyperpage{41}
+    \subitem {data}, \hyperpage{42}
+    \subitem {friendly\_name}, \hyperpage{42}
+    \subitem {id}, \hyperpage{42}
+    \subitem {interface\_number}, \hyperpage{42}
+    \subitem {length}, \hyperpage{42}
+    \subitem {timestamp}, \hyperpage{42}
   \item {CANCOMM\_ReadMessages}
-    \subitem {CANCOMM}, \hyperpage{12}
-  \item {COMMAND}, \hyperpage{12}
-    \subitem {COMMAND\_Generate}, \hyperpage{13}
-  \item {command.c}, \hyperpage{25}
-  \item {command.h}, \hyperpage{25, 26}
+    \subitem {CANCOMM}, \hyperpage{14}
+  \item {CLOCK\_FREQUENCY\_CORE}
+    \subitem {DELAY}, \hyperpage{23}
+  \item {COMMAND}, \hyperpage{15}
+    \subitem {COMMAND\_Generate}, \hyperpage{15}
+  \item {command.c}, \hyperpage{58}
+  \item {command.h}, \hyperpage{59}
+  \item {command\_buffer}
+    \subitem {SHORTPROTOCOL\_Instance}, \hyperpage{44}
   \item {COMMAND\_Generate}
-    \subitem {COMMAND}, \hyperpage{13}
-  \item {conv.h}, \hyperpage{26}
-  \item {crc.c}, \hyperpage{27}
-    \subitem {CRC\_Calculate}, \hyperpage{28}
-    \subitem {crc\_update}, \hyperpage{28}
-  \item {crc.h}, \hyperpage{28}, \hyperpage{31}
-    \subitem {CRC\_ALGO\_TABLE\_DRIVEN}, \hyperpage{29}
-    \subitem {CRC\_Calculate}, \hyperpage{30}
-    \subitem {crc\_t}, \hyperpage{30}
-    \subitem {crc\_update}, \hyperpage{30}
+    \subitem {COMMAND}, \hyperpage{15}
+  \item {CONV}, \hyperpage{16}
+    \subitem {CONV\_BestLapTime}, \hyperpage{17}
+    \subitem {CONV\_DISP\_FSG\_AMI\_State}, \hyperpage{17}
+    \subitem {CONV\_DISP\_InverterTemp}, \hyperpage{17}
+    \subitem {CONV\_DISP\_LapDelta}, \hyperpage{17}
+    \subitem {CONV\_DISP\_LapTime}, \hyperpage{17}
+    \subitem {CONV\_DISP\_LastLapTime}, \hyperpage{18}
+    \subitem {CONV\_DISP\_MaxBatTemp}, \hyperpage{18}
+    \subitem {CONV\_DISP\_MinVoltage}, \hyperpage{18}
+    \subitem {CONV\_DISP\_Motor\_Temp}, \hyperpage{18}
+    \subitem {CONV\_find\_string\_length}, \hyperpage{18}
+    \subitem {CONV\_FSG\_AMI\_state}, \hyperpage{19}
+    \subitem {CONV\_InverterTemp\_FL}, \hyperpage{19}
+    \subitem {CONV\_InverterTemp\_FR}, \hyperpage{19}
+    \subitem {CONV\_InverterTemp\_RL}, \hyperpage{19}
+    \subitem {CONV\_InverterTemp\_RR}, \hyperpage{19}
+    \subitem {CONV\_LapTime}, \hyperpage{20}
+    \subitem {CONV\_LastLapTime}, \hyperpage{20}
+    \subitem {CONV\_max}, \hyperpage{20}
+    \subitem {CONV\_MaxBatTemp}, \hyperpage{20}
+    \subitem {CONV\_MaxInverterTemp}, \hyperpage{20}
+    \subitem {CONV\_MaxMotorTemp}, \hyperpage{21}
+    \subitem {CONV\_min}, \hyperpage{21}
+    \subitem {CONV\_MinBatVoltage}, \hyperpage{21}
+    \subitem {CONV\_MotorTemp\_FL}, \hyperpage{21}
+    \subitem {CONV\_MotorTemp\_FR}, \hyperpage{21}
+    \subitem {CONV\_MotorTemp\_RL}, \hyperpage{22}
+    \subitem {CONV\_MotorTemp\_RR}, \hyperpage{22}
+  \item {conv.c}, \hyperpage{60, 61}
+  \item {conv.h}, \hyperpage{65, 66}
+  \item {CONV\_BestLapTime}
+    \subitem {CONV}, \hyperpage{17}
+  \item {CONV\_DISP\_FSG\_AMI\_State}
+    \subitem {CONV}, \hyperpage{17}
+  \item {CONV\_DISP\_InverterTemp}
+    \subitem {CONV}, \hyperpage{17}
+  \item {CONV\_DISP\_LapDelta}
+    \subitem {CONV}, \hyperpage{17}
+  \item {CONV\_DISP\_LapTime}
+    \subitem {CONV}, \hyperpage{17}
+  \item {CONV\_DISP\_LastLapTime}
+    \subitem {CONV}, \hyperpage{18}
+  \item {CONV\_DISP\_MaxBatTemp}
+    \subitem {CONV}, \hyperpage{18}
+  \item {CONV\_DISP\_MinVoltage}
+    \subitem {CONV}, \hyperpage{18}
+  \item {CONV\_DISP\_Motor\_Temp}
+    \subitem {CONV}, \hyperpage{18}
+  \item {CONV\_find\_string\_length}
+    \subitem {CONV}, \hyperpage{18}
+  \item {CONV\_FSG\_AMI\_state}
+    \subitem {CONV}, \hyperpage{19}
+  \item {CONV\_InverterTemp\_FL}
+    \subitem {CONV}, \hyperpage{19}
+  \item {CONV\_InverterTemp\_FR}
+    \subitem {CONV}, \hyperpage{19}
+  \item {CONV\_InverterTemp\_RL}
+    \subitem {CONV}, \hyperpage{19}
+  \item {CONV\_InverterTemp\_RR}
+    \subitem {CONV}, \hyperpage{19}
+  \item {CONV\_LapTime}
+    \subitem {CONV}, \hyperpage{20}
+  \item {CONV\_LastLapTime}
+    \subitem {CONV}, \hyperpage{20}
+  \item {CONV\_max}
+    \subitem {CONV}, \hyperpage{20}
+  \item {CONV\_MaxBatTemp}
+    \subitem {CONV}, \hyperpage{20}
+  \item {CONV\_MaxInverterTemp}
+    \subitem {CONV}, \hyperpage{20}
+  \item {CONV\_MaxMotorTemp}
+    \subitem {CONV}, \hyperpage{21}
+  \item {CONV\_min}
+    \subitem {CONV}, \hyperpage{21}
+  \item {CONV\_MinBatVoltage}
+    \subitem {CONV}, \hyperpage{21}
+  \item {CONV\_MotorTemp\_FL}
+    \subitem {CONV}, \hyperpage{21}
+  \item {CONV\_MotorTemp\_FR}
+    \subitem {CONV}, \hyperpage{21}
+  \item {CONV\_MotorTemp\_RL}
+    \subitem {CONV}, \hyperpage{22}
+  \item {CONV\_MotorTemp\_RR}
+    \subitem {CONV}, \hyperpage{22}
+  \item {crc.c}, \hyperpage{67}, \hyperpage{69}
+    \subitem {CRC\_Calculate}, \hyperpage{68}
+    \subitem {crc\_update}, \hyperpage{68}
+  \item {crc.h}, \hyperpage{70}, \hyperpage{72}
+    \subitem {CRC\_ALGO\_TABLE\_DRIVEN}, \hyperpage{71}
+    \subitem {CRC\_Calculate}, \hyperpage{71}
+    \subitem {crc\_t}, \hyperpage{71}
+    \subitem {crc\_update}, \hyperpage{72}
   \item {CRC\_ALGO\_TABLE\_DRIVEN}
-    \subitem {crc.h}, \hyperpage{29}
+    \subitem {crc.h}, \hyperpage{71}
   \item {CRC\_Calculate}
-    \subitem {crc.c}, \hyperpage{28}
-    \subitem {crc.h}, \hyperpage{30}
+    \subitem {crc.c}, \hyperpage{68}
+    \subitem {crc.h}, \hyperpage{71}
   \item {crc\_t}
-    \subitem {crc.h}, \hyperpage{30}
+    \subitem {crc.h}, \hyperpage{71}
   \item {crc\_update}
-    \subitem {crc.c}, \hyperpage{28}
-    \subitem {crc.h}, \hyperpage{30}
+    \subitem {crc.c}, \hyperpage{68}
+    \subitem {crc.h}, \hyperpage{72}
+  \item {current\_command\_signal}
+    \subitem {main.c}, \hyperpage{77}
 
   \indexspace
 
-  \item {delay.h}, \hyperpage{31}
+  \item {data}
+    \subitem {cancomm\_message}, \hyperpage{42}
+    \subitem {SHORTPROTOCOL\_string}, \hyperpage{46}
+    \subitem {SIGNALS\_string}, \hyperpage{51}
+  \item {data\_type}
+    \subitem {signals\_signal\_struct}, \hyperpage{48}
+  \item {DELAY}, \hyperpage{22}
+    \subitem {CLOCK\_FREQUENCY\_CORE}, \hyperpage{23}
+    \subitem {DELAY\_Microseconds}, \hyperpage{23}
+    \subitem {DELAY\_Milliseconds}, \hyperpage{24}
+    \subitem {MICROSECONDS\_IN\_SECOND}, \hyperpage{23}
+    \subitem {MILLISECONDS\_IN\_SECOND}, \hyperpage{23}
+    \subitem {TWO\_STEPS\_DELAY\_ADJ}, \hyperpage{23}
+  \item {delay.c}, \hyperpage{74}
+  \item {delay.h}, \hyperpage{74, 75}
+  \item {DELAY\_Microseconds}
+    \subitem {DELAY}, \hyperpage{23}
+  \item {DELAY\_Milliseconds}
+    \subitem {DELAY}, \hyperpage{24}
 
   \indexspace
 
+  \item {friendly\_name}
+    \subitem {cancomm\_message}, \hyperpage{42}
+    \subitem {signals\_signal\_struct}, \hyperpage{48}
+
+  \indexspace
+
+  \item {id}
+    \subitem {cancomm\_message}, \hyperpage{42}
+    \subitem {signals\_signal\_struct}, \hyperpage{48}
+  \item {interface\_list}
+    \subitem {main.c}, \hyperpage{77}
+  \item {interface\_list\_len}
+    \subitem {main.c}, \hyperpage{77}
+  \item {interface\_number}
+    \subitem {cancomm\_message}, \hyperpage{42}
+    \subitem {signals\_signal\_struct}, \hyperpage{48}
+  \item {internal\_convert\_float}
+    \subitem {signals\_signal\_struct}, \hyperpage{49}
+  \item {internal\_convert\_string}
+    \subitem {signals\_signal\_struct}, \hyperpage{49}
+  \item {internal\_convert\_uint32\_t}
+    \subitem {signals\_signal\_struct}, \hyperpage{49}
+
+  \indexspace
+
+  \item {length}
+    \subitem {cancomm\_message}, \hyperpage{42}
+    \subitem {SHORTPROTOCOL\_string}, \hyperpage{46}
+    \subitem {SIGNALS\_string}, \hyperpage{51}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.c}, \hyperpage{77}
+  \item {main.c}, \hyperpage{76}, \hyperpage{79}
+    \subitem {current\_command\_signal}, \hyperpage{77}
+    \subitem {interface\_list}, \hyperpage{77}
+    \subitem {interface\_list\_len}, \hyperpage{77}
+    \subitem {main}, \hyperpage{77}
+    \subitem {message\_list}, \hyperpage{78}
+    \subitem {message\_list\_len}, \hyperpage{78}
+    \subitem {shortProt}, \hyperpage{78}
+    \subitem {signal\_list}, \hyperpage{78}
+    \subitem {signal\_list\_len}, \hyperpage{79}
+  \item {maximumPackageLength}
+    \subitem {SHORTPROTOCOL\_Instance}, \hyperpage{44}
+  \item {message\_list}
+    \subitem {main.c}, \hyperpage{78}
+  \item {message\_list\_len}
+    \subitem {main.c}, \hyperpage{78}
   \item {MessageReceive}
-    \subitem {cancomm\_interface}, \hyperpage{17}
+    \subitem {cancomm\_interface}, \hyperpage{39}
   \item {MessageTransmit}
-    \subitem {cancomm\_interface}, \hyperpage{18}
+    \subitem {cancomm\_interface}, \hyperpage{40}
+  \item {MICROSECONDS\_IN\_SECOND}
+    \subitem {DELAY}, \hyperpage{23}
+  \item {MILLISECONDS\_IN\_SECOND}
+    \subitem {DELAY}, \hyperpage{23}
 
   \indexspace
 
-  \item {shortprotocol.h}, \hyperpage{32}
-  \item {SHORTPROTOCOL\_Instance}, \hyperpage{19}
-  \item {SHORTPROTOCOL\_string}, \hyperpage{19}
-  \item {SIGNALS}, \hyperpage{13}
-    \subitem {SIGNALS\_FOUND}, \hyperpage{15}
-    \subitem {SIGNALS\_MATCH}, \hyperpage{15}
-    \subitem {SIGNALS\_NO\_MATCH}, \hyperpage{15}
-    \subitem {SIGNALS\_NOT\_FOUND}, \hyperpage{15}
-    \subitem {signals\_result}, \hyperpage{15}
-    \subitem {signals\_signal}, \hyperpage{14}
-  \item {signals.h}, \hyperpage{33, 34}
+  \item {newCommand}
+    \subitem {SHORTPROTOCOL\_Instance}, \hyperpage{44}
+  \item {number}
+    \subitem {cancomm\_interface}, \hyperpage{40}
+
+  \indexspace
+
+  \item {readAvailable}
+    \subitem {SHORTPROTOCOL\_Instance}, \hyperpage{44}
+  \item {readByte}
+    \subitem {SHORTPROTOCOL\_Instance}, \hyperpage{44}
+  \item {receiveFifo}
+    \subitem {cancomm\_interface}, \hyperpage{40}
+
+  \indexspace
+
+  \item {shortProt}
+    \subitem {main.c}, \hyperpage{78}
+  \item {SHORTPROTOCOL}, \hyperpage{24}
+    \subitem {SHORTPROTOCOL\_Available}, \hyperpage{28}
+    \subitem {SHORTPROTOCOL\_BEGIN}, \hyperpage{26}
+    \subitem {SHORTPROTOCOL\_BEGIN\_OFFSET}, \hyperpage{26}
+    \subitem {SHORTPROTOCOL\_BYTE\_LENGTH}, \hyperpage{26}
+    \subitem {SHORTPROTOCOL\_COMMAND\_OFFSET}, \hyperpage{26}
+    \subitem {SHORTPROTOCOL\_CRC\_LSB\_OFFSET}, \hyperpage{26}
+    \subitem {SHORTPROTOCOL\_CRC\_MSB\_OFFSET}, \hyperpage{27}
+    \subitem {SHORTPROTOCOL\_FIRST\_BYTE\_MASK}, \hyperpage{27}
+    \subitem {SHORTPROTOCOL\_Initialize}, \hyperpage{29}
+    \subitem {SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET}, \hyperpage{27}
+    \subitem {SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET}, \hyperpage{27}
+    \subitem {SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH}, \hyperpage{27}
+    \subitem {SHORTPROTOCOL\_OVERHEAD\_BYTES}, \hyperpage{28}
+    \subitem {SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES}, 
+		\hyperpage{28}
+    \subitem {SHORTPROTOCOL\_SECOND\_BYTE\_MASK}, \hyperpage{28}
+    \subitem {SHORTPROTOCOL\_Send}, \hyperpage{29}
+    \subitem {SHORTPROTOCOL\_status}, \hyperpage{28}
+    \subitem {SHORTPROTOCOL\_Update}, \hyperpage{30}
+  \item {shortprotocol.c}, \hyperpage{82, 83}
+  \item {shortprotocol.h}, \hyperpage{84}, \hyperpage{86}
+  \item {SHORTPROTOCOL\_Available}
+    \subitem {SHORTPROTOCOL}, \hyperpage{28}
+  \item {SHORTPROTOCOL\_BEGIN}
+    \subitem {SHORTPROTOCOL}, \hyperpage{26}
+  \item {SHORTPROTOCOL\_BEGIN\_OFFSET}
+    \subitem {SHORTPROTOCOL}, \hyperpage{26}
+  \item {SHORTPROTOCOL\_BYTE\_LENGTH}
+    \subitem {SHORTPROTOCOL}, \hyperpage{26}
+  \item {SHORTPROTOCOL\_COMMAND\_OFFSET}
+    \subitem {SHORTPROTOCOL}, \hyperpage{26}
+  \item {SHORTPROTOCOL\_CRC\_LSB\_OFFSET}
+    \subitem {SHORTPROTOCOL}, \hyperpage{26}
+  \item {SHORTPROTOCOL\_CRC\_MSB\_OFFSET}
+    \subitem {SHORTPROTOCOL}, \hyperpage{27}
+  \item {SHORTPROTOCOL\_FIRST\_BYTE\_MASK}
+    \subitem {SHORTPROTOCOL}, \hyperpage{27}
+  \item {SHORTPROTOCOL\_Initialize}
+    \subitem {SHORTPROTOCOL}, \hyperpage{29}
+  \item {SHORTPROTOCOL\_Instance}, \hyperpage{43}
+    \subitem {command\_buffer}, \hyperpage{44}
+    \subitem {maximumPackageLength}, \hyperpage{44}
+    \subitem {newCommand}, \hyperpage{44}
+    \subitem {readAvailable}, \hyperpage{44}
+    \subitem {readByte}, \hyperpage{44}
+    \subitem {writeAvailable}, \hyperpage{45}
+    \subitem {writeByte}, \hyperpage{45}
+    \subitem {writeCounter}, \hyperpage{45}
+  \item {SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET}
+    \subitem {SHORTPROTOCOL}, \hyperpage{27}
+  \item {SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET}
+    \subitem {SHORTPROTOCOL}, \hyperpage{27}
+  \item {SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH}
+    \subitem {SHORTPROTOCOL}, \hyperpage{27}
+  \item {SHORTPROTOCOL\_OVERHEAD\_BYTES}
+    \subitem {SHORTPROTOCOL}, \hyperpage{28}
+  \item {SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES}
+    \subitem {SHORTPROTOCOL}, \hyperpage{28}
+  \item {SHORTPROTOCOL\_SECOND\_BYTE\_MASK}
+    \subitem {SHORTPROTOCOL}, \hyperpage{28}
+  \item {SHORTPROTOCOL\_Send}
+    \subitem {SHORTPROTOCOL}, \hyperpage{29}
+  \item {SHORTPROTOCOL\_status}
+    \subitem {SHORTPROTOCOL}, \hyperpage{28}
+  \item {SHORTPROTOCOL\_string}, \hyperpage{45}
+    \subitem {data}, \hyperpage{46}
+    \subitem {length}, \hyperpage{46}
+  \item {SHORTPROTOCOL\_Update}
+    \subitem {SHORTPROTOCOL}, \hyperpage{30}
+  \item {signal\_list}
+    \subitem {main.c}, \hyperpage{78}
+  \item {signal\_list\_len}
+    \subitem {main.c}, \hyperpage{79}
+  \item {SIGNALS}, \hyperpage{30}
+    \subitem {signals\_compare\_names}, \hyperpage{33}
+    \subitem {signals\_data\_type}, \hyperpage{32}
+    \subitem {signals\_find\_data}, \hyperpage{33}
+    \subitem {signals\_find\_display\_signal}, \hyperpage{35}
+    \subitem {signals\_find\_signal}, \hyperpage{35}
+    \subitem {SIGNALS\_FOUND}, \hyperpage{32}
+    \subitem {SIGNALS\_Interpret}, \hyperpage{36}
+    \subitem {SIGNALS\_MATCH}, \hyperpage{32}
+    \subitem {SIGNALS\_MAXIMUM\_NAME\_LENGTH}, \hyperpage{31}
+    \subitem {SIGNALS\_NO\_MATCH}, \hyperpage{32}
+    \subitem {SIGNALS\_NOT\_FOUND}, \hyperpage{32}
+    \subitem {signals\_result}, \hyperpage{32}
+    \subitem {signals\_signal}, \hyperpage{32}
+    \subitem {signals\_signal\_type}, \hyperpage{33}
+    \subitem {SIGNALS\_STRING\_MAXIMUM\_LENGTH}, \hyperpage{31}
+  \item {signals.c}, \hyperpage{89}
+  \item {signals.h}, \hyperpage{91, 92}
+  \item {signals\_compare\_names}
+    \subitem {SIGNALS}, \hyperpage{33}
+  \item {signals\_data\_type}
+    \subitem {SIGNALS}, \hyperpage{32}
+  \item {signals\_find\_data}
+    \subitem {SIGNALS}, \hyperpage{33}
+  \item {signals\_find\_display\_signal}
+    \subitem {SIGNALS}, \hyperpage{35}
+  \item {signals\_find\_signal}
+    \subitem {SIGNALS}, \hyperpage{35}
   \item {SIGNALS\_FOUND}
-    \subitem {SIGNALS}, \hyperpage{15}
+    \subitem {SIGNALS}, \hyperpage{32}
+  \item {SIGNALS\_Interpret}
+    \subitem {SIGNALS}, \hyperpage{36}
   \item {SIGNALS\_MATCH}
-    \subitem {SIGNALS}, \hyperpage{15}
+    \subitem {SIGNALS}, \hyperpage{32}
+  \item {SIGNALS\_MAXIMUM\_NAME\_LENGTH}
+    \subitem {SIGNALS}, \hyperpage{31}
   \item {SIGNALS\_NO\_MATCH}
-    \subitem {SIGNALS}, \hyperpage{15}
+    \subitem {SIGNALS}, \hyperpage{32}
   \item {SIGNALS\_NOT\_FOUND}
-    \subitem {SIGNALS}, \hyperpage{15}
+    \subitem {SIGNALS}, \hyperpage{32}
   \item {signals\_result}
-    \subitem {SIGNALS}, \hyperpage{15}
+    \subitem {SIGNALS}, \hyperpage{32}
   \item {signals\_signal}
-    \subitem {SIGNALS}, \hyperpage{14}
-  \item {signals\_signal\_struct}, \hyperpage{20}
-  \item {SIGNALS\_string}, \hyperpage{20}
+    \subitem {SIGNALS}, \hyperpage{32}
+  \item {signals\_signal\_struct}, \hyperpage{46}
+    \subitem {can\_convert\_float}, \hyperpage{47}
+    \subitem {can\_convert\_string}, \hyperpage{47}
+    \subitem {can\_convert\_uint32\_t}, \hyperpage{48}
+    \subitem {data\_type}, \hyperpage{48}
+    \subitem {friendly\_name}, \hyperpage{48}
+    \subitem {id}, \hyperpage{48}
+    \subitem {interface\_number}, \hyperpage{48}
+    \subitem {internal\_convert\_float}, \hyperpage{49}
+    \subitem {internal\_convert\_string}, \hyperpage{49}
+    \subitem {internal\_convert\_uint32\_t}, \hyperpage{49}
+    \subitem {timestamp}, \hyperpage{49}
+    \subitem {type}, \hyperpage{49}
+    \subitem {value\_float}, \hyperpage{50}
+    \subitem {value\_string}, \hyperpage{50}
+    \subitem {value\_uint32\_t}, \hyperpage{50}
+  \item {signals\_signal\_type}
+    \subitem {SIGNALS}, \hyperpage{33}
+  \item {SIGNALS\_string}, \hyperpage{50}
+    \subitem {data}, \hyperpage{51}
+    \subitem {length}, \hyperpage{51}
+  \item {SIGNALS\_STRING\_MAXIMUM\_LENGTH}
+    \subitem {SIGNALS}, \hyperpage{31}
 
   \indexspace
 
-  \item {uart.h}, \hyperpage{35}
+  \item {timestamp}
+    \subitem {cancomm\_message}, \hyperpage{42}
+    \subitem {signals\_signal\_struct}, \hyperpage{49}
+  \item {transmitFifo}
+    \subitem {cancomm\_interface}, \hyperpage{41}
+  \item {TWO\_STEPS\_DELAY\_ADJ}
+    \subitem {DELAY}, \hyperpage{23}
+  \item {type}
+    \subitem {signals\_signal\_struct}, \hyperpage{49}
+
+  \indexspace
+
+  \item {UART}, \hyperpage{36}
+    \subitem {UART\_ReadAvailable}, \hyperpage{37}
+    \subitem {UART\_ReadByte}, \hyperpage{37}
+    \subitem {UART\_WriteAvailable}, \hyperpage{37}
+    \subitem {UART\_WriteByte}, \hyperpage{37}
+  \item {uart.c}, \hyperpage{96}
+  \item {uart.h}, \hyperpage{97}
+  \item {UART\_ReadAvailable}
+    \subitem {UART}, \hyperpage{37}
+  \item {UART\_ReadByte}
+    \subitem {UART}, \hyperpage{37}
+  \item {UART\_WriteAvailable}
+    \subitem {UART}, \hyperpage{37}
+  \item {UART\_WriteByte}
+    \subitem {UART}, \hyperpage{37}
+
+  \indexspace
+
+  \item {value\_float}
+    \subitem {signals\_signal\_struct}, \hyperpage{50}
+  \item {value\_string}
+    \subitem {signals\_signal\_struct}, \hyperpage{50}
+  \item {value\_uint32\_t}
+    \subitem {signals\_signal\_struct}, \hyperpage{50}
+
+  \indexspace
+
+  \item {writeAvailable}
+    \subitem {SHORTPROTOCOL\_Instance}, \hyperpage{45}
+  \item {writeByte}
+    \subitem {SHORTPROTOCOL\_Instance}, \hyperpage{45}
+  \item {writeCounter}
+    \subitem {SHORTPROTOCOL\_Instance}, \hyperpage{45}
 
 \end{theindex}

@@ -1,33 +1,69 @@
 \hypertarget{uart_8h_source}{}\doxysection{uart.\+h}
 \label{uart_8h_source}\index{uart.h@{uart.h}}
-
+\mbox{\hyperlink{uart_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{comment}{/* }}
-\DoxyCodeLine{2 \textcolor{comment}{ * File:   uart.h}}
-\DoxyCodeLine{3 \textcolor{comment}{ * Author: Frederic}}
-\DoxyCodeLine{4 \textcolor{comment}{ *}}
-\DoxyCodeLine{5 \textcolor{comment}{ * Created on 23. Mai 2022, 17:10}}
-\DoxyCodeLine{6 \textcolor{comment}{ */}}
-\DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef UART\_H}}
-\DoxyCodeLine{9 \textcolor{preprocessor}{\#define UART\_H}}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
-\DoxyCodeLine{12 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
-\DoxyCodeLine{13 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{14 }
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}shortprotocol.h"{}}}
-\DoxyCodeLine{16     }
-\DoxyCodeLine{17 SHORTPROTOCOL\_status UART\_ReadAvailable( \textcolor{keywordtype}{void} );}
-\DoxyCodeLine{18 uint8\_t UART\_ReadByte( \textcolor{keywordtype}{void} );}
-\DoxyCodeLine{19 SHORTPROTOCOL\_status UART\_WriteAvailable( \textcolor{keywordtype}{void} );}
-\DoxyCodeLine{20 \textcolor{keywordtype}{void} UART\_WriteByte(uint8\_t \textcolor{keywordtype}{byte});}
-\DoxyCodeLine{21 }
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
-\DoxyCodeLine{23 \}}
-\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{25 }
-\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* UART\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{27 }
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00001}00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00002}00002 \textcolor{comment}{ * @file uart.h}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00003}00003 \textcolor{comment}{ * @brief This File defines the Prototypes for \(\backslash\)ref UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00004}00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00005}00005 \textcolor{comment}{ * @author Frederic Emmerth}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00006}00006 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00007}00007 \textcolor{comment}{ * \(\backslash\)ingroup UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00008}00008 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00009}00009 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00010}00010 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00011}00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00012}00012 \textcolor{comment}{ * \(\backslash\)defgroup UART UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00013}00013 \textcolor{comment}{ * This Module defines the Interface Functions used by \(\backslash\)ref SHORTPROTOCOL.}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00014}00014 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00015}00015 \textcolor{comment}{ * \(\backslash\)addtogroup UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00016}00016 \textcolor{comment}{ * \(\backslash\)\{}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00017}00017 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00020}00020 \textcolor{preprocessor}{\#ifndef UART\_H}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00021}00021 \textcolor{preprocessor}{\#define UART\_H}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00023}00023 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00024}00024 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00025}00025 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00027}00027 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shortprotocol_8h}{shortprotocol.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00028}00028     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00029}00029 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00030}00030 \textcolor{comment}{ * Returns wether or not a Byte can be read from UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00031}00031 \textcolor{comment}{ * @return SHORTPROTOCOL\_AVAILABLE if a Byte can be read from UART and }}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00032}00032 \textcolor{comment}{ * SHORTPROTOCOL\_NOT\_AVAILABLE if no Byte can be read from UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00033}00033 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00034}00034 \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\_status}} \mbox{\hyperlink{group___u_a_r_t_gab2c69fcc941bf1c9d9c6d6f17c501de0}{UART\_ReadAvailable}}( \textcolor{keywordtype}{void} );}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00035}00035 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00036}00036 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00037}00037 \textcolor{comment}{ * Reads one Byte from UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00038}00038 \textcolor{comment}{ * @return The Byte read from UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00039}00039 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00040}00040 uint8\_t \mbox{\hyperlink{group___u_a_r_t_ga414d0f5f341aa74ca8ee77488ac2ba1f}{UART\_ReadByte}}( \textcolor{keywordtype}{void} );}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00041}00041 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00042}00042 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00043}00043 \textcolor{comment}{ * Returns wether or not a Byte can be written to UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00044}00044 \textcolor{comment}{ * @return SHORTPROTOCOL\_AVAILABLE if a Byte can be written to UART and }}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00045}00045 \textcolor{comment}{ * SHORTPROTOCOL\_NOT\_AVAILABLE if no Byte can be written to UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00046}00046 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00047}00047 \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\_status}} \mbox{\hyperlink{group___u_a_r_t_ga55b31d065a749c2fd5248fe78df10faf}{UART\_WriteAvailable}}( \textcolor{keywordtype}{void} );}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00048}00048 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00049}00049 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00050}00050 \textcolor{comment}{ * Writes one Byte to UART}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00051}00051 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00052}00052 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___u_a_r_t_gab4b544724f23b23cadc905493d8f9f46}{UART\_WriteByte}}(uint8\_t \textcolor{keywordtype}{byte});}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00054}00054 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00055}00055 \}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00056}00056 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00058}00058 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* UART\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00059}00059 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00060}00060 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00061}00061 \textcolor{comment}{ * \(\backslash\)\}}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00062}00062 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{uart_8h_source_l00063}00063 }
 
 \end{DoxyCode}

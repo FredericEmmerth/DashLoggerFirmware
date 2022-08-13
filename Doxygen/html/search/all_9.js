@@ -1,19 +1,6 @@
 var searchData=
 [
-  ['shortprotocol_5finstance_0',['SHORTPROTOCOL_Instance',['../struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html',1,'']]],
-  ['shortprotocol_5fstring_1',['SHORTPROTOCOL_string',['../struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string.html',1,'']]],
-  ['signals_2',['SIGNALS',['../group___s_i_g_n_a_l_s.html',1,'']]],
-  ['signals_2eh_3',['signals.h',['../signals_8h.html',1,'']]],
-  ['signals_5fdata_5ftype_4',['signals_data_type',['../group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351',1,'signals.h']]],
-  ['signals_5ffound_5',['SIGNALS_FOUND',['../group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b',1,'signals.h']]],
-  ['signals_5fmatch_6',['SIGNALS_MATCH',['../group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb',1,'signals.h']]],
-  ['signals_5fmaximum_5fname_5flength_7',['SIGNALS_MAXIMUM_NAME_LENGTH',['../group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2',1,'signals.h']]],
-  ['signals_5fno_5fmatch_8',['SIGNALS_NO_MATCH',['../group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29',1,'signals.h']]],
-  ['signals_5fnot_5ffound_9',['SIGNALS_NOT_FOUND',['../group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28',1,'signals.h']]],
-  ['signals_5fresult_10',['signals_result',['../group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8',1,'signals.h']]],
-  ['signals_5fsignal_11',['signals_signal',['../group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3',1,'signals.h']]],
-  ['signals_5fsignal_5fstruct_12',['signals_signal_struct',['../structsignals__signal__struct.html',1,'']]],
-  ['signals_5fsignal_5ftype_13',['signals_signal_type',['../group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a',1,'signals.h']]],
-  ['signals_5fstring_14',['SIGNALS_string',['../struct_s_i_g_n_a_l_s__string.html',1,'']]],
-  ['signals_5fstring_5fmaximum_5flength_15',['SIGNALS_STRING_MAXIMUM_LENGTH',['../group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5',1,'signals.h']]]
+  ['readavailable_0',['readAvailable',['../struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a2d6eb84ff339495806a39cc27e354966',1,'SHORTPROTOCOL_Instance']]],
+  ['readbyte_1',['readByte',['../struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#aeb3a21d8a39f1b46905e4e683dedfe34',1,'SHORTPROTOCOL_Instance']]],
+  ['receivefifo_2',['receiveFifo',['../structcancomm__interface.html#ae59fbe1dbba45de03a83a322ea63181b',1,'cancomm_interface']]]
 ];

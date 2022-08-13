@@ -1,16 +1,16 @@
 var indexSectionsWithContent =
 {
-  0: "bcdfilmnrst",
+  0: "bcdfilmnprstuvw",
   1: "cs",
-  2: "cs",
-  3: "c",
-  4: "dfilmnrt",
+  2: "cdmsu",
+  3: "cdsu",
+  4: "cdfilmnrtvw",
   5: "cs",
   6: "s",
   7: "s",
   8: "c",
-  9: "cs",
-  10: "bt"
+  9: "cdsu",
+  10: "bpt"
 };
 
 var indexSectionNames =

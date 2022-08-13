@@ -1,0 +1,75 @@
+\hypertarget{group___u_a_r_t}{}\doxysection{UART}
+\label{group___u_a_r_t}\index{UART@{UART}}
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{uart_8h}{uart.\+h}}
+\begin{DoxyCompactList}\small\item\em This File defines the Prototypes for \mbox{\hyperlink{group___u_a_r_t}{UART}}. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{uart_8c}{uart.\+c}}
+\begin{DoxyCompactList}\small\item\em This File Implements the Prototypes for \mbox{\hyperlink{group___u_a_r_t}{UART}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} \mbox{\hyperlink{group___u_a_r_t_gab2c69fcc941bf1c9d9c6d6f17c501de0}{UART\+\_\+\+Read\+Available}} (void)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{group___u_a_r_t_ga414d0f5f341aa74ca8ee77488ac2ba1f}{UART\+\_\+\+Read\+Byte}} (void)
+\item 
+\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} \mbox{\hyperlink{group___u_a_r_t_ga55b31d065a749c2fd5248fe78df10faf}{UART\+\_\+\+Write\+Available}} (void)
+\item 
+void \mbox{\hyperlink{group___u_a_r_t_gab4b544724f23b23cadc905493d8f9f46}{UART\+\_\+\+Write\+Byte}} (uint8\+\_\+t byte)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Module defines the Interface Functions used by \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}}. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___u_a_r_t_gab2c69fcc941bf1c9d9c6d6f17c501de0}\label{group___u_a_r_t_gab2c69fcc941bf1c9d9c6d6f17c501de0}} 
+\index{UART@{UART}!UART\_ReadAvailable@{UART\_ReadAvailable}}
+\index{UART\_ReadAvailable@{UART\_ReadAvailable}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_ReadAvailable()}{UART\_ReadAvailable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} UART\+\_\+\+Read\+Available (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns wether or not a Byte can be read from UART \begin{DoxyReturn}{Returns}
+SHORTPROTOCOL\+\_\+\+AVAILABLE if a Byte can be read from UART and SHORTPROTOCOL\+\_\+\+NOT\+\_\+\+AVAILABLE if no Byte can be read from UART 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00017}{17}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+\mbox{\Hypertarget{group___u_a_r_t_ga414d0f5f341aa74ca8ee77488ac2ba1f}\label{group___u_a_r_t_ga414d0f5f341aa74ca8ee77488ac2ba1f}} 
+\index{UART@{UART}!UART\_ReadByte@{UART\_ReadByte}}
+\index{UART\_ReadByte@{UART\_ReadByte}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_ReadByte()}{UART\_ReadByte()}}
+{\footnotesize\ttfamily uint8\+\_\+t UART\+\_\+\+Read\+Byte (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Reads one Byte from UART \begin{DoxyReturn}{Returns}
+The Byte read from UART 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00025}{25}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+\mbox{\Hypertarget{group___u_a_r_t_ga55b31d065a749c2fd5248fe78df10faf}\label{group___u_a_r_t_ga55b31d065a749c2fd5248fe78df10faf}} 
+\index{UART@{UART}!UART\_WriteAvailable@{UART\_WriteAvailable}}
+\index{UART\_WriteAvailable@{UART\_WriteAvailable}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_WriteAvailable()}{UART\_WriteAvailable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} UART\+\_\+\+Write\+Available (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Returns wether or not a Byte can be written to UART \begin{DoxyReturn}{Returns}
+SHORTPROTOCOL\+\_\+\+AVAILABLE if a Byte can be written to UART and SHORTPROTOCOL\+\_\+\+NOT\+\_\+\+AVAILABLE if no Byte can be written to UART 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00029}{29}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+
+\mbox{\Hypertarget{group___u_a_r_t_gab4b544724f23b23cadc905493d8f9f46}\label{group___u_a_r_t_gab4b544724f23b23cadc905493d8f9f46}} 
+\index{UART@{UART}!UART\_WriteByte@{UART\_WriteByte}}
+\index{UART\_WriteByte@{UART\_WriteByte}!UART@{UART}}
+\doxysubsubsection{\texorpdfstring{UART\_WriteByte()}{UART\_WriteByte()}}
+{\footnotesize\ttfamily void UART\+\_\+\+Write\+Byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{byte }\end{DoxyParamCaption})}
+
+Writes one Byte to UART 
+
+Definition at line \mbox{\hyperlink{uart_8c_source_l00037}{37}} of file \mbox{\hyperlink{uart_8c_source}{uart.\+c}}.
+

@@ -1,3 +1,17 @@
+/**
+ * @file shortprotocol.c
+ * @brief This File implements the Prototypes for \ref SHORTPROTOCOL
+ * 
+ * @author Frederic Emmerth
+ * 
+ * \ingroup SHORTPROTOCOL
+ * 
+ * \addtogroup SHORTPROTOCOL
+ * \{
+ * 
+ */
+
+
 #include "shortprotocol.h"
 
 SHORTPROTOCOL_status SHORTPROTOCOL_Send(SHORTPROTOCOL_Instance* inst,
@@ -95,3 +109,7 @@ void SHORTPROTOCOL_Initialize(SHORTPROTOCOL_Instance* inst){
     inst->writeCounter = 0;
     inst->newCommand = SHORTPROTOCOL_AVAILABLE;
 }
+
+/**
+ * \}
+ */

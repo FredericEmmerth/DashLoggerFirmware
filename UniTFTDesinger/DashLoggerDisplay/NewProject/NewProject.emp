@@ -6,9 +6,9 @@ exportFileName=Backup
 encryption=0 0
 
 [Project]
-AMI_Mission=1266, 58, 200, 100, 1
-DashLoggerDebug=272, 43, 210, 100, 1
-Default=122, 94, 200, 100, 1
+AMI_Mission=925, 828, 143, 100, 1
+DashLoggerDebug=924, 831, 143, 100, 1
+Default=11, 19, 183, 100, 1
 
 [ScreenTransitions]
 FadeScrTrans="id=5name=FadeScrTranstransition=4direction=0time=50triggerEvent=0curve=2"

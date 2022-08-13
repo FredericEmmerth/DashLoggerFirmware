@@ -1,4 +1,24 @@
+/**
+ * @file conv.h
+ * @brief This File defines the Prototypes for \ref CONV
+ * 
+ * @author Frederic Emmerth
+ * 
+ * \ingroup CONV
+ * 
+ */
 
+/**
+ * \defgroup CONV CONV
+ * In this Module the Callback Functions for the Signals from the 
+ * \ref SIGNALS Module are defined. 
+ * 
+ * There are Callback Functions for CAN Message Interpretation, for Internal
+ * Message Processing and Display Command Generation.
+ * 
+ * \addtogroup CONV
+ * \{
+ */
 
 #ifndef CONV_H
 #define	CONV_H
@@ -65,4 +85,8 @@ float CONV_min(float* vals, uint32_t valcount);
 #endif
 
 #endif	/* CONV_H */
+
+/**
+ * \}
+ */
 

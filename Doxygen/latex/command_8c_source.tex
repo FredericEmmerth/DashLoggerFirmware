@@ -1,0 +1,53 @@
+\hypertarget{command_8c_source}{}\doxysection{command.\+c}
+\label{command_8c_source}\index{command.c@{command.c}}
+\mbox{\hyperlink{command_8c}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00001}00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00002}00002 \textcolor{comment}{ * @file command.c}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00003}00003 \textcolor{comment}{ * @brief This File implements the Prototypes for \(\backslash\)ref COMMAND}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00004}00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00005}00005 \textcolor{comment}{ * @author Frederic Emmerth}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00006}00006 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00007}00007 \textcolor{comment}{ * \(\backslash\)ingroup COMMAND}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00008}00008 \textcolor{comment}{ * \(\backslash\)addtogroup COMMAND}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00009}00009 \textcolor{comment}{ * \(\backslash\)\{}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00010}00010 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00011}00011 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00015}00015 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{command_8h}{command.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00017}\mbox{\hyperlink{group___c_o_m_m_a_n_d_gaed1ab647768f1c798408529cdd73de6f}{00017}} \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_m_m_a_n_d_gaed1ab647768f1c798408529cdd73de6f}{COMMAND\_Generate}}(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00018}00018         uint32\_t* current\_display\_signal, \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* shortProt)\{}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00019}00019     }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00020}00020     uint32\_t display\_signal\_count;}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00021}00021     }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00022}00022     \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* current\_signal;}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00023}00023     }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00024}00024     \textcolor{comment}{/* get the count of display signals and if there is one, the current display signal*/}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00025}00025     current\_signal = \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}{signals\_find\_display\_signal}}(signal\_list, signal\_list\_len,}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00026}00026             \&display\_signal\_count, *current\_display\_signal);}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00027}00027     }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00028}00028     \textcolor{comment}{/* Only add a new Command to be sent if the last one was sent */}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00029}00029     \textcolor{keywordflow}{if}(\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga3ec4cb2cffb8d3d1f13961db7855e061}{SHORTPROTOCOL\_Available}}(shortProt)==SHORTPROTOCOL\_AVAILABLE)\{}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00030}00030         }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00031}00031         \textcolor{comment}{/* Set the Command to be next transmitted by the Shortprotocol */}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00032}00032         \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga335fde4cd4aec4b754c8b8f7243584a8}{SHORTPROTOCOL\_Send}}(shortProt, current\_signal-\/>\mbox{\hyperlink{structsignals__signal__struct_a88b1a26aa092b39c64026d2ad0e87eae}{value\_string}}.data,}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00033}00033                 current\_signal-\/>\mbox{\hyperlink{structsignals__signal__struct_a88b1a26aa092b39c64026d2ad0e87eae}{value\_string}}.length);}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00034}00034     }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00035}00035         *current\_display\_signal = *current\_display\_signal + 1;}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00037}00037         \textcolor{keywordflow}{if}(*current\_display\_signal >= display\_signal\_count)\{}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00038}00038             *current\_display\_signal = 0;}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00039}00039         \}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00040}00040     }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00041}00041     \}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00042}00042 \}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00044}00044 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00045}00045 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00046}00046 \textcolor{comment}{ * \(\backslash\)\}}}
+\DoxyCodeLine{\Hypertarget{command_8c_source_l00047}00047 \textcolor{comment}{ */}}
+
+\end{DoxyCode}

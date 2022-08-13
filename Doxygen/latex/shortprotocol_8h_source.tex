@@ -1,77 +1,239 @@
 \hypertarget{shortprotocol_8h_source}{}\doxysection{shortprotocol.\+h}
 \label{shortprotocol_8h_source}\index{shortprotocol.h@{shortprotocol.h}}
-
+\mbox{\hyperlink{shortprotocol_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 \textcolor{comment}{/* }}
-\DoxyCodeLine{2 \textcolor{comment}{ * File:   shortprotocol.h}}
-\DoxyCodeLine{3 \textcolor{comment}{ * Author: Frederic}}
-\DoxyCodeLine{4 \textcolor{comment}{ *}}
-\DoxyCodeLine{5 \textcolor{comment}{ * Created on 19. Mai 2022, 13:37}}
-\DoxyCodeLine{6 \textcolor{comment}{ */}}
-\DoxyCodeLine{7 }
-\DoxyCodeLine{8 \textcolor{preprocessor}{\#ifndef SHORTPROTOCOL\_H}}
-\DoxyCodeLine{9 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_H}}
-\DoxyCodeLine{10 }
-\DoxyCodeLine{11 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
-\DoxyCodeLine{12 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
-\DoxyCodeLine{13 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{14     }
-\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
-\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{crc_8h}{crc.h}}"{}}}
-\DoxyCodeLine{17 }
-\DoxyCodeLine{18 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH 100}}
-\DoxyCodeLine{19 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BEGIN 0x13}}
-\DoxyCodeLine{20 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_OVERHEAD\_BYTES 5}}
-\DoxyCodeLine{21 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES 3}}
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_FIRST\_BYTE\_MASK 0x00FF}}
-\DoxyCodeLine{23 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_SECOND\_BYTE\_MASK 0xFF00}}
-\DoxyCodeLine{24 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BYTE\_LENGTH 8}}
-\DoxyCodeLine{25 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BEGIN\_OFFSET 0}}
-\DoxyCodeLine{26 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET 1}}
-\DoxyCodeLine{27 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET 2}}
-\DoxyCodeLine{28 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_COMMAND\_OFFSET 3}}
-\DoxyCodeLine{29 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_CRC\_LSB\_OFFSET 0}}
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_CRC\_MSB\_OFFSET 1}}
-\DoxyCodeLine{31     }
-\DoxyCodeLine{32 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
-\DoxyCodeLine{33     SHORTPROTOCOL\_SUCCESS = 0,}
-\DoxyCodeLine{34     SHORTPROTOCOL\_ERROR,}
-\DoxyCodeLine{35     SHORTPROTOCOL\_AVAILABLE,}
-\DoxyCodeLine{36     SHORTPROTOCOL\_NOT\_AVAILABLE}
-\DoxyCodeLine{37 \}SHORTPROTOCOL\_status;}
-\DoxyCodeLine{38 }
-\DoxyCodeLine{39 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
-\DoxyCodeLine{40     uint32\_t length;}
-\DoxyCodeLine{41     uint8\_t data[SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH +}
-\DoxyCodeLine{42                         SHORTPROTOCOL\_OVERHEAD\_BYTES];}
-\DoxyCodeLine{43 \}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{SHORTPROTOCOL\_string}};}
-\DoxyCodeLine{44     }
-\DoxyCodeLine{45 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
-\DoxyCodeLine{46     uint8\_t (*readByte)(void);}
-\DoxyCodeLine{47     SHORTPROTOCOL\_status (*readAvailable)(void);}
-\DoxyCodeLine{48     void (*writeByte)(uint8\_t);}
-\DoxyCodeLine{49     SHORTPROTOCOL\_status (*writeAvailable)(void);}
-\DoxyCodeLine{50     uint32\_t maximumPackageLength;}
-\DoxyCodeLine{51     \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{SHORTPROTOCOL\_string}} command\_buffer;}
-\DoxyCodeLine{52     SHORTPROTOCOL\_status newCommand;}
-\DoxyCodeLine{53     uint32\_t writeCounter;}
-\DoxyCodeLine{54     }
-\DoxyCodeLine{55 \}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}};}
-\DoxyCodeLine{56     }
-\DoxyCodeLine{57 SHORTPROTOCOL\_status SHORTPROTOCOL\_Send(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst,}
-\DoxyCodeLine{58         uint8\_t* data, uint32\_t length);}
-\DoxyCodeLine{59 }
-\DoxyCodeLine{60 \textcolor{keywordtype}{void} SHORTPROTOCOL\_Update(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
-\DoxyCodeLine{61 }
-\DoxyCodeLine{62 SHORTPROTOCOL\_status SHORTPROTOCOL\_Available(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
-\DoxyCodeLine{63 }
-\DoxyCodeLine{64 \textcolor{keywordtype}{void} SHORTPROTOCOL\_Initialize(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
-\DoxyCodeLine{67 \}}
-\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{69 }
-\DoxyCodeLine{70 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* SHORTPROTOCOL\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{71 }
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00001}00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00002}00002 \textcolor{comment}{ * @file shortprotocol.h}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00003}00003 \textcolor{comment}{ * @brief This File defines the Prototypes for \(\backslash\)ref SHORTPROTOCOL}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00004}00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00005}00005 \textcolor{comment}{ * @author Frederic Emmerth}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00006}00006 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00007}00007 \textcolor{comment}{ * \(\backslash\)ingroup SHORTPROTOCOL}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00008}00008 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00009}00009 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00010}00010 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00011}00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00012}00012 \textcolor{comment}{ * \(\backslash\)defgroup SHORTPROTOCOL SHORTPROTOCOL}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00013}00013 \textcolor{comment}{ * This Module handles packing the Commands generated by the \(\backslash\)ref SIGNAL Module}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00014}00014 \textcolor{comment}{ * and sending them using the Shortprotocol defined in the Displays }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00015}00015 \textcolor{comment}{ * (EA uniTFTs035-\/ATC) Datasheet. To not block the Main Loop for too long, the}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00016}00016 \textcolor{comment}{ * Packet is split into smaller Parts defined by }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00017}00017 \textcolor{comment}{ * SHORTPROTOCOL\_Instance.maximumPackageLength. The Module is written in a }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00018}00018 \textcolor{comment}{ * general Fashion and can be adopted to use SPI, for this the Callback Functions}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00019}00019 \textcolor{comment}{ * in SHORTPROTOCOL\_Instance have to be redefined for SPI.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00020}00020 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00021}00021 \textcolor{comment}{ * \(\backslash\)addtogroup SHORTPROTOCOL}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00022}00022 \textcolor{comment}{ * \(\backslash\)\{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00023}00023 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00025}00025 \textcolor{preprocessor}{\#ifndef SHORTPROTOCOL\_H}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00026}00026 \textcolor{preprocessor}{\#define SHORTPROTOCOL\_H}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00028}00028 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00029}00029 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00030}00030 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00031}00031     }
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00032}00032 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00033}00033 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{crc_8h}{crc.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00034}00034 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00035}00035 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00036}00036 \textcolor{comment}{ * @brief Maximum Command length, thus maximum payload length}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00037}00037 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00038}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac5622b14139f3f9274c17d0483519601}{00038}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH 100}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00039}00039     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00040}00040 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00041}00041 \textcolor{comment}{ * @brief The Begining Byte to indicate a Transmission}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00042}00042 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00043}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga5abce405bc83e95e64ee1b81d271f9af}{00043}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BEGIN 0x13}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00044}00044 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00045}00045 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00046}00046 \textcolor{comment}{ * @brief The Overhead of sending Data with the Shortprotocol}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00047}00047 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00048}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga4576edb2570e95144c04a4936228fbf4}{00048}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_OVERHEAD\_BYTES 5}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00049}00049 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00050}00050 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00051}00051 \textcolor{comment}{ * @brief The Overhead of sending Data with the Shortprotocol, not counting the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00052}00052 \textcolor{comment}{ * two CRC Bytes.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00053}00053 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00054}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga132ff70ac3ecc9ff45c20faf83d87757}{00054}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES 3}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00055}00055 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00056}00056 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00057}00057 \textcolor{comment}{ * @brief Mask to convert endianess (first Byte is on second place)}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00058}00058 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00059}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4dc74bbe50ad20f81141e8374ed9483}{00059}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_FIRST\_BYTE\_MASK 0x00FF}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00060}00060 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00061}00061 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00062}00062 \textcolor{comment}{ * @brief Mask to convert endianess (second Byte in on first place)}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00063}00063 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00064}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gabededadae97c822c6c72a5945e3254f2}{00064}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_SECOND\_BYTE\_MASK 0xFF00}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00065}00065 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00066}00066 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00067}00067 \textcolor{comment}{ * @brief The length of one Byte for endianess conversion}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00068}00068 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00069}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga432d6ee7045abd7c06bd12b61c8ff73a}{00069}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BYTE\_LENGTH 8}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00070}00070 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00071}00071 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00072}00072 \textcolor{comment}{ * @brief The Offset of the Begin Byte in the Shortprotocol}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00073}00073 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00074}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga838056ee8c9f5d2530fa6bc876a7f29c}{00074}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_BEGIN\_OFFSET 0}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00075}00075     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00076}00076 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00077}00077 \textcolor{comment}{ * @brief The Offset of the Least Significant Byte of the Length in the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00078}00078 \textcolor{comment}{ * Shortprotocol}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00079}00079 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00080}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga46417772da85082538f1f8de615d8360}{00080}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET 1}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00081}00081     }
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00082}00082 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00083}00083 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00084}00084 \textcolor{comment}{ * @brief The Offset of the Most Significant Byte of the Length in the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00085}00085 \textcolor{comment}{ * Shortprotocol}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00086}00086 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00087}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gafdf684ecf8382d782f36dae7c152bbe5}{00087}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET 2}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00088}00088 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00089}00089 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00090}00090 \textcolor{comment}{ * @brief The Offset of the Command, thus the Payload in the Shortprotocol}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00091}00091 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00092}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac355290dc0b3840a076cf730fa662e0f}{00092}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_COMMAND\_OFFSET 3}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00093}00093     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00094}00094 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00095}00095 \textcolor{comment}{ * @brief The Offset of the CRC Least Significant Byte from the Back of the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00096}00096 \textcolor{comment}{ * Package}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00097}00097 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00098}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga8c27f1a93be080e9f1552f55ddeb758b}{00098}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_CRC\_LSB\_OFFSET 0}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00099}00099 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00100}00100 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00101}00101 \textcolor{comment}{ * @brief The Offset of the CRC Most Significant Byte from the Back of the}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00102}00102 \textcolor{comment}{ * Package}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00103}00103 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00104}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga34c47422b35a9695498b42ab845f9cda}{00104}} \textcolor{preprocessor}{\#define SHORTPROTOCOL\_CRC\_MSB\_OFFSET 1}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00105}00105 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00106}00106 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00107}00107 \textcolor{comment}{ * @brief Return Status used by both the Callback Functions of the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00108}00108 \textcolor{comment}{ * \(\backslash\)ref SHORTPROTOCOL and the Functions.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00109}00109 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00110}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{00110}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00111}00111     SHORTPROTOCOL\_SUCCESS = 0,}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00112}00112     SHORTPROTOCOL\_ERROR,}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00113}00113     SHORTPROTOCOL\_AVAILABLE,}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00114}00114     SHORTPROTOCOL\_NOT\_AVAILABLE}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00115}00115 \}\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\_status}};}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00116}00116 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00117}00117 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00118}00118 \textcolor{comment}{ * @brief Struct to combine the length of a String with the String and the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00119}00119 \textcolor{comment}{ * Overhead Bytes used by the Shortprotocol in one Data type.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00120}00120 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00121}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{00121}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00122}00122     uint32\_t length;}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00123}00123     uint8\_t data[\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac5622b14139f3f9274c17d0483519601}{SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH}} +}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00124}00124                         \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga4576edb2570e95144c04a4936228fbf4}{SHORTPROTOCOL\_OVERHEAD\_BYTES}}];}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00125}00125 \}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{SHORTPROTOCOL\_string}};}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00126}00126     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00127}00127 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00128}00128 \textcolor{comment}{ * @brief Configuration Struct for \(\backslash\)ref SHORTPROTOCOL passed to the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00129}00129 \textcolor{comment}{ * \(\backslash\)ref SHORTPROTOCOL Functions}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00130}00130 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00131}00131 \textcolor{comment}{ * The Callback functions have to all be defined as described in thier}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00132}00132 \textcolor{comment}{ * Documentaion, also a maximumPackageLength has to be defined.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00133}00133 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00134}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{00134}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00135}00135 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00136}00136 \textcolor{comment}{     * @brief Callback to read one Byte from the Serial Interface}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00137}00137 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00138}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_aeb3a21d8a39f1b46905e4e683dedfe34}{00138}}     uint8\_t (*readByte)(void);}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00139}00139     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00140}00140 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00141}00141 \textcolor{comment}{     * @brief Callback to check if a Byte is available to be read. }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00142}00142 \textcolor{comment}{     * If this returns SHORTPROTOCOL\_AVAILABLE at least one Byte has to be}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00143}00143 \textcolor{comment}{     * readable from readByte.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00144}00144 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00145}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a2d6eb84ff339495806a39cc27e354966}{00145}}     \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\_status}} (*readAvailable)(void);}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00146}00146     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00147}00147 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00148}00148 \textcolor{comment}{     * @brief Callback to write one Byte to the Serial Interface}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00149}00149 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00150}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_ae9b7411d43d04e6822022f5c2793dee2}{00150}}     void (*writeByte)(uint8\_t);}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00151}00151     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00152}00152 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00153}00153 \textcolor{comment}{     * @brief Callbakc to check if a Byte is writeable to the Serial Interface}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00154}00154 \textcolor{comment}{     * If this returns SHORTPROTOCOL\_AVAILABLE at leat one Byte has to be}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00155}00155 \textcolor{comment}{     * writeable to write Byte.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00156}00156 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00157}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a81a9a7a0455383670a7308fcb188ff93}{00157}}     \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\_status}} (*writeAvailable)(void);}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00158}00158     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00159}00159 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00160}00160 \textcolor{comment}{     * @brief The maximum Package Length}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00161}00161 \textcolor{comment}{     * Packets longer than this will be split into Packets with the maximum Size}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00162}00162 \textcolor{comment}{     * of maximumPackageLength.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00163}00163 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00164}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a38a5e509c9750876370dbfd98ea63680}{00164}}     uint32\_t \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a38a5e509c9750876370dbfd98ea63680}{maximumPackageLength}};}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00165}00165     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00166}00166 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00167}00167 \textcolor{comment}{     * @brief A Buffer where the Command wich is currently sent resides.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00168}00168 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00169}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a2744f6303ce44b5736dee19d3c90055b}{00169}}     \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{SHORTPROTOCOL\_string}} \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a2744f6303ce44b5736dee19d3c90055b}{command\_buffer}};}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00170}00170     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00171}00171 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00172}00172 \textcolor{comment}{     * @brief Status of the SHORTPROTOCOL Instance itself.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00173}00173 \textcolor{comment}{     * }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00174}00174 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00175}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a1e01ed7a25558ada72a109b017386c69}{00175}}     \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\_status}} \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a1e01ed7a25558ada72a109b017386c69}{newCommand}};}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00176}00176     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00177}00177 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00178}00178 \textcolor{comment}{     * @brief Counter to keep track of what Parts of a Package were already sent}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00179}00179 \textcolor{comment}{     * when it is split to maximumPackageLength.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00180}00180 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00181}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a778e7c2ae9a4bb9ca26bddb002749c5b}{00181}}     uint32\_t \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a778e7c2ae9a4bb9ca26bddb002749c5b}{writeCounter}};}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00182}00182     }
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00183}00183 \}\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}};}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00184}00184     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00185}00185 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00186}00186 \textcolor{comment}{ * @brief Function to try to send a new Command using the SHORTPROTOCOL}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00187}00187 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00188}00188 \textcolor{comment}{ * \(\backslash\)param inst SHORTPROTOCOL\_Instance}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00189}00189 \textcolor{comment}{ * \(\backslash\)param data The Data to be sent using the Shortprotocol}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00190}00190 \textcolor{comment}{ * \(\backslash\)param length The Length of the Payload (Data) to be sent}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00191}00191 \textcolor{comment}{ * (without NULL termination)}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00192}00192 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00193}00193 \textcolor{comment}{ * @return SHORTPROTOCOL\_NOT\_AVAILABLE when the last Command was not yet sent,}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00194}00194 \textcolor{comment}{ * SHORTPROTOCOL\_ERROR when the Command has a length of zero,}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00195}00195 \textcolor{comment}{ * SHORTPROTOCOL\_SUCCESS when the Command was successfully queued to be sent.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00196}00196 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00197}00197 \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\_status}} \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga335fde4cd4aec4b754c8b8f7243584a8}{SHORTPROTOCOL\_Send}}(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst,}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00198}00198         uint8\_t* data, uint32\_t length);}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00199}00199 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00200}00200 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00201}00201 \textcolor{comment}{ * @brief Function to be called repeadetly in the Main Loop to send Pieces of}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00202}00202 \textcolor{comment}{ * maximumPackageLength of the Package generated by SHORTPROTOCOL\_Send}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00203}00203 \textcolor{comment}{ * @param inst SHORTPROTOCOL\_Instance}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00204}00204 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00205}00205 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga004de19c9c8ad6a22da9fe7c978c758f}{SHORTPROTOCOL\_Update}}(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00206}00206 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00207}00207 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00208}00208 \textcolor{comment}{ * @brief Returns if a new Command can be sent using the Shortprotocol}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00209}00209 \textcolor{comment}{ * @param inst SHORTPROTOCOL\_Instance}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00210}00210 \textcolor{comment}{ * @return SHORTPROTOCOL\_AVAILABLE if a new Command can be written using the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00211}00211 \textcolor{comment}{ * SHORTPROTOCOL\_Send Function, SHORTPROTOCOL\_NOT\_AVAILABLE if the last }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00212}00212 \textcolor{comment}{ * Command is not yet sent.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00213}00213 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00214}00214 \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\_status}} \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga3ec4cb2cffb8d3d1f13961db7855e061}{SHORTPROTOCOL\_Available}}(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00215}00215 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00216}00216 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00217}00217 \textcolor{comment}{ * @brief Initializes an Empty SHORTPROTOCOL\_Instance.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00218}00218 \textcolor{comment}{ * Callback Functions still have to be added/defined and the }}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00219}00219 \textcolor{comment}{ * maximumPackageLength has to be set.}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00220}00220 \textcolor{comment}{ * @param inst SHORTPROTOCOL\_Instance}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00221}00221 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00222}00222 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4c229f96d354e4f78cb38996820e949}{SHORTPROTOCOL\_Initialize}}(\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* inst);}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00223}00223 }
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00224}00224 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00225}00225 \}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00226}00226 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00227}00227 }
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00228}00228 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* SHORTPROTOCOL\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00229}00229 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00230}00230 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00231}00231 \textcolor{comment}{ * \(\backslash\)\}}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00232}00232 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{shortprotocol_8h_source_l00233}00233 }
 
 \end{DoxyCode}

@@ -2,27 +2,62 @@
 \label{command_8h_source}\index{command.h@{command.h}}
 \mbox{\hyperlink{command_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 }
-\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifndef COMMAND\_H}}
-\DoxyCodeLine{23 \textcolor{preprocessor}{\#define COMMAND\_H}}
-\DoxyCodeLine{24 }
-\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
-\DoxyCodeLine{26 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
-\DoxyCodeLine{27 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{28     }
-\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{signals_8h}{signals.h}}"{}}}
-\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}shortprotocol.h"{}}}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{44 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_m_m_a_n_d_gaed1ab647768f1c798408529cdd73de6f}{COMMAND\_Generate}}(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
-\DoxyCodeLine{45         uint32\_t* next\_command, \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* shortProt);}
-\DoxyCodeLine{46 }
-\DoxyCodeLine{47 }
-\DoxyCodeLine{48 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
-\DoxyCodeLine{49 \}}
-\DoxyCodeLine{50 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{51 }
-\DoxyCodeLine{52 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* COMMAND\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{53 }
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00001}00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00002}00002 \textcolor{comment}{ * @file command.h}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00003}00003 \textcolor{comment}{ * @brief This File defines the Prototypes for \(\backslash\)ref COMMAND}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00004}00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00005}00005 \textcolor{comment}{ * @author Frederic Emmerth}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00006}00006 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00007}00007 \textcolor{comment}{ * \(\backslash\)ingroup COMMAND}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00008}00008 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00009}00009 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00010}00010 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00011}00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00012}00012 \textcolor{comment}{ * \(\backslash\)defgroup COMMAND COMMAND}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00013}00013 \textcolor{comment}{ * This Module Picks the \(\backslash\)ref signals\_signal from a signal\_list wich are of Type}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00014}00014 \textcolor{comment}{ * SIGNALS\_DISPLAY\_SIGNAL and Generates a Comand to change the Text Object on}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00015}00015 \textcolor{comment}{ * the Display with ID \(\backslash\)ref signals\_signal.oject\_id to}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00016}00016 \textcolor{comment}{ * \(\backslash\)ref signals\_signal.string\_value.}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00017}00017 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00018}00018 \textcolor{comment}{ * \(\backslash\)addtogroup COMMAND}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00019}00019 \textcolor{comment}{ * \(\backslash\)\{}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00020}00020 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00022}00022 \textcolor{preprocessor}{\#ifndef COMMAND\_H}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00023}00023 \textcolor{preprocessor}{\#define COMMAND\_H}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00025}00025 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00026}00026 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00027}00027 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00028}00028     }
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00029}00029 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00030}00030 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{signals_8h}{signals.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00031}00031 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shortprotocol_8h}{shortprotocol.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00032}00032 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00033}00033 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00034}00034 \textcolor{comment}{ * @brief Adds a Command from \(\backslash\)p signal\_list if \(\backslash\)p shortProt is ready.}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00035}00035 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00036}00036 \textcolor{comment}{ * \(\backslash\)param signal\_list A list of \(\backslash\)ref signals\_signal}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00037}00037 \textcolor{comment}{ * \(\backslash\)param signal\_list\_len The Length of \(\backslash\)p signal\_list}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00038}00038 \textcolor{comment}{ * \(\backslash\)param next\_command A pointer to an Integer. This represents the next}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00039}00039 \textcolor{comment}{ *  Command to be Sent. This value should only be changed by this Function.}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00040}00040 \textcolor{comment}{ * \(\backslash\)param shortProt A \(\backslash\)ref SHORTPROTOCOL\_Instance for sending Packets to the}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00041}00041 \textcolor{comment}{ *  Display.}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00042}00042 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00043}00043 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00044}00044 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_o_m_m_a_n_d_gaed1ab647768f1c798408529cdd73de6f}{COMMAND\_Generate}}(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00045}00045         uint32\_t* next\_command, \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\_Instance}}* shortProt);}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00048}00048 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00049}00049 \}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00050}00050 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00052}00052 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* COMMAND\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00053}00053 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00054}00054 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00055}00055 \textcolor{comment}{ * \(\backslash\)\}}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00056}00056 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{command_8h_source_l00057}00057 }
 
 \end{DoxyCode}

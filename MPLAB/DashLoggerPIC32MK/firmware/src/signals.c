@@ -1,3 +1,16 @@
+/**
+ * @file signals.c
+ * @brief This File implements the Prototypes for \ref SIGNALS
+ * 
+ * @author Frederic Emmerth
+ * 
+ * \ingroup SIGNALS
+ * 
+ * \addtogroup SIGNALS
+ * \{
+ * 
+ */
+
 #include "signals.h"
 
 void SIGNALS_Interpret(signals_signal* signal_list, uint32_t signal_list_len,
@@ -149,3 +162,8 @@ signals_signal* signals_find_display_signal(signals_signal* signal_list,
     *dispSignalCount = counter;
     return foundNeedle;
 }
+
+
+/**
+ * \}
+ */

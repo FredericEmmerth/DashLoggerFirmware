@@ -1,3 +1,16 @@
+/**
+ * @file delay.c
+ * @brief This File implements the Prototypes for \ref DELAY
+ * 
+ * @author Frederic Emmerth
+ * 
+ * \ingroup DELAY
+ * 
+ * \addtogroup DELAY
+ * \{
+ * 
+ */
+
 #include "delay.h"
 
 void DELAY_Milliseconds(uint32_t delay){
@@ -17,3 +30,7 @@ void DELAY_Microseconds(uint32_t delay){
         
     }
 }
+
+/**
+ * \}
+ */

@@ -4,15 +4,21 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/spi_write_read_test_app/firmware/src/delay.c</file>
-            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/config/default/peripheral/canfd/plib_canfd_common.h</file>
             <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/cancomm.h</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/signals.c</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/crc.c</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/command.h</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/crc.h</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/conv.c</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/shortprotocol.h</file>
             <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/command.c</file>
             <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/conv.h</file>
-            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/signals.c</file>
             <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/signals.h</file>
-            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/command.h</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/uart.h</file>
             <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/main.c</file>
-            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/conv.c</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/uart.c</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/shortprotocol.c</file>
+            <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/delay.h</file>
             <file>file:/C:/Uni/DashLogger/DashLoggerFirmware/MPLAB/DashLoggerPIC32MK/firmware/src/cancomm.c</file>
         </group>
     </open-files>

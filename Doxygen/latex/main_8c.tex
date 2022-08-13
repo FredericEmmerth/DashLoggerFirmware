@@ -1,0 +1,219 @@
+\hypertarget{main_8c}{}\doxysection{main.\+c File Reference}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$stddef.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}delay.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cancomm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}signals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}conv.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}shortprotocol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}command.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structcancomm__interface}{cancomm\+\_\+interface}} \mbox{\hyperlink{main_8c_a93ff12353ffcc485832a7295113e1bb3}{interface\+\_\+list}} \mbox{[}$\,$\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_adcce22b8298d0ea6124f555a70975a30}{interface\+\_\+list\+\_\+len}}
+\item 
+\mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} \mbox{\hyperlink{main_8c_a6aad00a5a581ff0104cc2294b677409a}{message\+\_\+list}} \mbox{[}$\,$\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_ad0e75b4d77992b17de15ca5dc4d0fa10}{message\+\_\+list\+\_\+len}} = sizeof(message\+\_\+list) / sizeof(\mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}})
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} \mbox{\hyperlink{main_8c_a48772ff349a77b196c177cc4ccbd36d4}{signal\+\_\+list}} \mbox{[}$\,$\mbox{]}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_af846310a659168a51c7305982d9cca28}{signal\+\_\+list\+\_\+len}} = sizeof(signal\+\_\+list) / sizeof(\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_a1ed6843da8cc9ed0c3dcfa9a636fb5ce}{current\+\_\+command\+\_\+signal}} = 0
+\item 
+\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} \mbox{\hyperlink{main_8c_ab762eda09ce8e7a60a1e6194e306bbea}{short\+Prot}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+In this file, there is the main() function wich is the entry Point of The Program
+
+\begin{DoxyAuthor}{Author}
+Frederic Emmerth
+\end{DoxyAuthor}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Make a constant loop time 
+
+Implement Watchdog\end{DoxyRefDesc}
+
+
+Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00241}{241}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_a1ed6843da8cc9ed0c3dcfa9a636fb5ce}\label{main_8c_a1ed6843da8cc9ed0c3dcfa9a636fb5ce}} 
+\index{main.c@{main.c}!current\_command\_signal@{current\_command\_signal}}
+\index{current\_command\_signal@{current\_command\_signal}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{current\_command\_signal}{current\_command\_signal}}
+{\footnotesize\ttfamily uint32\+\_\+t current\+\_\+command\+\_\+signal = 0}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00230}{230}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_a93ff12353ffcc485832a7295113e1bb3}\label{main_8c_a93ff12353ffcc485832a7295113e1bb3}} 
+\index{main.c@{main.c}!interface\_list@{interface\_list}}
+\index{interface\_list@{interface\_list}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{interface\_list}{interface\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcancomm__interface}{cancomm\+\_\+interface}} interface\+\_\+list\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{.number=1,}
+\DoxyCodeLine{            .receiveFifo=2, .transmitFifo=1,}
+\DoxyCodeLine{            .MessageTransmit=CAN1\_MessageTransmit,}
+\DoxyCodeLine{            .MessageReceive=CAN1\_MessageReceive}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.number=2,}
+\DoxyCodeLine{            .receiveFifo=2, .transmitFifo=1,}
+\DoxyCodeLine{            .MessageTransmit=CAN2\_MessageTransmit,}
+\DoxyCodeLine{            .MessageReceive=CAN2\_MessageReceive}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.number=3,}
+\DoxyCodeLine{            .receiveFifo=2, .transmitFifo=1,}
+\DoxyCodeLine{            .MessageTransmit=CAN3\_MessageTransmit,}
+\DoxyCodeLine{            .MessageReceive=CAN3\_MessageReceive}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.number=4,}
+\DoxyCodeLine{            .receiveFifo=2, .transmitFifo=1,}
+\DoxyCodeLine{            .MessageTransmit=CAN4\_MessageTransmit,}
+\DoxyCodeLine{            .MessageReceive=CAN4\_MessageReceive}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00028}{28}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_adcce22b8298d0ea6124f555a70975a30}\label{main_8c_adcce22b8298d0ea6124f555a70975a30}} 
+\index{main.c@{main.c}!interface\_list\_len@{interface\_list\_len}}
+\index{interface\_list\_len@{interface\_list\_len}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{interface\_list\_len}{interface\_list\_len}}
+{\footnotesize\ttfamily uint32\+\_\+t interface\+\_\+list\+\_\+len}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \textcolor{keyword}{sizeof}(interface\_list)}
+\DoxyCodeLine{                                        / \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structcancomm__interface}{cancomm\_interface}})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00050}{50}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_a6aad00a5a581ff0104cc2294b677409a}\label{main_8c_a6aad00a5a581ff0104cc2294b677409a}} 
+\index{main.c@{main.c}!message\_list@{message\_list}}
+\index{message\_list@{message\_list}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{message\_list}{message\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} message\+\_\+list\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{.friendly\_name=\textcolor{stringliteral}{"{}BCU\_Extrem\_Voltages"{}},}
+\DoxyCodeLine{            .id=0xA2,  .interface\_number=1, .length=8}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.friendly\_name=\textcolor{stringliteral}{"{}BCU\_Extrem\_Temperatures"{}},}
+\DoxyCodeLine{            .id=0xA3,  .interface\_number=1, .length=8}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.friendly\_name=\textcolor{stringliteral}{"{}VCU\_LapInfo"{}},}
+\DoxyCodeLine{            .id=0x711, .interface\_number=1, .length=8}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.friendly\_name=\textcolor{stringliteral}{"{}FSG\_System\_status"{}},}
+\DoxyCodeLine{            .id=0x502, .interface\_number=1, .length=8}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.friendly\_name=\textcolor{stringliteral}{"{}BCU\_SCstatus"{}},}
+\DoxyCodeLine{            .id=0xA4,  .interface\_number=1, .length=2}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.friendly\_name=\textcolor{stringliteral}{"{}VCU\_Motor\_Temps"{}},}
+\DoxyCodeLine{            .id=0x239, .interface\_number=1, .length=8}
+\DoxyCodeLine{    \},}
+\DoxyCodeLine{    \{.friendly\_name=\textcolor{stringliteral}{"{}VCU\_Inverter\_Temp"{}},}
+\DoxyCodeLine{            .id=0x23A, .interface\_number=1, .length=8}
+\DoxyCodeLine{    \}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00054}{54}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_ad0e75b4d77992b17de15ca5dc4d0fa10}\label{main_8c_ad0e75b4d77992b17de15ca5dc4d0fa10}} 
+\index{main.c@{main.c}!message\_list\_len@{message\_list\_len}}
+\index{message\_list\_len@{message\_list\_len}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{message\_list\_len}{message\_list\_len}}
+{\footnotesize\ttfamily uint32\+\_\+t message\+\_\+list\+\_\+len = sizeof(message\+\_\+list) / sizeof(\mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00077}{77}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_ab762eda09ce8e7a60a1e6194e306bbea}\label{main_8c_ab762eda09ce8e7a60a1e6194e306bbea}} 
+\index{main.c@{main.c}!shortProt@{shortProt}}
+\index{shortProt@{shortProt}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{shortProt}{shortProt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} short\+Prot}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    .readAvailable = \mbox{\hyperlink{group___u_a_r_t_gab2c69fcc941bf1c9d9c6d6f17c501de0}{UART\_ReadAvailable}},}
+\DoxyCodeLine{    .readByte = \mbox{\hyperlink{group___u_a_r_t_ga414d0f5f341aa74ca8ee77488ac2ba1f}{UART\_ReadByte}},}
+\DoxyCodeLine{    .writeAvailable = \mbox{\hyperlink{group___u_a_r_t_ga55b31d065a749c2fd5248fe78df10faf}{UART\_WriteAvailable}},}
+\DoxyCodeLine{    .writeByte = \mbox{\hyperlink{group___u_a_r_t_gab4b544724f23b23cadc905493d8f9f46}{UART\_WriteByte}},}
+\DoxyCodeLine{    .maximumPackageLength = 5}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00233}{233}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_a48772ff349a77b196c177cc4ccbd36d4}\label{main_8c_a48772ff349a77b196c177cc4ccbd36d4}} 
+\index{main.c@{main.c}!signal\_list@{signal\_list}}
+\index{signal\_list@{signal\_list}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{signal\_list}{signal\_list}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} signal\+\_\+list\mbox{[}$\,$\mbox{]}}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00080}{80}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\mbox{\Hypertarget{main_8c_af846310a659168a51c7305982d9cca28}\label{main_8c_af846310a659168a51c7305982d9cca28}} 
+\index{main.c@{main.c}!signal\_list\_len@{signal\_list\_len}}
+\index{signal\_list\_len@{signal\_list\_len}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{signal\_list\_len}{signal\_list\_len}}
+{\footnotesize\ttfamily uint32\+\_\+t signal\+\_\+list\+\_\+len = sizeof(signal\+\_\+list) / sizeof(\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00228}{228}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

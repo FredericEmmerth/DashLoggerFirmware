@@ -1,0 +1,33 @@
+\hypertarget{signals_8c}{}\doxysection{signals.\+c File Reference}
+\label{signals_8c}\index{signals.c@{signals.c}}
+
+
+This File implements the Prototypes for \mbox{\hyperlink{group___s_i_g_n_a_l_s}{SIGNALS}}.  
+
+
+{\ttfamily \#include \char`\"{}signals.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}{SIGNALS\+\_\+\+Interpret}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len)
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}{signals\+\_\+find\+\_\+data}} (uint32\+\_\+t id, uint8\+\_\+t interface, \mbox{\hyperlink{structcancomm__message}{cancomm\+\_\+message}} $\ast$message\+\_\+list, uint32\+\_\+t message\+\_\+list\+\_\+len, uint8\+\_\+t $\ast$data)
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\+\_\+result}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}{signals\+\_\+compare\+\_\+names}} (uint8\+\_\+t $\ast$first, uint32\+\_\+t firstlen, uint8\+\_\+t $\ast$second, uint32\+\_\+t secondlen)
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}{signals\+\_\+find\+\_\+signal}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, void($\ast$Callback)(void))
+\item 
+\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$ \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}{signals\+\_\+find\+\_\+display\+\_\+signal}} (\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{signals\+\_\+signal}} $\ast$signal\+\_\+list, uint32\+\_\+t signal\+\_\+list\+\_\+len, uint32\+\_\+t $\ast$disp\+Signal\+Count, uint32\+\_\+t needle)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This File implements the Prototypes for \mbox{\hyperlink{group___s_i_g_n_a_l_s}{SIGNALS}}. 
+
+\begin{DoxyAuthor}{Author}
+Frederic Emmerth 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{signals_8c_source}{signals.\+c}}.
+

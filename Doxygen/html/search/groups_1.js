@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['signals_0',['SIGNALS',['../group___s_i_g_n_a_l_s.html',1,'']]]
+  ['delay_0',['DELAY',['../group___d_e_l_a_y.html',1,'']]]
 ];

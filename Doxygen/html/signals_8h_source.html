@@ -85,113 +85,312 @@ $(document).ready(function(){initNavTree('signals_8h_source.html',''); initResiz
   <div class="headertitle"><div class="title">signals.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="signals_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#ifndef SIGNALS_H</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define SIGNALS_H</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#include &quot;definitions.h&quot;</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#include &quot;<a class="code" href="cancomm_8h.html">cancomm.h</a>&quot;</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2">   43</a></span><span class="preprocessor">#define SIGNALS_MAXIMUM_NAME_LENGTH     30</span></div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5">   48</a></span><span class="preprocessor">#define SIGNALS_STRING_MAXIMUM_LENGTH   50</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>   </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">   53</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b">   57</a></span>    <a class="code hl_enumvalue" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b">SIGNALS_FOUND</a> = 0,</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28">   62</a></span>    <a class="code hl_enumvalue" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28">SIGNALS_NOT_FOUND</a>,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb">   67</a></span>    <a class="code hl_enumvalue" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb">SIGNALS_MATCH</a>,</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_enumvalue" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29">SIGNALS_NO_MATCH</a></div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29">   73</a></span>}<a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a>;</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">   79</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    SIGNALS_FLOAT_SIGNAL = 0,</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    SIGNALS_UINT32_T_SIGNAL,</div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    SIGNALS_STRING_SIGNAL</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>}<a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a>;</div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">   88</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    SIGNALS_CAN_MESSAGE = 0,</div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    SIGNALS_INTERNAL_SIGNAL,</div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    SIGNALS_DISPLAY_SIGNAL</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>}<a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a>;</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="struct_s_i_g_n_a_l_s__string.html">   97</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    uint32_t length;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    uint8_t data[<a class="code hl_define" href="group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5">SIGNALS_STRING_MAXIMUM_LENGTH</a>];</div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>}<a class="code hl_struct" href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a>;</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">  107</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal_struct</a> <a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>;</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>     </div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html">  135</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal_struct</a>{</div>
-<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    uint32_t id;</div>
-<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    uint8_t interface_number;</div>
-<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a> data_type;</div>
-<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    </div>
-<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    float(*can_convert_float)(uint8_t* data);</div>
-<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    float(*internal_convert_float)(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            uint32_t signal_list_len);</div>
-<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="keywordtype">float</span> value_float;</div>
-<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    </div>
-<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    uint32_t(*can_convert_uint32_t)(uint8_t* data);</div>
-<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    uint32_t(*internal_convert_uint32_t)(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
-<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            uint32_t signal_list_len);</div>
-<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    uint32_t value_uint32_t;</div>
-<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    </div>
-<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    void (*can_convert_string)(uint8_t* data, <a class="code hl_struct" href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a>* string);</div>
-<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>    void (*internal_convert_string)(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
-<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            uint32_t signal_list_len, <a class="code hl_struct" href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a>* string);</div>
-<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <a class="code hl_struct" href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a> value_string;</div>
-<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    </div>
-<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    uint8_t friendly_name[<a class="code hl_define" href="group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2">SIGNALS_MAXIMUM_NAME_LENGTH</a>];</div>
-<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    uint32_t timestamp;</div>
-<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>    <a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a> type;</div>
-<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    </div>
-<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    uint32_t object_id;</div>
-<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>};</div>
-<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
-<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="keywordtype">void</span> SIGNALS_Interpret(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list, uint32_t signal_list_len,</div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>        <a class="code hl_struct" href="structcancomm__message.html">cancomm_message</a>* message_list, uint32_t message_list_len);</div>
-<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
-<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a> signals_find_data(uint32_t <span class="keywordtype">id</span>, uint8_t interface,</div>
-<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>        <a class="code hl_struct" href="structcancomm__message.html">cancomm_message</a>* message_list, uint32_t message_list_len,</div>
-<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>        uint8_t* data);</div>
-<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span><a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signals_find_signal( <a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
-<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>        uint32_t signal_list_len, <span class="keywordtype">void</span>(*Callback)(<span class="keywordtype">void</span>));</div>
-<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span> </div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a> signals_compare_names(uint8_t* first, uint32_t firstlen,</div>
-<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>        uint8_t* second, uint32_t secondlen);</div>
-<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
-<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signals_find_display_signal(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
-<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        uint32_t signal_list_len, uint32_t* dispSignalCount, uint32_t needle);</div>
-<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span> </div>
-<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span><span class="preprocessor">#ifdef  __cplusplus</span></div>
-<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>}</div>
-<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span> </div>
-<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span><span class="preprocessor">#endif  </span><span class="comment">/* SIGNALS_H */</span><span class="preprocessor"></span></div>
-<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span> </div>
+<a href="signals_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> * @file signals.h</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> * @brief This File defines the Prototypes for \ref SIGNALS</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> * @author Frederic Emmerth</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> * \ingroup SIGNALS</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"></span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> * \defgroup SIGNALS SIGNALS</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> * This Module Handles the Information Interpretation Handling of All Inputs</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> * to Outputs. Signals have a Type, wich changes how it is interpreted and used.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> * For more on this, refer to \ref signals_data_type and</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> * \ref signals_signal_type. Signals can be chained together. For Example, four </span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> * Signals of Type SIGNALS_CAN_MESSAGE could recieve four Temperatures, wich</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> * would then be interpreted to float Values using thier respective Callback</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> * Functions. Another Signal of Type SIGNALS_INTERNAL_SIGNAL could then find the</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> * highest of these Temperatures using its Callback Function. To complete the</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> * Chain, a Signal of Type SIGNALS_DISPLAY_SIGNAL can be used to convert the </span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> * float value of the previous Maximising Function to a String Command wich can</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="comment"> * be interpreted by a Display.</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment"> * \addtogroup SIGNALS</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"> * \{</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#ifndef SIGNALS_H</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define SIGNALS_H</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#include &quot;definitions.h&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#include &quot;<a class="code" href="cancomm_8h.html">cancomm.h</a>&quot;</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment"> * @brief The maximum friendly name length for a signal</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2">   41</a></span><span class="preprocessor">#define SIGNALS_MAXIMUM_NAME_LENGTH     30</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment"> * @brief The maximum length of the string value of a signal</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5">   46</a></span><span class="preprocessor">#define SIGNALS_STRING_MAXIMUM_LENGTH   50</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>   <span class="comment"></span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment"> * @brief Definition of the Return Values of some Functions of this Module</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">   51</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{<span class="comment"></span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="comment">     * Returned if a Signal is found</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b">   55</a></span>    <a class="code hl_enumvalue" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b">SIGNALS_FOUND</a> = 0,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="comment"></span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">     * Returned if no Signal is found</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28">   60</a></span>    <a class="code hl_enumvalue" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28">SIGNALS_NOT_FOUND</a>,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="comment"></span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="comment">     * Returned if the Inputs match</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb">   65</a></span>    <a class="code hl_enumvalue" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb">SIGNALS_MATCH</a>,</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            <span class="comment"></span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="comment">    /**</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="comment">     * Returned if the Inputs dont match</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="comment">     */</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_enumvalue" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29">SIGNALS_NO_MATCH</a></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29">   71</a></span>}<a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a>;</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment"></span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="comment"> * @brief The Data type of a Signal</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">   77</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    SIGNALS_FLOAT_SIGNAL = 0,</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    SIGNALS_UINT32_T_SIGNAL,</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    SIGNALS_STRING_SIGNAL</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>}<a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a>;</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="comment"></span> </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment"> * @brief The Signal type of a Signal</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">   86</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    SIGNALS_CAN_MESSAGE = 0,</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    SIGNALS_INTERNAL_SIGNAL,</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    SIGNALS_DISPLAY_SIGNAL</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>}<a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="comment"></span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="comment"> * \brief A struct to combine a String with it&#39;s length</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="struct_s_i_g_n_a_l_s__string.html">   95</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    uint32_t length;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    uint8_t data[<a class="code hl_define" href="group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5">SIGNALS_STRING_MAXIMUM_LENGTH</a>];</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>}<a class="code hl_struct" href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a>;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="comment"></span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span><span class="comment"> * Type Definition of signals_signal_struct to be able to use</span></div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span><span class="comment"> * signals_signal in the definition of signals_signal, as signal structs have</span></div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span><span class="comment"> * to store pointers to other signals_signal structs.</span></div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="group___s_i_g_n_a_l_s.html#ga3a65aa7fe94f6bafd6d8a913b86999b3">  105</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal_struct</a> <a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>;</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>     <span class="comment"></span></div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span><span class="comment"> * \struct signals_signal_struct</span></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment"> * This Struct defines a Signal. Every Signal should have a friendly Name, to be</span></div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span><span class="comment"> * easily identified by a human. Every Signal has to have a</span></div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span><span class="comment"> * \ref signals_signal.type and a \ref signals_signal.data_type. Depending on</span></div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="comment"> * the \ref signals_signal.type and \ref signals_signal.data_type other</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span><span class="comment"> * members of the struct have to be defined. If a signal is of type</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span><span class="comment"> * SIGNALS_CAN_MESSAGE, the id and the interface_number have to be defined.</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span><span class="comment"> * The Signal can be either of data_type SIGNALS_FLOAT_SIGNAL, </span></div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span><span class="comment"> * SIGNALS_UINT32_T_SIGNAL or SIGNALS_STRING_SIGNAL. The corresponding callback</span></div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span><span class="comment"> * function can_convert_float, can_convert_uint32_t or can_convert_string has</span></div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span><span class="comment"> * to be defined.</span></div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment"> * If a signal is of type SIGNALS_INTERNAL_SIGNAL, it can be of data_type </span></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="comment"> * SIGNALS_FLOAT_SIGNAL, SIGNALS_UINT32_T_SIGNAL or SIGNALS_STRING_SIGNAL. The</span></div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="comment"> * corresponding callback function internal_convert_float,</span></div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="comment"> * internal_convert_uint32_t or internal_convert_string has to be defined.</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="comment"> * If a signal is of type SIGNALS_DISPLAY_SIGNAL, it&#39;s data_type has to be </span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span><span class="comment"> * SIGNALS_STRING_SIGNAL, and its callback function internal_convert_string</span></div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span><span class="comment"> * has to be defined in a way to produce correct Commands for the Display to </span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="comment"> * be interpreted. Signals of this Type are read by \ref COMMAND to be sent of</span></div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span><span class="comment"> * to the Display using the \ref SHORTPROTOCOL.</span></div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span><span class="comment"> * A Signal is therefore defined by its type and data_type.</span></div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span><span class="comment"> * @todo Combine the Different Signal Types to a Union to use less RAM</span></div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html">  137</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal_struct</a>{<span class="comment"></span></div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span><span class="comment">    /** The ID of the CAN Message */</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a6b91f99ce8a81496f49dc35d13dac0b0">  139</a></span>    uint32_t <a class="code hl_variable" href="structsignals__signal__struct.html#a6b91f99ce8a81496f49dc35d13dac0b0">id</a>;</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span><span class="comment">    /** The CAN Interface Number (unique Identifier for a CAN Interface)*/</span></div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a59f86ac6195ba91ca4312e018bc4a119">  142</a></span>    uint8_t <a class="code hl_variable" href="structsignals__signal__struct.html#a59f86ac6195ba91ca4312e018bc4a119">interface_number</a>;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span><span class="comment">    /** Type of the Signal */</span></div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#ad30a372a63b611762abe1c5e0c5fa6aa">  145</a></span>    <a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a> <a class="code hl_variable" href="structsignals__signal__struct.html#ad30a372a63b611762abe1c5e0c5fa6aa">type</a>;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="comment">    /** Data Type of the Signal */</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#af68804a49ea40ef5000c9f76ab47d2d8">  148</a></span>    <a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a> <a class="code hl_variable" href="structsignals__signal__struct.html#af68804a49ea40ef5000c9f76ab47d2d8">data_type</a>;</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span><span class="comment">    /** Callback Function for type=SIGNALS_CAN_MESSAGE and </span></div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span><span class="comment">     * data_type=SIGNALS_FLOAT_SIGNAL */</span></div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a3c6366a494b09023499ccc623a951c31">  152</a></span>    float(*<a class="code hl_variable" href="structsignals__signal__struct.html#a3c6366a494b09023499ccc623a951c31">can_convert_float</a>)(uint8_t* data);</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="comment">    /** Callback Function for type=SIGNALS_INTERNAL_SIGNAL and </span></div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span><span class="comment">     * data_type=SIGNALS_FLOAT_SIGNAL */</span></div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a3db1c4962d72a52bc2da98d627d21311">  156</a></span>    float(*<a class="code hl_variable" href="structsignals__signal__struct.html#a3db1c4962d72a52bc2da98d627d21311">internal_convert_float</a>)(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            uint32_t signal_list_len);</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span><span class="comment">    /** The Float Value of this Signal, only used when </span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><span class="comment">     * data_type=SIGNALS_FLOAT_SIGNAL*/</span></div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#ab935d973b3a1f1030fdb5a835e143248">  161</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structsignals__signal__struct.html#ab935d973b3a1f1030fdb5a835e143248">value_float</a>;</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span><span class="comment">    /** Callback Function for type=SIGNALS_CAN_MESSAGE and </span></div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="comment">     * data_type=SIGNALS_UINT32_T_SIGNAL*/</span></div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#abfc621b9dbe9de03f794e479039e1dcb">  165</a></span>    uint32_t(*<a class="code hl_variable" href="structsignals__signal__struct.html#abfc621b9dbe9de03f794e479039e1dcb">can_convert_uint32_t</a>)(uint8_t* data);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span><span class="comment">    /** Callback Function for type=SIGNALS_INTERNAL_SIGNAL and </span></div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span><span class="comment">     * data_type=SIGNALS_UINT32_T_SIGNAL*/</span></div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#af9f969177c03c39b8622e0ca011e281d">  169</a></span>    uint32_t(*<a class="code hl_variable" href="structsignals__signal__struct.html#af9f969177c03c39b8622e0ca011e281d">internal_convert_uint32_t</a>)(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>            uint32_t signal_list_len);</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span><span class="comment">    /** The uint32_t Value of this Signal, only used when </span></div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span><span class="comment">     * data_type=SIGNALS_UINT32_T_SIGNAL*/</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a22f897328a12b8e442b3d7c99f85cc55">  174</a></span>    uint32_t <a class="code hl_variable" href="structsignals__signal__struct.html#a22f897328a12b8e442b3d7c99f85cc55">value_uint32_t</a>;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span><span class="comment">    /** Callback Function for type=SIGNALS_CAN_MESSAGE and </span></div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span><span class="comment">     * data_type=SIGNALS_STRING_SIGNAL*/</span></div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#ac995cb11901ea482a506e81f9ba5b498">  178</a></span>    void (*<a class="code hl_variable" href="structsignals__signal__struct.html#ac995cb11901ea482a506e81f9ba5b498">can_convert_string</a>)(uint8_t* data, <a class="code hl_struct" href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a>* string);</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span><span class="comment">    /** Callback Function for type=SIGNALS_INTERNAL_SIGNAL or </span></div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span><span class="comment">     * type=SIGNALS_DISPLAY_SIGNAL. and data_type SIGNALS_STRING_SIGNAL*/</span></div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a3151a985d6d2de155e36f185a96ce960">  182</a></span>    void (*<a class="code hl_variable" href="structsignals__signal__struct.html#a3151a985d6d2de155e36f185a96ce960">internal_convert_string</a>)(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>            uint32_t signal_list_len, <a class="code hl_struct" href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a>* string);</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="comment">    /** The String Value of this Signal, only used when </span></div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span><span class="comment">     * data_type=SIGNALS_STRING_SIGNAL*/</span></div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a88b1a26aa092b39c64026d2ad0e87eae">  187</a></span>    <a class="code hl_struct" href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a> <a class="code hl_variable" href="structsignals__signal__struct.html#a88b1a26aa092b39c64026d2ad0e87eae">value_string</a>;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span><span class="comment">    /** A friendly Name of the Signal, only used for Debugging */</span></div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a733c9f5e557ba368fba6bdc0dea51974">  190</a></span>    uint8_t <a class="code hl_variable" href="structsignals__signal__struct.html#a733c9f5e557ba368fba6bdc0dea51974">friendly_name</a>[<a class="code hl_define" href="group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2">SIGNALS_MAXIMUM_NAME_LENGTH</a>];</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="comment"></span></div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span><span class="comment">    /** The Timestamp of the Signal */</span></div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno"><a class="line" href="structsignals__signal__struct.html#a400c4500b5329e3d6bf5baa605f2abac">  193</a></span>    uint32_t <a class="code hl_variable" href="structsignals__signal__struct.html#a400c4500b5329e3d6bf5baa605f2abac">timestamp</a>;</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>};</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span><span class="comment"></span> </div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span><span class="comment"> * This Function takes a signal_list and a message_list and interprets each</span></div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span><span class="comment"> * Signal either from other Signals or from a CAN message. The Callback </span></div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span><span class="comment"> * Functions defined in each Signal are called here.</span></div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span><span class="comment"> * @param signal_list A List of \ref signals_signal Structs</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span><span class="comment"> * @param signal_list_len The Length of \p signal_list</span></div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span><span class="comment"> * @param message_list A List of \ref cancomm_message Structs</span></div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="comment"> * @param message_list_len The Length of \p signal_list</span></div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span><span class="keywordtype">void</span> <a class="code hl_function" href="group___s_i_g_n_a_l_s.html#ga1582449885505ae9242711dd5a89edae">SIGNALS_Interpret</a>(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list, uint32_t signal_list_len,</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>        <a class="code hl_struct" href="structcancomm__message.html">cancomm_message</a>* message_list, uint32_t message_list_len);</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span><span class="comment"></span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span><span class="comment"> * This function finds the data from a CAN Message and writes it to the Buffer </span></div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span><span class="comment"> * \p data</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span><span class="comment"> * @param id The CAN Message ID</span></div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="comment"> * @param interface The CAN Interface (wich uniquely identifies a CAN Interface)</span></div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span><span class="comment"> * @param message_list List of \ref cancomm_message Structs with the data in it</span></div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span><span class="comment"> * @param message_list_len The Length of \p message_list</span></div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span><span class="comment"> * @param data The Buffer the Data of the requested Message gets written to</span></div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span><span class="comment"> * @return A \ref signals_result. Returns SIGNALS_FOUND if the Data of the</span></div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span><span class="comment"> * Message was found, and SIGNALS_NOT_FOUND if the Message is not in the List.</span></div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span><a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a> <a class="code hl_function" href="group___s_i_g_n_a_l_s.html#gae14757bb5eca3e8333b9437648ec8713">signals_find_data</a>(uint32_t <span class="keywordtype">id</span>, uint8_t interface,</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>        <a class="code hl_struct" href="structcancomm__message.html">cancomm_message</a>* message_list, uint32_t message_list_len,</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        uint8_t* data);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span><span class="comment"></span> </div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span><span class="comment"> * This function finds a singnal from signal_list by its Callback. This is </span></div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span><span class="comment"> * needed for the Conversion Functions of Internal Signals, as they need to </span></div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span><span class="comment"> * read other Signal Values in thier Conversion Function.</span></div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="comment"> * @param signal_list List of \ref signals_signal to be searched in</span></div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span><span class="comment"> * @param signal_list_len The Length of \p signal_list</span></div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span><span class="comment"> * @param Callback The Callback Function of the searched signal</span></div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span><span class="comment"> * @return Pointer to the Signal if it is found, else NULL is returned</span></div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span><a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* <a class="code hl_function" href="group___s_i_g_n_a_l_s.html#gaf87949102aad309c3f6402b3f73a12ce">signals_find_signal</a>( <a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>        uint32_t signal_list_len, <span class="keywordtype">void</span>(*Callback)(<span class="keywordtype">void</span>));</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span><span class="comment"></span> </div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span><span class="comment"> * Function to compare two Signals Names.</span></div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="comment"> * @param first First Name</span></div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span><span class="comment"> * @param firstlen Length of \p first</span></div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span><span class="comment"> * @param second Second Name</span></div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span><span class="comment"> * @param secondlen Length of \p second</span></div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span><span class="comment"> * @return SIGNALS_MATCH if the Names match, and SIGNALS_NO_MATCH if they dont</span></div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span><a class="code hl_enumeration" href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a> <a class="code hl_function" href="group___s_i_g_n_a_l_s.html#gab651d13c2faa1f7351a8fcb0224b0b50">signals_compare_names</a>(uint8_t* first, uint32_t firstlen,</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>        uint8_t* second, uint32_t secondlen);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span><span class="comment"></span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span><span class="comment"> * Function to return the first, second, third ... display Signal. If needle is</span></div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span><span class="comment"> * for example five, the fifth display Signal is returned. Also, the total Count</span></div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span><span class="comment"> * of Display Signals is written to \p dispSignalCount.</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span><span class="comment"> * </span></div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="comment"> * @param signal_list The signal_list to be searched in.</span></div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span><span class="comment"> * @param signal_list_len The Length of \p signal_list</span></div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span><span class="comment"> * @param dispSignalCount The total Count of Display Signals in \p signal_list</span></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span><span class="comment"> * is written to this Pointer.</span></div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="comment"> * @param needle The Display Signal to return</span></div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span><span class="comment"> * @return Pointer to the display Signal in place of \p needle</span></div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span><a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* <a class="code hl_function" href="group___s_i_g_n_a_l_s.html#ga5ff248cd6f705af5befc5a6f86d39365">signals_find_display_signal</a>(<a class="code hl_struct" href="structsignals__signal__struct.html">signals_signal</a>* signal_list,</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        uint32_t signal_list_len, uint32_t* dispSignalCount, uint32_t needle);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="preprocessor">#ifdef  __cplusplus</span></div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>}</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span><span class="preprocessor">#endif  </span><span class="comment">/* SIGNALS_H */</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span><span class="comment"></span> </div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span><span class="comment">/**</span></div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span><span class="comment"> * \}</span></div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span> </div>
 <div class="ttc" id="acancomm_8h_html"><div class="ttname"><a href="cancomm_8h.html">cancomm.h</a></div><div class="ttdoc">This File defines the Prototypes for CANCOMM.</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga187ad7aa9a4136a07b326b83ee9503e5"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5">SIGNALS_STRING_MAXIMUM_LENGTH</a></div><div class="ttdeci">#define SIGNALS_STRING_MAXIMUM_LENGTH</div><div class="ttdoc">The maximum length of the string value of a signal.</div><div class="ttdef"><b>Definition:</b> signals.h:48</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga19345763f88f56f70252c7a97d831351"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a></div><div class="ttdeci">signals_data_type</div><div class="ttdoc">The Data type of a Signal.</div><div class="ttdef"><b>Definition:</b> signals.h:79</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga433e7bf0aaee9070db3f46ae2521bab8"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a></div><div class="ttdeci">signals_result</div><div class="ttdoc">Definition of the Return Values of some Functions of this Module.</div><div class="ttdef"><b>Definition:</b> signals.h:53</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga9fc067d416cfbe44c226acdfb69772a2"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2">SIGNALS_MAXIMUM_NAME_LENGTH</a></div><div class="ttdeci">#define SIGNALS_MAXIMUM_NAME_LENGTH</div><div class="ttdoc">The maximum friendly name length for a signal.</div><div class="ttdef"><b>Definition:</b> signals.h:43</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gaa8356b463bcf4f2de5fb8ab61004eb5a"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a></div><div class="ttdeci">signals_signal_type</div><div class="ttdoc">The Signal type of a Signal.</div><div class="ttdef"><b>Definition:</b> signals.h:88</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b">SIGNALS_FOUND</a></div><div class="ttdeci">@ SIGNALS_FOUND</div><div class="ttdef"><b>Definition:</b> signals.h:57</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb">SIGNALS_MATCH</a></div><div class="ttdeci">@ SIGNALS_MATCH</div><div class="ttdef"><b>Definition:</b> signals.h:67</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29">SIGNALS_NO_MATCH</a></div><div class="ttdeci">@ SIGNALS_NO_MATCH</div><div class="ttdef"><b>Definition:</b> signals.h:72</div></div>
-<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28">SIGNALS_NOT_FOUND</a></div><div class="ttdeci">@ SIGNALS_NOT_FOUND</div><div class="ttdef"><b>Definition:</b> signals.h:62</div></div>
-<div class="ttc" id="astruct_s_i_g_n_a_l_s__string_html"><div class="ttname"><a href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a></div><div class="ttdoc">A struct to combine a String with it's length.</div><div class="ttdef"><b>Definition:</b> signals.h:97</div></div>
-<div class="ttc" id="astructcancomm__message_html"><div class="ttname"><a href="structcancomm__message.html">cancomm_message</a></div><div class="ttdoc">Structure defining a CAN Message.</div><div class="ttdef"><b>Definition:</b> cancomm.h:115</div></div>
-<div class="ttc" id="astructsignals__signal__struct_html"><div class="ttname"><a href="structsignals__signal__struct.html">signals_signal_struct</a></div><div class="ttdef"><b>Definition:</b> signals.h:135</div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga1582449885505ae9242711dd5a89edae"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga1582449885505ae9242711dd5a89edae">SIGNALS_Interpret</a></div><div class="ttdeci">void SIGNALS_Interpret(signals_signal *signal_list, uint32_t signal_list_len, cancomm_message *message_list, uint32_t message_list_len)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8c_source.html#l00016">signals.c:16</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga187ad7aa9a4136a07b326b83ee9503e5"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga187ad7aa9a4136a07b326b83ee9503e5">SIGNALS_STRING_MAXIMUM_LENGTH</a></div><div class="ttdeci">#define SIGNALS_STRING_MAXIMUM_LENGTH</div><div class="ttdoc">The maximum length of the string value of a signal.</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00046">signals.h:46</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga19345763f88f56f70252c7a97d831351"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga19345763f88f56f70252c7a97d831351">signals_data_type</a></div><div class="ttdeci">signals_data_type</div><div class="ttdoc">The Data type of a Signal.</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00077">signals.h:77</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga433e7bf0aaee9070db3f46ae2521bab8"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga433e7bf0aaee9070db3f46ae2521bab8">signals_result</a></div><div class="ttdeci">signals_result</div><div class="ttdoc">Definition of the Return Values of some Functions of this Module.</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00051">signals.h:51</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga5ff248cd6f705af5befc5a6f86d39365"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga5ff248cd6f705af5befc5a6f86d39365">signals_find_display_signal</a></div><div class="ttdeci">signals_signal * signals_find_display_signal(signals_signal *signal_list, uint32_t signal_list_len, uint32_t *dispSignalCount, uint32_t needle)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8c_source.html#l00148">signals.c:148</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_ga9fc067d416cfbe44c226acdfb69772a2"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#ga9fc067d416cfbe44c226acdfb69772a2">SIGNALS_MAXIMUM_NAME_LENGTH</a></div><div class="ttdeci">#define SIGNALS_MAXIMUM_NAME_LENGTH</div><div class="ttdoc">The maximum friendly name length for a signal.</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00041">signals.h:41</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gaa8356b463bcf4f2de5fb8ab61004eb5a"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gaa8356b463bcf4f2de5fb8ab61004eb5a">signals_signal_type</a></div><div class="ttdeci">signals_signal_type</div><div class="ttdoc">The Signal type of a Signal.</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00086">signals.h:86</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gab651d13c2faa1f7351a8fcb0224b0b50"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gab651d13c2faa1f7351a8fcb0224b0b50">signals_compare_names</a></div><div class="ttdeci">signals_result signals_compare_names(uint8_t *first, uint32_t firstlen, uint8_t *second, uint32_t secondlen)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8c_source.html#l00100">signals.c:100</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gae14757bb5eca3e8333b9437648ec8713"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gae14757bb5eca3e8333b9437648ec8713">signals_find_data</a></div><div class="ttdeci">signals_result signals_find_data(uint32_t id, uint8_t interface, cancomm_message *message_list, uint32_t message_list_len, uint8_t *data)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8c_source.html#l00082">signals.c:82</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gaf87949102aad309c3f6402b3f73a12ce"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gaf87949102aad309c3f6402b3f73a12ce">signals_find_signal</a></div><div class="ttdeci">signals_signal * signals_find_signal(signals_signal *signal_list, uint32_t signal_list_len, void(*Callback)(void))</div><div class="ttdef"><b>Definition:</b> <a href="signals_8c_source.html#l00127">signals.c:127</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b">SIGNALS_FOUND</a></div><div class="ttdeci">@ SIGNALS_FOUND</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00055">signals.h:55</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb">SIGNALS_MATCH</a></div><div class="ttdeci">@ SIGNALS_MATCH</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00065">signals.h:65</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29">SIGNALS_NO_MATCH</a></div><div class="ttdeci">@ SIGNALS_NO_MATCH</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00071">signals.h:70</a></div></div>
+<div class="ttc" id="agroup___s_i_g_n_a_l_s_html_gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28"><div class="ttname"><a href="group___s_i_g_n_a_l_s.html#gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28">SIGNALS_NOT_FOUND</a></div><div class="ttdeci">@ SIGNALS_NOT_FOUND</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00060">signals.h:60</a></div></div>
+<div class="ttc" id="astruct_s_i_g_n_a_l_s__string_html"><div class="ttname"><a href="struct_s_i_g_n_a_l_s__string.html">SIGNALS_string</a></div><div class="ttdoc">A struct to combine a String with it's length.</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00095">signals.h:95</a></div></div>
+<div class="ttc" id="astructcancomm__message_html"><div class="ttname"><a href="structcancomm__message.html">cancomm_message</a></div><div class="ttdoc">Structure defining a CAN Message.</div><div class="ttdef"><b>Definition:</b> <a href="cancomm_8h_source.html#l00115">cancomm.h:115</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html"><div class="ttname"><a href="structsignals__signal__struct.html">signals_signal_struct</a></div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00137">signals.h:137</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a22f897328a12b8e442b3d7c99f85cc55"><div class="ttname"><a href="structsignals__signal__struct.html#a22f897328a12b8e442b3d7c99f85cc55">signals_signal_struct::value_uint32_t</a></div><div class="ttdeci">uint32_t value_uint32_t</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00174">signals.h:174</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a3151a985d6d2de155e36f185a96ce960"><div class="ttname"><a href="structsignals__signal__struct.html#a3151a985d6d2de155e36f185a96ce960">signals_signal_struct::internal_convert_string</a></div><div class="ttdeci">void(* internal_convert_string)(signals_signal *signal_list, uint32_t signal_list_len, SIGNALS_string *string)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00182">signals.h:182</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a3c6366a494b09023499ccc623a951c31"><div class="ttname"><a href="structsignals__signal__struct.html#a3c6366a494b09023499ccc623a951c31">signals_signal_struct::can_convert_float</a></div><div class="ttdeci">float(* can_convert_float)(uint8_t *data)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00152">signals.h:152</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a3db1c4962d72a52bc2da98d627d21311"><div class="ttname"><a href="structsignals__signal__struct.html#a3db1c4962d72a52bc2da98d627d21311">signals_signal_struct::internal_convert_float</a></div><div class="ttdeci">float(* internal_convert_float)(signals_signal *signal_list, uint32_t signal_list_len)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00156">signals.h:156</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a400c4500b5329e3d6bf5baa605f2abac"><div class="ttname"><a href="structsignals__signal__struct.html#a400c4500b5329e3d6bf5baa605f2abac">signals_signal_struct::timestamp</a></div><div class="ttdeci">uint32_t timestamp</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00193">signals.h:193</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a59f86ac6195ba91ca4312e018bc4a119"><div class="ttname"><a href="structsignals__signal__struct.html#a59f86ac6195ba91ca4312e018bc4a119">signals_signal_struct::interface_number</a></div><div class="ttdeci">uint8_t interface_number</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00142">signals.h:142</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a6b91f99ce8a81496f49dc35d13dac0b0"><div class="ttname"><a href="structsignals__signal__struct.html#a6b91f99ce8a81496f49dc35d13dac0b0">signals_signal_struct::id</a></div><div class="ttdeci">uint32_t id</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00139">signals.h:139</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a733c9f5e557ba368fba6bdc0dea51974"><div class="ttname"><a href="structsignals__signal__struct.html#a733c9f5e557ba368fba6bdc0dea51974">signals_signal_struct::friendly_name</a></div><div class="ttdeci">uint8_t friendly_name[SIGNALS_MAXIMUM_NAME_LENGTH]</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00190">signals.h:190</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_a88b1a26aa092b39c64026d2ad0e87eae"><div class="ttname"><a href="structsignals__signal__struct.html#a88b1a26aa092b39c64026d2ad0e87eae">signals_signal_struct::value_string</a></div><div class="ttdeci">SIGNALS_string value_string</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00187">signals.h:187</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_ab935d973b3a1f1030fdb5a835e143248"><div class="ttname"><a href="structsignals__signal__struct.html#ab935d973b3a1f1030fdb5a835e143248">signals_signal_struct::value_float</a></div><div class="ttdeci">float value_float</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00161">signals.h:161</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_abfc621b9dbe9de03f794e479039e1dcb"><div class="ttname"><a href="structsignals__signal__struct.html#abfc621b9dbe9de03f794e479039e1dcb">signals_signal_struct::can_convert_uint32_t</a></div><div class="ttdeci">uint32_t(* can_convert_uint32_t)(uint8_t *data)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00165">signals.h:165</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_ac995cb11901ea482a506e81f9ba5b498"><div class="ttname"><a href="structsignals__signal__struct.html#ac995cb11901ea482a506e81f9ba5b498">signals_signal_struct::can_convert_string</a></div><div class="ttdeci">void(* can_convert_string)(uint8_t *data, SIGNALS_string *string)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00178">signals.h:178</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_ad30a372a63b611762abe1c5e0c5fa6aa"><div class="ttname"><a href="structsignals__signal__struct.html#ad30a372a63b611762abe1c5e0c5fa6aa">signals_signal_struct::type</a></div><div class="ttdeci">signals_signal_type type</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00145">signals.h:145</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_af68804a49ea40ef5000c9f76ab47d2d8"><div class="ttname"><a href="structsignals__signal__struct.html#af68804a49ea40ef5000c9f76ab47d2d8">signals_signal_struct::data_type</a></div><div class="ttdeci">signals_data_type data_type</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00148">signals.h:148</a></div></div>
+<div class="ttc" id="astructsignals__signal__struct_html_af9f969177c03c39b8622e0ca011e281d"><div class="ttname"><a href="structsignals__signal__struct.html#af9f969177c03c39b8622e0ca011e281d">signals_signal_struct::internal_convert_uint32_t</a></div><div class="ttdeci">uint32_t(* internal_convert_uint32_t)(signals_signal *signal_list, uint32_t signal_list_len)</div><div class="ttdef"><b>Definition:</b> <a href="signals_8h_source.html#l00169">signals.h:169</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

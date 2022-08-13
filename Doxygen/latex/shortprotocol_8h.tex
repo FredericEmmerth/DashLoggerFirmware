@@ -1,0 +1,77 @@
+\hypertarget{shortprotocol_8h}{}\doxysection{shortprotocol.\+h File Reference}
+\label{shortprotocol_8h}\index{shortprotocol.h@{shortprotocol.h}}
+
+
+This File defines the Prototypes for \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}}.  
+
+
+{\ttfamily \#include \char`\"{}definitions.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}crc.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{SHORTPROTOCOL\+\_\+string}}
+\begin{DoxyCompactList}\small\item\em Struct to combine the length of a String with the String and the Overhead Bytes used by the Shortprotocol in one Data type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}}
+\begin{DoxyCompactList}\small\item\em Configuration Struct for \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}} passed to the \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}} Functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac5622b14139f3f9274c17d0483519601}{SHORTPROTOCOL\+\_\+\+MAXIMUM\+\_\+\+COMMAND\+\_\+\+LENGTH}}~100
+\begin{DoxyCompactList}\small\item\em Maximum Command length, thus maximum payload length. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga5abce405bc83e95e64ee1b81d271f9af}{SHORTPROTOCOL\+\_\+\+BEGIN}}~0x13
+\begin{DoxyCompactList}\small\item\em The Begining Byte to indicate a Transmission. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga4576edb2570e95144c04a4936228fbf4}{SHORTPROTOCOL\+\_\+\+OVERHEAD\+\_\+\+BYTES}}~5
+\begin{DoxyCompactList}\small\item\em The Overhead of sending Data with the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga132ff70ac3ecc9ff45c20faf83d87757}{SHORTPROTOCOL\+\_\+\+OVERHEAD\+\_\+\+WITHOUT\+\_\+\+CRC\+\_\+\+BYTES}}~3
+\begin{DoxyCompactList}\small\item\em The Overhead of sending Data with the Shortprotocol, not counting the two CRC Bytes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4dc74bbe50ad20f81141e8374ed9483}{SHORTPROTOCOL\+\_\+\+FIRST\+\_\+\+BYTE\+\_\+\+MASK}}~0x00\+FF
+\begin{DoxyCompactList}\small\item\em Mask to convert endianess (first Byte is on second place) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gabededadae97c822c6c72a5945e3254f2}{SHORTPROTOCOL\+\_\+\+SECOND\+\_\+\+BYTE\+\_\+\+MASK}}~0x\+FF00
+\begin{DoxyCompactList}\small\item\em Mask to convert endianess (second Byte in on first place) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga432d6ee7045abd7c06bd12b61c8ff73a}{SHORTPROTOCOL\+\_\+\+BYTE\+\_\+\+LENGTH}}~8
+\begin{DoxyCompactList}\small\item\em The length of one Byte for endianess conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga838056ee8c9f5d2530fa6bc876a7f29c}{SHORTPROTOCOL\+\_\+\+BEGIN\+\_\+\+OFFSET}}~0
+\begin{DoxyCompactList}\small\item\em The Offset of the Begin Byte in the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga46417772da85082538f1f8de615d8360}{SHORTPROTOCOL\+\_\+\+LENGTH\+\_\+\+LSB\+\_\+\+OFFSET}}~1
+\begin{DoxyCompactList}\small\item\em The Offset of the Least Significant Byte of the Length in the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gafdf684ecf8382d782f36dae7c152bbe5}{SHORTPROTOCOL\+\_\+\+LENGTH\+\_\+\+MSB\+\_\+\+OFFSET}}~2
+\begin{DoxyCompactList}\small\item\em The Offset of the Most Significant Byte of the Length in the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac355290dc0b3840a076cf730fa662e0f}{SHORTPROTOCOL\+\_\+\+COMMAND\+\_\+\+OFFSET}}~3
+\begin{DoxyCompactList}\small\item\em The Offset of the Command, thus the Payload in the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga8c27f1a93be080e9f1552f55ddeb758b}{SHORTPROTOCOL\+\_\+\+CRC\+\_\+\+LSB\+\_\+\+OFFSET}}~0
+\begin{DoxyCompactList}\small\item\em The Offset of the CRC Least Significant Byte from the Back of the Package. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga34c47422b35a9695498b42ab845f9cda}{SHORTPROTOCOL\+\_\+\+CRC\+\_\+\+MSB\+\_\+\+OFFSET}}~1
+\begin{DoxyCompactList}\small\item\em The Offset of the CRC Most Significant Byte from the Back of the Package. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} \{ {\bfseries SHORTPROTOCOL\+\_\+\+SUCCESS} = 0
+, {\bfseries SHORTPROTOCOL\+\_\+\+ERROR}
+, {\bfseries SHORTPROTOCOL\+\_\+\+AVAILABLE}
+, {\bfseries SHORTPROTOCOL\+\_\+\+NOT\+\_\+\+AVAILABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em Return Status used by both the Callback Functions of the \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}} and the Functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga335fde4cd4aec4b754c8b8f7243584a8}{SHORTPROTOCOL\+\_\+\+Send}} (\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$inst, uint8\+\_\+t $\ast$data, uint32\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Function to try to send a new Command using the SHORTPROTOCOL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga004de19c9c8ad6a22da9fe7c978c758f}{SHORTPROTOCOL\+\_\+\+Update}} (\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Function to be called repeadetly in the Main Loop to send Pieces of maximum\+Package\+Length of the Package generated by SHORTPROTOCOL\+\_\+\+Send. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga3ec4cb2cffb8d3d1f13961db7855e061}{SHORTPROTOCOL\+\_\+\+Available}} (\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Returns if a new Command can be sent using the Shortprotocol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4c229f96d354e4f78cb38996820e949}{SHORTPROTOCOL\+\_\+\+Initialize}} (\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Initializes an Empty \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}}. Callback Functions still have to be added/defined and the maximum\+Package\+Length has to be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This File defines the Prototypes for \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}}. 
+
+\begin{DoxyAuthor}{Author}
+Frederic Emmerth 
+\end{DoxyAuthor}
+
+
+Definition in file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+

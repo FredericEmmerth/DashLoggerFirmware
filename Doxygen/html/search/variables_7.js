@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['timestamp_0',['timestamp',['../structcancomm__message.html#a214326cac47c94869df6b85b8c9f4a90',1,'cancomm_message']]],
-  ['transmitfifo_1',['transmitFifo',['../structcancomm__interface.html#a024fade2f8407472d0d5e31eb0a32535',1,'cancomm_interface']]]
+  ['readavailable_0',['readAvailable',['../struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a2d6eb84ff339495806a39cc27e354966',1,'SHORTPROTOCOL_Instance']]],
+  ['readbyte_1',['readByte',['../struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#aeb3a21d8a39f1b46905e4e683dedfe34',1,'SHORTPROTOCOL_Instance']]],
+  ['receivefifo_2',['receiveFifo',['../structcancomm__interface.html#ae59fbe1dbba45de03a83a322ea63181b',1,'cancomm_interface']]]
 ];

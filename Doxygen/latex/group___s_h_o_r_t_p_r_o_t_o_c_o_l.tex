@@ -1,0 +1,375 @@
+\hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{}\doxysection{SHORTPROTOCOL}
+\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l}\index{SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsection*{Files}
+\begin{DoxyCompactItemize}
+\item 
+file \mbox{\hyperlink{shortprotocol_8h}{shortprotocol.\+h}}
+\begin{DoxyCompactList}\small\item\em This File defines the Prototypes for \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}}. \end{DoxyCompactList}\item 
+file \mbox{\hyperlink{shortprotocol_8c}{shortprotocol.\+c}}
+\begin{DoxyCompactList}\small\item\em This File implements the Prototypes for \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string}{SHORTPROTOCOL\+\_\+string}}
+\begin{DoxyCompactList}\small\item\em Struct to combine the length of a String with the String and the Overhead Bytes used by the Shortprotocol in one Data type. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}}
+\begin{DoxyCompactList}\small\item\em Configuration Struct for \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}} passed to the \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}} Functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac5622b14139f3f9274c17d0483519601}{SHORTPROTOCOL\+\_\+\+MAXIMUM\+\_\+\+COMMAND\+\_\+\+LENGTH}}~100
+\begin{DoxyCompactList}\small\item\em Maximum Command length, thus maximum payload length. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga5abce405bc83e95e64ee1b81d271f9af}{SHORTPROTOCOL\+\_\+\+BEGIN}}~0x13
+\begin{DoxyCompactList}\small\item\em The Begining Byte to indicate a Transmission. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga4576edb2570e95144c04a4936228fbf4}{SHORTPROTOCOL\+\_\+\+OVERHEAD\+\_\+\+BYTES}}~5
+\begin{DoxyCompactList}\small\item\em The Overhead of sending Data with the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga132ff70ac3ecc9ff45c20faf83d87757}{SHORTPROTOCOL\+\_\+\+OVERHEAD\+\_\+\+WITHOUT\+\_\+\+CRC\+\_\+\+BYTES}}~3
+\begin{DoxyCompactList}\small\item\em The Overhead of sending Data with the Shortprotocol, not counting the two CRC Bytes. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4dc74bbe50ad20f81141e8374ed9483}{SHORTPROTOCOL\+\_\+\+FIRST\+\_\+\+BYTE\+\_\+\+MASK}}~0x00\+FF
+\begin{DoxyCompactList}\small\item\em Mask to convert endianess (first Byte is on second place) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gabededadae97c822c6c72a5945e3254f2}{SHORTPROTOCOL\+\_\+\+SECOND\+\_\+\+BYTE\+\_\+\+MASK}}~0x\+FF00
+\begin{DoxyCompactList}\small\item\em Mask to convert endianess (second Byte in on first place) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga432d6ee7045abd7c06bd12b61c8ff73a}{SHORTPROTOCOL\+\_\+\+BYTE\+\_\+\+LENGTH}}~8
+\begin{DoxyCompactList}\small\item\em The length of one Byte for endianess conversion. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga838056ee8c9f5d2530fa6bc876a7f29c}{SHORTPROTOCOL\+\_\+\+BEGIN\+\_\+\+OFFSET}}~0
+\begin{DoxyCompactList}\small\item\em The Offset of the Begin Byte in the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga46417772da85082538f1f8de615d8360}{SHORTPROTOCOL\+\_\+\+LENGTH\+\_\+\+LSB\+\_\+\+OFFSET}}~1
+\begin{DoxyCompactList}\small\item\em The Offset of the Least Significant Byte of the Length in the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gafdf684ecf8382d782f36dae7c152bbe5}{SHORTPROTOCOL\+\_\+\+LENGTH\+\_\+\+MSB\+\_\+\+OFFSET}}~2
+\begin{DoxyCompactList}\small\item\em The Offset of the Most Significant Byte of the Length in the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac355290dc0b3840a076cf730fa662e0f}{SHORTPROTOCOL\+\_\+\+COMMAND\+\_\+\+OFFSET}}~3
+\begin{DoxyCompactList}\small\item\em The Offset of the Command, thus the Payload in the Shortprotocol. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga8c27f1a93be080e9f1552f55ddeb758b}{SHORTPROTOCOL\+\_\+\+CRC\+\_\+\+LSB\+\_\+\+OFFSET}}~0
+\begin{DoxyCompactList}\small\item\em The Offset of the CRC Least Significant Byte from the Back of the Package. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga34c47422b35a9695498b42ab845f9cda}{SHORTPROTOCOL\+\_\+\+CRC\+\_\+\+MSB\+\_\+\+OFFSET}}~1
+\begin{DoxyCompactList}\small\item\em The Offset of the CRC Most Significant Byte from the Back of the Package. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} \{ {\bfseries SHORTPROTOCOL\+\_\+\+SUCCESS} = 0
+, {\bfseries SHORTPROTOCOL\+\_\+\+ERROR}
+, {\bfseries SHORTPROTOCOL\+\_\+\+AVAILABLE}
+, {\bfseries SHORTPROTOCOL\+\_\+\+NOT\+\_\+\+AVAILABLE}
+ \}
+\begin{DoxyCompactList}\small\item\em Return Status used by both the Callback Functions of the \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}} and the Functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga335fde4cd4aec4b754c8b8f7243584a8}{SHORTPROTOCOL\+\_\+\+Send}} (\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$inst, uint8\+\_\+t $\ast$data, uint32\+\_\+t length)
+\begin{DoxyCompactList}\small\item\em Function to try to send a new Command using the SHORTPROTOCOL. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga004de19c9c8ad6a22da9fe7c978c758f}{SHORTPROTOCOL\+\_\+\+Update}} (\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Function to be called repeadetly in the Main Loop to send Pieces of maximum\+Package\+Length of the Package generated by SHORTPROTOCOL\+\_\+\+Send. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga3ec4cb2cffb8d3d1f13961db7855e061}{SHORTPROTOCOL\+\_\+\+Available}} (\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Returns if a new Command can be sent using the Shortprotocol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4c229f96d354e4f78cb38996820e949}{SHORTPROTOCOL\+\_\+\+Initialize}} (\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$inst)
+\begin{DoxyCompactList}\small\item\em Initializes an Empty \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}}. Callback Functions still have to be added/defined and the maximum\+Package\+Length has to be set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This Module handles packing the Commands generated by the SIGNAL Module and sending them using the Shortprotocol defined in the Displays (EA uni\+TFTs035-\/\+ATC) Datasheet. To not block the Main Loop for too long, the Packet is split into smaller Parts defined by \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance_a38a5e509c9750876370dbfd98ea63680}{SHORTPROTOCOL\+\_\+\+Instance.\+maximum\+Package\+Length}}. The Module is written in a general Fashion and can be adopted to use SPI, for this the Callback Functions in \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} have to be redefined for SPI. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga5abce405bc83e95e64ee1b81d271f9af}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga5abce405bc83e95e64ee1b81d271f9af}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_BEGIN@{SHORTPROTOCOL\_BEGIN}}
+\index{SHORTPROTOCOL\_BEGIN@{SHORTPROTOCOL\_BEGIN}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_BEGIN}{SHORTPROTOCOL\_BEGIN}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+BEGIN~0x13}
+
+
+
+The Begining Byte to indicate a Transmission. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00043}{43}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga838056ee8c9f5d2530fa6bc876a7f29c}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga838056ee8c9f5d2530fa6bc876a7f29c}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_BEGIN\_OFFSET@{SHORTPROTOCOL\_BEGIN\_OFFSET}}
+\index{SHORTPROTOCOL\_BEGIN\_OFFSET@{SHORTPROTOCOL\_BEGIN\_OFFSET}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_BEGIN\_OFFSET}{SHORTPROTOCOL\_BEGIN\_OFFSET}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+BEGIN\+\_\+\+OFFSET~0}
+
+
+
+The Offset of the Begin Byte in the Shortprotocol. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00074}{74}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga432d6ee7045abd7c06bd12b61c8ff73a}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga432d6ee7045abd7c06bd12b61c8ff73a}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_BYTE\_LENGTH@{SHORTPROTOCOL\_BYTE\_LENGTH}}
+\index{SHORTPROTOCOL\_BYTE\_LENGTH@{SHORTPROTOCOL\_BYTE\_LENGTH}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_BYTE\_LENGTH}{SHORTPROTOCOL\_BYTE\_LENGTH}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+BYTE\+\_\+\+LENGTH~8}
+
+
+
+The length of one Byte for endianess conversion. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00069}{69}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac355290dc0b3840a076cf730fa662e0f}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac355290dc0b3840a076cf730fa662e0f}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_COMMAND\_OFFSET@{SHORTPROTOCOL\_COMMAND\_OFFSET}}
+\index{SHORTPROTOCOL\_COMMAND\_OFFSET@{SHORTPROTOCOL\_COMMAND\_OFFSET}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_COMMAND\_OFFSET}{SHORTPROTOCOL\_COMMAND\_OFFSET}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+COMMAND\+\_\+\+OFFSET~3}
+
+
+
+The Offset of the Command, thus the Payload in the Shortprotocol. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00092}{92}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga8c27f1a93be080e9f1552f55ddeb758b}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga8c27f1a93be080e9f1552f55ddeb758b}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_CRC\_LSB\_OFFSET@{SHORTPROTOCOL\_CRC\_LSB\_OFFSET}}
+\index{SHORTPROTOCOL\_CRC\_LSB\_OFFSET@{SHORTPROTOCOL\_CRC\_LSB\_OFFSET}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_CRC\_LSB\_OFFSET}{SHORTPROTOCOL\_CRC\_LSB\_OFFSET}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+CRC\+\_\+\+LSB\+\_\+\+OFFSET~0}
+
+
+
+The Offset of the CRC Least Significant Byte from the Back of the Package. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00098}{98}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga34c47422b35a9695498b42ab845f9cda}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga34c47422b35a9695498b42ab845f9cda}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_CRC\_MSB\_OFFSET@{SHORTPROTOCOL\_CRC\_MSB\_OFFSET}}
+\index{SHORTPROTOCOL\_CRC\_MSB\_OFFSET@{SHORTPROTOCOL\_CRC\_MSB\_OFFSET}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_CRC\_MSB\_OFFSET}{SHORTPROTOCOL\_CRC\_MSB\_OFFSET}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+CRC\+\_\+\+MSB\+\_\+\+OFFSET~1}
+
+
+
+The Offset of the CRC Most Significant Byte from the Back of the Package. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00104}{104}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4dc74bbe50ad20f81141e8374ed9483}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4dc74bbe50ad20f81141e8374ed9483}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_FIRST\_BYTE\_MASK@{SHORTPROTOCOL\_FIRST\_BYTE\_MASK}}
+\index{SHORTPROTOCOL\_FIRST\_BYTE\_MASK@{SHORTPROTOCOL\_FIRST\_BYTE\_MASK}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_FIRST\_BYTE\_MASK}{SHORTPROTOCOL\_FIRST\_BYTE\_MASK}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+FIRST\+\_\+\+BYTE\+\_\+\+MASK~0x00\+FF}
+
+
+
+Mask to convert endianess (first Byte is on second place) 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00059}{59}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga46417772da85082538f1f8de615d8360}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga46417772da85082538f1f8de615d8360}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET@{SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET}}
+\index{SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET@{SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET}{SHORTPROTOCOL\_LENGTH\_LSB\_OFFSET}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+LENGTH\+\_\+\+LSB\+\_\+\+OFFSET~1}
+
+
+
+The Offset of the Least Significant Byte of the Length in the Shortprotocol. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00080}{80}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gafdf684ecf8382d782f36dae7c152bbe5}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gafdf684ecf8382d782f36dae7c152bbe5}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET@{SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET}}
+\index{SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET@{SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET}{SHORTPROTOCOL\_LENGTH\_MSB\_OFFSET}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+LENGTH\+\_\+\+MSB\+\_\+\+OFFSET~2}
+
+
+
+The Offset of the Most Significant Byte of the Length in the Shortprotocol. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00087}{87}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac5622b14139f3f9274c17d0483519601}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gac5622b14139f3f9274c17d0483519601}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH@{SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH}}
+\index{SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH@{SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH}{SHORTPROTOCOL\_MAXIMUM\_COMMAND\_LENGTH}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+MAXIMUM\+\_\+\+COMMAND\+\_\+\+LENGTH~100}
+
+
+
+Maximum Command length, thus maximum payload length. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00038}{38}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga4576edb2570e95144c04a4936228fbf4}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga4576edb2570e95144c04a4936228fbf4}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_OVERHEAD\_BYTES@{SHORTPROTOCOL\_OVERHEAD\_BYTES}}
+\index{SHORTPROTOCOL\_OVERHEAD\_BYTES@{SHORTPROTOCOL\_OVERHEAD\_BYTES}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_OVERHEAD\_BYTES}{SHORTPROTOCOL\_OVERHEAD\_BYTES}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+OVERHEAD\+\_\+\+BYTES~5}
+
+
+
+The Overhead of sending Data with the Shortprotocol. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00048}{48}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga132ff70ac3ecc9ff45c20faf83d87757}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga132ff70ac3ecc9ff45c20faf83d87757}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES@{SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES}}
+\index{SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES@{SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES}{SHORTPROTOCOL\_OVERHEAD\_WITHOUT\_CRC\_BYTES}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+OVERHEAD\+\_\+\+WITHOUT\+\_\+\+CRC\+\_\+\+BYTES~3}
+
+
+
+The Overhead of sending Data with the Shortprotocol, not counting the two CRC Bytes. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00054}{54}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gabededadae97c822c6c72a5945e3254f2}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gabededadae97c822c6c72a5945e3254f2}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_SECOND\_BYTE\_MASK@{SHORTPROTOCOL\_SECOND\_BYTE\_MASK}}
+\index{SHORTPROTOCOL\_SECOND\_BYTE\_MASK@{SHORTPROTOCOL\_SECOND\_BYTE\_MASK}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_SECOND\_BYTE\_MASK}{SHORTPROTOCOL\_SECOND\_BYTE\_MASK}}
+{\footnotesize\ttfamily \#define SHORTPROTOCOL\+\_\+\+SECOND\+\_\+\+BYTE\+\_\+\+MASK~0x\+FF00}
+
+
+
+Mask to convert endianess (second Byte in on first place) 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00064}{64}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_status@{SHORTPROTOCOL\_status}}
+\index{SHORTPROTOCOL\_status@{SHORTPROTOCOL\_status}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_status}{SHORTPROTOCOL\_status}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}}}
+
+
+
+Return Status used by both the Callback Functions of the \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l}{SHORTPROTOCOL}} and the Functions. 
+
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8h_source_l00110}{110}} of file \mbox{\hyperlink{shortprotocol_8h_source}{shortprotocol.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga3ec4cb2cffb8d3d1f13961db7855e061}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga3ec4cb2cffb8d3d1f13961db7855e061}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_Available@{SHORTPROTOCOL\_Available}}
+\index{SHORTPROTOCOL\_Available@{SHORTPROTOCOL\_Available}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_Available()}{SHORTPROTOCOL\_Available()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} SHORTPROTOCOL\+\_\+\+Available (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$}]{inst }\end{DoxyParamCaption})}
+
+
+
+Returns if a new Command can be sent using the Shortprotocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inst} & \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SHORTPROTOCOL\+\_\+\+AVAILABLE if a new Command can be written using the SHORTPROTOCOL\+\_\+\+Send Function, SHORTPROTOCOL\+\_\+\+NOT\+\_\+\+AVAILABLE if the last Command is not yet sent. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8c_source_l00104}{104}} of file \mbox{\hyperlink{shortprotocol_8c_source}{shortprotocol.\+c}}.
+
+
+
+References \mbox{\hyperlink{shortprotocol_8h_source_l00175}{SHORTPROTOCOL\+\_\+\+Instance\+::new\+Command}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4c229f96d354e4f78cb38996820e949}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_gaf4c229f96d354e4f78cb38996820e949}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_Initialize@{SHORTPROTOCOL\_Initialize}}
+\index{SHORTPROTOCOL\_Initialize@{SHORTPROTOCOL\_Initialize}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_Initialize()}{SHORTPROTOCOL\_Initialize()}}
+{\footnotesize\ttfamily void SHORTPROTOCOL\+\_\+\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$}]{inst }\end{DoxyParamCaption})}
+
+
+
+Initializes an Empty \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}}. Callback Functions still have to be added/defined and the maximum\+Package\+Length has to be set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inst} & \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8c_source_l00108}{108}} of file \mbox{\hyperlink{shortprotocol_8c_source}{shortprotocol.\+c}}.
+
+
+
+References \mbox{\hyperlink{shortprotocol_8h_source_l00175}{SHORTPROTOCOL\+\_\+\+Instance\+::new\+Command}}, and \mbox{\hyperlink{shortprotocol_8h_source_l00181}{SHORTPROTOCOL\+\_\+\+Instance\+::write\+Counter}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga335fde4cd4aec4b754c8b8f7243584a8}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga335fde4cd4aec4b754c8b8f7243584a8}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_Send@{SHORTPROTOCOL\_Send}}
+\index{SHORTPROTOCOL\_Send@{SHORTPROTOCOL\_Send}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_Send()}{SHORTPROTOCOL\_Send()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga25318a92fca49be72071e53a84ec3e5a}{SHORTPROTOCOL\+\_\+status}} SHORTPROTOCOL\+\_\+\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$}]{inst,  }\item[{uint8\+\_\+t $\ast$}]{data,  }\item[{uint32\+\_\+t}]{length }\end{DoxyParamCaption})}
+
+
+
+Function to try to send a new Command using the SHORTPROTOCOL. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inst} & \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} \\
+\hline
+{\em data} & The Data to be sent using the Shortprotocol \\
+\hline
+{\em length} & The Length of the Payload (Data) to be sent (without NULL termination)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+SHORTPROTOCOL\+\_\+\+NOT\+\_\+\+AVAILABLE when the last Command was not yet sent, SHORTPROTOCOL\+\_\+\+ERROR when the Command has a length of zero, SHORTPROTOCOL\+\_\+\+SUCCESS when the Command was successfully queued to be sent. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8c_source_l00017}{17}} of file \mbox{\hyperlink{shortprotocol_8c_source}{shortprotocol.\+c}}.
+
+
+
+References \mbox{\hyperlink{shortprotocol_8h_source_l00175}{SHORTPROTOCOL\+\_\+\+Instance\+::new\+Command}}.
+
+\mbox{\Hypertarget{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga004de19c9c8ad6a22da9fe7c978c758f}\label{group___s_h_o_r_t_p_r_o_t_o_c_o_l_ga004de19c9c8ad6a22da9fe7c978c758f}} 
+\index{SHORTPROTOCOL@{SHORTPROTOCOL}!SHORTPROTOCOL\_Update@{SHORTPROTOCOL\_Update}}
+\index{SHORTPROTOCOL\_Update@{SHORTPROTOCOL\_Update}!SHORTPROTOCOL@{SHORTPROTOCOL}}
+\doxysubsubsection{\texorpdfstring{SHORTPROTOCOL\_Update()}{SHORTPROTOCOL\_Update()}}
+{\footnotesize\ttfamily void SHORTPROTOCOL\+\_\+\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} $\ast$}]{inst }\end{DoxyParamCaption})}
+
+
+
+Function to be called repeadetly in the Main Loop to send Pieces of maximum\+Package\+Length of the Package generated by SHORTPROTOCOL\+\_\+\+Send. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inst} & \mbox{\hyperlink{struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance}{SHORTPROTOCOL\+\_\+\+Instance}} \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{shortprotocol_8c_source_l00078}{78}} of file \mbox{\hyperlink{shortprotocol_8c_source}{shortprotocol.\+c}}.
+
+
+
+References \mbox{\hyperlink{shortprotocol_8h_source_l00175}{SHORTPROTOCOL\+\_\+\+Instance\+::new\+Command}}.
+

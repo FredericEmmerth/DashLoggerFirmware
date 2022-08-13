@@ -2,99 +2,278 @@
 \label{signals_8h_source}\index{signals.h@{signals.h}}
 \mbox{\hyperlink{signals_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{1 }
-\DoxyCodeLine{30 \textcolor{preprocessor}{\#ifndef SIGNALS\_H}}
-\DoxyCodeLine{31 \textcolor{preprocessor}{\#define SIGNALS\_H}}
-\DoxyCodeLine{32 }
-\DoxyCodeLine{33 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
-\DoxyCodeLine{34 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
-\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{36     }
-\DoxyCodeLine{37 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
-\DoxyCodeLine{38 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cancomm_8h}{cancomm.h}}"{}}}
-\DoxyCodeLine{39     }
-\DoxyCodeLine{43 \textcolor{preprocessor}{\#define SIGNALS\_MAXIMUM\_NAME\_LENGTH     30}}
-\DoxyCodeLine{44     }
-\DoxyCodeLine{48 \textcolor{preprocessor}{\#define SIGNALS\_STRING\_MAXIMUM\_LENGTH   50}}
-\DoxyCodeLine{49    }
-\DoxyCodeLine{53 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
-\DoxyCodeLine{57     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b}{SIGNALS\_FOUND}} = 0,}
-\DoxyCodeLine{58             }
-\DoxyCodeLine{62     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28}{SIGNALS\_NOT\_FOUND}},}
-\DoxyCodeLine{63             }
-\DoxyCodeLine{67     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb}{SIGNALS\_MATCH}},}
-\DoxyCodeLine{68             }
-\DoxyCodeLine{72     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29}{SIGNALS\_NO\_MATCH}}}
-\DoxyCodeLine{73 \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}};}
-\DoxyCodeLine{74 }
-\DoxyCodeLine{75 }
-\DoxyCodeLine{79 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
-\DoxyCodeLine{80     SIGNALS\_FLOAT\_SIGNAL = 0,}
-\DoxyCodeLine{81     SIGNALS\_UINT32\_T\_SIGNAL,}
-\DoxyCodeLine{82     SIGNALS\_STRING\_SIGNAL}
-\DoxyCodeLine{83 \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\_data\_type}};}
-\DoxyCodeLine{84 }
-\DoxyCodeLine{88 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
-\DoxyCodeLine{89     SIGNALS\_CAN\_MESSAGE = 0,}
-\DoxyCodeLine{90     SIGNALS\_INTERNAL\_SIGNAL,}
-\DoxyCodeLine{91     SIGNALS\_DISPLAY\_SIGNAL}
-\DoxyCodeLine{92 \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\_signal\_type}};}
-\DoxyCodeLine{93 }
-\DoxyCodeLine{97 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
-\DoxyCodeLine{98     uint32\_t length;}
-\DoxyCodeLine{99     uint8\_t data[\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}{SIGNALS\_STRING\_MAXIMUM\_LENGTH}}];}
-\DoxyCodeLine{100 \}\mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}};}
-\DoxyCodeLine{101 }
-\DoxyCodeLine{107 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal\_struct}} \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}};}
-\DoxyCodeLine{108      }
-\DoxyCodeLine{135 \textcolor{keyword}{struct }\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal\_struct}}\{}
-\DoxyCodeLine{136     uint32\_t id;}
-\DoxyCodeLine{137     uint8\_t interface\_number;}
-\DoxyCodeLine{138     \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\_data\_type}} data\_type;}
-\DoxyCodeLine{139     }
-\DoxyCodeLine{140     float(*can\_convert\_float)(uint8\_t* data);}
-\DoxyCodeLine{141     float(*internal\_convert\_float)(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
-\DoxyCodeLine{142             uint32\_t signal\_list\_len);}
-\DoxyCodeLine{143     \textcolor{keywordtype}{float} value\_float;}
-\DoxyCodeLine{144     }
-\DoxyCodeLine{145     uint32\_t(*can\_convert\_uint32\_t)(uint8\_t* data);}
-\DoxyCodeLine{146     uint32\_t(*internal\_convert\_uint32\_t)(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
-\DoxyCodeLine{147             uint32\_t signal\_list\_len);}
-\DoxyCodeLine{148     uint32\_t value\_uint32\_t;}
-\DoxyCodeLine{149     }
-\DoxyCodeLine{150     void (*can\_convert\_string)(uint8\_t* data, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}}* string);}
-\DoxyCodeLine{151     void (*internal\_convert\_string)(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
-\DoxyCodeLine{152             uint32\_t signal\_list\_len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}}* string);}
-\DoxyCodeLine{153     \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}} value\_string;}
-\DoxyCodeLine{154     }
-\DoxyCodeLine{155     uint8\_t friendly\_name[\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}{SIGNALS\_MAXIMUM\_NAME\_LENGTH}}];}
-\DoxyCodeLine{156     uint32\_t timestamp;}
-\DoxyCodeLine{157     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\_signal\_type}} type;}
-\DoxyCodeLine{158     }
-\DoxyCodeLine{159     uint32\_t object\_id;}
-\DoxyCodeLine{160 \};}
-\DoxyCodeLine{161 }
-\DoxyCodeLine{162 \textcolor{keywordtype}{void} SIGNALS\_Interpret(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
-\DoxyCodeLine{163         \mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list, uint32\_t message\_list\_len);}
-\DoxyCodeLine{164 }
-\DoxyCodeLine{165 \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} signals\_find\_data(uint32\_t \textcolor{keywordtype}{id}, uint8\_t interface,}
-\DoxyCodeLine{166         \mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list, uint32\_t message\_list\_len,}
-\DoxyCodeLine{167         uint8\_t* data);}
-\DoxyCodeLine{168 }
-\DoxyCodeLine{169 \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signals\_find\_signal( \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
-\DoxyCodeLine{170         uint32\_t signal\_list\_len, \textcolor{keywordtype}{void}(*Callback)(\textcolor{keywordtype}{void}));}
-\DoxyCodeLine{171 }
-\DoxyCodeLine{172 \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} signals\_compare\_names(uint8\_t* first, uint32\_t firstlen,}
-\DoxyCodeLine{173         uint8\_t* second, uint32\_t secondlen);}
-\DoxyCodeLine{174 }
-\DoxyCodeLine{175 \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signals\_find\_display\_signal(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
-\DoxyCodeLine{176         uint32\_t signal\_list\_len, uint32\_t* dispSignalCount, uint32\_t needle);}
-\DoxyCodeLine{177 }
-\DoxyCodeLine{178 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
-\DoxyCodeLine{179 \}}
-\DoxyCodeLine{180 \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{181 }
-\DoxyCodeLine{182 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* SIGNALS\_H */}\textcolor{preprocessor}{}}
-\DoxyCodeLine{183 }
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00001}00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00002}00002 \textcolor{comment}{ * @file signals.h}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00003}00003 \textcolor{comment}{ * @brief This File defines the Prototypes for \(\backslash\)ref SIGNALS}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00004}00004 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00005}00005 \textcolor{comment}{ * @author Frederic Emmerth}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00006}00006 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00007}00007 \textcolor{comment}{ * \(\backslash\)ingroup SIGNALS}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00008}00008 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00009}00009 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00010}00010 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00011}00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00012}00012 \textcolor{comment}{ * \(\backslash\)defgroup SIGNALS SIGNALS}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00013}00013 \textcolor{comment}{ * This Module Handles the Information Interpretation Handling of All Inputs}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00014}00014 \textcolor{comment}{ * to Outputs. Signals have a Type, wich changes how it is interpreted and used.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00015}00015 \textcolor{comment}{ * For more on this, refer to \(\backslash\)ref signals\_data\_type and}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00016}00016 \textcolor{comment}{ * \(\backslash\)ref signals\_signal\_type. Signals can be chained together. For Example, four }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00017}00017 \textcolor{comment}{ * Signals of Type SIGNALS\_CAN\_MESSAGE could recieve four Temperatures, wich}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00018}00018 \textcolor{comment}{ * would then be interpreted to float Values using thier respective Callback}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00019}00019 \textcolor{comment}{ * Functions. Another Signal of Type SIGNALS\_INTERNAL\_SIGNAL could then find the}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00020}00020 \textcolor{comment}{ * highest of these Temperatures using its Callback Function. To complete the}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00021}00021 \textcolor{comment}{ * Chain, a Signal of Type SIGNALS\_DISPLAY\_SIGNAL can be used to convert the }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00022}00022 \textcolor{comment}{ * float value of the previous Maximising Function to a String Command wich can}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00023}00023 \textcolor{comment}{ * be interpreted by a Display.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00024}00024 \textcolor{comment}{ * \(\backslash\)addtogroup SIGNALS}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00025}00025 \textcolor{comment}{ * \(\backslash\)\{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00026}00026 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00028}00028 \textcolor{preprocessor}{\#ifndef SIGNALS\_H}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00029}00029 \textcolor{preprocessor}{\#define SIGNALS\_H}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00031}00031 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00032}00032 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00033}00033 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00034}00034     }
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00035}00035 \textcolor{preprocessor}{\#include "{}definitions.h"{}}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00036}00036 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cancomm_8h}{cancomm.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00037}00037     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00038}00038 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00039}00039 \textcolor{comment}{ * @brief The maximum friendly name length for a signal}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00040}00040 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00041}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}{00041}} \textcolor{preprocessor}{\#define SIGNALS\_MAXIMUM\_NAME\_LENGTH     30}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00042}00042     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00043}00043 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00044}00044 \textcolor{comment}{ * @brief The maximum length of the string value of a signal}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00045}00045 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00046}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}{00046}} \textcolor{preprocessor}{\#define SIGNALS\_STRING\_MAXIMUM\_LENGTH   50}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00047}00047    \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00048}00048 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00049}00049 \textcolor{comment}{ * @brief Definition of the Return Values of some Functions of this Module}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00050}00050 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00051}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{00051}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00052}00052 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00053}00053 \textcolor{comment}{     * Returned if a Signal is found}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00054}00054 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00055}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b}{00055}}     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a17332a7c46481806eb72a731d8dca66b}{SIGNALS\_FOUND}} = 0,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00056}00056             \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00057}00057 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00058}00058 \textcolor{comment}{     * Returned if no Signal is found}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00059}00059 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00060}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28}{00060}}     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ae71cc9b219ba6ea0e41fd76d06482f28}{SIGNALS\_NOT\_FOUND}},}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00061}00061             \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00062}00062 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00063}00063 \textcolor{comment}{     * Returned if the Inputs match}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00064}00064 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00065}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb}{00065}}     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8a8de1afddaefc5d66db3791a1166478eb}{SIGNALS\_MATCH}},}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00066}00066             \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00067}00067 \textcolor{comment}{    /**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00068}00068 \textcolor{comment}{     * Returned if the Inputs dont match}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00069}00069 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00070}00070     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29}{SIGNALS\_NO\_MATCH}}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00071}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gga433e7bf0aaee9070db3f46ae2521bab8ac036b6f8be31caf22cd231ea9e045e29}{00071}} \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00073}00073 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00074}00074 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00075}00075 \textcolor{comment}{ * @brief The Data type of a Signal}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00076}00076 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00077}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{00077}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00078}00078     SIGNALS\_FLOAT\_SIGNAL = 0,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00079}00079     SIGNALS\_UINT32\_T\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00080}00080     SIGNALS\_STRING\_SIGNAL}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00081}00081 \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\_data\_type}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00082}00082 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00083}00083 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00084}00084 \textcolor{comment}{ * @brief The Signal type of a Signal}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00085}00085 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00086}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{00086}} \textcolor{keyword}{typedef} \textcolor{keyword}{enum}\{}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00087}00087     SIGNALS\_CAN\_MESSAGE = 0,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00088}00088     SIGNALS\_INTERNAL\_SIGNAL,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00089}00089     SIGNALS\_DISPLAY\_SIGNAL}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00090}00090 \}\mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\_signal\_type}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00091}00091 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00092}00092 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00093}00093 \textcolor{comment}{ * \(\backslash\)brief A struct to combine a String with it's length}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00094}00094 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00095}\mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{00095}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00096}00096     uint32\_t length;}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00097}00097     uint8\_t data[\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga187ad7aa9a4136a07b326b83ee9503e5}{SIGNALS\_STRING\_MAXIMUM\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00098}00098 \}\mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00099}00099 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00100}00100 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00101}00101 \textcolor{comment}{ * Type Definition of signals\_signal\_struct to be able to use}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00102}00102 \textcolor{comment}{ * signals\_signal in the definition of signals\_signal, as signal structs have}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00103}00103 \textcolor{comment}{ * to store pointers to other signals\_signal structs.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00104}00104 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00105}\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga3a65aa7fe94f6bafd6d8a913b86999b3}{00105}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal\_struct}} \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00106}00106      \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00107}00107 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00108}00108 \textcolor{comment}{ * \(\backslash\)struct signals\_signal\_struct}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00109}00109 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00110}00110 \textcolor{comment}{ * This Struct defines a Signal. Every Signal should have a friendly Name, to be}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00111}00111 \textcolor{comment}{ * easily identified by a human. Every Signal has to have a}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00112}00112 \textcolor{comment}{ * \(\backslash\)ref signals\_signal.type and a \(\backslash\)ref signals\_signal.data\_type. Depending on}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00113}00113 \textcolor{comment}{ * the \(\backslash\)ref signals\_signal.type and \(\backslash\)ref signals\_signal.data\_type other}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00114}00114 \textcolor{comment}{ * members of the struct have to be defined. If a signal is of type}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00115}00115 \textcolor{comment}{ * SIGNALS\_CAN\_MESSAGE, the id and the interface\_number have to be defined.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00116}00116 \textcolor{comment}{ * The Signal can be either of data\_type SIGNALS\_FLOAT\_SIGNAL, }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00117}00117 \textcolor{comment}{ * SIGNALS\_UINT32\_T\_SIGNAL or SIGNALS\_STRING\_SIGNAL. The corresponding callback}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00118}00118 \textcolor{comment}{ * function can\_convert\_float, can\_convert\_uint32\_t or can\_convert\_string has}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00119}00119 \textcolor{comment}{ * to be defined.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00120}00120 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00121}00121 \textcolor{comment}{ * If a signal is of type SIGNALS\_INTERNAL\_SIGNAL, it can be of data\_type }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00122}00122 \textcolor{comment}{ * SIGNALS\_FLOAT\_SIGNAL, SIGNALS\_UINT32\_T\_SIGNAL or SIGNALS\_STRING\_SIGNAL. The}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00123}00123 \textcolor{comment}{ * corresponding callback function internal\_convert\_float,}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00124}00124 \textcolor{comment}{ * internal\_convert\_uint32\_t or internal\_convert\_string has to be defined.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00125}00125 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00126}00126 \textcolor{comment}{ * If a signal is of type SIGNALS\_DISPLAY\_SIGNAL, it's data\_type has to be }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00127}00127 \textcolor{comment}{ * SIGNALS\_STRING\_SIGNAL, and its callback function internal\_convert\_string}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00128}00128 \textcolor{comment}{ * has to be defined in a way to produce correct Commands for the Display to }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00129}00129 \textcolor{comment}{ * be interpreted. Signals of this Type are read by \(\backslash\)ref COMMAND to be sent of}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00130}00130 \textcolor{comment}{ * to the Display using the \(\backslash\)ref SHORTPROTOCOL.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00131}00131 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00132}00132 \textcolor{comment}{ * A Signal is therefore defined by its type and data\_type.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00133}00133 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00134}00134 \textcolor{comment}{ * @todo Combine the Different Signal Types to a Union to use less RAM}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00135}00135 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00136}00136 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00137}\mbox{\hyperlink{structsignals__signal__struct}{00137}} \textcolor{keyword}{struct }\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal\_struct}}\{\textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00138}00138 \textcolor{comment}{    /** The ID of the CAN Message */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00139}\mbox{\hyperlink{structsignals__signal__struct_a6b91f99ce8a81496f49dc35d13dac0b0}{00139}}     uint32\_t \mbox{\hyperlink{structsignals__signal__struct_a6b91f99ce8a81496f49dc35d13dac0b0}{id}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00140}00140     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00141}00141 \textcolor{comment}{    /** The CAN Interface Number (unique Identifier for a CAN Interface)*/}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00142}\mbox{\hyperlink{structsignals__signal__struct_a59f86ac6195ba91ca4312e018bc4a119}{00142}}     uint8\_t \mbox{\hyperlink{structsignals__signal__struct_a59f86ac6195ba91ca4312e018bc4a119}{interface\_number}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00143}00143     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00144}00144 \textcolor{comment}{    /** Type of the Signal */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00145}\mbox{\hyperlink{structsignals__signal__struct_ad30a372a63b611762abe1c5e0c5fa6aa}{00145}}     \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaa8356b463bcf4f2de5fb8ab61004eb5a}{signals\_signal\_type}} \mbox{\hyperlink{structsignals__signal__struct_ad30a372a63b611762abe1c5e0c5fa6aa}{type}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00146}00146     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00147}00147 \textcolor{comment}{    /** Data Type of the Signal */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00148}\mbox{\hyperlink{structsignals__signal__struct_af68804a49ea40ef5000c9f76ab47d2d8}{00148}}     \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga19345763f88f56f70252c7a97d831351}{signals\_data\_type}} \mbox{\hyperlink{structsignals__signal__struct_af68804a49ea40ef5000c9f76ab47d2d8}{data\_type}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00149}00149     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00150}00150 \textcolor{comment}{    /** Callback Function for type=SIGNALS\_CAN\_MESSAGE and }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00151}00151 \textcolor{comment}{     * data\_type=SIGNALS\_FLOAT\_SIGNAL */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00152}\mbox{\hyperlink{structsignals__signal__struct_a3c6366a494b09023499ccc623a951c31}{00152}}     float(*\mbox{\hyperlink{structsignals__signal__struct_a3c6366a494b09023499ccc623a951c31}{can\_convert\_float}})(uint8\_t* data);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00153}00153     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00154}00154 \textcolor{comment}{    /** Callback Function for type=SIGNALS\_INTERNAL\_SIGNAL and }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00155}00155 \textcolor{comment}{     * data\_type=SIGNALS\_FLOAT\_SIGNAL */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00156}\mbox{\hyperlink{structsignals__signal__struct_a3db1c4962d72a52bc2da98d627d21311}{00156}}     float(*\mbox{\hyperlink{structsignals__signal__struct_a3db1c4962d72a52bc2da98d627d21311}{internal\_convert\_float}})(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00157}00157             uint32\_t signal\_list\_len);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00158}00158     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00159}00159 \textcolor{comment}{    /** The Float Value of this Signal, only used when }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00160}00160 \textcolor{comment}{     * data\_type=SIGNALS\_FLOAT\_SIGNAL*/}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00161}\mbox{\hyperlink{structsignals__signal__struct_ab935d973b3a1f1030fdb5a835e143248}{00161}}     \textcolor{keywordtype}{float} \mbox{\hyperlink{structsignals__signal__struct_ab935d973b3a1f1030fdb5a835e143248}{value\_float}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00162}00162     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00163}00163 \textcolor{comment}{    /** Callback Function for type=SIGNALS\_CAN\_MESSAGE and }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00164}00164 \textcolor{comment}{     * data\_type=SIGNALS\_UINT32\_T\_SIGNAL*/}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00165}\mbox{\hyperlink{structsignals__signal__struct_abfc621b9dbe9de03f794e479039e1dcb}{00165}}     uint32\_t(*\mbox{\hyperlink{structsignals__signal__struct_abfc621b9dbe9de03f794e479039e1dcb}{can\_convert\_uint32\_t}})(uint8\_t* data);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00166}00166     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00167}00167 \textcolor{comment}{    /** Callback Function for type=SIGNALS\_INTERNAL\_SIGNAL and }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00168}00168 \textcolor{comment}{     * data\_type=SIGNALS\_UINT32\_T\_SIGNAL*/}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00169}\mbox{\hyperlink{structsignals__signal__struct_af9f969177c03c39b8622e0ca011e281d}{00169}}     uint32\_t(*\mbox{\hyperlink{structsignals__signal__struct_af9f969177c03c39b8622e0ca011e281d}{internal\_convert\_uint32\_t}})(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00170}00170             uint32\_t signal\_list\_len);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00171}00171     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00172}00172 \textcolor{comment}{    /** The uint32\_t Value of this Signal, only used when }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00173}00173 \textcolor{comment}{     * data\_type=SIGNALS\_UINT32\_T\_SIGNAL*/}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00174}\mbox{\hyperlink{structsignals__signal__struct_a22f897328a12b8e442b3d7c99f85cc55}{00174}}     uint32\_t \mbox{\hyperlink{structsignals__signal__struct_a22f897328a12b8e442b3d7c99f85cc55}{value\_uint32\_t}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00175}00175     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00176}00176 \textcolor{comment}{    /** Callback Function for type=SIGNALS\_CAN\_MESSAGE and }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00177}00177 \textcolor{comment}{     * data\_type=SIGNALS\_STRING\_SIGNAL*/}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00178}\mbox{\hyperlink{structsignals__signal__struct_ac995cb11901ea482a506e81f9ba5b498}{00178}}     void (*\mbox{\hyperlink{structsignals__signal__struct_ac995cb11901ea482a506e81f9ba5b498}{can\_convert\_string}})(uint8\_t* data, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}}* string);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00179}00179     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00180}00180 \textcolor{comment}{    /** Callback Function for type=SIGNALS\_INTERNAL\_SIGNAL or }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00181}00181 \textcolor{comment}{     * type=SIGNALS\_DISPLAY\_SIGNAL. and data\_type SIGNALS\_STRING\_SIGNAL*/}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00182}\mbox{\hyperlink{structsignals__signal__struct_a3151a985d6d2de155e36f185a96ce960}{00182}}     void (*\mbox{\hyperlink{structsignals__signal__struct_a3151a985d6d2de155e36f185a96ce960}{internal\_convert\_string}})(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00183}00183             uint32\_t signal\_list\_len, \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}}* string);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00184}00184     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00185}00185 \textcolor{comment}{    /** The String Value of this Signal, only used when }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00186}00186 \textcolor{comment}{     * data\_type=SIGNALS\_STRING\_SIGNAL*/}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00187}\mbox{\hyperlink{structsignals__signal__struct_a88b1a26aa092b39c64026d2ad0e87eae}{00187}}     \mbox{\hyperlink{struct_s_i_g_n_a_l_s__string}{SIGNALS\_string}} \mbox{\hyperlink{structsignals__signal__struct_a88b1a26aa092b39c64026d2ad0e87eae}{value\_string}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00188}00188     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00189}00189 \textcolor{comment}{    /** A friendly Name of the Signal, only used for Debugging */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00190}\mbox{\hyperlink{structsignals__signal__struct_a733c9f5e557ba368fba6bdc0dea51974}{00190}}     uint8\_t \mbox{\hyperlink{structsignals__signal__struct_a733c9f5e557ba368fba6bdc0dea51974}{friendly\_name}}[\mbox{\hyperlink{group___s_i_g_n_a_l_s_ga9fc067d416cfbe44c226acdfb69772a2}{SIGNALS\_MAXIMUM\_NAME\_LENGTH}}];}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00191}00191     \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00192}00192 \textcolor{comment}{    /** The Timestamp of the Signal */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00193}\mbox{\hyperlink{structsignals__signal__struct_a400c4500b5329e3d6bf5baa605f2abac}{00193}}     uint32\_t \mbox{\hyperlink{structsignals__signal__struct_a400c4500b5329e3d6bf5baa605f2abac}{timestamp}};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00194}00194 \};}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00195}00195 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00196}00196 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00197}00197 \textcolor{comment}{ * This Function takes a signal\_list and a message\_list and interprets each}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00198}00198 \textcolor{comment}{ * Signal either from other Signals or from a CAN message. The Callback }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00199}00199 \textcolor{comment}{ * Functions defined in each Signal are called here.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00200}00200 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00201}00201 \textcolor{comment}{ * @param signal\_list A List of \(\backslash\)ref signals\_signal Structs}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00202}00202 \textcolor{comment}{ * @param signal\_list\_len The Length of \(\backslash\)p signal\_list}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00203}00203 \textcolor{comment}{ * @param message\_list A List of \(\backslash\)ref cancomm\_message Structs}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00204}00204 \textcolor{comment}{ * @param message\_list\_len The Length of \(\backslash\)p signal\_list}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00205}00205 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00206}00206 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga1582449885505ae9242711dd5a89edae}{SIGNALS\_Interpret}}(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list, uint32\_t signal\_list\_len,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00207}00207         \mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list, uint32\_t message\_list\_len);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00208}00208 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00209}00209 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00210}00210 \textcolor{comment}{ * This function finds the data from a CAN Message and writes it to the Buffer }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00211}00211 \textcolor{comment}{ * \(\backslash\)p data}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00212}00212 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00213}00213 \textcolor{comment}{ * @param id The CAN Message ID}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00214}00214 \textcolor{comment}{ * @param interface The CAN Interface (wich uniquely identifies a CAN Interface)}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00215}00215 \textcolor{comment}{ * @param message\_list List of \(\backslash\)ref cancomm\_message Structs with the data in it}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00216}00216 \textcolor{comment}{ * @param message\_list\_len The Length of \(\backslash\)p message\_list}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00217}00217 \textcolor{comment}{ * @param data The Buffer the Data of the requested Message gets written to}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00218}00218 \textcolor{comment}{ * @return A \(\backslash\)ref signals\_result. Returns SIGNALS\_FOUND if the Data of the}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00219}00219 \textcolor{comment}{ * Message was found, and SIGNALS\_NOT\_FOUND if the Message is not in the List.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00220}00220 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00221}00221 \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_gae14757bb5eca3e8333b9437648ec8713}{signals\_find\_data}}(uint32\_t \textcolor{keywordtype}{id}, uint8\_t interface,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00222}00222         \mbox{\hyperlink{structcancomm__message}{cancomm\_message}}* message\_list, uint32\_t message\_list\_len,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00223}00223         uint8\_t* data);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00224}00224 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00225}00225 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00226}00226 \textcolor{comment}{ * This function finds a singnal from signal\_list by its Callback. This is }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00227}00227 \textcolor{comment}{ * needed for the Conversion Functions of Internal Signals, as they need to }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00228}00228 \textcolor{comment}{ * read other Signal Values in thier Conversion Function.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00229}00229 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00230}00230 \textcolor{comment}{ * @param signal\_list List of \(\backslash\)ref signals\_signal to be searched in}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00231}00231 \textcolor{comment}{ * @param signal\_list\_len The Length of \(\backslash\)p signal\_list}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00232}00232 \textcolor{comment}{ * @param Callback The Callback Function of the searched signal}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00233}00233 \textcolor{comment}{ * @return Pointer to the Signal if it is found, else NULL is returned}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00234}00234 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00235}00235 \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* \mbox{\hyperlink{group___s_i_g_n_a_l_s_gaf87949102aad309c3f6402b3f73a12ce}{signals\_find\_signal}}( \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00236}00236         uint32\_t signal\_list\_len, \textcolor{keywordtype}{void}(*Callback)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00237}00237 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00238}00238 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00239}00239 \textcolor{comment}{ * Function to compare two Signals Names.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00240}00240 \textcolor{comment}{ * @param first First Name}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00241}00241 \textcolor{comment}{ * @param firstlen Length of \(\backslash\)p first}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00242}00242 \textcolor{comment}{ * @param second Second Name}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00243}00243 \textcolor{comment}{ * @param secondlen Length of \(\backslash\)p second}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00244}00244 \textcolor{comment}{ * @return SIGNALS\_MATCH if the Names match, and SIGNALS\_NO\_MATCH if they dont}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00245}00245 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00246}00246 \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga433e7bf0aaee9070db3f46ae2521bab8}{signals\_result}} \mbox{\hyperlink{group___s_i_g_n_a_l_s_gab651d13c2faa1f7351a8fcb0224b0b50}{signals\_compare\_names}}(uint8\_t* first, uint32\_t firstlen,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00247}00247         uint8\_t* second, uint32\_t secondlen);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00248}00248 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00249}00249 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00250}00250 \textcolor{comment}{ * Function to return the first, second, third ... display Signal. If needle is}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00251}00251 \textcolor{comment}{ * for example five, the fifth display Signal is returned. Also, the total Count}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00252}00252 \textcolor{comment}{ * of Display Signals is written to \(\backslash\)p dispSignalCount.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00253}00253 \textcolor{comment}{ * }}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00254}00254 \textcolor{comment}{ * @param signal\_list The signal\_list to be searched in.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00255}00255 \textcolor{comment}{ * @param signal\_list\_len The Length of \(\backslash\)p signal\_list}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00256}00256 \textcolor{comment}{ * @param dispSignalCount The total Count of Display Signals in \(\backslash\)p signal\_list}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00257}00257 \textcolor{comment}{ * is written to this Pointer.}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00258}00258 \textcolor{comment}{ * @param needle The Display Signal to return}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00259}00259 \textcolor{comment}{ * @return Pointer to the display Signal in place of \(\backslash\)p needle}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00260}00260 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00261}00261 \mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* \mbox{\hyperlink{group___s_i_g_n_a_l_s_ga5ff248cd6f705af5befc5a6f86d39365}{signals\_find\_display\_signal}}(\mbox{\hyperlink{structsignals__signal__struct}{signals\_signal}}* signal\_list,}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00262}00262         uint32\_t signal\_list\_len, uint32\_t* dispSignalCount, uint32\_t needle);}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00263}00263 }
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00264}00264 \textcolor{preprocessor}{\#ifdef  \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00265}00265 \}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00266}00266 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00267}00267 }
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00268}00268 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* SIGNALS\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00269}00269 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00270}00270 \textcolor{comment}{/**}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00271}00271 \textcolor{comment}{ * \(\backslash\)\}}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00272}00272 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{signals_8h_source_l00273}00273 }
 
 \end{DoxyCode}

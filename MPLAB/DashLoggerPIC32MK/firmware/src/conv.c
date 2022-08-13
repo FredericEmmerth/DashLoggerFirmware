@@ -1,3 +1,16 @@
+/**
+ * @file conv.c
+ * @brief This File implements the Prototypes for \ref CONV
+ * 
+ * @author Frederic Emmerth
+ * 
+ * \ingroup CONV
+ * \addtogroup CONV
+ * \{
+ * 
+ */
+
+
 #include "conv.h"
 
 /*############################################################################*/
@@ -309,3 +322,7 @@ float CONV_max(float* vals, uint32_t valcount){
     }
     return maximum;
 }
+
+/**
+ * \}
+ */

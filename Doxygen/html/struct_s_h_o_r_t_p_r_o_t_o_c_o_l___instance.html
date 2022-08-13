@@ -84,37 +84,192 @@ $(document).ready(function(){initNavTree('struct_s_h_o_r_t_p_r_o_t_o_c_o_l___ins
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
-  <div class="headertitle"><div class="title">SHORTPROTOCOL_Instance Struct Reference</div></div>
+  <div class="headertitle"><div class="title">SHORTPROTOCOL_Instance Struct Reference<div class="ingroups"><a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html">SHORTPROTOCOL</a></div></div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Configuration Struct for <a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html">SHORTPROTOCOL</a> passed to the <a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html">SHORTPROTOCOL</a> Functions.  
+ <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:aeb3a21d8a39f1b46905e4e683dedfe34"><td class="memItemLeft" align="right" valign="top"><a id="aeb3a21d8a39f1b46905e4e683dedfe34" name="aeb3a21d8a39f1b46905e4e683dedfe34"></a>
-uint8_t(*&#160;</td><td class="memItemRight" valign="bottom"><b>readByte</b> )(void)</td></tr>
+<tr class="memitem:aeb3a21d8a39f1b46905e4e683dedfe34"><td class="memItemLeft" align="right" valign="top">uint8_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#aeb3a21d8a39f1b46905e4e683dedfe34">readByte</a> )(void)</td></tr>
+<tr class="memdesc:aeb3a21d8a39f1b46905e4e683dedfe34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to read one Byte from the Serial Interface.  <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#aeb3a21d8a39f1b46905e4e683dedfe34">More...</a><br /></td></tr>
 <tr class="separator:aeb3a21d8a39f1b46905e4e683dedfe34"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d6eb84ff339495806a39cc27e354966"><td class="memItemLeft" align="right" valign="top"><a id="a2d6eb84ff339495806a39cc27e354966" name="a2d6eb84ff339495806a39cc27e354966"></a>
-SHORTPROTOCOL_status(*&#160;</td><td class="memItemRight" valign="bottom"><b>readAvailable</b> )(void)</td></tr>
+<tr class="memitem:a2d6eb84ff339495806a39cc27e354966"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html#ga25318a92fca49be72071e53a84ec3e5a">SHORTPROTOCOL_status</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a2d6eb84ff339495806a39cc27e354966">readAvailable</a> )(void)</td></tr>
+<tr class="memdesc:a2d6eb84ff339495806a39cc27e354966"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to check if a Byte is available to be read. If this returns SHORTPROTOCOL_AVAILABLE at least one Byte has to be readable from readByte.  <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a2d6eb84ff339495806a39cc27e354966">More...</a><br /></td></tr>
 <tr class="separator:a2d6eb84ff339495806a39cc27e354966"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9b7411d43d04e6822022f5c2793dee2"><td class="memItemLeft" align="right" valign="top"><a id="ae9b7411d43d04e6822022f5c2793dee2" name="ae9b7411d43d04e6822022f5c2793dee2"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>writeByte</b> )(uint8_t)</td></tr>
+<tr class="memitem:ae9b7411d43d04e6822022f5c2793dee2"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#ae9b7411d43d04e6822022f5c2793dee2">writeByte</a> )(uint8_t)</td></tr>
+<tr class="memdesc:ae9b7411d43d04e6822022f5c2793dee2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to write one Byte to the Serial Interface.  <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#ae9b7411d43d04e6822022f5c2793dee2">More...</a><br /></td></tr>
 <tr class="separator:ae9b7411d43d04e6822022f5c2793dee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81a9a7a0455383670a7308fcb188ff93"><td class="memItemLeft" align="right" valign="top"><a id="a81a9a7a0455383670a7308fcb188ff93" name="a81a9a7a0455383670a7308fcb188ff93"></a>
-SHORTPROTOCOL_status(*&#160;</td><td class="memItemRight" valign="bottom"><b>writeAvailable</b> )(void)</td></tr>
+<tr class="memitem:a81a9a7a0455383670a7308fcb188ff93"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html#ga25318a92fca49be72071e53a84ec3e5a">SHORTPROTOCOL_status</a>(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a81a9a7a0455383670a7308fcb188ff93">writeAvailable</a> )(void)</td></tr>
+<tr class="memdesc:a81a9a7a0455383670a7308fcb188ff93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callbakc to check if a Byte is writeable to the Serial Interface If this returns SHORTPROTOCOL_AVAILABLE at leat one Byte has to be writeable to write Byte.  <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a81a9a7a0455383670a7308fcb188ff93">More...</a><br /></td></tr>
 <tr class="separator:a81a9a7a0455383670a7308fcb188ff93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38a5e509c9750876370dbfd98ea63680"><td class="memItemLeft" align="right" valign="top"><a id="a38a5e509c9750876370dbfd98ea63680" name="a38a5e509c9750876370dbfd98ea63680"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>maximumPackageLength</b></td></tr>
+<tr class="memitem:a38a5e509c9750876370dbfd98ea63680"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a38a5e509c9750876370dbfd98ea63680">maximumPackageLength</a></td></tr>
+<tr class="memdesc:a38a5e509c9750876370dbfd98ea63680"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum Package Length Packets longer than this will be split into Packets with the maximum Size of maximumPackageLength.  <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a38a5e509c9750876370dbfd98ea63680">More...</a><br /></td></tr>
 <tr class="separator:a38a5e509c9750876370dbfd98ea63680"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2744f6303ce44b5736dee19d3c90055b"><td class="memItemLeft" align="right" valign="top"><a id="a2744f6303ce44b5736dee19d3c90055b" name="a2744f6303ce44b5736dee19d3c90055b"></a>
-<a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string.html">SHORTPROTOCOL_string</a>&#160;</td><td class="memItemRight" valign="bottom"><b>command_buffer</b></td></tr>
+<tr class="memitem:a2744f6303ce44b5736dee19d3c90055b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string.html">SHORTPROTOCOL_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a2744f6303ce44b5736dee19d3c90055b">command_buffer</a></td></tr>
+<tr class="memdesc:a2744f6303ce44b5736dee19d3c90055b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A Buffer where the Command wich is currently sent resides.  <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a2744f6303ce44b5736dee19d3c90055b">More...</a><br /></td></tr>
 <tr class="separator:a2744f6303ce44b5736dee19d3c90055b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e01ed7a25558ada72a109b017386c69"><td class="memItemLeft" align="right" valign="top"><a id="a1e01ed7a25558ada72a109b017386c69" name="a1e01ed7a25558ada72a109b017386c69"></a>
-SHORTPROTOCOL_status&#160;</td><td class="memItemRight" valign="bottom"><b>newCommand</b></td></tr>
+<tr class="memitem:a1e01ed7a25558ada72a109b017386c69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html#ga25318a92fca49be72071e53a84ec3e5a">SHORTPROTOCOL_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a1e01ed7a25558ada72a109b017386c69">newCommand</a></td></tr>
+<tr class="memdesc:a1e01ed7a25558ada72a109b017386c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status of the SHORTPROTOCOL Instance itself.  <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a1e01ed7a25558ada72a109b017386c69">More...</a><br /></td></tr>
 <tr class="separator:a1e01ed7a25558ada72a109b017386c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a778e7c2ae9a4bb9ca26bddb002749c5b"><td class="memItemLeft" align="right" valign="top"><a id="a778e7c2ae9a4bb9ca26bddb002749c5b" name="a778e7c2ae9a4bb9ca26bddb002749c5b"></a>
-uint32_t&#160;</td><td class="memItemRight" valign="bottom"><b>writeCounter</b></td></tr>
+<tr class="memitem:a778e7c2ae9a4bb9ca26bddb002749c5b"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a778e7c2ae9a4bb9ca26bddb002749c5b">writeCounter</a></td></tr>
+<tr class="memdesc:a778e7c2ae9a4bb9ca26bddb002749c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter to keep track of what Parts of a Package were already sent when it is split to maximumPackageLength.  <a href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l___instance.html#a778e7c2ae9a4bb9ca26bddb002749c5b">More...</a><br /></td></tr>
 <tr class="separator:a778e7c2ae9a4bb9ca26bddb002749c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Configuration Struct for <a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html">SHORTPROTOCOL</a> passed to the <a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html">SHORTPROTOCOL</a> Functions. </p>
+<p >The Callback functions have to all be defined as described in thier Documentaion, also a maximumPackageLength has to be defined. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00134">134</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+</div><h2 class="groupheader">Field Documentation</h2>
+<a id="a2744f6303ce44b5736dee19d3c90055b" name="a2744f6303ce44b5736dee19d3c90055b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2744f6303ce44b5736dee19d3c90055b">&#9670;&nbsp;</a></span>command_buffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_s_h_o_r_t_p_r_o_t_o_c_o_l__string.html">SHORTPROTOCOL_string</a> SHORTPROTOCOL_Instance::command_buffer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A Buffer where the Command wich is currently sent resides. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00169">169</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+
+</div>
+</div>
+<a id="a38a5e509c9750876370dbfd98ea63680" name="a38a5e509c9750876370dbfd98ea63680"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38a5e509c9750876370dbfd98ea63680">&#9670;&nbsp;</a></span>maximumPackageLength</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t SHORTPROTOCOL_Instance::maximumPackageLength</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The maximum Package Length Packets longer than this will be split into Packets with the maximum Size of maximumPackageLength. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00164">164</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+
+</div>
+</div>
+<a id="a1e01ed7a25558ada72a109b017386c69" name="a1e01ed7a25558ada72a109b017386c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e01ed7a25558ada72a109b017386c69">&#9670;&nbsp;</a></span>newCommand</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html#ga25318a92fca49be72071e53a84ec3e5a">SHORTPROTOCOL_status</a> SHORTPROTOCOL_Instance::newCommand</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Status of the SHORTPROTOCOL Instance itself. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00175">175</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+
+</div>
+</div>
+<a id="a2d6eb84ff339495806a39cc27e354966" name="a2d6eb84ff339495806a39cc27e354966"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d6eb84ff339495806a39cc27e354966">&#9670;&nbsp;</a></span>readAvailable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html#ga25318a92fca49be72071e53a84ec3e5a">SHORTPROTOCOL_status</a>(* SHORTPROTOCOL_Instance::readAvailable) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback to check if a Byte is available to be read. If this returns SHORTPROTOCOL_AVAILABLE at least one Byte has to be readable from readByte. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00145">145</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+
+</div>
+</div>
+<a id="aeb3a21d8a39f1b46905e4e683dedfe34" name="aeb3a21d8a39f1b46905e4e683dedfe34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3a21d8a39f1b46905e4e683dedfe34">&#9670;&nbsp;</a></span>readByte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t(* SHORTPROTOCOL_Instance::readByte) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback to read one Byte from the Serial Interface. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00138">138</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+
+</div>
+</div>
+<a id="a81a9a7a0455383670a7308fcb188ff93" name="a81a9a7a0455383670a7308fcb188ff93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81a9a7a0455383670a7308fcb188ff93">&#9670;&nbsp;</a></span>writeAvailable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_h_o_r_t_p_r_o_t_o_c_o_l.html#ga25318a92fca49be72071e53a84ec3e5a">SHORTPROTOCOL_status</a>(* SHORTPROTOCOL_Instance::writeAvailable) (void)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callbakc to check if a Byte is writeable to the Serial Interface If this returns SHORTPROTOCOL_AVAILABLE at leat one Byte has to be writeable to write Byte. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00157">157</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+
+</div>
+</div>
+<a id="ae9b7411d43d04e6822022f5c2793dee2" name="ae9b7411d43d04e6822022f5c2793dee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9b7411d43d04e6822022f5c2793dee2">&#9670;&nbsp;</a></span>writeByte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* SHORTPROTOCOL_Instance::writeByte) (uint8_t)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback to write one Byte to the Serial Interface. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00150">150</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+
+</div>
+</div>
+<a id="a778e7c2ae9a4bb9ca26bddb002749c5b" name="a778e7c2ae9a4bb9ca26bddb002749c5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a778e7c2ae9a4bb9ca26bddb002749c5b">&#9670;&nbsp;</a></span>writeCounter</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t SHORTPROTOCOL_Instance::writeCounter</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Counter to keep track of what Parts of a Package were already sent when it is split to maximumPackageLength. </p>
+
+<p class="definition">Definition at line <a class="el" href="shortprotocol_8h_source.html#l00181">181</a> of file <a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
 <li><a class="el" href="shortprotocol_8h_source.html">shortprotocol.h</a></li>
 </ul>
